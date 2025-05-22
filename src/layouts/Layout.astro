@@ -1,0 +1,25 @@
+---
+import './src/styles/global.css'
+import { GovernmentOfficialHeader } from "@/components/common/GovernmentOfficialHeader";
+import { Header } from "@/components/common/Header";
+import { Footer } from "@/components/common/Footer";
+---
+
+<!doctype html>
+<html lang='es-ES'>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<GovernmentOfficialHeader client:load />
+		<Header client:load />
+		<main role='main' class='bg-background antialiased'>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>
