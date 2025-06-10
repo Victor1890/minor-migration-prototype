@@ -1,8 +1,24 @@
+export { PresentationIcon } from './PresentationIcon'
+
+export { CalendarIcon } from './CalendarIcon'
+
+export { MoneyIcon } from './MoneyIcon'
+
+export { ClockIcon } from './ClockIcon'
+
+export { ExclamationIcon } from './ExclamationIcon'
+
+export { PersonIcon } from './PersonIcon'
+
+export { BothParentIcon } from './BothParentIcon'
+
+export { WordDominicanIcon } from './WordDominicanIcon'
+
+export { DominicanWordIcon } from './DominicanWordIcon'
+
 export { ArrowBackIcon } from './ArrowBack'
 
 export { PlanetIcon } from './PlanetIcon'
-
-export { DominicanWithCountryIcon } from './DominicanWithCountryIcon'
 
 export { DominicanIcon } from './DominicanIcon'
 

@@ -1,25 +1,36 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { STATUS_MIGRATION_MINOR } from "@/data";
+import type { IFormData } from "@/components/features/Home/hooks/useFormNavigation";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { STATUS_TRAVELING_MINOR } from "@/data/status-traveling-minor";
 import { cn } from "@/lib/utils";
+import { useMemo } from "react";
 
-interface StatusMigrationMinorProps {
+interface TravelingWithMinorProps {
   value: string;
+  payload?: IFormData;
   setValue: (value: string) => void;
 }
 
-export function StatusMigrationMinor({
+export function TravelingWithMinor({
   setValue,
   value,
-}: StatusMigrationMinorProps) {
+  payload,
+}: TravelingWithMinorProps) {
+  const data = useMemo(() => {
+    if (!payload) return [];
+    const key = payload.status_migration_minor;
+    return STATUS_TRAVELING_MINOR[key] || [];
+  }, [payload]);
+
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-      {STATUS_MIGRATION_MINOR.map((item) => (
+    <div
+      className={cn(
+        "grid grid-cols-1 gap-4",
+        data.length === 2 && "lg:grid-cols-2",
+        data.length === 3 && "lg:grid-cols-3",
+        data.length === 4 && "lg:grid-cols-4"
+      )}
+    >
+      {data.map((item) => (
         <Card
           className={cn(
             "flex flex-col",

@@ -174,4 +174,3 @@ El estado del formulario se maneja a través del custom hook `useFormNavigation`
 1. **Testing**: Después de cualquier modificación, asegúrate de probar completamente el flujo del formulario.
 2. **Tipos de datos**: Si añades nuevos campos al formulario, actualiza también la interfaz `IFormData` en `useFormNavigation.ts`.
 3. **Estilos**: Los estilos se manejan principalmente con Tailwind CSS, por lo que cualquier cambio visual puede requerir modificaciones de las clases CSS.
-# migracion-

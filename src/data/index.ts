@@ -1,125 +1,96 @@
-import {
-  DominicanIcon,
-  DominicanWithCountryIcon,
-  PlanetIcon,
-} from "@/components/icons";
+import { DominicanIcon, DominicanWordIcon, WordDominicanIcon, PlanetIcon, BothParentIcon, PersonIcon, ClockIcon, MoneyIcon, CalendarIcon, PresentationIcon } from "@/components/icons";
 
-export const STATUS_MIGRATION_MINOR = [
-  {
-    title: "Es dominicano",
-    slug: "dominicano",
-    icon: DominicanIcon,
-    description: "El menor solo tiene nacionalidad dominicana. ",
-  },
-  {
-    title: "Tiene doble nacionalidad",
-    slug: "doble-nacionalidad",
-    icon: DominicanWithCountryIcon,
-    description:
-      "El menor tiene nacionalidad dominicana y de otro país. Puede tener dos pasaportes y utilizar cualquiera de ellos para viajar.",
-  },
-  {
-    title: "Es residente extranjero",
-    slug: "residente-extranjero",
-    icon: PlanetIcon,
-    description:
-      "El menor tiene una nacionalidad extranjera y reside legalmente en el país con carnet de residencia.",
-  },
-];
+interface StatusMigrationMinor {
+    title: string;
+    slug: string;
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    description: string;
+}
+
+export const STATUS_MIGRATION_MINOR: StatusMigrationMinor[] = [
+    {
+        title: "Menor tiene únicamente nacionalidad dominicana ",
+        slug: "nacionalidad-dominicana-unicamente",
+        icon: DominicanIcon,
+        description: "El menor tiene nacionalidad dominicana y no posee otra ciudadanía ni residencia en otro país."
+    },
+    {
+        title: "Menor tiene doble nacionalidad o residencia en el extranjero",
+        slug: "doble-nacionalidad-o-residencia-extranjero",
+        icon: DominicanWordIcon,
+        description: "El menor tiene nacionalidad dominicana y también posee ciudadanía extranjera o una residencia legal en otro país."
+    },
+    {
+        title: "Menor es extranjero con residencia en la República Dominicana",
+        slug: "es-extranjero-residencia-republica-dominicana",
+        icon: WordDominicanIcon,
+        description: "El menor tiene pasaporte extranjero, pero cuenta con residencia legal vigente en República Dominicana."
+    },
+    {
+        title: "Menor tiene estatus migratorio de no residentes (estudiantes, deportistas, artistas y estudiantes de intercambio)",
+        slug: "estatus-migratorio-no-residente",
+        icon: PlanetIcon,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        title: "Menores hijo/as de personal de organismos internacionales acreditados en el país",
+        slug: "minor-children-international-organizations",
+        icon: PlanetIcon,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
+]
+
+
 
 export const HAS_MINOR_STAYED_MORE_THAN_6_MONTHS = [
-  {
-    title: "El menor lleva más de 6 meses en el país",
-    slug: "more-than-6-months",
-    description: "(Requiere permiso de salida para salir del país)",
-  },
-  {
-    title: "El menor lleva menos de 6 meses en el país",
-    slug: "less-than-6-months",
-    description: "(No requiere permiso de salida según normas migratorias)",
-  },
-];
+    {
+        title: "Sí, ha estado más de 6 meses en el país",
+        slug: "more-than-6-months",
+        description: "El menor ha permanecido en República Dominicana por más de seis meses desde su última entrada.",
+    },
+    {
+        title: "No, ha estado menos de 6 meses en el país",
+        slug: "less-than-6-months",
+        description: "El menor ha permanecido en República Dominicana por menos de seis meses desde su última entrada.",
+    }
+]
 
-export const CASE_LIST = [
-  {
-    label: "No cuenta con la autorización del padre o la madre",
-    description: "Padre ausente o sin autorización requiere permiso legal.",
-    value: "sin-autorizacion",
-  },
-  {
-    label: "Declarado por ambos padres",
-    description: "Padre y madre declaran que el menor viaja con uno de ellos.",
-    value: "declarado-por-ambos-padres",
-  },
-  {
-    label: "Padres residen en el exterior",
-    description: "Padres en el extranjero requieren autorización consular.",
-    value: "padres-fuera-del-pais",
-  },
-  {
-    label: "Padre o madre fallecidos y viaja con una tercera persona",
-    description: "Padre o madre fallecidos requieren autorización legal.",
-    value: "padre-o-madre-fallecidos",
-  },
-  {
-    label: "Adoptados por extranjeros o nacionales",
-    description:
-      "Menores adoptados por extranjeros o nacionales requieren autorización legal.",
-    value: "adoptados-por-extranjeros-o-nacionales",
-  },
-  {
-    label: "Viaja con un tutor legal",
-    description: "Menor que viaja con tutor legal requiere autorización legal.",
-    value: "viaja-con-tutor-legal",
-  },
-  {
-    label: "Viaja bajo la responsabilidad de la línea aérea u otro acompañante",
-    description:
-      "Menor que viaja bajo la responsabilidad de la línea aérea u otro acompañante requiere autorización legal.",
-    value: "viaja-bajo-responsabilidad-linea-aerea",
-  },
-  {
-    label: "Los menores acompañados de ambos padres",
-    description:
-      "Los menores acompañados de ambos padres no requieren autorización.",
-    value: "menores-acompanados-de-ambos-padres",
-  },
-  {
-    label:
-      "Los menores declarados bajo filiación materna o paterna, que viajen en compañía de la madre o el padre",
-    description:
-      "Los menores con un solo apellido (filiación materna o paterna) que viajan en compañía de la madre o el padre no requieren autorización.",
-    value: "menores-con-un-solo-apellido-filiacion-materna-o-padre",
-  },
-  {
-    label:
-      "Los menores con residencia legal en otro país y permanencia inferior a los 6 meses en la República Dominicana",
-    description:
-      "Los menores con residencia legal en otro país y permanencia inferior a los 6 meses en la República Dominicana y viajen hacia su país de residencia, no requieren autorización.",
-    value: "menores-con-residencia-legal-en-otro-pais",
-  },
-  {
-    label:
-      "Los menores con doble nacionalidad y permanencia inferior a los 6 meses en República Dominicana",
-    description:
-      "Los menores con doble nacionalidad y permanencia inferior a los 6 meses en República Dominicana y viajen hacia el país de su otra nacionalidad, no requieren autorización.",
-    value:
-      "menores-con-doble-nacionalidad-y-permanencia-inferior-a-los-6-meses-en-republica-dominicana",
-  },
-  {
-    label:
-      "Con residencia legal en la República Dominicana viajando en compañía de ambos padres",
-    description:
-      "Los menores con residencia legal en la Republica Dominicana viajando en compañía de ambos padres no requieren autorización.",
-    value:
-      "menores-con-residencia-legal-en-republica-dominicana-viajando-en-compania-de-ambos-padres",
-  },
+export const DETAILS_OF_PROCESS_DOCUMENTATION: Array<Omit<StatusMigrationMinor, 'description'> & { description: string | string[] }> = [
+    {
+        title: "Horario de prestación",
+        slug: "horario-de-prestacion",
+        description: "Lunes a viernes de 8:00 AM. a 4:00 PM.  (En verano y navidad el horario se extiende hasta las 6:00 PM. por el aumento de la demanda)",
+        icon: ClockIcon
+    },
+    {
+        title: "Costo",
+        slug: "costo",
+        description: [
+            "Un menor – <strong>RD$ 2,000.00</strong>",
+            "<br />",
+            "Menores adicionales en el mismo documento (Hermanos) – <strong>RD$ 1,500.00 (cada uno)</strong>"
+        ],
+        icon: MoneyIcon
+    },
+    {
+        title: "Tiempo de realización",
+        slug: "tiempo-de-realizacion",
+        description: "48 Horas laborables. Después de haber depositado físicamente los documentos requeridos.( Si al evaluar el expediente y en el sistema está todo correcto )",
+        icon: CalendarIcon
+    },
+    {
+        title: "Canal de Prestación",
+        slug: "canal-de-prestacion",
+        description: [
+            "En línea: Completa todo el proceso desde el portal web de Migración.",
+            "<br />",
+            "Presencial: Puedes realizar el proceso directamente en las oficinas de Migración."
+        ],
+        icon: PresentationIcon
+    }
 ];
 
 export const CASE_LIST_NOT_ALLOWED = [
-  "menores-acompanados-de-ambos-padres",
-  "menores-con-un-solo-apellido-filiacion-materna-o-padre",
-  "menores-con-residencia-legal-en-otro-pais",
-  "menores-con-doble-nacionalidad-y-permanencia-inferior-a-los-6-meses-en-republica-dominicana",
-  "menores-con-residencia-legal-en-republica-dominicana-viajando-en-compania-de-ambos-padres",
-];
+    "estatus-migratorio-no-residente",
+    "both-parents"
+]
