@@ -60,17 +60,31 @@ export const SPECIAL_CONDITION_PRESENT_DATA: SpecialConditionPresentDataMap = {
                 slug: "viaja-con-el-colegio-centro-educativo-o-institucion-cultural",
                 tooltip: "Cuando el menor viaja con  una academia, centro educativo o institución cultural, y cuenta con la autorización de los padres, padre, madre o tutor legal"
             },
-            ...[
-                "Viaja con academia, selección o liga deportiva",
-                "Viaja con la persona que posee la guarda custodia ",
-                "Menor  tiene un solo apellido (materno) y  no viaja con su madre ",
-                "Uno de los padres ha fallecido y no viaja con el padre/madre sobreviviente",
-                "Viaja con una persona autorizada por el tutor legal ",
-            ].map(x => ({
-                title: x,
-                slug: x.toLowerCase().replace(/ /g, "-"),
-                tooltip: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            }))
+            {
+                title: "Viaja con academia, selección o liga deportiva",
+                slug: "viaja-con-academia-seleccion-o-liga-deportiva",
+                tooltip: "Cuando el menor viaja con una academia, selección o liga deportiva, y cuenta con la autorización de los padres, padre, madre o tutor legal"
+            },
+            {
+                title: "Viaja con la persona que posee la guarda custodia",
+                slug: "viaja-con-la-persona-que-posee-la-guarda-custodia",
+                tooltip: "Cuando el menor viaja con la persona que tiene la guarda custodia del menor"
+            },
+            {
+                title: "Menor  tiene un solo apellido (materno) y  no viaja con su madre",
+                slug: "menor-tiene-un-solo-apellido-materno-y-no-viaja-con-su-madre",
+                tooltip: "Cuando el menor ha sido declarado solo por la madre y no es ella quien le acompaña a viajar"
+            },
+            {
+                title: "Uno de los padres ha fallecido y no viaja con el padre/madre sobreviviente",
+                slug: "uno-de-los-padres-ha-fallecido-y-no-viaja-con-el-padre-madre-sobreviviente",
+                tooltip: "Cuando el menor viaja acompañado por su único padre o madre que aún está vivo"
+            },
+            {
+                title: "Viaja con una persona autorizada por el tutor legal",
+                slug: "viaja-con-una-persona-autorizada-por-el-tutor-legal",
+                tooltip: "Cuando el menor viaja con una persona distinta a sus padres o bajo la custodia de una aerolínea, pero cuenta con la autorización del tutor legal"
+            },
         ]
     },
     "doble-nacionalidad-o-residencia-extranjero": {

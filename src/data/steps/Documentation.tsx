@@ -16,12 +16,31 @@ import { Info } from "lucide-react";
 import { DETAILS_OF_PROCESS_DOCUMENTATION } from "..";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { documentationData } from "../documentation-data";
+import { DOCUMENTATION_DATA } from "../documentation-data/info-data";
 import { Divider } from "@/components/ui/divider";
+import type { IFormData } from "@/components/features/Home/hooks/useFormNavigation";
+import { useMemo } from "react";
 
-const { title, illustration, requiredDocuments, additionalNote, sections } =
-  documentationData;
+const { title, illustration, additionalNote, sections } = documentationData;
 
-export function Documentation() {
+interface DocumentationProps {
+  payload: IFormData;
+}
+
+export function Documentation({ payload }: DocumentationProps) {
+  const { required, onlineServiceSteps } = useMemo(() => {
+    const keyMigrationMinor = payload.status_migration_minor || "";
+    const keyTravelingWithMinor = payload.status_traveling_minor || "";
+    const keyConditionPresent = payload.special_conditions_present;
+
+    const data =
+      DOCUMENTATION_DATA[keyMigrationMinor]?.[keyTravelingWithMinor]?.[
+        keyConditionPresent
+      ];
+
+    return data;
+  }, [payload]);
+
   return (
     <Card className="border-0 shadow-none">
       <CardContent className="p-0 space-y-8">
@@ -37,12 +56,15 @@ export function Documentation() {
           </div>
 
           <ol className="space-y-4 list-decimal list-outside ml-5">
-            {requiredDocuments.map((doc, index) => (
+            {required.map((doc, index) => (
               <li key={index}>
                 <p className="font-semibold text-[18px]">{doc.title}</p>
                 <ul className="list-disc text-[#4B5563] space-y-1 text-base">
-                  {doc.details.map((detail, detailIndex) => (
-                    <li key={detailIndex}>{detail}</li>
+                  {doc.details?.map((detail, detailIndex) => (
+                    <li
+                      key={detailIndex}
+                      dangerouslySetInnerHTML={{ __html: detail }}
+                    />
                   ))}
                 </ul>
               </li>
@@ -114,7 +136,7 @@ export function Documentation() {
             </AccordionTrigger>
             <AccordionContent>
               <ol className="space-y-6 list-decimal list-outside ml-5">
-                {sections.onlineServiceSteps.steps.map((step, index) => {
+                {onlineServiceSteps.map((step, index) => {
                   return (
                     <li key={index}>
                       <p className="font-semibold text-[18px]">{step.title}</p>
@@ -156,26 +178,28 @@ export function Documentation() {
                       )}
                       {step.details && step.details.length > 0 && (
                         <ul className="list-disc list-outside ml-5 text-base text-muted-foreground space-y-1 mt-1">
-                          {step.details.map((detail, detailIndex) => {
-                            const isLastDetail =
-                              detailIndex === step.details.length - 1;
-                            return (
-                              <li key={detailIndex}>
-                                {detail}
-                                {step.subDetails && isLastDetail && (
-                                  <ul className="list-disc list-outside ml-5 space-y-1 mt-1">
-                                    {step.subDetails.map((subDetail) =>
-                                      subDetail.items.map(
-                                        (subItem, subIndex) => (
-                                          <li key={subIndex}>{subItem}</li>
-                                        )
-                                      )
+                          {!step.details?.length
+                            ? null
+                            : step.details?.map((detail, detailIndex) => {
+                                const isLastDetail =
+                                  detailIndex === step.details!.length - 1;
+                                return (
+                                  <li key={detailIndex}>
+                                    {detail}
+                                    {step.subDetails && isLastDetail && (
+                                      <ul className="list-disc list-outside ml-5 space-y-1 mt-1">
+                                        {step.subDetails.map((subDetail) =>
+                                          subDetail.items.map(
+                                            (subItem, subIndex) => (
+                                              <li key={subIndex}>{subItem}</li>
+                                            )
+                                          )
+                                        )}
+                                      </ul>
                                     )}
-                                  </ul>
-                                )}
-                              </li>
-                            );
-                          })}
+                                  </li>
+                                );
+                              })}
                         </ul>
                       )}
                     </li>
@@ -183,12 +207,6 @@ export function Documentation() {
                 })}
               </ol>
             </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value={sections.presentialServiceSteps.value}>
-            <AccordionTrigger className="font-semibold text-2xl text-[#020617]">
-              {sections.presentialServiceSteps.title}
-            </AccordionTrigger>
-            <AccordionContent>{null}</AccordionContent>
           </AccordionItem>
         </Accordion>
 

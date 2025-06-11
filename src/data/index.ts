@@ -26,18 +26,18 @@ export const STATUS_MIGRATION_MINOR: StatusMigrationMinor[] = [
         icon: WordDominicanIcon,
         description: "El menor tiene pasaporte extranjero, pero cuenta con residencia legal vigente en República Dominicana."
     },
-    // {
-    //     title: "Menor tiene estatus migratorio de no residentes (estudiantes, deportistas, artistas y estudiantes de intercambio)",
-    //     slug: "estatus-migratorio-no-residente",
-    //     icon: PlanetIcon,
-    //     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    // },
-    // {
-    //     title: "Menores hijo/as de personal de organismos internacionales acreditados en el país",
-    //     slug: "minor-children-international-organizations",
-    //     icon: PlanetIcon,
-    //     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    // }
+    {
+        title: "Menor tiene estatus migratorio de no residentes (estudiantes, deportistas, artistas y estudiantes de intercambio)",
+        slug: "estatus-migratorio-no-residente",
+        icon: PlanetIcon,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+        title: "Menores hijo/as de personal de organismos internacionales acreditados en el país",
+        slug: "minor-children-international-organizations",
+        icon: PlanetIcon,
+        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    }
 ]
 
 
@@ -89,8 +89,3 @@ export const DETAILS_OF_PROCESS_DOCUMENTATION: Array<Omit<StatusMigrationMinor, 
         icon: PresentationIcon
     }
 ];
-
-export const CASE_LIST_NOT_ALLOWED = [
-    "estatus-migratorio-no-residente",
-    "both-parents"
-]

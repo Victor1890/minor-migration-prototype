@@ -15,8 +15,15 @@ export interface IFormData {
 
 type DecisionType = "SHOW_NEXT" | "STEP_NOT_FOUND";
 
+const SPECIAL_CONDITION_NOT_ALLOWED = [
+    "menor-tiene-un-solo-apellido-y-viaja-con-su-madre",
+    "viaja-con-uno-de-sus-padres-y-el-otro-ha-fallecido"
+]
+
 function getNextStepDecision(payload: IFormData): DecisionType {
-    // Example decision logic based on form data
+    if (SPECIAL_CONDITION_NOT_ALLOWED.includes(payload.special_conditions_present)) {
+        return "STEP_NOT_FOUND";
+    }
     if (payload.status_migration_minor === "nacionalidad-dominicana-unicamente") {
         if (payload.status_traveling_minor === "both-parents") {
             return "STEP_NOT_FOUND";
@@ -45,6 +52,7 @@ function getNextStepDecision(payload: IFormData): DecisionType {
     if (payload.status_migration_minor === 'estatus-migratorio-no-residente') {
         return 'STEP_NOT_FOUND'
     }
+
     return "SHOW_NEXT";
 }
 

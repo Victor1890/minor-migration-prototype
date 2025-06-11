@@ -1,19 +1,19 @@
 import { Info } from "lucide-react";
 
 // Tipos de datos para documentación
-export interface RequiredDocument {
+interface RequiredDocument {
+    title: string;
+    details?: string[];
+}
+
+interface AdditionalNote {
     title: string;
     details: string[];
 }
 
-export interface AdditionalNote {
+interface OnlineServiceStep {
     title: string;
-    details: string[];
-}
-
-export interface OnlineServiceStep {
-    title: string;
-    details: string[];
+    details?: string[];
     alert?: {
         title: string;
         details: string[];
@@ -28,13 +28,13 @@ export interface OnlineServiceStep {
     }[];
 }
 
-export interface PresentialServiceStep {
+interface PresentialServiceStep {
     // Esta interfaz se implementará cuando se tenga información para el servicio presencial
     title: string;
     details?: string[];
 }
 
-export interface DocumentationData {
+interface DocumentationData {
     title: string;
     illustration: {
         src: string;
@@ -207,4 +207,16 @@ export const documentationData: DocumentationData = {
             steps: [], // Datos no proporcionados en el componente original
         },
     },
+};
+
+type DocumentationDataMap = {
+    [key: string]: {
+        [key: string]: {
+            // [key: string]: RequiredDocument[];
+            [key: string]: {
+                required: RequiredDocument[];
+                onlineServiceSteps: OnlineServiceStep[];
+            }
+        }
+    }
 };
