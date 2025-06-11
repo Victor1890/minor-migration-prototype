@@ -27,16 +27,16 @@ export const STATUS_MIGRATION_MINOR: StatusMigrationMinor[] = [
         description: "El menor tiene pasaporte extranjero, pero cuenta con residencia legal vigente en República Dominicana."
     },
     {
-        title: "Menor tiene estatus migratorio de no residentes (estudiantes, deportistas, artistas y estudiantes de intercambio)",
+        title: "Tiene estatus migratorio de no residente",
         slug: "estatus-migratorio-no-residente",
         icon: PlanetIcon,
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description: "El menor se encuentra en RD por un período definido como estudiante, deportista, artista o en intercambio, sin residencia permanente."
     },
     {
-        title: "Menores hijo/as de personal de organismos internacionales acreditados en el país",
+        title: "Hijo de personal internacional acreditado en el país",
         slug: "minor-children-international-organizations",
         icon: PlanetIcon,
-        description: "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        description: "El menor es hijo de personal de un organismo internacional oficialmente acreditado en República Dominicana."
     }
 ]
 
@@ -68,7 +68,7 @@ export const DETAILS_OF_PROCESS_DOCUMENTATION: Array<Omit<StatusMigrationMinor, 
         description: [
             "Un menor – <strong>RD$ 2,000.00</strong>",
             "<br />",
-            "Menores adicionales en el mismo documento (Hermanos) – <strong>RD$ 1,500.00 (cada uno)</strong>"
+            "Menores adicionales en el mismo documento (Hermanos) – <strong>RD$ 2,000.00 por el primer menor</strong> – <strong>RD$ 1,500.00 (cada menor adicional)</strong>"
         ],
         icon: MoneyIcon
     },

@@ -21,7 +21,8 @@ import { Divider } from "@/components/ui/divider";
 import type { IFormData } from "@/components/features/Home/hooks/useFormNavigation";
 import { useMemo } from "react";
 
-const { title, illustration, additionalNote, sections } = documentationData;
+const { title, illustration, additionalNote, sections, requiredDocuments } =
+  documentationData;
 
 interface DocumentationProps {
   payload: IFormData;
@@ -38,7 +39,12 @@ export function Documentation({ payload }: DocumentationProps) {
         keyConditionPresent
       ];
 
-    return data;
+    return (
+      data || {
+        required: requiredDocuments,
+        onlineServiceSteps: sections.onlineServiceSteps.steps,
+      }
+    );
   }, [payload]);
 
   return (

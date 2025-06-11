@@ -68,6 +68,18 @@ export function useFormNavigation() {
 
     const STEPS = useMemo(() => {
         const steps = [..._STEPS];
+
+        console.log("formData?.status_migration_minor: ", formData?.status_migration_minor)
+
+        if (formData?.status_migration_minor === "minor-children-international-organizations") {
+            // give the first and last element in this array
+
+            return [
+                steps[0],
+                steps[steps.length - 1]
+            ]
+        }
+
         if (formData?.status_migration_minor === "nacionalidad-dominicana-unicamente") {
             return steps;
         }
