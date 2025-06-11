@@ -1,3 +1,5 @@
+export { WarningIcon } from './WarningIcon'
+
 export { PresentationIcon } from './PresentationIcon'
 
 export { CalendarIcon } from './CalendarIcon'

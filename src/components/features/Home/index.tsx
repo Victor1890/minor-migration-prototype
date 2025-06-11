@@ -18,6 +18,8 @@ import { MoveLeft } from "lucide-react";
 import { useMemo } from "react";
 import { ContactInfo } from "./ContactInfo";
 import { useFormNavigation, type IFormData } from "./hooks/useFormNavigation";
+import { NotFound } from "@/data/steps/NotFound";
+import { FooterMessage } from "./FooterMessage";
 
 export function HomePage() {
   const {
@@ -76,7 +78,6 @@ export function HomePage() {
                           ? clearFormData
                           : goToPreviousStep
                       }
-                      // disabled={shouldShowStepNotFound ? false : currentStepIndex === 0}
                     >
                       <MoveLeft />
                       Regresar
@@ -94,85 +95,89 @@ export function HomePage() {
                 )}
               </CardHeader>
               <CardContent className="px-6 lg:px-8 w-full py-0 m-0 flex-1">
-                <div className="flex flex-col gap-1">
-                  <h1 className="font-bold text-[28px] text-[#020617]">
-                    {shouldShowStepNotFound
-                      ? STEP_NOT_FOUND.title
-                      : currentStep.title}
-                  </h1>
-                  <p className="text-base font-normal text-[#727272]">
-                    {shouldShowStepNotFound
-                      ? STEP_NOT_FOUND.description
-                      : currentStep.description}
-                  </p>
-                </div>
-                <Divider className="my-6" />{" "}
-                <div className="pb-6 w-full">
-                  {shouldShowStepNotFound ? null : (
-                    <CurrentStepComponent
-                      value={(() => {
-                        if (!formData) return "";
-                        if (currentStepIndex === 0) {
-                          return formData?.status_migration_minor || "";
-                        }
-
-                        if (
-                          formData?.status_migration_minor ===
-                          "nacionalidad-dominicana-unicamente"
-                        ) {
-                          if (currentStepIndex === 1) {
-                            return formData?.status_traveling_minor || "";
-                          } else if (currentStepIndex === 2) {
-                            return formData?.special_conditions_present || "";
+                {shouldShowStepNotFound ? (
+                  <NotFound />
+                ) : (
+                  <>
+                    <div className="flex flex-col gap-1">
+                      <h1 className="font-bold text-[28px] text-[#020617]">
+                        {currentStep.title}
+                      </h1>
+                      <p className="text-base font-normal text-[#727272]">
+                        {currentStep.description}
+                      </p>
+                    </div>
+                    <Divider className="my-6" />{" "}
+                    <div className="pb-6 w-full">
+                      <CurrentStepComponent
+                        value={(() => {
+                          if (!formData) return "";
+                          if (currentStepIndex === 0) {
+                            return formData?.status_migration_minor || "";
                           }
-                        } else {
-                          if (currentStepIndex === 1) {
-                            return formData?.minor_stayed_over_6_months || "";
-                          } else if (currentStepIndex === 2) {
-                            return formData?.status_traveling_minor || "";
-                          } else if (currentStepIndex === 3) {
-                            return formData?.special_conditions_present || "";
-                          }
-                        }
 
-                        return "";
-                      })()}
-                      payload={(formData || {}) as IFormData}
-                      setValue={(value) => {
-                        if (currentStepIndex === 0) {
-                          updateFormData({ status_migration_minor: value });
-                        }
-
-                        if (
-                          formData?.status_migration_minor ===
-                          "nacionalidad-dominicana-unicamente"
-                        ) {
-                          if (currentStepIndex === 1) {
-                            updateFormData({ status_traveling_minor: value });
-                          } else if (currentStepIndex === 2) {
-                            updateFormData({
-                              special_conditions_present: value,
-                            });
+                          if (
+                            formData?.status_migration_minor ===
+                            "nacionalidad-dominicana-unicamente"
+                          ) {
+                            if (currentStepIndex === 1) {
+                              return formData?.status_traveling_minor || "";
+                            } else if (currentStepIndex === 2) {
+                              return formData?.special_conditions_present || "";
+                            }
+                          } else {
+                            if (currentStepIndex === 1) {
+                              return formData?.minor_stayed_over_6_months || "";
+                            } else if (currentStepIndex === 2) {
+                              return formData?.status_traveling_minor || "";
+                            } else if (currentStepIndex === 3) {
+                              return formData?.special_conditions_present || "";
+                            }
                           }
-                        } else {
-                          if (currentStepIndex === 1) {
-                            updateFormData({
-                              minor_stayed_over_6_months: value,
-                            });
-                          } else if (currentStepIndex === 2) {
-                            updateFormData({ status_traveling_minor: value });
-                          } else if (currentStepIndex === 3) {
-                            updateFormData({
-                              special_conditions_present: value,
-                            });
-                          }
-                        }
 
-                        goToNextStep();
-                      }}
-                    />
-                  )}
-                </div>
+                          return "";
+                        })()}
+                        payload={(formData || {}) as IFormData}
+                        setValue={(value) => {
+                          if (currentStepIndex === 0) {
+                            updateFormData({ status_migration_minor: value });
+                          }
+
+                          if (
+                            formData?.status_migration_minor ===
+                            "nacionalidad-dominicana-unicamente"
+                          ) {
+                            if (currentStepIndex === 1) {
+                              updateFormData({
+                                status_traveling_minor: value,
+                              });
+                            } else if (currentStepIndex === 2) {
+                              updateFormData({
+                                special_conditions_present: value,
+                              });
+                            }
+                          } else {
+                            if (currentStepIndex === 1) {
+                              updateFormData({
+                                minor_stayed_over_6_months: value,
+                              });
+                            } else if (currentStepIndex === 2) {
+                              updateFormData({
+                                status_traveling_minor: value,
+                              });
+                            } else if (currentStepIndex === 3) {
+                              updateFormData({
+                                special_conditions_present: value,
+                              });
+                            }
+                          }
+
+                          goToNextStep();
+                        }}
+                      />
+                    </div>
+                  </>
+                )}
                 {isLastStep && (
                   <div className="pb-6 w-full flex justify-end gap-6">
                     <Button
@@ -197,10 +202,8 @@ export function HomePage() {
               {!isLastStep &&
                 currentStep.message &&
                 !shouldShowStepNotFound && (
-                  <CardFooter className="flex items-center justify-center py-10 text-center">
-                    <p className="max-w-[700px] w-full text-[#031942] font-normal text-base">
-                      {currentStep.message}
-                    </p>
+                  <CardFooter className="flex items-center justify-center pt-3 pb-10 text-center">
+                    <FooterMessage />
                   </CardFooter>
                 )}
               {isLastStep && (

@@ -38,7 +38,7 @@ export const STEPS: Step[] = [
 ]
 
 export const STEP_NOT_FOUND = {
-    title: "No necesitas un permiso de salida en este caso!",
-    description: "Según la normativa de la Dirección General de Migración, los menores con doble nacionalidad o extranjeros con residencia legal no necesitan una certificación de salida si han permanecido en el país por menos de seis (6) meses.",
+    title: "No necesitas permiso para este caso",
+    description: "Según la información que proporcionaste, el menor no necesita tramitar un permiso de salida. Aun así, te recomendamos llevar consigo los documentos personales básicos (pasaporte, acta de nacimiento y visa si aplica), ya que podrían ser solicitados por las autoridades al momento del viaje.",
     component: null,
 }
