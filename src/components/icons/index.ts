@@ -1,3 +1,7 @@
+export { PeopleTravelIcon } from './PeopleTravelIcon'
+
+export { PeopleTravelWordIcon } from './PeopleTravelWordIcon'
+
 export { WarningIcon } from './WarningIcon'
 
 export { PresentationIcon } from './PresentationIcon'

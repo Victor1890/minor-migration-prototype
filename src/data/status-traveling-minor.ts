@@ -1,4 +1,5 @@
-import { BothParentIcon, PersonIcon } from "@/components/icons";
+import { PeopleTravelIcon, PeopleTravelWordIcon, PersonIcon } from "@/components/icons";
+// import { PeopleTravelIcon } from "@/components/icons/PeopleTravelIcon";
 
 interface StatusTravelingMinor {
     title: string;
@@ -14,35 +15,35 @@ type StatusTravelingMinorDataMap = {
 export const STATUS_TRAVELING_MINOR: StatusTravelingMinorDataMap = {
     "nacionalidad-dominicana-unicamente": [
         {
-            title: "Viaja con ambos padres",
+            title: "El menor viajara con ambos padres",
             slug: "both-parents",
-            icon: BothParentIcon,
+            icon: PeopleTravelIcon,
             description: "El menor viajará junto a su madre y su padre."
         },
         {
-            title: "Viaja con uno de los padres",
+            title: "El menor viajará con uno de los padres",
             slug: "one-parent-or-other-person",
             icon: PersonIcon,
             description: "El menor viajará solo con su madre, su padre, una persona distinta a sus padres o bajo la custodia de una aerolínea."
         },
         {
-            title: "Viaja con un tercero",
+            title: "El menor viajará  con un tercero o una aerolínea",
             slug: "third-party",
-            icon: PersonIcon,
+            icon: PeopleTravelWordIcon,
             description: "El menor viajará bajo la custodia de una persona distinta a sus padres o bajo la custodia de una aerolínea."
         }
     ],
     "doble-nacionalidad-o-residencia-extranjero": [
         {
-            title: "Viaja con uno de los padres",
+            title: "El menor viajará con uno de los padres",
             slug: "one-parent-or-other-person",
             icon: PersonIcon,
             description: "El menor viajará solo con su madre, su padre, una persona distinta a sus padres o bajo la custodia de una aerolínea."
         },
         {
-            title: "Viaja con un tercero",
+            title: "El menor viajará  con un tercero o una aerolínea",
             slug: "third-party",
-            icon: PersonIcon,
+            icon: PeopleTravelWordIcon,
             description: "El menor viajará bajo la custodia de una persona distinta a sus padres o bajo la custodia de una aerolínea."
         },
         {
@@ -54,15 +55,15 @@ export const STATUS_TRAVELING_MINOR: StatusTravelingMinorDataMap = {
     ],
     "es-extranjero-residencia-republica-dominicana": [
         {
-            title: "Viaja con uno de los padres",
+            title: "El menor viajará con uno de los padres",
             slug: "one-parent-or-other-person",
             icon: PersonIcon,
             description: "El menor viajará solo con su madre, su padre, una persona distinta a sus padres o bajo la custodia de una aerolínea."
         },
         {
-            title: "Viaja con un tercero",
+            title: "El menor viajará  con un tercero o una aerolínea",
             slug: "third-party",
-            icon: PersonIcon,
+            icon: PeopleTravelWordIcon,
             description: "El menor viajará bajo la custodia de una persona distinta a sus padres o bajo la custodia de una aerolínea."
         },
     ]

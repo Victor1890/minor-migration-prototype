@@ -68,7 +68,9 @@ export const DETAILS_OF_PROCESS_DOCUMENTATION: Array<Omit<StatusMigrationMinor, 
         description: [
             "Un menor – <strong>RD$ 2,000.00</strong>",
             "<br />",
-            "Menores adicionales en el mismo documento (Hermanos) – <strong>RD$ 2,000.00 por el primer menor</strong> – <strong>RD$ 1,500.00 (cada menor adicional)</strong>"
+            "Menores adicionales en el mismo documento (Hermanos)",
+            "<strong className='pb-3'>RD$ 2,000.00 por el primer menor</strong>",
+            "<strong>RD$ 1,500.00 (cada menor adicional)</strong>"
         ],
         icon: MoneyIcon
     },

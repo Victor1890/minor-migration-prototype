@@ -1194,9 +1194,111 @@ export const DOCUMENTATION_DATA: DocumentationDataMap = {
                     }
                 ],
             },
-            // "viaja-con-una-persona-autorizada-por-el-tutor-legal": {
-
-            // }
+            "viaja-con-una-persona-autorizada-por-el-tutor-legal": {
+                required: [
+                    {
+                        title: "Poder Notarial del tutor legal que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría",
+                        details: [
+                            "Ambos padres deben firmar el poder notarial autorizando la salida del menor",
+                            "Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil"
+                        ],
+                    },
+                    {
+                        title: "Foto o copia de acta de nacimiento original, con el código QR legible",
+                        details: ["Versión reciente con código QR o número de evento."],
+                    },
+                    {
+                        title: "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                    },
+                    {
+                        title: "Foto o copia de la cédula del otro padre que autoriza",
+                    },
+                    {
+                        title: "Foto o copia de la visa / residencia del acompañante",
+                        details: ["Si viaja a un país que requiera visa o residencia"]
+                    },
+                    {
+                        title: "Foto o copia de la visa / residencia del menor",
+                        details: [
+                            "Si viaja a un país que requiera visa o residencia"
+                        ]
+                    },
+                    {
+                        title: "Foto o copia del pasaporte del acompañante",
+                        details: ["De la página principal con los datos biométricos."]
+                    },
+                    {
+                        title: "Foto o copia del pasaporte del menor",
+                        details: ["De la página principal con los datos biométricos."]
+                    },
+                    {
+                        title: "Foto 2x2 reciente del menor",
+                        details: ["De frente y reciente."]
+                    },
+                    {
+                        title: "Recibo de pago",
+                        details: ["Puede realizarse en línea o presencial en BanReservas a nombre del padre, madre o tutor."]
+                    }
+                ],
+                onlineServiceSteps: [
+                    {
+                        title: "Entrar al portal https://servicios.migracion.gob.do",
+                    },
+                    {
+                        title: "Crear un usuario en el portal de migración",
+                    },
+                    {
+                        title: "Completar los formularios con los datos del menor y del acompañante"
+                    },
+                    {
+                        title: "Escanear todos los documentos requeridos",
+                        details: [
+                            "Escanear todos los documentos en formato JPG",
+                            "Incluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc"
+                        ]
+                    },
+                    {
+                        title: "Cargar los documentos escaneados o fotos a la plataforma",
+                    },
+                    {
+                        title: "Esperar validación de los documentos",
+                        details: [
+                            "Migración revisará la solicitud",
+                            "Si falta algún documento, recibirás un correo solicitando la corrección o carga adicional"
+                        ]
+                    },
+                    {
+                        title: "Realizar el pago",
+                        details: [
+                            "Una vez aprobados los documentos, recibirás una notificación para proceder al pago",
+                            "Puedes pagar:"
+                        ],
+                        subDetails: [
+                            {
+                                title: "",
+                                items: [
+                                    "En línea (tarjeta de crédito).",
+                                    "En una sucursal de Banreservas.",
+                                    "Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        title: "Depositar los documentos originales en la oficina de Migración",
+                        details: [
+                            "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                        ]
+                    },
+                    {
+                        title: "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                        details: [
+                            "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden",
+                            "Este documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                        ]
+                    }
+                ],
+            }
         }
     }
 }
