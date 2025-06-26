@@ -1,3 +1,9 @@
+export { QuestionIcon } from './QuestionIcon'
+
+export { WordInternationalIcon } from './WordInternationalIcon'
+
+export { SchoolIcon } from './SchoolIcon'
+
 export { PeopleTravelIcon } from './PeopleTravelIcon'
 
 export { PeopleTravelWordIcon } from './PeopleTravelWordIcon'

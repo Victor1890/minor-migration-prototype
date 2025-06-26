@@ -3,6 +3,13 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-family-robo: "Roboto", sans-serif;
+  --font-family-mono: "Roboto Mono", monospace;
+  --font-family-sans: "Roboto", sans-serif;
+  --font-family-serif: "Roboto", serif;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -117,11 +124,14 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
 }
 
 @layer utilities {
+  * {
+    font-family: var(--font-family-robo, "Roboto", sans-serif);
+  }
   .layout-container {
     width: 100%;
     max-width: 1200px;
