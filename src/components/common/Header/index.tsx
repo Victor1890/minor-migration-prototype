@@ -27,7 +27,7 @@ export const Header = memo(() => (
         >
           <a
             role="menuitem"
-            href="tel:+8095324233"
+            href="tel:+8095082555"
             rel="noopener noreferrer"
             className={cn(
               "mr-4 flex items-center pb-[20px] mt-[24px] group border-spacing-4 gap-2 border-b-4 border-transparent hover:border-white transition-all duration-200"
@@ -35,7 +35,7 @@ export const Header = memo(() => (
           >
             <p className="flex items-center justify-between gap-1.5 capitalize">
               ¿Necesitas ayuda?
-              <span className="font-bold">809-555-8888</span>
+              <span className="font-bold">809-508-2555</span>
             </p>
             <Headset className="size-6" />
           </a>

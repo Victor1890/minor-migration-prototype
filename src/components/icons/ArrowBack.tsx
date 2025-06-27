@@ -11,15 +11,15 @@ export function ArrowBackIcon(props: React.SVGProps<SVGSVGElement>) {
       <path
         d="M2.75 9H15.25"
         stroke="black"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M7 13.25L2.75 9L7 4.75"
         stroke="black"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
         stroke-linejoin="round"
       />
     </svg>

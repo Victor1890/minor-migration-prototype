@@ -1,5 +1,5 @@
 export const FooterMessage = () => (
-  <p className="max-w-[700px] w-full text-[#031942] font-normal text-base">
+  <p className="max-w-[896px] w-full text-[#031942] font-normal text-base">
     Si tu situación no está entre las opciones disponibles, puedes comunicarte
     con la Dirección General de Migración para recibir orientación. Puedes
     llamar al{" "}
