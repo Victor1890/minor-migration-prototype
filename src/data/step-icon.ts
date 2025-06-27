@@ -1,7 +1,8 @@
 import { DominicanIcon, DominicanWordIcon, PeopleTravelIcon, PeopleTravelWordIcon, PersonIcon, QuestionIcon, SchoolIcon, WordDominicanIcon, WordInternationalIcon } from "@/components/icons";
 
 interface StatusMigrationMinor {
-    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    label?: string;
     description: string;
 }
 
@@ -41,5 +42,13 @@ export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
     "viaja-con-un-tercero": {
         icon: PeopleTravelWordIcon,
         description: "El menor viaja con un tercero, quien no es padre o madre, y necesita autorización de ambos padres o tutores"
+    },
+    "el-menor-ha-estado-más-de-6-meses-en-el-país": {
+        label: "Si",
+        description: "El menor tiene más de seis meses en República Dominicana desde su última entrada al país."
+    },
+    "el-menor-no-ha-estado-más-de-6-meses-en-el-país": {
+        label: "No",
+        description: "El menor tiene menos de seis meses en República Dominicana desde su última entrada al país."
     }
 }

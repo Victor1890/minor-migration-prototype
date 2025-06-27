@@ -1,8 +1,6 @@
-import { Fragment } from "react";
-
 export function ContactInfo() {
   return (
-    <Fragment>
+    <div>
       <p className="text-xl font-semibold text-[#020617]">
         ¿Tienes dudas o necesitas confirmar esta información?
       </p>
@@ -31,6 +29,6 @@ export function ContactInfo() {
           <a>https://servicios.migracion.gob.do</a>
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 }
