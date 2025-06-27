@@ -7,6 +7,7 @@ import { FooterMessage } from "./FooterMessage";
 import { getNodeById } from "@/utils/array";
 import { Button } from "@/components/ui/button";
 import { MoveLeft } from "lucide-react";
+import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
 
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
@@ -56,33 +57,37 @@ export function Container() {
     navigationStack,
   } = useFormDataStore();
 
+  // Obtener el contexto de navegación basado en el estado actual
+  const isAtRoot = isRootLevel(formData.slug, navigationStack.length);
+  const navigationContext = getNavigationContext(formData.slug, isAtRoot);
+
   return (
     <>
       {navigationStack.length > 0 && formData.slug && (
-        <Button
-          variant={"outline"}
-          className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
-          onClick={() => {
-            const prevId = popFromStack();
-            const prevForm = getNodeById(DATA_DUMB as any, prevId || "");
-            if (prevForm) return setFormData(prevForm);
-            resetFormData();
-          }}
-        >
-          <MoveLeft />
-          Paso anterior
-        </Button>
+        <div className="pb-8">
+          <Button
+            variant={"outline"}
+            className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
+            onClick={() => {
+              const prevId = popFromStack();
+              const prevForm = getNodeById(DATA_DUMB as any, prevId || "");
+              if (prevForm) return setFormData(prevForm);
+              resetFormData();
+            }}
+          >
+            <MoveLeft />
+            Paso anterior
+          </Button>
+        </div>
       )}
 
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-1">
           <h1 className="font-bold text-[28px] text-[#020617]">
-            {formData.label ? formData.label : DATA_DUMB[0].label}
+            {navigationContext.title}
           </h1>
           <p className="text-base font-normal text-[#727272]">
-            {formData.description
-              ? formData.description
-              : DATA_DUMB[0].description}
+            {navigationContext.description}
           </p>
         </div>
         <div className="pb-6 w-full">

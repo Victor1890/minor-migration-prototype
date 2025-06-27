@@ -3561,6 +3561,6 @@ export const DATA_DUMB = [
         description: "Selecciona esta opción si no estás seguro de qué opción elegir o tu situación no aparece entre las disponibles",
         children: []
     }
-]
+];
 
 export type HierarchyNode = typeof DATA_DUMB[number];
