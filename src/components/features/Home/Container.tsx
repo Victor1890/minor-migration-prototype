@@ -118,15 +118,19 @@ export function Container() {
 
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-1">
-            <h1 className="font-bold text-[28px] text-[#020617]">
+            <h1 className="font-bold text-[28px] text-[#020617] leading-none">
               {specialView === "not_found"
                 ? "No necesitas permiso para este caso"
                 : specialView === "no_viable"
-                ? "Tu situación no está en la lista de opciones"
+                ? "No ves la situación del menor en la lista de opciones o no estas seguro de que opción seleccionar?"
                 : navigationContext.title}
             </h1>
             <p className="text-base font-normal text-[#727272]">
-              {specialView === "not_found" ? "" : navigationContext.description}
+              {specialView === "not_found"
+                ? ""
+                : specialView === "no_viable"
+                ? "No te preocupes. Si no encuentras la situación del menor o tienes dudas sobre qué opción elegir, te guiaremos para recibir la ayuda adecuada."
+                : navigationContext.description}
             </p>
           </div>
           <div className="pb-6 w-full">
