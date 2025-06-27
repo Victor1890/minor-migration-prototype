@@ -4,8 +4,15 @@ import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
 import { LABEL_ICON_DETAILS } from "@/utils/step-icon";
 import { FooterMessage } from "./FooterMessage";
+import { getNodeById } from "@/utils/array";
+import { Button } from "@/components/ui/button";
+import { MoveLeft } from "lucide-react";
 
-export const StatusCard = ({ item }: { item: HierarchyNode }) => {
+interface HierarchyNodeCardProps {
+  item: HierarchyNode;
+}
+
+export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
   const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
 
   const { description, icon: Icon } = LABEL_ICON_DETAILS[item.slug] || {};
@@ -39,21 +46,6 @@ export const StatusCard = ({ item }: { item: HierarchyNode }) => {
   );
 };
 
-function findById(data: HierarchyNode[], id: string): any | undefined {
-  for (const item of data) {
-    if (item.id === id) {
-      return item;
-    }
-    if (Array.isArray(item.children)) {
-      const found = findById(item.children as HierarchyNode[], id);
-      if (found) {
-        return found;
-      }
-    }
-  }
-  return undefined;
-}
-
 export function Container() {
   const {
     formData,
@@ -67,16 +59,19 @@ export function Container() {
   return (
     <>
       {navigationStack.length > 0 && formData.slug && (
-        <button
+        <Button
+          variant={"outline"}
+          className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
           onClick={() => {
             const prevId = popFromStack();
-            const prevForm = findById(DATA_DUMB as any, prevId || "");
+            const prevForm = getNodeById(DATA_DUMB as any, prevId || "");
             if (prevForm) return setFormData(prevForm);
             resetFormData();
           }}
         >
+          <MoveLeft />
           Paso anterior
-        </button>
+        </Button>
       )}
 
       <div className="flex flex-col gap-8">
@@ -100,13 +95,13 @@ export function Container() {
               )}
             >
               {formData.children.map((item: any) => {
-                return <StatusCard key={item.slug} item={item} />;
+                return <HierarchyNodeCard key={item.slug} item={item} />;
               })}
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               {DATA_DUMB.map((item) => {
-                return <StatusCard key={item.slug} item={item} />;
+                return <HierarchyNodeCard key={item.slug} item={item} />;
               })}
             </div>
           )}
