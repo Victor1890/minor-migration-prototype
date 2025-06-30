@@ -7,13 +7,7 @@ import { FooterMessage } from "./FooterMessage";
 import { getNodeById } from "@/utils/array";
 import { Button } from "@/components/ui/button";
 import { MoveLeft } from "lucide-react";
-import {
-  getNavigationContext,
-  isRootLevel,
-  // getSpecialView,
-  // buildNavigationPath,
-  type SpecialView,
-} from "@/data/navigation-context";
+import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
 import { NotFound } from "./NotFound";
 import { NoViable } from "./NoViable";
 import { Fragment, useMemo } from "react";
@@ -76,6 +70,24 @@ export function Container() {
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
 
   const renderSpecialView = useMemo(() => {
+    const documentationPage = formData?.children?.some(
+      (child: any) => child?.["Notas requisitos"]
+    );
+    if (documentationPage) {
+      return {
+        title: "Documentación requerida",
+        description:
+          "Por favor, revisa la documentación necesaria para este caso.",
+        specialView: "documentation",
+        render: (
+          <div className="flex flex-col gap-4">
+            <h2 className="text-lg font-semibold">Documentación requerida</h2>
+            <p>{documentationPage}</p>
+          </div>
+        ),
+      };
+    }
+
     const notPermission = notPermissions.find((item) => item === formData.id);
 
     if (notPermission) {
@@ -95,21 +107,20 @@ export function Container() {
     <div className="flex flex-col mx-auto">
       {navigationStack.length > 0 && formData.slug && (
         <div className="pb-8 flex justify-start items-center gap-4">
-          {!renderSpecialView?.title ? (
-            <Button
-              variant={"outline"}
-              className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
-              onClick={() => {
-                const prevId = popFromStack();
-                const prevForm = getNodeById(cases as any, prevId || "");
-                if (prevForm) return setFormData(prevForm);
-                resetFormData();
-              }}
-            >
-              <MoveLeft />
-              Paso anterior
-            </Button>
-          ) : (
+          <Button
+            variant={"outline"}
+            className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
+            onClick={() => {
+              const prevId = popFromStack();
+              const prevForm = getNodeById(cases as any, prevId || "");
+              if (prevForm) return setFormData(prevForm);
+              resetFormData();
+            }}
+          >
+            <MoveLeft />
+            Paso anterior
+          </Button>
+          {renderSpecialView?.title && (
             <Button
               variant={"ghost"}
               className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
