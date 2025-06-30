@@ -10,13 +10,15 @@ import { MoveLeft } from "lucide-react";
 import {
   getNavigationContext,
   isRootLevel,
-  getSpecialView,
-  buildNavigationPath,
+  // getSpecialView,
+  // buildNavigationPath,
   type SpecialView,
 } from "@/data/navigation-context";
 import { NotFound } from "./NotFound";
 import { NoViable } from "./NoViable";
-import { useMemo } from "react";
+import { Fragment, useMemo } from "react";
+
+const { cases, notPermissions } = DATA_DUMB;
 
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
@@ -70,42 +72,36 @@ export function Container() {
     navigationStack,
   } = useFormDataStore();
 
-  // Obtener el contexto de navegación basado en el estado actual
   const isAtRoot = isRootLevel(formData.slug, navigationStack.length);
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
 
-  // Construir la ruta de navegación y determinar si mostrar una vista especial
-  const navigationPath = buildNavigationPath(
-    navigationStack,
-    formData.slug,
-    DATA_DUMB
-  );
-  const specialView: SpecialView = getSpecialView(navigationPath);
-
-  console.log("Special View:", specialView, navigationPath);
-
   const renderSpecialView = useMemo(() => {
-    switch (specialView) {
-      case "not_found":
-        return <NotFound />;
-      case "no_viable":
-        return <NoViable />;
-      default:
-        return null;
-    }
-  }, [specialView]);
+    const notPermission = notPermissions.find((item) => item === formData.id);
 
-  if (specialView) {
-    return (
-      <div className="flex flex-col mx-auto max-w-[768px]">
-        {navigationStack.length > 0 && formData.slug && (
-          <div className="pb-8">
+    if (notPermission) {
+      return {
+        title: "No necesitas permiso para este caso",
+        description:
+          "No te preocupes, no necesitas un permiso especial para este caso.",
+        specialView: "not_found",
+        render: <NotFound />,
+      };
+    }
+
+    return null;
+  }, [formData]);
+
+  return (
+    <div className="flex flex-col mx-auto">
+      {navigationStack.length > 0 && formData.slug && (
+        <div className="pb-8 flex justify-start items-center gap-4">
+          {!renderSpecialView?.title ? (
             <Button
               variant={"outline"}
               className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
               onClick={() => {
                 const prevId = popFromStack();
-                const prevForm = getNodeById(DATA_DUMB as any, prevId || "");
+                const prevForm = getNodeById(cases as any, prevId || "");
                 if (prevForm) return setFormData(prevForm);
                 resetFormData();
               }}
@@ -113,91 +109,56 @@ export function Container() {
               <MoveLeft />
               Paso anterior
             </Button>
-          </div>
-        )}
-
-        <div className="flex flex-col gap-8">
-          <div className="flex flex-col gap-1">
-            <h1 className="font-bold text-[28px] text-[#020617] leading-none">
-              {specialView === "not_found"
-                ? "No necesitas permiso para este caso"
-                : specialView === "no_viable"
-                ? "No ves la situación del menor en la lista de opciones o no estas seguro de que opción seleccionar?"
-                : navigationContext.title}
-            </h1>
-            <p className="text-base font-normal text-[#727272]">
-              {specialView === "not_found"
-                ? ""
-                : specialView === "no_viable"
-                ? "No te preocupes. Si no encuentras la situación del menor o tienes dudas sobre qué opción elegir, te guiaremos para recibir la ayuda adecuada."
-                : navigationContext.description}
-            </p>
-          </div>
-          <div className="pb-6 w-full">
-            {renderSpecialView}
-            <div className="py-12">
-              <FooterMessage />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  return (
-    <>
-      {navigationStack.length > 0 && formData.slug && (
-        <div className="pb-8">
-          <Button
-            variant={"outline"}
-            className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
-            onClick={() => {
-              const prevId = popFromStack();
-              const prevForm = getNodeById(DATA_DUMB as any, prevId || "");
-              if (prevForm) return setFormData(prevForm);
-              resetFormData();
-            }}
-          >
-            <MoveLeft />
-            Paso anterior
-          </Button>
+          ) : (
+            <Button
+              variant={"ghost"}
+              className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
+              onClick={() => resetFormData()}
+            >
+              Volver al inicio
+            </Button>
+          )}
         </div>
       )}
 
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-1">
           <h1 className="font-bold text-[28px] text-[#020617]">
-            {navigationContext.title}
+            {renderSpecialView?.title || navigationContext.title}
           </h1>
           <p className="text-base font-normal text-[#727272]">
-            {navigationContext.description}
+            {renderSpecialView?.description || navigationContext.description}
           </p>
         </div>
         <div className="pb-6 w-full">
-          {show && formData?.children ? (
-            <div
-              className={cn(
-                "grid grid-cols-1 gap-4",
-                formData.children.length == 2 && "lg:grid-cols-2",
-                formData.children.length > 2 && "lg:grid-cols-3"
+          {renderSpecialView?.render || (
+            <Fragment>
+              {show && formData?.children ? (
+                <div
+                  className={cn(
+                    "grid grid-cols-1 gap-4",
+                    formData.children.length == 2 && "lg:grid-cols-2",
+                    formData.children.length > 2 && "lg:grid-cols-3"
+                  )}
+                >
+                  {formData.children.map((item: any) => {
+                    return <HierarchyNodeCard key={item.slug} item={item} />;
+                  })}
+                </div>
+              ) : (
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                  {cases.map((item) => {
+                    return <HierarchyNodeCard key={item.slug} item={item} />;
+                  })}
+                </div>
               )}
-            >
-              {formData.children.map((item: any) => {
-                return <HierarchyNodeCard key={item.slug} item={item} />;
-              })}
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-              {DATA_DUMB.map((item) => {
-                return <HierarchyNodeCard key={item.slug} item={item} />;
-              })}
-            </div>
+            </Fragment>
           )}
           <div className="py-12">
             <FooterMessage />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
