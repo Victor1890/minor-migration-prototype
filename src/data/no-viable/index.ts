@@ -13,7 +13,7 @@ interface BranchOfficeData {
 }
 
 
-export const BRANCH_OFFICE_DATA = [
+export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
     {
         title: "Puedes visitar nuestras oficinas",
         data: [

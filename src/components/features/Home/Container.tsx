@@ -74,7 +74,7 @@ export function Container() {
     const documentationPage = formData?.children?.some(
       (child: any) => child?.["Notas requisitos"]
     );
-    if (!documentationPage) {
+    if (documentationPage) {
       return {
         title: "Documentos obligatorios y pasos para tu caso",
         description:

@@ -5,20 +5,19 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Card, CardContent } from "@/components/ui/card";
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { DETAILS_OF_PROCESS_DOCUMENTATION } from "@/data/documentation-data";
-import { cn } from "@/lib/utils";
+  DETAILS_OF_PROCESS_DOCUMENTATION,
+  REQUERID_DOCUMENTS,
+} from "@/data/documentation-data";
+import { useFormDataStore } from "@/store/form-data.store";
 import { AlertCircleIcon, CircleMinus, CirclePlus } from "lucide-react";
 import { useState } from "react";
 
 export function DocAccordion() {
   const [selected, setSelected] = useState<string>("");
+  // const { formData } = useFormDataStore();
+
   return (
     <Accordion
       type="single"
@@ -45,25 +44,24 @@ export function DocAccordion() {
         <AccordionContent className="px-6 pb-6">
           <div className="space-y-4">
             <div className="space-y-4">
-              <div>
-                <div className="font-semibold text-slate-800 text-base">
-                  1. Autorización judicial
+              {REQUERID_DOCUMENTS.map((doc, idx) => (
+                <div key={doc.title}>
+                  <span className="font-semibold text-slate-800 text-base">
+                    {/* 1. Autorización judicial */}
+                    {idx + 1}. {doc.title}
+                  </span>
+                  {doc.details?.length ? (
+                    <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
+                      {doc.details?.map((desc, descIndex) => (
+                        <li
+                          key={descIndex}
+                          dangerouslySetInnerHTML={{ __html: desc }}
+                        />
+                      ))}
+                    </ul>
+                  ) : null}
                 </div>
-                <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
-                  <li>
-                    Resolución emitida por el Tribunal de Niños, Niñas y
-                    Adolescentes, autorizando la salida del menor.
-                  </li>
-                  <li>
-                    Esta autorización suple la firma del padre o madre que no
-                    autoriza.
-                  </li>
-                  <li>
-                    Debe estar certificada y legalizada por la Procuraduría
-                    General de la República.
-                  </li>
-                </ul>
-              </div>
+              ))}
             </div>
 
             <Alert className="bg-white border-white relative grid-cols-none">

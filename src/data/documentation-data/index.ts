@@ -60,6 +60,49 @@ interface DocumentationData {
     };
 }
 
+export const REQUERID_DOCUMENTS: RequiredDocument[] = [
+    {
+        title: "Autorización judicial",
+        details: [
+            "Resolución emitida por el Tribunal de Niños, Niñas y Adolescentes, autorizando la salida del menor.",
+            "Esta autorización suple la firma del padre o madre que no autoriza.",
+            "Debe estar certificada y legalizada por la Procuraduría General de la República.",
+        ],
+    },
+    {
+        title: "Acta de nacimiento del menor",
+        details: ["Versión reciente con código QR o número de evento."],
+    },
+    {
+        title: "Copia o foto del pasaporte del menor",
+        details: [
+            "Una foto o copia de la página principal con los datos biométricos.",
+        ],
+    },
+    {
+        title: "Copia del pasaporte del acompañante",
+        details: [
+            "Solo si el menor viaja con un tercero. Debe incluir los datos biométricos (si es extranjero).",
+        ],
+    },
+    {
+        title: "Copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+        details: [
+            "Solo si el menor viaja con un tercero. Debe incluir los datos biométricos (si es extranjero).",
+        ],
+    },
+    {
+        title: "Fotografía 2x2 del menor",
+        details: ["De frente y reciente."],
+    },
+    {
+        title: "Comprobante de pago",
+        details: [
+            "Puede realizarse en línea o presencial en BanReservas a nombre del padre, madre o tutor.",
+        ],
+    },
+];
+
 // Datos de documentación
 export const documentationData: DocumentationData = {
     title: "Documentos obligatorios",
