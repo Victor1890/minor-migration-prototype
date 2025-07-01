@@ -71,6 +71,16 @@ export function Container() {
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
 
   const renderSpecialView = useMemo(() => {
+    const notPermission = notPermissions.find((item) => item === formData.id);
+    if (notPermission) {
+      return {
+        title: "No necesitas permiso para este caso",
+        description:
+          "No te preocupes, no necesitas un permiso especial para este caso.",
+        render: <NotFound />,
+      };
+    }
+
     const notViablePage = notFoundCase.find((item) => item === formData.id);
     if (notViablePage) {
       return {
@@ -91,16 +101,6 @@ export function Container() {
         description:
           "Antes de iniciar tu solicitud, asegúrate de contar con todos los documentos requeridos y sigue los pasos detallados para completar el proceso sin contratiempos. Esta guía está basada en tu caso específico.",
         render: <Documentation />,
-      };
-    }
-
-    const notPermission = notPermissions.find((item) => item === formData.id);
-    if (notPermission) {
-      return {
-        title: "No necesitas permiso para este caso",
-        description:
-          "No te preocupes, no necesitas un permiso especial para este caso.",
-        render: <NotFound />,
       };
     }
 
