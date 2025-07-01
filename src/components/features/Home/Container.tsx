@@ -13,7 +13,7 @@ import { NoViable } from "./components/NoViable";
 import { Fragment, useMemo } from "react";
 import { Documentation } from "./components/Documentation";
 
-const { cases, notPermissions } = DATA_DUMB;
+const { cases, notPermissions, notFoundCase } = DATA_DUMB;
 
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
@@ -71,6 +71,17 @@ export function Container() {
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
 
   const renderSpecialView = useMemo(() => {
+    const notViablePage = notFoundCase.find((item) => item === formData.id);
+    if (notViablePage) {
+      return {
+        title:
+          "No ves la situación del menor en la lista de opciones o no estas seguro de que opción seleccionar?",
+        description:
+          "No te preocupes. Si no encuentras la situación del menor o tienes dudas sobre qué opción elegir, te guiaremos para recibir la ayuda adecuada.",
+        render: <NoViable />,
+      };
+    }
+
     const documentationPage = formData?.children?.some(
       (child: any) => child?.["Notas requisitos"]
     );
@@ -79,19 +90,16 @@ export function Container() {
         title: "Documentos obligatorios y pasos para tu caso",
         description:
           "Antes de iniciar tu solicitud, asegúrate de contar con todos los documentos requeridos y sigue los pasos detallados para completar el proceso sin contratiempos. Esta guía está basada en tu caso específico.",
-        specialView: "documentation",
         render: <Documentation />,
       };
     }
 
     const notPermission = notPermissions.find((item) => item === formData.id);
-
     if (notPermission) {
       return {
         title: "No necesitas permiso para este caso",
         description:
           "No te preocupes, no necesitas un permiso especial para este caso.",
-        specialView: "not_found",
         render: <NotFound />,
       };
     }

@@ -3611,9 +3611,14 @@ export const DATA_DUMB = {
         "3.1.1.4",
         "3.2",
         "4"
+    ],
+    "notFoundCase": [
+        "6"
     ]
 }
 
 export type HierarchyNode = typeof DATA_DUMB.cases[number];
 
 export type NotPermission = typeof DATA_DUMB.notPermissions;
+
+export type NotFoundCase = typeof DATA_DUMB.notFoundCase;

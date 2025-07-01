@@ -35,7 +35,7 @@ export function NoViable() {
         </div>
       </div>
 
-      <Divider className="my-8" />
+      <Divider className="my-3" />
 
       <Accordion type="single" collapsible defaultValue="no-viable">
         {BRANCH_OFFICE_DATA.map((branch, index) => (
