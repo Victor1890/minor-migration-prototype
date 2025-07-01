@@ -8,9 +8,10 @@ import { getNodeById } from "@/utils/array";
 import { Button } from "@/components/ui/button";
 import { MoveLeft } from "lucide-react";
 import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
-import { NotFound } from "./NotFound";
-import { NoViable } from "./NoViable";
+import { NotFound } from "./components/NotFound";
+import { NoViable } from "./components/NoViable";
 import { Fragment, useMemo } from "react";
+import { Documentation } from "./components/Documentation";
 
 const { cases, notPermissions } = DATA_DUMB;
 
@@ -73,18 +74,13 @@ export function Container() {
     const documentationPage = formData?.children?.some(
       (child: any) => child?.["Notas requisitos"]
     );
-    if (documentationPage) {
+    if (!documentationPage) {
       return {
-        title: "Documentación requerida",
+        title: "Documentos obligatorios y pasos para tu caso",
         description:
-          "Por favor, revisa la documentación necesaria para este caso.",
+          "Antes de iniciar tu solicitud, asegúrate de contar con todos los documentos requeridos y sigue los pasos detallados para completar el proceso sin contratiempos. Esta guía está basada en tu caso específico.",
         specialView: "documentation",
-        render: (
-          <div className="flex flex-col gap-4">
-            <h2 className="text-lg font-semibold">Documentación requerida</h2>
-            <p>{documentationPage}</p>
-          </div>
-        ),
+        render: <Documentation />,
       };
     }
 

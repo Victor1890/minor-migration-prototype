@@ -209,14 +209,37 @@ export const documentationData: DocumentationData = {
     },
 };
 
-type DocumentationDataMap = {
-    [key: string]: {
-        [key: string]: {
-            // [key: string]: RequiredDocument[];
-            [key: string]: {
-                required: RequiredDocument[];
-                onlineServiceSteps: OnlineServiceStep[];
-            }
-        }
+export const DETAILS_OF_PROCESS_DOCUMENTATION = [
+    {
+        title: "Horario de prestación",
+        slug: "horario-de-prestación",
+        desc: [
+            "Lunes a viernes de 8:00 AM. a 4:00 PM.",
+            "(En verano y navidad el horario se extiende hasta las 6:00 PM. por el aumento de la demanda)"
+        ]
+    },
+    {
+        title: "Costo",
+        slug: "costo",
+        desc: [
+            "Un menor – <strong>RD$ 2,000.00</strong>",
+            "Menores adicionales en el mismo documento (Hermanos) – <strong>RD$ 1,500.00 (cada uno)</strong>",
+        ]
+    },
+    {
+        title: "Tiempo de realización",
+        slug: "tiempo-de-realización",
+        desc: [
+            "48 Horas laborables.",
+            "Después de haber depositado físicamente los documentos requeridos.( Si al evaluar el expediente y en el sistema está todo correcto )"
+        ]
+    },
+    {
+        title: "Canal de Prestación",
+        slug: "canal-de-prestación",
+        desc: [
+            "<strong>En línea</strong>: Completa todo el proceso desde el portal web de Migración.",
+            "<strong>Presencial</strong>: Puedes realizar el proceso directamente en las oficinas de Migración."
+        ]
     }
-};
+]
