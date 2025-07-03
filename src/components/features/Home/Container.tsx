@@ -10,8 +10,18 @@ import { MoveLeft } from "lucide-react";
 import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
 import { NotFound } from "./components/NotFound";
 import { NoViable } from "./components/NoViable";
-import { Fragment, useMemo } from "react";
+import { Fragment, useMemo, useState } from "react";
 import { Documentation } from "./components/Documentation";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Divider } from "@/components/ui/divider";
+import { Label } from "@/components/ui/label";
 
 const { cases, notPermissions, notFoundCase } = DATA_DUMB;
 
@@ -21,39 +31,99 @@ interface HierarchyNodeCardProps {
 
 export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
   const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
+  const [data, setData] = useState<HierarchyNode | null>(null);
+
+  const isMoreInfoAvailable = useMemo(() => {
+    const isValid = ["1.1", "2.2", "3.2", "4"].includes(item.id);
+    if (isValid) return false;
+    return item?.children?.some((child: any) => child?.["Notas requisitos"]);
+  }, [item]);
 
   const {
     description,
     icon: Icon,
     label,
-  } = LABEL_ICON_DETAILS[item.slug] || {};
+  } = useMemo(() => LABEL_ICON_DETAILS[item.slug] || {}, [item.slug]);
 
   return (
-    <Card
-      className={cn(
-        "flex flex-col",
-        "border hover:shadow-md transition-shadow cursor-pointer",
-        formData.slug === item.slug && "bg-card/90 ring-2 ring-blue-500"
+    <Fragment>
+      <Card
+        className={cn(
+          "flex flex-col",
+          "border hover:shadow-md transition-shadow cursor-pointer",
+          formData.slug === item.slug && "bg-card/90 ring-2 ring-blue-500"
+        )}
+        onClick={() => {
+          pushToStack(formData.id);
+          setFormData(item);
+          setShow(true);
+        }}
+        key={item.slug}
+      >
+        <CardHeader className="flex flex-col items-start">
+          {Icon && <Icon />}
+          <CardTitle className="text-left font-semibold text-[18px]">
+            {label || item.label}
+          </CardTitle>
+        </CardHeader>
+        <CardFooter className="bg-[#F9FAFB] px-8 py-4 rounded-b-xl grow">
+          {!isMoreInfoAvailable ? (
+            <p className="text-base font-normal text-[#4B5563]">
+              {description || item.description || "Descripción no disponible."}
+            </p>
+          ) : (
+            <Button
+              onClick={(e) => {
+                e.stopPropagation();
+                setData(item);
+              }}
+              variant={"ghost"}
+              className="text-base font-normal text-[#0072D7] cursor-pointer hover:text-[#0056A3] flex items-center gap-2"
+            >
+              Ver más información
+            </Button>
+          )}
+        </CardFooter>
+      </Card>
+      {data && (
+        <Dialog open={!!data}>
+          <DialogContent className="gap-0" activeBtnClose={false}>
+            <DialogHeader>
+              <DialogTitle>{data.label}</DialogTitle>
+            </DialogHeader>
+
+            <Divider className="my-6" />
+
+            <div className="flex flex-col gap-4 mb-8">
+              <div className="flex flex-col items-start gap-1">
+                <Label className="font-semibold text-xl">Descripción</Label>
+                <DialogDescription className="text-base font-normal text-[#475569]">
+                  {data.description || "Descripción no disponible."}
+                </DialogDescription>
+              </div>
+              <div className="flex flex-col items-start gap-1">
+                <Label className="font-semibold text-xl">Importante</Label>
+                <DialogDescription className="text-base font-normal text-[#475569]">
+                  Si el menor viaja con otra persona que no sea su madre, aunque
+                  tenga un solo apellido, sí deberá presentar una autorización
+                  firmada por la madre a través de un poder notarial legalizado.
+                </DialogDescription>
+              </div>
+            </div>
+
+            <DialogFooter>
+              <Button
+                variant={"default"}
+                className="rounded-full flex gap-2 items-center hover:bg-[#0072D7]/90 bg-[#0072D7] border-[#0072D7] max-w-[163px]"
+                onClick={() => setData(null)}
+              >
+                Cerrar
+              </Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       )}
-      onClick={() => {
-        pushToStack(formData.id);
-        setFormData(item);
-        setShow(true);
-      }}
-      key={item.slug}
-    >
-      <CardHeader className="flex flex-col items-start">
-        {Icon && <Icon />}
-        <CardTitle className="text-left font-semibold text-[18px]">
-          {label || item.label}
-        </CardTitle>
-      </CardHeader>
-      <CardFooter className="bg-[#F9FAFB] px-8 py-4 rounded-b-xl grow">
-        <p className="text-base font-normal text-[#4B5563]">
-          {description || item.description || "Descripción no disponible."}
-        </p>
-      </CardFooter>
-    </Card>
+    </Fragment>
   );
 };
 
