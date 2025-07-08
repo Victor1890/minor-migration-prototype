@@ -36,7 +36,7 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
   const isMoreInfoAvailable = useMemo(() => {
     const isValid = ["1.1", "2.2", "3.2", "4"].includes(item.id);
     if (isValid) return false;
-    return item?.children?.some((child: any) => child?.["Notas requisitos"]);
+    return item?.children?.some((child: any) => child?.["document"]);
   }, [item]);
 
   const {
@@ -163,7 +163,7 @@ export function Container() {
     }
 
     const documentationPage = formData?.children?.some(
-      (child: any) => child?.["Notas requisitos"]
+      (child: any) => Object.keys(child?.["process_online"] || {}).length > 0
     );
     if (documentationPage) {
       return {

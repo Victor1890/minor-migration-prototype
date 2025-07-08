@@ -12,9 +12,11 @@ export const DATA_DUMB = {
                     "description": "Cuando ambos padres viajaran con el menor",
                     "children": [
                         {
-                            "Requisitos": [],
-                            "Notas requisitos": "Ninguno",
-                            "Paso a paso": "No requiere presentar PSM en Control Migratorio"
+                            "document": {
+                                "Requisitos": "Ninguno",
+                                "Notas requisitos": "No requiere presentar PSM en Control Migratorio"
+                            },
+                            "process_online": {}
                         }
                     ]
                 },
@@ -31,64 +33,96 @@ export const DATA_DUMB = {
                             "description": "Cuando uno de los padres autoriza al otro a viajar con el menor",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                    "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB ",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                        "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -99,64 +133,96 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con la persona que tiene la guarda legal de este",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                    "Paso a paso": "· Ambos padres o tutores deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                        "Notas requisitos": "Ambos padres o tutores deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -167,10 +233,11 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor ha sido declarado solo por la madre y es ella quien le acompaña a viajar",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Acta de nacimiento",
-                                    "Paso a paso": "Presentar acta en el  punto de Control Migratorio",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Acta de nacimiento",
+                                        "Notas requisitos": "Presentar acta en el  punto de Control Migratorio"
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -181,10 +248,10 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja acompañado por su único padre o madre que aún está vivo",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Mostrar en Control Migratorio el acta de defunción y acta de nacimiento del menor",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Mostrar en Control Migratorio el acta de defunción y acta de nacimiento del menor"
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -195,64 +262,96 @@ export const DATA_DUMB = {
                             "description": "cuando el menor viaja por primera vez luego de ser adoptado por personas extranjeras",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Sentencia del tribunal  de niños, niñas y adolescentes que evidencie la adopción",
-                                    "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la adopción, original y certificada. ",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Sentencia del tribunal  de niños, niñas y adolescentes que evidencie la adopción",
+                                        "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la adopción, original y certificada."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Poder Notarial del padre que tiene la patria potestad y no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                    "Paso a paso": "· El padre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial del padre que tiene la patria potestad y no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                        "Notas requisitos": "El padre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula o pasaporte del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula o pasaporte del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: autorización judicial, poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del otro padre adoptivo que viaja con el menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del otro padre adoptivo que viaja con el menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, el poder notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -260,67 +359,99 @@ export const DATA_DUMB = {
                             "id": "1.2.6",
                             "label": "Uno de los padres vive en el extranjero",
                             "slug": "uno-de-los-padres-vive-en-el-extranjero",
-                            "description": "Cuando el menor viaja acompañado padre o madre que está en el país, y el padre en el extranjero es quien autoriza la salida del menor",
+                            "description": "Cuando el menor viaja acompañado por el padre o madre que está en el país, y el padre o madre en el extranjero es quien autoriza la salida del menor",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder consular otorgado en el país en donde se encuentra el padre (debe ser apostillado y sellado en cancilleria) o Poder Notarial legalizado del país donde se encuentre el padre en  original con apostilla de la Haya",
-                                    "Paso a paso": "· El padre en el extranjero debe firmar el poder consular (en el consulado más cercana) autorizando la salida del menor.\r\n· Este poder debe ser legalizado en el Ministerio de Relaciones Exteriores de la República Dominicana.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder consular otorgado en el país en donde se encuentra el padre (debe ser apostillado y sellado en cancilleria) o Poder Notarial legalizado del país donde se encuentre el padre en  original con apostilla de la Haya",
+                                        "Notas requisitos": "El padre en el extranjero debe firmar el poder consular (en el consulado más cercana) autorizando la salida del menor.\r\nEste poder debe ser legalizado en el Ministerio de Relaciones Exteriores de la República Dominicana."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder consular o notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder consular o notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -331,64 +462,96 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con la persona que tiene la guarda legal con autorización de viaje",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Autorización judicial (sentencia, auto o resolución) que autoriza el viaje del Menor",
-                                    "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la Guarda Legal y Autorización de viaje del menor",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Autorización judicial (sentencia, auto o resolución) que autoriza el viaje del Menor",
+                                        "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la Guarda Legal y Autorización de viaje del menor"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -399,64 +562,96 @@ export const DATA_DUMB = {
                             "description": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial del padre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                    "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial del padre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                        "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -467,58 +662,90 @@ export const DATA_DUMB = {
                             "description": "Cuando uno de los padres se niega a autorizar el viaje o está ausente en la vida del menor.",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Sentencia judicial que autoriza el viaje del Menor o sentencia judical que otorga la autoridad parental unilateral al padre que viaja",
-                                    "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la patria potestad ",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Sentencia judicial que autoriza el viaje del Menor o sentencia judical que otorga la autoridad parental unilateral al padre que viaja",
+                                        "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la patria potestad"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre o  madre que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre o  madre que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del padre acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del padre acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia del pasaporte del padre acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del padre acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 }
                             ]
                         }
@@ -537,58 +764,88 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con la Aerolínea y cuenta con la autorización de ambos padres, padre, madre o tutor legal",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial de ambos padres, padre, madre o tutor (según el caso) legal autorizando la salida del menor del país con la aerolínea, legalizado por procuraduría o sentencia judicial.",
-                                    "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial de ambos padres, padre, madre o tutor (según el caso) legal autorizando la salida del menor del país con la aerolínea, legalizado por procuraduría o sentencia judicial.",
+                                        "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula de la o las personas que autorizan",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de la o las personas que autorizan",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notaral, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "Boleto o reserva del viaje",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Boleto o reserva del viaje"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 }
                             ]
                         },
@@ -599,64 +856,96 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con  una academia, centro educativo o institución cultural, y cuenta con la autorización de los padres, padre, madre o tutor legal",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial de los padres o tutores, autorizando la salida del menor del país con el centro educativo, legalizado por procuraduría. ",
-                                    "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\n· Este poder debe ser legalizado en la Procuraduría General de la República.\r\n· Los padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial de los padres o tutores, autorizando la salida del menor del país con el centro educativo, legalizado por procuraduría.",
+                                        "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\nEste poder debe ser legalizado en la Procuraduría General de la República.\r\nLos padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -667,76 +956,110 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con  una academia, selecció o liga deportiva, y cuenta con la autorización de ambos padres, padre, madre o tutor legal",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial (colectivo o individual) de los padres, autorizando la salida del o los menores del país, legalizado por procuraduría. En caso de que los padres esten fuera del pais, debera entregar el poder consular. En caso de que uno de los padres no quiere que viaje o no este presente en la vida del menor, debera entregar Autorizacion Judicial. ",
-                                    "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\n· Este poder debe ser legalizado en la Procuraduría General de la República.\r\n· Los padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial (colectivo o individual) de los padres, autorizando la salida del o los menores del país, legalizado por procuraduría. En caso de que los padres esten fuera del pais, debera entregar el poder consular. En caso de que uno de los padres no quiere que viaje o no este presente en la vida del menor, debera entregar Autorizacion Judicial.",
+                                        "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\nEste poder debe ser legalizado en la Procuraduría General de la República.\r\nLos padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": [],
-                                    "Notas requisitos": "Carta o comunicación de la organización (Academia, iglesia o liga Deportiva) local especificando el motivo del viaje",
-                                    "Paso a paso": "Opcional",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Carta o comunicación de la organización (Academia, iglesia o liga Deportiva) local especificando el motivo del viaje",
+                                        "Notas requisitos": "Opcional"
+                                    },
+                                    "process_online": {}
                                 },
                                 {
-                                    "Requisitos": [],
-                                    "Notas requisitos": "Carta de invitación de la actividad a la que asistira el menor",
-                                    "Paso a paso": "Opcional",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Carta de invitación de la actividad a la que asistira el menor",
+                                        "Notas requisitos": "Opcional"
+                                    },
+                                    "process_online": {}
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Fotos o copias de las actas de nacimiento originales del (de los)  menor(es) , con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Fotos o copias de las actas de nacimiento originales del (de los)  menor(es) , con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante o responsable",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante o responsable",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -747,64 +1070,95 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con la persona que tiene la guarda legal con autorización de viaje",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial de ambos padres, autorizando la salida del menor del país con el guarda custodia (de hecho o legal), legalizado por procuraduría. ",
-                                    "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial de ambos padres, autorizando la salida del menor del país con el guarda custodia (de hecho o legal), legalizado por procuraduría.",
+                                        "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Fotos o copias de las cédulas de identidad del padre y de la madre; o del tutor ",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Fotos o copias de las cédulas de identidad del padre y de la madre; o del tutor",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del acompañante ( si aplica)",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del acompañante ( si aplica)"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -815,64 +1169,96 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial de la madre, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                    "Paso a paso": "· La madre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial de la madre, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                        "Notas requisitos": "La madre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad de la madre ",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad de la madre",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del acompañante (si aplica)",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del acompañante (si aplica)",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -883,70 +1269,102 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con la persona que ha autorizado el padre o madre sobreviviente",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial del padre sobreviviente, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                    "Paso a paso": "· El padre sobreviviente debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial del padre sobreviviente, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                        "Notas requisitos": "El padre sobreviviente debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 },
                                 {
-                                    "Requisitos": "11",
-                                    "Notas requisitos": "Acta de defunción del padre fallecido  con codigo QR legible",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Acta de defunción del padre fallecido  con codigo QR legible"
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -957,70 +1375,101 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con la persona que ha autorizado el tutor legal",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial del tutor (es) legal, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                    "Paso a paso": "· El tutor legal debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial del tutor (es) legal, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                        "Notas requisitos": "El tutor legal debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad de el o los tutores que realizan la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad de el o los tutores que realizan la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Sentencia que otorga la tutoría legal del menor",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Sentencia que otorga la tutoría legal del menor"
+                                    },
+                                    "process_online": {}
                                 },
                                 {
-                                    "Requisitos": "11",
-                                    "Notas requisitos": "Cédula del acompañante",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Cédula del acompañante"
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -1031,64 +1480,95 @@ export const DATA_DUMB = {
                             "description": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                    "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                        "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Fotos o copia sde las cédulas de identidad de ambos padres o tutor (es) ",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Fotos o copia sde las cédulas de identidad de ambos padres o tutor (es)",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial o consular, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder consular o notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "Cédula del acompañante ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Cédula del acompañante"
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         },
@@ -1099,70 +1579,104 @@ export const DATA_DUMB = {
                             "description": "Cuando no se tiene la autorización de viaje de parte de uno de los padres",
                             "children": [
                                 {
-                                    "Requisitos": "1",
-                                    "Notas requisitos": "Sentencia Judicial que otorga la autorización de viaje del menor",
-                                    "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la autorización de viaje ",
-                                    "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Sentencia Judicial que otorga la autorización de viaje del menor",
+                                        "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la autorización de viaje"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "Si la sentencia que posee tiene más de 1 año y 6 meses, debe depositar también la certificación de la sentencia, y la legalización"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "2",
-                                    "Notas requisitos": "Poder Notarial del padre que tiene la autorización de viaje y no viaja, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                    "Paso a paso": "· El padre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                    "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                    "document": {
+                                        "Requisitos": "Poder Notarial del padre que tiene la autorización de viaje y no viaja, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                        "Notas requisitos": "El padre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "3",
-                                    "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                    "Paso a paso": [],
-                                    "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                    "document": {
+                                        "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "4",
-                                    "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos",
+                                        "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "5",
-                                    "Notas requisitos": "Cédula de identidad del acompañante (si aplica)",
-                                    "Paso a paso": "Versión nueva",
-                                    "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                    "document": {
+                                        "Requisitos": "Cédula de identidad del acompañante (si aplica)",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
                                 },
                                 {
-                                    "Requisitos": "6",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "6. Esperar validación de los documentos"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos",
+                                        "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "7",
-                                    "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                    "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                    "Notas paso a paso": "7. Realizar el pago"
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago",
+                                        "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "8",
-                                    "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                        "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "9",
-                                    "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                    "Paso a paso": "De la página principal con los datos biométricos.",
-                                    "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                        "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                    }
                                 },
                                 {
-                                    "Requisitos": "10",
-                                    "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                    "Paso a paso": "De frente, reciente y fondo claro",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {}
                                 },
                                 {
-                                    "Requisitos": "11",
-                                    "Notas requisitos": "Recibo de pago del servicio ",
-                                    "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                    "Notas paso a paso": []
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
                                 }
                             ]
                         }
@@ -1193,64 +1707,96 @@ export const DATA_DUMB = {
                                     "description": "Cuando uno de los padres autoriza al otro a viajar con el menor",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB ",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1258,66 +1804,99 @@ export const DATA_DUMB = {
                                     "id": "2.1.1.2",
                                     "label": "Tiene la guarda legal del menor",
                                     "slug": "tiene-la-guarda-legal-del-menor",
+                                    "description": "Cuando el menor viaja con la persona que tiene la guarda legal de este",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el guarda, legalizado por procuraduría. ",
-                                            "Paso a paso": "· Ambos padres o tutores deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el guarda, legalizado por procuraduría.",
+                                                "Notas requisitos": "Ambos padres o tutores deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1325,12 +1904,14 @@ export const DATA_DUMB = {
                                     "id": "2.1.1.3",
                                     "label": "Menor tiene un solo apellido (el del madre) y viaja con su madre",
                                     "slug": "menor-tiene-un-solo-apellido-(el-del-madre)-y-viaja-con-su-madre",
+                                    "description": "Cuando el menor ha sido declarado solo por la madre y es ella quien le acompaña a viajar",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Acta de nacimiento",
-                                            "Paso a paso": "Presentar acta en el aeropuerto",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Acta de nacimiento",
+                                                "Notas requisitos": "Presentar acta en el aeropuerto"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1338,12 +1919,11 @@ export const DATA_DUMB = {
                                     "id": "2.1.1.4",
                                     "label": "Viaja con uno de sus padres y el otro ha fallecido",
                                     "slug": "viaja-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                                    "description": "Cuando el menor viaja acompañado por su único padre o madre que aún está vivo",
                                     "children": [
                                         {
-                                            "Requisitos": "Mostrar en Control Migratorio el acta de defunción y acta de nacimiento del menor",
-                                            "Notas requisitos": [],
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {},
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1351,66 +1931,99 @@ export const DATA_DUMB = {
                                     "id": "2.1.1.5",
                                     "label": "Menor adoptado por personas extranjeras y viaja por primera vez",
                                     "slug": "menor-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                                    "description": "Cuando el menor viaja por primera vez luego de ser adoptado por personas extranjeras",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Sentencia del tribunal  de niños, niñas y adolescentes que evidencie la adopción",
-                                            "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la adopción, original y certificada. ",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Sentencia del tribunal  de niños, niñas y adolescentes que evidencie la adopción",
+                                                "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la adopción, original y certificada."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Poder Notarial del padre que tiene la patria potestad y no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre que tiene la patria potestad y no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula o pasaporte del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula o pasaporte del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: autorización judicial, poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del otro padre adoptivo que viaja con el menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del otro padre adoptivo que viaja con el menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, el poder notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1418,66 +2031,99 @@ export const DATA_DUMB = {
                                     "id": "2.1.1.6",
                                     "label": "Uno de los padres vive en el extranjero",
                                     "slug": "uno-de-los-padres-vive-en-el-extranjero",
+                                    "description": "Cuando el menor viaja acompañado por el padre o madre que está en el país, y el padre o madre en el extranjero es quien autoriza la salida del menor",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder consular otorgado en el país en donde se encuentra el padre (debe ser apostillado y sellado en cancilleria) o Poder Notarial legalizado del país donde se encuentre el padre en  original con apostilla de la Haya",
-                                            "Paso a paso": "· El padre en el extranjero debe firmar el poder consular (en el consulado más cercana) autorizando la salida del menor.\r\n· Este poder debe ser legalizado en el Ministerio de Relaciones Exteriores de la República Dominicana.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder consular otorgado en el país en donde se encuentra el padre (debe ser apostillado y sellado en cancilleria) o Poder Notarial legalizado del país donde se encuentre el padre en  original con apostilla de la Haya",
+                                                "Notas requisitos": "El padre en el extranjero debe firmar el poder consular (en el consulado más cercana) autorizando la salida del menor.\r\nEste poder debe ser legalizado en el Ministerio de Relaciones Exteriores de la República Dominicana."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder consular o notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder consular o notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1485,66 +2131,99 @@ export const DATA_DUMB = {
                                     "id": "2.1.1.7",
                                     "label": "Tiene autorización de viaje del menor del tribunal Niños, Niñas y Adolescentes",
                                     "slug": "tiene-autorización-de-viaje-del-menor-del-tribunal-niños,-niñas-y-adolescentes",
+                                    "description": "Cuando el menor viaja con la persona que tiene la guarda legal con autorización de viaje",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Autorización judicial (sentencia, auto o resolución) que autoriza el viaje del Menor",
-                                            "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la Guarda Legal y Autorización de viaje del menor",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Autorización judicial (sentencia, auto o resolución) que autoriza el viaje del Menor",
+                                                "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la Guarda Legal y Autorización de viaje del menor"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1552,66 +2231,99 @@ export const DATA_DUMB = {
                                     "id": "2.1.1.8",
                                     "label": "Viaja a una actividad cultural, escolar o deportiva",
                                     "slug": "viaja-a-una-actividad-cultural,-escolar-o-deportiva",
+                                    "description": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial del padre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1622,58 +2334,90 @@ export const DATA_DUMB = {
                                     "description": "Cuando uno de los padres se niega a autorizar el viaje o está ausente en la vida del menor.",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Sentencia judicial que autoriza el viaje del Menor o sentencia judical que otorga la autoridad parental unilateral al padre que viaja",
-                                            "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la patria potestad ",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Sentencia judicial que autoriza el viaje del Menor o sentencia judical que otorga la autoridad parental unilateral al padre que viaja",
+                                                "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la patria potestad"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o  madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o  madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del padre acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del padre acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia del pasaporte del padre acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del padre acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         }
                                     ]
                                 }
@@ -1688,60 +2432,91 @@ export const DATA_DUMB = {
                                     "id": "2.1.2.1",
                                     "label": "Viaja con la aerolínea",
                                     "slug": "viaja-con-la-aerolínea",
+                                    "description": "Cuando el menor viaja con la Aerolínea y cuenta con la autorización de ambos padres, padre, madre o tutor legal",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de ambos padres, padre, madre o tutor (según el caso) legal autorizando la salida del menor del país con la aerolínea, legalizado por procuraduría o sentencia judicial.",
-                                            "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de ambos padres, padre, madre o tutor (según el caso) legal autorizando la salida del menor del país con la aerolínea, legalizado por procuraduría o sentencia judicial.",
+                                                "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula de la o las personas que autorizan",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de la o las personas que autorizan",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notaral, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Boleto o reserva del viaje",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Boleto o reserva del viaje"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         }
                                     ]
                                 },
@@ -1749,66 +2524,99 @@ export const DATA_DUMB = {
                                     "id": "2.1.2.2",
                                     "label": "Viaja con el colegio, centro educativo o institución cultural",
                                     "slug": "viaja-con-el-colegio,-centro-educativo-o-institución-cultural",
+                                    "description": "Cuando el menor viaja con  una academia, centro educativo o institución cultural, y cuenta con la autorización de los padres, padre, madre o tutor legal",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de los padres o tutores, autorizando la salida del menor del país con el centro educativo, legalizado por procuraduría. ",
-                                            "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\n· Este poder debe ser legalizado en la Procuraduría General de la República.\r\n· Los padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de los padres o tutores, autorizando la salida del menor del país con el centro educativo, legalizado por procuraduría.",
+                                                "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\nEste poder debe ser legalizado en la Procuraduría General de la República.\r\nLos padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1816,78 +2624,113 @@ export const DATA_DUMB = {
                                     "id": "2.1.2.3",
                                     "label": "Viaja con academia, selección o liga deportiva",
                                     "slug": "viaja-con-academia,-selección-o-liga-deportiva",
+                                    "description": "Cuando el menor viaja con  una academia, selecció o liga deportiva, y cuenta con la autorización de ambos padres, padre, madre o tutor legal",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial (colectivo o individual) de los padres, autorizando la salida del o los menores del país, legalizado por procuraduría. En caso de que los padres esten fuera del pais, debera entregar el poder consular. En caso de que uno de los padres no quiere que viaje o no este presente en la vida del menor, debera entregar Autorizacion Judicial. ",
-                                            "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\n· Este poder debe ser legalizado en la Procuraduría General de la República.\r\n· Los padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial (colectivo o individual) de los padres, autorizando la salida del o los menores del país, legalizado por procuraduría. En caso de que los padres esten fuera del pais, debera entregar el poder consular. En caso de que uno de los padres no quiere que viaje o no este presente en la vida del menor, debera entregar Autorizacion Judicial.",
+                                                "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\nEste poder debe ser legalizado en la Procuraduría General de la República.\r\nLos padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": [],
-                                            "Notas requisitos": "Carta o comunicación de la organización (Academia, iglesia o liga Deportiva) local especificando el motivo del viaje",
-                                            "Paso a paso": "Opcional",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Carta o comunicación de la organización (Academia, iglesia o liga Deportiva) local especificando el motivo del viaje",
+                                                "Notas requisitos": "Opcional"
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": [],
-                                            "Notas requisitos": "Carta de invitación de la actividad a la que asistira el menor",
-                                            "Paso a paso": "Opcional",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Carta de invitación de la actividad a la que asistira el menor",
+                                                "Notas requisitos": "Opcional"
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Fotos o copias de las actas de nacimiento originales del (de los)  menor(es) , con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Fotos o copias de las actas de nacimiento originales del (de los)  menor(es) , con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante o responsable",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante o responsable",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1895,66 +2738,98 @@ export const DATA_DUMB = {
                                     "id": "2.1.2.4",
                                     "label": "Viaja con la persona que posee la guarda custodia (de hecho o legal)",
                                     "slug": "viaja-con-la-persona-que-posee-la-guarda-custodia-(de-hecho-o-legal)",
+                                    "description": "Cuando el menor viaja con la persona que tiene la guarda legal con autorización de viaje",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de ambos padres, autorizando la salida del menor del país con el guarda custodia (de hecho o legal), legalizado por procuraduría. ",
-                                            "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de ambos padres, autorizando la salida del menor del país con el guarda custodia (de hecho o legal), legalizado por procuraduría.",
+                                                "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Fotos o copias de las cédulas de identidad del padre y de la madre; o del tutor ",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Fotos o copias de las cédulas de identidad del padre y de la madre; o del tutor",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del acompañante ( si aplica)",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del acompañante ( si aplica)"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -1962,66 +2837,99 @@ export const DATA_DUMB = {
                                     "id": "2.1.2.5",
                                     "label": "Menor  tiene un solo apellido (materno) y  no viaja con su madre",
                                     "slug": "menor-tiene-un-solo-apellido-(materno)-y-no-viaja-con-su-madre",
+                                    "description": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de la madre, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· La madre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de la madre, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "La madre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad de la madre ",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad de la madre",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del acompañante (si aplica)",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del acompañante (si aplica)",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2029,72 +2937,105 @@ export const DATA_DUMB = {
                                     "id": "2.1.2.6",
                                     "label": "Uno de los padres ha fallecido y no viaja con el padre/madre sobreviviente",
                                     "slug": "uno-de-los-padres-ha-fallecido-y-no-viaja-con-el-padre/madre-sobreviviente",
+                                    "description": "Cuando el menor viaja con la persona que ha autorizado el padre o madre sobreviviente",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial del padre sobreviviente, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre sobreviviente debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre sobreviviente, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre sobreviviente debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": "11",
-                                            "Notas requisitos": "Acta de defunción del padre fallecido  con codigo QR legible",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Acta de defunción del padre fallecido  con codigo QR legible"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2102,72 +3043,104 @@ export const DATA_DUMB = {
                                     "id": "2.1.2.7",
                                     "label": "Viaja con una persona autorizada por el tutor legal",
                                     "slug": "viaja-con-una-persona-autorizada-por-el-tutor-legal",
+                                    "description": "Cuando el menor viaja con la persona que ha autorizado el tutor legal",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial del tutor (es) legal, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El tutor legal debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del tutor (es) legal, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "El tutor legal debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad de el o los tutores que realizan la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad de el o los tutores que realizan la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Sentencia que otorga la tutoría legal del menor",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Sentencia que otorga la tutoría legal del menor"
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": "11",
-                                            "Notas requisitos": "Cédula del acompañante",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Cédula del acompañante"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2175,66 +3148,98 @@ export const DATA_DUMB = {
                                     "id": "2.1.2.8",
                                     "label": "Viaja con abuelos, tíos, amigos u otras personas que no son los padres",
                                     "slug": "viaja-con-abuelos,-tíos,-amigos-u-otras-personas-que-no-son-los-padres",
+                                    "description": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Fotos o copia sde las cédulas de identidad de ambos padres o tutor (es) ",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Fotos o copia sde las cédulas de identidad de ambos padres o tutor (es)",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial o consular, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder consular o notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Cédula del acompañante ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Cédula del acompañante"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2245,70 +3250,103 @@ export const DATA_DUMB = {
                                     "description": "Cuando uno de los padres se niega a autorizar el viaje o está ausente en la vida del menor",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Sentencia Judicial que otorga la autorización de viaje del menor",
-                                            "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la autorización de viaje ",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Sentencia Judicial que otorga la autorización de viaje del menor",
+                                                "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la autorización de viaje"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Poder Notarial del padre que tiene la autorización de viaje y no viaja, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre que tiene la autorización de viaje y no viaja, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Cédula de identidad del acompañante (si aplica)",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Cédula de identidad del acompañante (si aplica)",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": "11",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 }
@@ -2322,10 +3360,10 @@ export const DATA_DUMB = {
                     "slug": "el-menor-no-ha-estado-más-de-6-meses-en-el-país",
                     "children": [
                         {
-                            "Requisitos": "Ninguno",
-                            "Notas requisitos": "No requiere presentar PSM",
-                            "Paso a paso": [],
-                            "Notas paso a paso": []
+                            "document": {
+                                "Requisitos": "No requiere presentar PSM"
+                            },
+                            "process_online": {}
                         }
                     ]
                 }
@@ -2345,71 +3383,105 @@ export const DATA_DUMB = {
                             "id": "3.1.1",
                             "label": "Viaja con uno de los padres",
                             "slug": "viaja-con-uno-de-los-padres",
+                            "description": "Cuando el menor viaja con uno de los padres",
                             "children": [
                                 {
                                     "id": "3.1.1.1",
                                     "label": "Cuando uno de los padres autoriza al otro a viajar con el menor",
                                     "slug": "cuando-uno-de-los-padres-autoriza-al-otro-a-viajar-con-el-menor",
+                                    "description": "Cuando uno de los padres autoriza al otro a viajar con el menor",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB ",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2417,66 +3489,99 @@ export const DATA_DUMB = {
                                     "id": "3.1.1.2",
                                     "label": "Tiene la guarda legal del menor",
                                     "slug": "tiene-la-guarda-legal-del-menor",
+                                    "description": "Cuando el menor viaja con la persona que tiene la guarda legal de este",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el guarda, legalizado por procuraduría. ",
-                                            "Paso a paso": "· Ambos padres o tutores deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el guarda, legalizado por procuraduría.",
+                                                "Notas requisitos": "Ambos padres o tutores deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2484,12 +3589,14 @@ export const DATA_DUMB = {
                                     "id": "3.1.1.3",
                                     "label": "Menor tiene un solo apellido (el del madre) y viaja con su madre",
                                     "slug": "menor-tiene-un-solo-apellido-(el-del-madre)-y-viaja-con-su-madre",
+                                    "description": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Acta de nacimiento",
-                                            "Paso a paso": "Presentar acta en el aeropuerto",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Acta de nacimiento",
+                                                "Notas requisitos": "Presentar acta en el aeropuerto"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2497,12 +3604,13 @@ export const DATA_DUMB = {
                                     "id": "3.1.1.4",
                                     "label": "Viaja con uno de sus padres y el otro ha fallecido",
                                     "slug": "viaja-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                                    "description": "Cuando el menor viaja acompañado por su único padre o madre que aún está vivo",
                                     "children": [
                                         {
-                                            "Requisitos": "Ninguno",
-                                            "Notas requisitos": "No requiere presentar PSM",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "No requiere presentar PSM"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2512,64 +3620,96 @@ export const DATA_DUMB = {
                                     "slug": "menor-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Sentencia del tribunal  de niños, niñas y adolescentes que evidencie la adopción",
-                                            "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la adopción, original y certificada. ",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Sentencia del tribunal  de niños, niñas y adolescentes que evidencie la adopción",
+                                                "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la adopción, original y certificada."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Poder Notarial del padre que tiene la patria potestad y no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre que tiene la patria potestad y no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula o pasaporte del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula o pasaporte del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: autorización judicial, poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del otro padre adoptivo que viaja con el menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del otro padre adoptivo que viaja con el menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, el poder notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2579,64 +3719,96 @@ export const DATA_DUMB = {
                                     "slug": "uno-de-los-padres-vive-en-el-extranjero",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder consular otorgado en el país en donde se encuentra el padre (debe ser apostillado y sellado en cancilleria) o Poder Notarial legalizado del país donde se encuentre el padre en  original con apostilla de la Haya",
-                                            "Paso a paso": "· El padre en el extranjero debe firmar el poder consular (en el consulado más cercana) autorizando la salida del menor.\r\n· Este poder debe ser legalizado en el Ministerio de Relaciones Exteriores de la República Dominicana.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder consular otorgado en el país en donde se encuentra el padre (debe ser apostillado y sellado en cancilleria) o Poder Notarial legalizado del país donde se encuentre el padre en  original con apostilla de la Haya",
+                                                "Notas requisitos": "El padre en el extranjero debe firmar el poder consular (en el consulado más cercana) autorizando la salida del menor.\r\nEste poder debe ser legalizado en el Ministerio de Relaciones Exteriores de la República Dominicana."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder consular o notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder consular o notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2646,64 +3818,96 @@ export const DATA_DUMB = {
                                     "slug": "tiene-autorización-de-viaje-del-menor-del-tribunal-niños,-niñas-y-adolescentes",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Autorización judicial (sentencia, auto o resolución) que autoriza el viaje del Menor",
-                                            "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la Guarda Legal y Autorización de viaje del menor",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Autorización judicial (sentencia, auto o resolución) que autoriza el viaje del Menor",
+                                                "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la Guarda Legal y Autorización de viaje del menor"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2713,64 +3917,96 @@ export const DATA_DUMB = {
                                     "slug": "viaja-a-una-actividad-cultural,-escolar-o-deportiva",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial del padre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2781,58 +4017,90 @@ export const DATA_DUMB = {
                                     "description": "Cuando uno de los padres se niega a autorizar el viaje o está ausente en la vida del menor.",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Sentencia judicial que autoriza el viaje del Menor o sentencia judical que otorga la autoridad parental unilateral al padre que viaja",
-                                            "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la patria potestad ",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Sentencia judicial que autoriza el viaje del Menor o sentencia judical que otorga la autoridad parental unilateral al padre que viaja",
+                                                "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la patria potestad"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o  madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o  madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del padre acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del padre acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia del pasaporte del padre acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del padre acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         }
                                     ]
                                 }
@@ -2849,58 +4117,88 @@ export const DATA_DUMB = {
                                     "slug": "viaja-con-la-aerolínea",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de ambos padres, padre, madre o tutor (según el caso) legal autorizando la salida del menor del país con la aerolínea, legalizado por procuraduría o sentencia judicial.",
-                                            "Paso a paso": "· El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de ambos padres, padre, madre o tutor (según el caso) legal autorizando la salida del menor del país con la aerolínea, legalizado por procuraduría o sentencia judicial.",
+                                                "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB Sambil"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula de la o las personas que autorizan",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de la o las personas que autorizan",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notaral, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Boleto o reserva del viaje",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Boleto o reserva del viaje"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         }
                                     ]
                                 },
@@ -2910,64 +4208,96 @@ export const DATA_DUMB = {
                                     "slug": "viaja-con-el-colegio,-centro-educativo-o-institución-cultural",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Si ambos padres están en el país:\r\n\r\nPresentar un Poder Notarial (individual o conjunto) emitido por los padres, autorizando la salida del menor. Este poder debe estar legalizado por la Procuraduría General de la República.\r\n\r\nSi uno o ambos padres están fuera del país:\r\n\r\nPresentar un Poder Consular emitido desde el país donde se encuentren, autorizando la salida del menor.\r\n\r\nSi uno de los padres no está de acuerdo o no está presente en la vida del menor:\r\n\r\nPresentar una Autorización Judicial, emitida por un tribunal competente, que permita la salida del menor.",
-                                            "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\n· Este poder debe ser legalizado en la Procuraduría General de la República.\r\n· Los padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Si ambos padres están en el país:\r\n\r\nPresentar un Poder Notarial (individual o conjunto) emitido por los padres, autorizando la salida del menor. Este poder debe estar legalizado por la Procuraduría General de la República.\r\n\r\nSi uno o ambos padres están fuera del país:\r\n\r\nPresentar un Poder Consular emitido desde el país donde se encuentren, autorizando la salida del menor.\r\n\r\nSi uno de los padres no está de acuerdo o no está presente en la vida del menor:\r\n\r\nPresentar una Autorización Judicial, emitida por un tribunal competente, que permita la salida del menor.",
+                                                "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\nEste poder debe ser legalizado en la Procuraduría General de la República.\r\nLos padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -2977,76 +4307,110 @@ export const DATA_DUMB = {
                                     "slug": "viaja-con-academia,-selección-o-liga-deportiva",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Si ambos padres están en el país:\r\n\r\nPresentar un Poder Notarial (individual o conjunto) emitido por los padres, autorizando la salida del menor. Este poder debe estar legalizado por la Procuraduría General de la República.\r\n\r\nSi uno o ambos padres están fuera del país:\r\n\r\nPresentar un Poder Consular emitido desde el país donde se encuentren, autorizando la salida del menor.\r\n\r\nSi uno de los padres no está de acuerdo o no está presente en la vida del menor:\r\n\r\nPresentar una Autorización Judicial, emitida por un tribunal competente, que permita la salida del menor.",
-                                            "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\n· Este poder debe ser legalizado en la Procuraduría General de la República.\r\n· Los padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Si ambos padres están en el país:\r\n\r\nPresentar un Poder Notarial (individual o conjunto) emitido por los padres, autorizando la salida del menor. Este poder debe estar legalizado por la Procuraduría General de la República.\r\n\r\nSi uno o ambos padres están fuera del país:\r\n\r\nPresentar un Poder Consular emitido desde el país donde se encuentren, autorizando la salida del menor.\r\n\r\nSi uno de los padres no está de acuerdo o no está presente en la vida del menor:\r\n\r\nPresentar una Autorización Judicial, emitida por un tribunal competente, que permita la salida del menor.",
+                                                "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor con la aerolínea. \r\nEste poder debe ser legalizado en la Procuraduría General de la República.\r\nLos padres de todos los menores pueden hacer un solo poder notarial, donde estén las firmas de todos los padres que autorizan la salida de los menores."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": [],
-                                            "Notas requisitos": "Carta o comunicación de la organización (Academia, iglesia o liga Deportiva) local especificando el motivo del viaje",
-                                            "Paso a paso": "Opcional",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Carta o comunicación de la organización (Academia, iglesia o liga Deportiva) local especificando el motivo del viaje",
+                                                "Notas requisitos": "Opcional"
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": [],
-                                            "Notas requisitos": "Carta de invitación de la actividad a la que asistira el menor",
-                                            "Paso a paso": "Opcional",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Carta de invitación de la actividad a la que asistira el menor",
+                                                "Notas requisitos": "Opcional"
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Fotos o copias de las actas de nacimiento originales del (de los)  menor(es) , con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Fotos o copias de las actas de nacimiento originales del (de los)  menor(es) , con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Fotos o copias de las cédulas de identidad de los padres, madres o tutores",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Fotos o copias de las cédulas de identidad de los padres, madres o tutores",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Fotos o copias de la cédula de la persona que realiza la solicitud.",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Fotos o copias de la cédula de la persona que realiza la solicitud.",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Fotos o copias de las visas / residencias / permisos de estadías de menores",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Fotos o copias de las visas / residencias / permisos de estadías de menores",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante o responsable",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante o responsable",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Fotos o copias de los pasaportes de los menores",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Fotos o copias de los pasaportes de los menores",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente de cada menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente de cada menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -3056,64 +4420,95 @@ export const DATA_DUMB = {
                                     "slug": "viaja-con-la-persona-que-posee-la-guarda-custodia-(de-hecho-o-legal)",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de ambos padres, autorizando la salida del menor del país con el guarda custodia (de hecho o legal), legalizado por procuraduría. ",
-                                            "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de ambos padres, autorizando la salida del menor del país con el guarda custodia (de hecho o legal), legalizado por procuraduría.",
+                                                "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Fotos o copias de las cédulas de identidad del padre y de la madre; o del tutor ",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Fotos o copias de las cédulas de identidad del padre y de la madre; o del tutor",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del acompañante ( si aplica)",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del acompañante ( si aplica)"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el\r\ncomprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en\r\norden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -3123,64 +4518,96 @@ export const DATA_DUMB = {
                                     "slug": "menor-tiene-un-solo-apellido-(materno)-y-no-viaja-con-su-madre",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de la madre, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· La madre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de la madre, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "La madre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad de la madre ",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad de la madre",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del acompañante (si aplica)",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del acompañante (si aplica)",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -3190,70 +4617,102 @@ export const DATA_DUMB = {
                                     "slug": "uno-de-los-padres-ha-fallecido-y-no-viaja-con-el-padre/madre-sobreviviente",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial del padre sobreviviente, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre sobreviviente debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre sobreviviente, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre sobreviviente debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": "11",
-                                            "Notas requisitos": "Acta de defunción del padre fallecido  con codigo QR legible",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Acta de defunción del padre fallecido  con codigo QR legible"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -3263,70 +4722,101 @@ export const DATA_DUMB = {
                                     "slug": "viaja-con-una-persona-autorizada-por-el-tutor-legal",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial del tutor (es) legal, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El tutor legal debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del tutor (es) legal, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "El tutor legal debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad de el o los tutores que realizan la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad de el o los tutores que realizan la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder notarial en físico, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Sentencia que otorga la tutoría legal del menor",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Sentencia que otorga la tutoría legal del menor"
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": "11",
-                                            "Notas requisitos": "Cédula del acompañante",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Cédula del acompañante"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -3336,64 +4826,95 @@ export const DATA_DUMB = {
                                     "slug": "viaja-con-abuelos,-tíos,-amigos-u-otras-personas-que-no-son-los-padres",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial de los padres, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "Ambos padres deben firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Fotos o copia sde las cédulas de identidad de ambos padres o tutor (es) ",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Fotos o copia sde las cédulas de identidad de ambos padres o tutor (es)",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial o consular, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder consular o notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "Cédula del acompañante ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Cédula del acompañante"
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 },
@@ -3404,70 +4925,103 @@ export const DATA_DUMB = {
                                     "description": "Cuando uno de los padres se niega a autorizar el viaje o está ausente en la vida del menor.",
                                     "children": [
                                         {
-                                            "Requisitos": "1",
-                                            "Notas requisitos": "Sentencia Judicial que otorga la autorización de viaje del menor",
-                                            "Paso a paso": "· Ir al tribunal de niños, niñas y adolescentes\r\n· Solicitar la sentencia donde se les otorga la autorización de viaje ",
-                                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Sentencia Judicial que otorga la autorización de viaje del menor",
+                                                "Notas requisitos": "Ir al tribunal de niños, niñas y adolescentes\r\nSolicitar la sentencia donde se les otorga la autorización de viaje"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "2",
-                                            "Notas requisitos": "Poder Notarial del padre que tiene la autorización de viaje y no viaja, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría. ",
-                                            "Paso a paso": "· El padre debe firmar el poder notarial autorizando la salida del menor.\r\n· Este poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil.",
-                                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                                            "document": {
+                                                "Requisitos": "Poder Notarial del padre que tiene la autorización de viaje y no viaja, autorizando la salida del menor del país con el acompañante, legalizado por procuraduría.",
+                                                "Notas requisitos": "El padre debe firmar el poder notarial autorizando la salida del menor.\r\nEste poder debe ser legalizado en la Procuraduría General de la República o en el PuntoGOB Sambil."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Crear un usuario en el portal de migración"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "3",
-                                            "Notas requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible  ",
-                                            "Paso a paso": [],
-                                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                                            "document": {
+                                                "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "4",
-                                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: sentencia judicial, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "5",
-                                            "Notas requisitos": "Cédula de identidad del acompañante (si aplica)",
-                                            "Paso a paso": "Versión nueva",
-                                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                                            "document": {
+                                                "Requisitos": "Cédula de identidad del acompañante (si aplica)",
+                                                "Notas requisitos": "Versión nueva"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                            }
                                         },
                                         {
-                                            "Requisitos": "6",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Esperar validación de los documentos",
+                                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "7",
-                                            "Notas requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
-                                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                                            "Notas paso a paso": "7. Realizar el pago"
+                                            "document": {
+                                                "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Realizar el pago",
+                                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "8",
-                                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con la sentencia judicial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "9",
-                                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                                            "Paso a paso": "De la página principal con los datos biométricos.",
-                                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                            "document": {
+                                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                                "Notas requisitos": "De la página principal con los datos biométricos."
+                                            },
+                                            "process_online": {
+                                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                                            }
                                         },
                                         {
-                                            "Requisitos": "10",
-                                            "Notas requisitos": "1 Foto 2x2 reciente del menor",
-                                            "Paso a paso": "De frente, reciente y fondo claro",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "1 Foto 2x2 reciente del menor",
+                                                "Notas requisitos": "De frente, reciente y fondo claro"
+                                            },
+                                            "process_online": {}
                                         },
                                         {
-                                            "Requisitos": "11",
-                                            "Notas requisitos": "Recibo de pago del servicio ",
-                                            "Paso a paso": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor.",
-                                            "Notas paso a paso": []
+                                            "document": {
+                                                "Requisitos": "Recibo de pago del servicio",
+                                                "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                            },
+                                            "process_online": {}
                                         }
                                     ]
                                 }
@@ -3481,10 +5035,10 @@ export const DATA_DUMB = {
                     "slug": "el-menor-no-ha-estado-más-de-6-meses-en-el-país",
                     "children": [
                         {
-                            "Requisitos": "Ninguno",
-                            "Notas requisitos": "No requiere presentar PSM",
-                            "Paso a paso": [],
-                            "Notas paso a paso": []
+                            "document": {
+                                "Requisitos": "No requiere presentar PSM"
+                            },
+                            "process_online": {}
                         }
                     ]
                 }
@@ -3496,9 +5050,11 @@ export const DATA_DUMB = {
             "slug": "menor-tiene-estatus-migratorio-de-no-residentes-(estudiantes,-deportistas,-artistas-y-estudiantes-de-intercambio)",
             "children": [
                 {
-                    "Requisitos": "1",
-                    "Notas requisitos": "No requiere presentar PSM",
-                    "Paso a paso": "No requiere presentar PSM"
+                    "document": {
+                        "Requisitos": "No requiere presentar PSM",
+                        "Notas requisitos": "No requiere presentar PSM"
+                    },
+                    "process_online": {}
                 }
             ]
         },
@@ -3514,9 +5070,11 @@ export const DATA_DUMB = {
                     "slug": "ambos-padres-están-en-república-dominicana",
                     "children": [
                         {
-                            "Requisitos": [],
-                            "Notas requisitos": "Nada",
-                            "Paso a paso": "No requiere presentar PSM en Control Migratorio"
+                            "document": {
+                                "Requisitos": "Nada",
+                                "Notas requisitos": "No requiere presentar PSM en Control Migratorio"
+                            },
+                            "process_online": {}
                         }
                     ]
                 },
@@ -3526,64 +5084,95 @@ export const DATA_DUMB = {
                     "slug": "un-padre-está-en-el-extranjero-y-otro-en-república-dominicana",
                     "children": [
                         {
-                            "Requisitos": "1",
-                            "Notas requisitos": "Poder consular de la embajada, consulado o representación del país en donde se encuentra el padre (debe ser apostillado y sellado en cancilleria) o Poder Notarial del país donde se encuentre el padre en  original apostilla de la Haya",
-                            "Paso a paso": "· El padre en el extranjero debe firmar el poder consular (en el consulado más cercana) autorizando la salida del menor.\r\n· Este poder debe ser legalizado en el Ministerio de Relaciones Exteriores de la República Dominicana.",
-                            "Notas paso a paso": "1. Entrar al portal  https://servicios.migracion.gob.do"
+                            "document": {
+                                "Requisitos": "Poder consular de la embajada, consulado o representación del país en donde se encuentra el padre (debe ser apostillado y sellado en cancilleria) o Poder Notarial del país donde se encuentre el padre en  original apostilla de la Haya",
+                                "Notas requisitos": "El padre en el extranjero debe firmar el poder consular (en el consulado más cercana) autorizando la salida del menor.\r\nEste poder debe ser legalizado en el Ministerio de Relaciones Exteriores de la República Dominicana."
+                            },
+                            "process_online": {
+                                "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                            }
                         },
                         {
-                            "Requisitos": "2",
-                            "Notas requisitos": "Foto o copia de acta de nacimiento original, con el código QR legible  ",
-                            "Paso a paso": "Versión reciente con código QR o número de evento.",
-                            "Notas paso a paso": "2. Crear un usuario en el portal de migración"
+                            "document": {
+                                "Requisitos": "Foto o copia de acta de nacimiento original, con el código QR legible",
+                                "Notas requisitos": "Versión reciente con código QR o número de evento."
+                            },
+                            "process_online": {
+                                "Paso a paso": "Crear un usuario en el portal de migración"
+                            }
                         },
                         {
-                            "Requisitos": "3",
-                            "Notas requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud",
-                            "Paso a paso": [],
-                            "Notas paso a paso": "3. Completar los formularios con los datos del menor y del acompañante."
+                            "document": {
+                                "Requisitos": "Foto o copia de la cédula de identidad del padre, madre o tutor que realiza la solicitud"
+                            },
+                            "process_online": {
+                                "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                            }
                         },
                         {
-                            "Requisitos": "4",
-                            "Notas requisitos": "Foto o copia de la cédula del otro padre que autoriza",
-                            "Paso a paso": [],
-                            "Notas paso a paso": "4. Escanear todos los documentos requeridos"
+                            "document": {
+                                "Requisitos": "Foto o copia de la cédula del otro padre que autoriza"
+                            },
+                            "process_online": {
+                                "Paso a paso": "Escanear todos los documentos requeridos",
+                                "Notas paso a paso": "Escanear todos los documentos en formato JPG.\r\nIncluye: poder notarial o consular, acta de nacimiento, pasaportes, cédulas, foto 2x2, etc."
+                            }
                         },
                         {
-                            "Requisitos": "5",
-                            "Notas requisitos": "Foto o copia de la visa / residencia del acompañante",
-                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                            "Notas paso a paso": "5. Cargar los documentos escaneados o fotos a la plataforma"
+                            "document": {
+                                "Requisitos": "Foto o copia de la visa / residencia del acompañante",
+                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                            },
+                            "process_online": {
+                                "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                            }
                         },
                         {
-                            "Requisitos": "6",
-                            "Notas requisitos": "Foto o copia de la visa / residencia del menor",
-                            "Paso a paso": "Si viaja a un país que requiera visa o residencia",
-                            "Notas paso a paso": "6. Esperar validación de los documentos"
+                            "document": {
+                                "Requisitos": "Foto o copia de la visa / residencia del menor",
+                                "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                            },
+                            "process_online": {
+                                "Paso a paso": "Esperar validación de los documentos",
+                                "Notas paso a paso": "Migración revisará la solicitud.\r\nSi falta algún documento, recibirás un correo solicitando la corrección o carga adicional."
+                            }
                         },
                         {
-                            "Requisitos": "7",
-                            "Notas requisitos": "Foto o copia del pasaporte del acompañante",
-                            "Paso a paso": "De la página principal con los datos biométricos.",
-                            "Notas paso a paso": "7. Realizar el pago"
+                            "document": {
+                                "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                "Notas requisitos": "De la página principal con los datos biométricos."
+                            },
+                            "process_online": {
+                                "Paso a paso": "Realizar el pago",
+                                "Notas paso a paso": "Una vez aprobados los documentos, recibirás una notificación para proceder al pago.\r\nPuedes pagar:\r\n        - En línea (tarjeta de crédito).\r\n        - En una sucursal de Banreservas.\r\n        - Con tarjeta directamente en la oficina de certificaciones de la DGM."
+                            }
                         },
                         {
-                            "Requisitos": "8",
-                            "Notas requisitos": "Foto o copia del pasaporte del menor",
-                            "Paso a paso": "De la página principal con los datos biométricos.",
-                            "Notas paso a paso": "8. Depositar los documentos originales en la oficina de Migración"
+                            "document": {
+                                "Requisitos": "Foto o copia del pasaporte del menor",
+                                "Notas requisitos": "De la página principal con los datos biométricos."
+                            },
+                            "process_online": {
+                                "Paso a paso": "Depositar los documentos originales en la oficina de Migración",
+                                "Notas paso a paso": "Luego de 24 horas laborables desde la solicitud, debes presentarte con el poder consular o notarial, la foto 2x2 y el comprobante de pago en la oficina que seleccionaste al iniciar el trámite."
+                            }
                         },
                         {
-                            "Requisitos": "9",
-                            "Notas requisitos": "Foto 2x2 reciente del menor",
-                            "Paso a paso": "De frente y reciente.",
-                            "Notas paso a paso": "9. Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                            "document": {
+                                "Requisitos": "Foto 2x2 reciente del menor",
+                                "Notas requisitos": "De frente y reciente."
+                            },
+                            "process_online": {
+                                "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do",
+                                "Notas paso a paso": "La Certificación de Salida del Menor se entrega en un plazo de hasta 48 horas laborables si todo está en orden.\r\nEste documento debe ser presentado al momento de salir del país (aeropuerto, puerto o frontera)."
+                            }
                         },
                         {
-                            "Requisitos": "10",
-                            "Notas requisitos": "Recibo de pago",
-                            "Paso a paso": "Puede realizarse en línea o presencial en BanReservas a nombre del padre, madre o tutor.",
-                            "Notas paso a paso": []
+                            "document": {
+                                "Requisitos": "Recibo de pago",
+                                "Notas requisitos": "Puede realizarse en línea o presencial en BanReservas a nombre del padre, madre o tutor."
+                            },
+                            "process_online": {}
                         }
                     ]
                 }
@@ -3595,6 +5184,170 @@ export const DATA_DUMB = {
             slug: "tu-situacion-no-esta-en-la-lista-de-opciones",
             description: "Selecciona esta opción si no estás seguro de qué opción elegir o tu situación no aparece entre las disponibles",
             children: []
+        }
+    ],
+    "termLegal": [
+        {
+            "Término legal": "Tutor legal",
+            "Descripción": "Es una tercera persona o institucion, a quien un tribunal le concede los derechos legales sobre el menor.",
+            "Otorgado por": "Tribunal de NNA",
+            "Término": "Escanear documents",
+            "Explicación sencilla": "Digitalizar un documento físico.",
+            "Traducción para usuarios no técnicos": "Tomar una foto o copiar con el escáner.",
+            "Sinónimos o equivalentes": "Digitalizar, subir como imagen"
+        },
+        {
+            "Término legal": "Guarda y custodia legal/derecho",
+            "Descripción": "Significa asumir la responsabilidad del cuidado, protección, educación y supervisión directa del niño o adolescente y se otorga a traves de un tribunal",
+            "Otorgado por": "Tribunal de NNA",
+            "Término": "Formato JPG / JPEG",
+            "Explicación sencilla": "Tipo de archivo de imagen (como una foto).",
+            "Traducción para usuarios no técnicos": "Foto tomada desde el celular o cámara.",
+            "Sinónimos o equivalentes": "Imagen digital, foto digital"
+        },
+        {
+            "Término legal": "Guarda y custodia de hecho (no de derecho)",
+            "Descripción": "Es cuando un persona asume la responsabilidad del cuidado, protección, educación y supervisión directa del niño o adolescente sin haber sido designado formalmente por un tribunal.",
+            "Otorgado por": "Acuerdo de boca",
+            "Término": "Cargar documentos",
+            "Explicación sencilla": "Subir archivos a la plataforma en línea.",
+            "Traducción para usuarios no técnicos": "Subir fotos o documentos al sistema desde tu dispositivo.",
+            "Sinónimos o equivalentes": "Subir, adjuntar, enviar archivos"
+        },
+        {
+            "Término legal": "Custodia",
+            "Descripción": "Se refiere a la responsabilidad limitada de cuidar directamente al niño o adolescente, durante un periodo de tiempo determinando.",
+            "Otorgado por": "Acuerdo de boca",
+            "Término": "Plataforma",
+            "Explicación sencilla": "Sitio web que permite hacer trámites.",
+            "Traducción para usuarios no técnicos": "Página web del gobierno para hacer la solicitud.",
+            "Sinónimos o equivalentes": "Portal, sistema, sitio"
+        },
+        {
+            "Término legal": "Filiación materna",
+            "Descripción": "Cuando el menor solo tiene el apellido de la madre.",
+            "Otorgado por": "Registro civil",
+            "Término": "Validación de documentos",
+            "Explicación sencilla": "Revisión que hace el sistema o personal para comprobar si los documentos son correctos.",
+            "Traducción para usuarios no técnicos": "Verificación para ver si todo está bien.",
+            "Sinónimos o equivalentes": "Revisión, chequeo"
+        },
+        {
+            "Término legal": "Autoridad Parental Unilateral",
+            "Descripción": "Es el otorgamiento judicial de toda responsabilidad parental a uno de los padres de manera temporal.",
+            "Otorgado por": "Tribunal NNA",
+            "Término": "Notificación",
+            "Explicación sencilla": "Mensaje que informa sobre el estado del trámite.",
+            "Traducción para usuarios no técnicos": "Aviso por correo o en la página.",
+            "Sinónimos o equivalentes": "Alerta, mensaje, correo"
+        },
+        {
+            "Término legal": "Organismos internacionales acreditados en el pais",
+            "Descripción": "Son aquellas entidades internacionales que a traves de acuerdos tienen representación en el pais, para funciones especificas y que son debidamente avalados por el MIREX.",
+            "Otorgado por": "Acreditado por el MIREX",
+            "Término": "Usuario (en línea)",
+            "Explicación sencilla": "Cuenta personal para entrar al portal.",
+            "Traducción para usuarios no técnicos": "Nombre y contraseña para acceder al sistema.",
+            "Sinónimos o equivalentes": "Cuenta, perfil"
+        },
+        {
+            "Término legal": "Patria potestad",
+            "Descripción": "Es el derecho legal que tienen los padres sobre sus hijos menores de edad.",
+            "Otorgado por": "Registro civil",
+            "Término": "Certificación descargable",
+            "Explicación sencilla": "Documento que puedes bajar del sitio web.",
+            "Traducción para usuarios no técnicos": "Documento digital que puedes guardar o imprimir.",
+            "Sinónimos o equivalentes": "Comprobante, constancia"
+        },
+        {
+            "Término legal": "Poder notarial",
+            "Descripción": "Documento otorgado ante notario donde una persona (poderdante) autoriza a otra (apoderado) a actuar en su nombre.",
+            "Otorgado por": null,
+            "Término": "Portal web",
+            "Explicación sencilla": "Página oficial de Migración en Internet.",
+            "Traducción para usuarios no técnicos": "Página web del gobierno para trámites.",
+            "Sinónimos o equivalentes": "Sitio, web oficial"
+        },
+        {
+            "Término legal": "Poder consular",
+            "Descripción": "Acto notarial realizado en un consulado dominicano en el exterior, que autentica firmas para documentos que luego serán legalizados u homologados.",
+            "Otorgado por": null,
+            "Término": "Click",
+            "Explicación sencilla": "Acción de presionar un botón del mouse.",
+            "Traducción para usuarios no técnicos": "Presiona, selecciona con el mouse.",
+            "Sinónimos o equivalentes": "Seleccionar, pulsar"
+        },
+        {
+            "Término legal": "Apostilla",
+            "Descripción": "Certificación oficial bajo el Convenio de La Haya (1961) emitida por el MIREX que autentica la firma, sello y origen de un documento público dominicano para su validación en otros países .",
+            "Otorgado por": null,
+            "Término": "Sistema",
+            "Explicación sencilla": "Conjunto de herramientas digitales que procesan tu solicitud.",
+            "Traducción para usuarios no técnicos": "La parte tecnológica que hace funcionar el portal.",
+            "Sinónimos o equivalentes": "Plataforma, aplicación"
+        },
+        {
+            "Término legal": "Legalización de documentos mediante la Procuraduría General",
+            "Descripción": "Consiste en autenticar la firma, sello y, por extensión, la corporación o calidad del funcionario público que certificó el documento. Es un trámite oficial que garantiza la validez de firmas en actos notariales, judiciales y documentos oficiales.",
+            "Otorgado por": null,
+            "Término": "Validación de documentos",
+            "Explicación sencilla": "Verificación de que todo esté correcto.",
+            "Traducción para usuarios no técnicos": "Revisión para ver si los papeles están bien.",
+            "Sinónimos o equivalentes": "Chequeo, verificación"
+        },
+        {
+            "Término legal": "Homologación",
+            "Descripción": "Reconocimiento formal de validez de documentos emitidos en el extranjero, que puede requerir traducción, apostilla/legalización y aprobación por entidades dominicanas.",
+            "Otorgado por": null,
+            "Término": "Notificación",
+            "Explicación sencilla": "Mensaje que informa algo sobre tu trámite.",
+            "Traducción para usuarios no técnicos": "Aviso por correo o en el portal.",
+            "Sinónimos o equivalentes": "Alerta, mensaje"
+        },
+        {
+            "Término legal": "Tribunal de NNA",
+            "Descripción": "Órgano judicial especializado en temas de Niños, Niñas y Adolescentes, encargado de tutelas, custodia y temas migratorios que involucren menores.",
+            "Otorgado por": null,
+            "Término": "Término",
+            "Explicación sencilla": "Explicación sencilla",
+            "Traducción para usuarios no técnicos": "Traducción para usuarios no técnicos",
+            "Sinónimos o equivalentes": "Sinónimos o equivalentes"
+        },
+        {
+            "Término legal": "Certificación de no apelación (no REVOCACIÓN)",
+            "Descripción": "Documento judicial que certifica que una resolución sobre un menor ya es firme, al no haberse apelado o revocado dentro del plazo legal.",
+            "Otorgado por": null,
+            "Término": "Certificación descargable",
+            "Explicación sencilla": "Documento que puedes guardar desde el portal.",
+            "Traducción para usuarios no técnicos": "Comprobante que se puede imprimir.",
+            "Sinónimos o equivalentes": "Constancia digital"
+        },
+        {
+            "Término legal": "Estatus migratorio",
+            "Descripción": "Se refiere a la condición legal de una persona dentro de un país",
+            "Otorgado por": null,
+            "Término": "Formulario",
+            "Explicación sencilla": "Documento con preguntas para llenar.",
+            "Traducción para usuarios no técnicos": "Pantalla donde escribes la información solicitada.",
+            "Sinónimos o equivalentes": "Solicitud, registro"
+        },
+        {
+            "Término legal": "Carta de ruta o salvo conducto",
+            "Descripción": "Documento expedido por autoridades migratorias que permite el tránsito o regreso seguro al país, usualmente para casos especiales o menores sin documentos regulares.",
+            "Otorgado por": null,
+            "Término": "Datos biometricos",
+            "Explicación sencilla": "Información personal (huellas, foto, iris) requerida por migración para identificación del menor en emisión de documentos migratorios, permisos y seguimiento.",
+            "Traducción para usuarios no técnicos": "foto y datos de identificación",
+            "Sinónimos o equivalentes": null
+        },
+        {
+            "Término legal": "Interes superior del menor",
+            "Descripción": "Principio jurídico prioritario que coloca el bienestar y derechos del menor como la consideración principal en cualquier decisión administrativa o judicial.",
+            "Otorgado por": null,
+            "Término": null,
+            "Explicación sencilla": null,
+            "Traducción para usuarios no técnicos": null,
+            "Sinónimos o equivalentes": null
         }
     ],
     "notPermissions": [

@@ -1,25 +1,6 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { cn } from "@/lib/utils";
-import { Info } from "lucide-react";
 // import { DETAILS_OF_PROCESS_DOCUMENTATION } from "..";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { documentationData } from "../../../../../data/documentation-data";
-import { DOCUMENTATION_DATA } from "../../../../../data/documentation-data/info-data";
 import { Divider } from "@/components/ui/divider";
 // import type { IFormData } from "@/components/features/Home/hooks/useFormNavigation";
-import { useMemo } from "react";
 import { DocAccordion } from "./doc-accordion";
 
 export function Documentation() {

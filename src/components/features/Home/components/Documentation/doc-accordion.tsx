@@ -4,25 +4,91 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Card, CardContent } from "@/components/ui/card";
 import {
-  DETAILS_OF_PROCESS_DOCUMENTATION,
-  REQUERID_DOCUMENTS,
-} from "@/data/documentation-data";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { DETAILS_OF_PROCESS_DOCUMENTATION } from "@/data/documentation-data";
 import { useFormDataStore } from "@/store/form-data.store";
-import { AlertCircleIcon, CircleMinus, CirclePlus } from "lucide-react";
-import { useState } from "react";
+import { CircleMinus, CirclePlus } from "lucide-react";
+import { useMemo, useState } from "react";
+
+interface Document {
+  label: string;
+  details: string;
+}
+
+interface Data {
+  documents: Document[];
+  process_online: Document[];
+}
 
 export function DocAccordion() {
   const [selected, setSelected] = useState<string>("");
-  // const { formData } = useFormDataStore();
+  const { formData } = useFormDataStore();
+
+  const { documents, process_online } = useMemo<Data>(() => {
+    return formData.children.reduce((acc, item: any) => {
+      const keyDocument = "documents";
+      const keyProcessOnline = "process_online";
+
+      if (!acc[keyDocument]) acc[keyDocument] = [];
+      if (!acc[keyProcessOnline]) acc[keyProcessOnline] = [];
+
+      const document = item?.["document"];
+      const processOnline = item?.["process_online"];
+
+      if (document) {
+        acc[keyDocument].push({
+          label: document?.["Requisitos"] || "",
+          details: document?.["Notas requisitos"] || "",
+        });
+      }
+
+      if (processOnline) {
+        acc[keyProcessOnline].push({
+          label: processOnline?.["Paso a paso"] || "",
+          details: processOnline?.["Notas paso a paso"] || "",
+        });
+      }
+
+      return acc;
+    }, {} as Record<string, any>) as Data;
+  }, [formData]);
+
+  const costsData = [
+    {
+      concepto: "Permiso de salida para un menor",
+      precio: "RD$ 2,000",
+    },
+    {
+      concepto: "Cada menor adicional en el mismo documento (hermanos)",
+      precio: "RD$ 1,500",
+    },
+    {
+      concepto: "Poder notarial (tramitado con abogado externo)",
+      precio: "Variable (según abogado o notaría)",
+    },
+    {
+      concepto: "Documento número 4",
+      precio: "RD$ 500",
+    },
+    {
+      concepto: "Documento número 5",
+      precio: "RD$ 500",
+    },
+  ];
 
   return (
     <Accordion
       type="single"
       collapsible
-      defaultValue="documentos"
+      defaultValue="mandatory-documents"
       className="space-y-4"
       onValueChange={(value) => setSelected(value)}
     >
@@ -44,27 +110,34 @@ export function DocAccordion() {
         <AccordionContent className="px-6 pb-6">
           <div className="space-y-4">
             <div className="space-y-4">
-              {REQUERID_DOCUMENTS.map((doc, idx) => (
-                <div key={doc.title}>
-                  <span className="font-semibold text-slate-800 text-base">
-                    {/* 1. Autorización judicial */}
-                    {idx + 1}. {doc.title}
-                  </span>
-                  {doc.details?.length ? (
-                    <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
-                      {doc.details?.map((desc, descIndex) => (
-                        <li
-                          key={descIndex}
-                          dangerouslySetInnerHTML={{ __html: desc }}
-                        />
-                      ))}
-                    </ul>
-                  ) : null}
-                </div>
-              ))}
+              {documents?.map((doc, idx) => {
+                if (!doc.label) return null;
+                return (
+                  <div key={doc.label}>
+                    <span className="font-semibold text-slate-800 text-base">
+                      {idx + 1}. {doc.label}
+                    </span>
+                    {Array.isArray(doc.details) ? (
+                      <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
+                        {doc.details?.map((desc, descIndex) => (
+                          <li
+                            key={descIndex}
+                            dangerouslySetInnerHTML={{ __html: desc }}
+                          />
+                        ))}
+                      </ul>
+                    ) : (
+                      <p
+                        className="text-sm font-normal text-[#475569]"
+                        dangerouslySetInnerHTML={{ __html: doc.details }}
+                      />
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
-            <Alert className="bg-white border-white relative grid-cols-none">
+            {/* <Alert className="bg-white border-white relative grid-cols-none">
               <div className="absolute top-3 left-3">
                 <AlertCircleIcon className="w-6 h-6 " />
               </div>
@@ -89,7 +162,7 @@ export function DocAccordion() {
                   </ul>
                 </AlertDescription>
               </div>
-            </Alert>
+            </Alert> */}
           </div>
         </AccordionContent>
       </AccordionItem>
@@ -107,32 +180,90 @@ export function DocAccordion() {
           ) : (
             <CirclePlus className="shrink-0 translate-y-0.5 transition-transform duration-200 " />
           )}
-          Detalles del proceso
+          Costo
         </AccordionTrigger>
-        <AccordionContent className="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
-          {DETAILS_OF_PROCESS_DOCUMENTATION.map((item) => (
-            <Card
-              className="bg-white border-none rounded-[8px] shadow-none"
-              key={item.slug}
-            >
-              <CardContent className="p-6">
-                <div className="flex items-start justify-center flex-col">
-                  <h2 className="text-xl font-bold text-gray-800">
-                    {item.title}
-                  </h2>
-                  <ul className="list-disc pl-5">
-                    {item.desc.map((desc, descIndex) => (
-                      <li
-                        key={descIndex}
-                        className="text-gray-600"
-                        dangerouslySetInnerHTML={{ __html: desc }}
-                      />
+        <AccordionContent className="grid grid-cols-1 gap-4 p-6">
+          <Card className="bg-white border-none rounded-[8px] shadow-none">
+            <CardContent className="p-0">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <Table>
+                  <TableHeader>
+                    <TableRow className="border-b border-gray-200">
+                      <TableHead className="text-left text-base font-semibold text-[#031942] py-4">
+                        Concepto
+                      </TableHead>
+                      <TableHead className="text-right font-semibold text-[#031942] py-4">
+                        Precio
+                      </TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {costsData.map((item, index) => (
+                      <TableRow
+                        key={index}
+                        className="border-b border-gray-100 last:border-b-0"
+                      >
+                        <TableCell className="py-4 text-base text-[#031942] font-semibold">
+                          {item.concepto}
+                        </TableCell>
+                        <TableCell className="py-4 text-base text-right font-normal text-[#475569]">
+                          {item.precio}
+                        </TableCell>
+                      </TableRow>
                     ))}
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </Card>
+        </AccordionContent>
+      </AccordionItem>
+
+      <AccordionItem
+        value="process-online"
+        className="bg-[#F1F5F9] border-none rounded-lg"
+      >
+        <AccordionTrigger
+          disableArrow
+          className="font-semibold px-5 py-3 hover:no-underline text-2xl flex items-center justify-start gap-2"
+        >
+          {selected === "process-online" ? (
+            <CircleMinus className="shrink-0 translate-y-0.5 transition-transform duration-200" />
+          ) : (
+            <CirclePlus className="shrink-0 translate-y-0.5 transition-transform duration-200 " />
+          )}
+          Pasos para iniciar la solicitud del permiso en línea
+        </AccordionTrigger>
+        <AccordionContent className="px-6 pb-6">
+          <div className="space-y-4">
+            <div className="space-y-4">
+              {process_online?.map((process, idx) => {
+                if (!process.label) return null;
+                return (
+                  <div key={process.label}>
+                    <span className="font-semibold text-slate-800 text-base">
+                      {idx + 1}. {process.label}
+                    </span>
+                    {Array.isArray(process.details) ? (
+                      <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
+                        {process.details?.map((desc, descIndex) => (
+                          <li
+                            key={descIndex}
+                            dangerouslySetInnerHTML={{ __html: desc }}
+                          />
+                        ))}
+                      </ul>
+                    ) : (
+                      <p
+                        className="text-sm font-normal text-[#475569]"
+                        dangerouslySetInnerHTML={{ __html: process.details }}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </AccordionContent>
       </AccordionItem>
     </Accordion>
