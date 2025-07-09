@@ -1,6 +1,8 @@
+import { useFormDataStore } from "@/store/form-data.store";
 import { ContactInfo } from "./ContactInfo";
 
 export function NotFound() {
+  const { historySteps } = useFormDataStore();
   return (
     <div className="w-full flex flex-col gap-8">
       <div className="p-6 rounded-[8px] flex flex-col gap-4 bg-[#EFF7FF]">
@@ -8,8 +10,9 @@ export function NotFound() {
           De acuerdo con los datos proporcionados, el menor:
         </p>
         <ul className="list-disc font-semibold text-[16px] ml-6">
-          <li>Tiene nacionalidad dominicana únicamente</li>
-          <li>El menor viajara con ambos padres</li>
+          {historySteps.map((item) => (
+            <li key={item.slug}>{item.label}</li>
+          ))}
         </ul>
         <p>
           En tu caso,{" "}

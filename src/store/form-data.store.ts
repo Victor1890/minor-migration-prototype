@@ -3,18 +3,19 @@ import { create } from "zustand";
 
 interface FormDataState {
     formData: HierarchyNode;
+    historySteps: Partial<HierarchyNode>[];
     navigationStack: string[];
+    show: boolean;
     pushToStack: (id: string) => void;
     popFromStack: () => string | undefined
-    show: boolean;
     setShow: (show: boolean) => void;
     setFormData: (data: FormDataState['formData']) => void;
     resetFormData: () => void;
 }
 
-export const useFormDataStore = create<FormDataState>((set) => ({
+export const useFormDataStore = create<FormDataState>((set, get) => ({
     formData: {} as FormDataState['formData'],
-
+    historySteps: [],
     show: false,
     setShow: (show) => set({ show }),
     navigationStack: [],
@@ -25,6 +26,7 @@ export const useFormDataStore = create<FormDataState>((set) => ({
     popFromStack: () => {
         let popped: string | undefined;
         set((state) => {
+            state?.historySteps?.pop();
             const newStack = [...state.navigationStack];
             popped = newStack.pop();
             return { navigationStack: newStack };
@@ -32,6 +34,6 @@ export const useFormDataStore = create<FormDataState>((set) => ({
         return popped;
     },
 
-    setFormData: (data) => set({ formData: data }),
-    resetFormData: () => set({ formData: {} as FormDataState['formData'], navigationStack: [] }),
+    setFormData: (data) => set({ formData: data, historySteps: [...get().historySteps, { label: data.label, slug: data.slug }] }),
+    resetFormData: () => set({ formData: {} as FormDataState['formData'], navigationStack: [], historySteps: [] }),
 }));

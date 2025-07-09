@@ -13,6 +13,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import type { HierarchyNode } from "@/data";
 import { COST_DATA } from "@/data/documentation-data";
 import { useFormDataStore } from "@/store/form-data.store";
 import { CircleMinus, CirclePlus } from "lucide-react";
@@ -28,37 +29,37 @@ interface Data {
   process_online: Document[];
 }
 
-export function DocAccordion() {
+interface DocAccordionProps {
+  formData: HierarchyNode;
+}
+
+export function DocAccordion({ formData }: DocAccordionProps) {
   const [selected, setSelected] = useState<string>("");
-  const { formData } = useFormDataStore();
 
   const { documents, process_online } = useMemo<Data>(() => {
     return formData.children.reduce((acc, item: any) => {
-      const keyDocument = "documents";
-      const keyProcessOnline = "process_online";
-
-      if (!acc[keyDocument]) acc[keyDocument] = [];
-      if (!acc[keyProcessOnline]) acc[keyProcessOnline] = [];
+      if (!acc["documents"]) acc["documents"] = [];
+      if (!acc["process_online"]) acc["process_online"] = [];
 
       const document = item?.["document"];
       const processOnline = item?.["process_online"];
 
       if (document) {
-        acc[keyDocument].push({
+        acc["documents"].push({
           label: document?.["Requisitos"] || "",
           details: document?.["Notas requisitos"] || "",
         });
       }
 
       if (processOnline) {
-        acc[keyProcessOnline].push({
+        acc["process_online"].push({
           label: processOnline?.["Paso a paso"] || "",
           details: processOnline?.["Notas paso a paso"] || "",
         });
       }
 
       return acc;
-    }, {} as Record<string, any>) as Data;
+    }, {} as Data);
   }, [formData]);
 
   return (
