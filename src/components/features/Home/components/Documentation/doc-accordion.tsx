@@ -13,14 +13,14 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { DETAILS_OF_PROCESS_DOCUMENTATION } from "@/data/documentation-data";
+import { COST_DATA } from "@/data/documentation-data";
 import { useFormDataStore } from "@/store/form-data.store";
 import { CircleMinus, CirclePlus } from "lucide-react";
 import { useMemo, useState } from "react";
 
 interface Document {
   label: string;
-  details: string;
+  details: string | string[];
 }
 
 interface Data {
@@ -60,29 +60,6 @@ export function DocAccordion() {
       return acc;
     }, {} as Record<string, any>) as Data;
   }, [formData]);
-
-  const costsData = [
-    {
-      concepto: "Permiso de salida para un menor",
-      precio: "RD$ 2,000",
-    },
-    {
-      concepto: "Cada menor adicional en el mismo documento (hermanos)",
-      precio: "RD$ 1,500",
-    },
-    {
-      concepto: "Poder notarial (tramitado con abogado externo)",
-      precio: "Variable (según abogado o notaría)",
-    },
-    {
-      concepto: "Documento número 4",
-      precio: "RD$ 500",
-    },
-    {
-      concepto: "Documento número 5",
-      precio: "RD$ 500",
-    },
-  ];
 
   return (
     <Accordion
@@ -185,10 +162,10 @@ export function DocAccordion() {
         <AccordionContent className="grid grid-cols-1 gap-4 p-6">
           <Card className="bg-white border-none rounded-[8px] shadow-none">
             <CardContent className="p-0">
-              <div className="bg-gray-50 rounded-lg p-6">
+              <div className="bg-white rounded-lg p-6">
                 <Table>
                   <TableHeader>
-                    <TableRow className="border-b border-gray-200">
+                    <TableRow className="border-b border-gray-200 hover:bg-transparent cursor-default">
                       <TableHead className="text-left text-base font-semibold text-[#031942] py-4">
                         Concepto
                       </TableHead>
@@ -198,10 +175,10 @@ export function DocAccordion() {
                     </TableRow>
                   </TableHeader>
                   <TableBody>
-                    {costsData.map((item, index) => (
+                    {COST_DATA.map((item) => (
                       <TableRow
-                        key={index}
-                        className="border-b border-gray-100 last:border-b-0"
+                        key={item.concepto}
+                        className="border-b border-gray-100 last:border-b-0 hover:bg-transparent cursor-default"
                       >
                         <TableCell className="py-4 text-base text-[#031942] font-semibold">
                           {item.concepto}
