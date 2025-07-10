@@ -7,7 +7,7 @@ type ProgessBarState = {
 };
 
 export const useProgressBarStore = create<ProgessBarState>((set) => ({
-    progress: 0,
+    progress: 20,
     setProgress: (value) => set({ progress: value }),
-    resetProgress: () => set({ progress: 0 }),
+    resetProgress: () => set({ progress: 20 }),
 }));

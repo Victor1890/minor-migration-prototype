@@ -1,9 +1,16 @@
 import { Divider } from "@/components/ui/divider";
 import { DocAccordion } from "./doc-accordion";
 import { useFormDataStore } from "@/store/form-data.store";
+import { useProgressBarStore } from "@/store/progress-bar.store";
+import { useEffect } from "react";
 
 export function Documentation() {
   const { formData, historySteps } = useFormDataStore();
+  const { setProgress } = useProgressBarStore();
+
+  useEffect(() => {
+    setProgress(100);
+  }, [setProgress]);
 
   return (
     <div className="">

@@ -22,6 +22,7 @@ import {
 } from "@/components/ui/dialog";
 import { Divider } from "@/components/ui/divider";
 import { Label } from "@/components/ui/label";
+import { useProgressBarStore } from "@/store/progress-bar.store";
 
 const { cases, notPermissions, notFoundCase } = DATA_DUMB;
 
@@ -32,6 +33,7 @@ interface HierarchyNodeCardProps {
 export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
   const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
   const [data, setData] = useState<HierarchyNode | null>(null);
+  const { setProgress, progress } = useProgressBarStore();
 
   const isMoreInfoAvailable = useMemo(() => {
     const isValid = ["1.1", "2.2", "3.2", "4"].includes(item.id);
@@ -57,6 +59,7 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
           pushToStack(formData.id);
           setFormData(item);
           setShow(true);
+          setProgress(progress + 20);
         }}
         key={item.slug}
       >
@@ -136,6 +139,7 @@ export function Container() {
     resetFormData,
     navigationStack,
   } = useFormDataStore();
+  const { setProgress, progress, resetProgress } = useProgressBarStore();
 
   const isAtRoot = isRootLevel(formData.slug, navigationStack.length);
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
@@ -187,7 +191,10 @@ export function Container() {
             onClick={() => {
               const prevId = popFromStack();
               const prevForm = getNodeById(cases as any, prevId || "");
-              if (prevForm) return setFormData(prevForm);
+              if (prevForm) {
+                setProgress(progress - 20);
+                return setFormData(prevForm);
+              }
               resetFormData();
             }}
           >
@@ -198,7 +205,10 @@ export function Container() {
             <Button
               variant={"ghost"}
               className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
-              onClick={() => resetFormData()}
+              onClick={() => {
+                resetFormData();
+                resetProgress();
+              }}
             >
               Volver al inicio
             </Button>

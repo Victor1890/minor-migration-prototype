@@ -7,8 +7,16 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Divider } from "@/components/ui/divider";
 import { BRANCH_OFFICE_DATA } from "@/data/no-viable";
+import { useProgressBarStore } from "@/store/progress-bar.store";
+import { useEffect } from "react";
 
 export function NoViable() {
+  const { setProgress } = useProgressBarStore();
+
+  useEffect(() => {
+    setProgress(100);
+  }, [setProgress]);
+
   return (
     <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4">

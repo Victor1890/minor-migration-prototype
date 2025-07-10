@@ -86,13 +86,16 @@ export function DocAccordion({ formData }: DocAccordionProps) {
           Documentos obligatorios
         </AccordionTrigger>
         <AccordionContent className="px-6 pb-6">
-          <div className="space-y-4">
-            <div className="space-y-4">
+          <div className="flex flex-col gap-4">
+            <span className="font-semibold text-[#1E293B] text-xl">
+              Requisitos
+            </span>
+            <div className="flex flex-col gap-4">
               {documents?.map((doc, idx) => {
                 if (!doc.label) return null;
                 return (
                   <div key={doc.label}>
-                    <span className="font-semibold text-slate-800 text-base">
+                    <span className="font-semibold text-[#1E293B] text-base">
                       {idx + 1}. {doc.label}
                     </span>
                     {Array.isArray(doc.details) ? (
@@ -114,7 +117,44 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                 );
               })}
             </div>
-
+            <div className="flex flex-col gap-4">
+              <span className="font-semibold text-[#1E293B] text-xl">
+                Costo
+              </span>
+              <Card className="bg-white border-none rounded-[8px] shadow-none">
+                <CardContent className="p-0">
+                  <div className="bg-white rounded-lg p-6 pt-0">
+                    <Table>
+                      <TableHeader>
+                        <TableRow className="border-b border-gray-200 hover:bg-transparent cursor-default">
+                          <TableHead className="text-left text-base font-semibold text-[#031942] py-4">
+                            Concepto
+                          </TableHead>
+                          <TableHead className="text-right font-semibold text-[#031942] py-4">
+                            Precio
+                          </TableHead>
+                        </TableRow>
+                      </TableHeader>
+                      <TableBody>
+                        {COST_DATA.map((item) => (
+                          <TableRow
+                            key={item.concepto}
+                            className="border-b border-gray-100 last:border-b-0 hover:bg-transparent cursor-default"
+                          >
+                            <TableCell className="py-4 text-base text-[#031942] font-semibold">
+                              {item.concepto}
+                            </TableCell>
+                            <TableCell className="py-4 text-base text-right font-normal text-[#475569]">
+                              {item.precio}
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
             {/* <Alert className="bg-white border-white relative grid-cols-none">
               <div className="absolute top-3 left-3">
                 <AlertCircleIcon className="w-6 h-6 " />
@@ -142,58 +182,6 @@ export function DocAccordion({ formData }: DocAccordionProps) {
               </div>
             </Alert> */}
           </div>
-        </AccordionContent>
-      </AccordionItem>
-
-      <AccordionItem
-        value="details-of-process"
-        className="bg-[#F1F5F9] border-none rounded-lg"
-      >
-        <AccordionTrigger
-          disableArrow
-          className="font-semibold px-5 py-3 hover:no-underline text-2xl flex items-center justify-start gap-2"
-        >
-          {selected === "details-of-process" ? (
-            <CircleMinus className="shrink-0 translate-y-0.5 transition-transform duration-200" />
-          ) : (
-            <CirclePlus className="shrink-0 translate-y-0.5 transition-transform duration-200 " />
-          )}
-          Costo
-        </AccordionTrigger>
-        <AccordionContent className="grid grid-cols-1 gap-4 p-6">
-          <Card className="bg-white border-none rounded-[8px] shadow-none">
-            <CardContent className="p-0">
-              <div className="bg-white rounded-lg p-6">
-                <Table>
-                  <TableHeader>
-                    <TableRow className="border-b border-gray-200 hover:bg-transparent cursor-default">
-                      <TableHead className="text-left text-base font-semibold text-[#031942] py-4">
-                        Concepto
-                      </TableHead>
-                      <TableHead className="text-right font-semibold text-[#031942] py-4">
-                        Precio
-                      </TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {COST_DATA.map((item) => (
-                      <TableRow
-                        key={item.concepto}
-                        className="border-b border-gray-100 last:border-b-0 hover:bg-transparent cursor-default"
-                      >
-                        <TableCell className="py-4 text-base text-[#031942] font-semibold">
-                          {item.concepto}
-                        </TableCell>
-                        <TableCell className="py-4 text-base text-right font-normal text-[#475569]">
-                          {item.precio}
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </div>
-            </CardContent>
-          </Card>
         </AccordionContent>
       </AccordionItem>
 

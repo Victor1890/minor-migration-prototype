@@ -1,8 +1,17 @@
 import { useFormDataStore } from "@/store/form-data.store";
 import { ContactInfo } from "./ContactInfo";
+import { useEffect } from "react";
+import { useProgressBarStore } from "@/store/progress-bar.store";
 
 export function NotFound() {
   const { historySteps } = useFormDataStore();
+
+  const { setProgress } = useProgressBarStore();
+
+  useEffect(() => {
+    setProgress(100);
+  }, [setProgress]);
+
   return (
     <div className="w-full flex flex-col gap-8">
       <div className="p-6 rounded-[8px] flex flex-col gap-4 bg-[#EFF7FF]">
