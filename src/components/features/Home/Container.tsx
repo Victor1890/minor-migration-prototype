@@ -10,7 +10,7 @@ import { MoveLeft } from "lucide-react";
 import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
 import { NotFound } from "./components/NotFound";
 import { NoViable } from "./components/NoViable";
-import { Fragment, useMemo, useState } from "react";
+import { Fragment, useEffect, useMemo, useState } from "react";
 import { Documentation } from "./components/Documentation";
 import {
   Dialog,
@@ -181,6 +181,10 @@ export function Container() {
     return null;
   }, [formData]);
 
+  useEffect(() => {
+    setProgress(20);
+  }, [setProgress]);
+
   return (
     <div className="flex flex-col mx-auto">
       {navigationStack.length > 0 && formData.slug && (
@@ -191,10 +195,8 @@ export function Container() {
             onClick={() => {
               const prevId = popFromStack();
               const prevForm = getNodeById(cases as any, prevId || "");
-              if (prevForm) {
-                setProgress(progress - 20);
-                return setFormData(prevForm);
-              }
+              setProgress(progress - 20);
+              if (prevForm) return setFormData(prevForm);
               resetFormData();
             }}
           >

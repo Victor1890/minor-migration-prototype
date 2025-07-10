@@ -34,6 +34,15 @@ export const useFormDataStore = create<FormDataState>((set, get) => ({
         return popped;
     },
 
-    setFormData: (data) => set({ formData: data, historySteps: [...get().historySteps, { label: data.label, slug: data.slug }] }),
+    setFormData: (data) => {
+
+        const historyStepData = [...get().historySteps, { label: data.label, slug: data.slug }];
+
+        const historySteps = Array.from(
+            new Map(historyStepData.map((item) => [item.slug, item])).values()
+        )
+
+        return set({ formData: data, historySteps })
+    },
     resetFormData: () => set({ formData: {} as FormDataState['formData'], navigationStack: [], historySteps: [] }),
 }));
