@@ -47,6 +47,15 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
     label,
   } = useMemo(() => LABEL_ICON_DETAILS[item.slug] || {}, [item.slug]);
 
+  useEffect(() => {
+    const isProgressReset = cases.some(
+      (caseItem) => caseItem.slug === item.slug
+    );
+
+    if (!isProgressReset) return;
+    setProgress(20);
+  }, [item, formData]);
+
   return (
     <Fragment>
       <Card
@@ -180,10 +189,6 @@ export function Container() {
 
     return null;
   }, [formData]);
-
-  useEffect(() => {
-    setProgress(20);
-  }, [setProgress]);
 
   return (
     <div className="flex flex-col mx-auto">
