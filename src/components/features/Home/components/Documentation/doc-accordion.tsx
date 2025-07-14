@@ -18,6 +18,7 @@ import { COST_DATA } from "@/data/documentation-data";
 import { useFormDataStore } from "@/store/form-data.store";
 import { CircleMinus, CirclePlus } from "lucide-react";
 import { useMemo, useState } from "react";
+import { Wiki } from "../Wiki";
 
 interface Document {
   label: string;
@@ -95,23 +96,27 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                 if (!doc.label) return null;
                 return (
                   <div key={doc.label}>
-                    <span className="font-semibold text-[#1E293B] text-base">
-                      {idx + 1}. {doc.label}
-                    </span>
+                    <p className="font-semibold text-[#1E293B] text-base">
+                      {idx + 1}. <Wiki value={doc.label} />
+                    </p>
                     {Array.isArray(doc.details) ? (
                       <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
                         {doc.details?.map((desc, descIndex) => (
                           <li
                             key={descIndex}
-                            dangerouslySetInnerHTML={{ __html: desc }}
-                          />
+                            // dangerouslySetInnerHTML={{ __html: desc }}
+                          >
+                            <Wiki value={desc} />
+                          </li>
                         ))}
                       </ul>
                     ) : (
                       <p
                         className="text-sm font-normal text-[#475569]"
-                        dangerouslySetInnerHTML={{ __html: doc.details }}
-                      />
+                        // dangerouslySetInnerHTML={{ __html: doc.details }}
+                      >
+                        <Wiki value={doc.details} />
+                      </p>
                     )}
                   </div>
                 );
@@ -207,23 +212,27 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                 if (!process.label) return null;
                 return (
                   <div key={process.label}>
-                    <span className="font-semibold text-slate-800 text-base">
-                      {idx + 1}. {process.label}
-                    </span>
+                    <p className="font-semibold text-slate-800 text-base">
+                      {idx + 1}. <Wiki value={process.label} />
+                    </p>
                     {Array.isArray(process.details) ? (
                       <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
                         {process.details?.map((desc, descIndex) => (
                           <li
                             key={descIndex}
-                            dangerouslySetInnerHTML={{ __html: desc }}
-                          />
+                            // dangerouslySetInnerHTML={{ __html: desc }}
+                          >
+                            <Wiki value={desc} />
+                          </li>
                         ))}
                       </ul>
                     ) : (
                       <p
                         className="text-sm font-normal text-[#475569]"
-                        dangerouslySetInnerHTML={{ __html: process.details }}
-                      />
+                        // dangerouslySetInnerHTML={{ __html: process.details }}
+                      >
+                        <Wiki value={process.details} />
+                      </p>
                     )}
                   </div>
                 );

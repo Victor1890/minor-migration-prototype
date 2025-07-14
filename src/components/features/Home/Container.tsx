@@ -1,17 +1,5 @@
-import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { DATA_DUMB, type HierarchyNode } from "@/data";
-import { cn } from "@/lib/utils";
-import { useFormDataStore } from "@/store/form-data.store";
-import { LABEL_ICON_DETAILS } from "@/data/step-icon";
-import { FooterMessage } from "./FooterMessage";
-import { getNodeById } from "@/utils/array";
 import { Button } from "@/components/ui/button";
-import { MoveLeft } from "lucide-react";
-import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
-import { NotFound } from "./components/NotFound";
-import { NoViable } from "./components/NoViable";
-import { Fragment, useEffect, useMemo, useState } from "react";
-import { Documentation } from "./components/Documentation";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -22,7 +10,20 @@ import {
 } from "@/components/ui/dialog";
 import { Divider } from "@/components/ui/divider";
 import { Label } from "@/components/ui/label";
+import { DATA_DUMB, type HierarchyNode } from "@/data";
+import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
+import { LABEL_ICON_DETAILS } from "@/data/step-icon";
+import { cn } from "@/lib/utils";
+import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
+import { getNodeById } from "@/utils/array";
+import { MoveLeft } from "lucide-react";
+import { Fragment, useEffect, useMemo, useState } from "react";
+import { Documentation } from "./components/Documentation";
+import { NotFound } from "./components/NotFound";
+import { NoViable } from "./components/NoViable";
+import { Wiki } from "./components/Wiki";
+import { FooterMessage } from "./FooterMessage";
 
 const { cases, notPermissions, notFoundCase } = DATA_DUMB;
 
@@ -75,13 +76,19 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
         <CardHeader className="flex flex-col items-start">
           {Icon && <Icon />}
           <CardTitle className="text-left font-semibold text-[18px]">
-            {label || item.label}
+            <Wiki value={label || item.label} />
           </CardTitle>
         </CardHeader>
         <CardFooter className="bg-[#F9FAFB] px-8 py-4 rounded-b-xl grow">
           {!isMoreInfoAvailable ? (
             <p className="text-base font-normal text-[#4B5563]">
-              {description || item.description || "Descripción no disponible."}
+              <Wiki
+                value={
+                  description ||
+                  item.description ||
+                  "Descripción no disponible."
+                }
+              />
             </p>
           ) : (
             <Button
@@ -110,17 +117,19 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
               <div className="flex flex-col items-start gap-1">
                 <Label className="font-semibold text-xl">Descripción</Label>
                 <DialogDescription className="text-base font-normal text-[#475569]">
-                  {data.description || "Descripción no disponible."}
+                  <Wiki
+                    value={data.description || "Descripción no disponible."}
+                  />
                 </DialogDescription>
               </div>
-              <div className="flex flex-col items-start gap-1">
+              {/* <div className="flex flex-col items-start gap-1">
                 <Label className="font-semibold text-xl">Importante</Label>
                 <DialogDescription className="text-base font-normal text-[#475569]">
                   Si el menor viaja con otra persona que no sea su madre, aunque
                   tenga un solo apellido, sí deberá presentar una autorización
                   firmada por la madre a través de un poder notarial legalizado.
                 </DialogDescription>
-              </div>
+              </div> */}
             </div>
 
             <DialogFooter>
