@@ -2,7 +2,7 @@ export const DATA_DUMB = {
     "cases": [
         {
             "id": "1",
-            "label": "Menor tiene únicamente nacionalidad dominicana",
+            "label": "Tiene nacionalidad dominicana únicamente",
             "slug": "menor-tiene-únicamente-nacionalidad-dominicana",
             "children": [
                 {
@@ -1686,7 +1686,7 @@ export const DATA_DUMB = {
         },
         {
             "id": "2",
-            "label": "Menor dominicano con otra nacionalidad o residencia en el extranjero",
+            "label": "Tiene doble nacionalidad o residencia en el extranjero",
             "slug": "menor-dominicano-con-otra-nacionalidad-o-residencia-en-el-extranjero",
             "children": [
                 {
@@ -3371,7 +3371,7 @@ export const DATA_DUMB = {
         },
         {
             "id": "3",
-            "label": "Menor es extranjero con residencia en la República Dominicana",
+            "label": "Es extranjero con residencia en República Dominicana",
             "slug": "menor-es-extranjero-con-residencia-en-la-república-dominicana",
             "children": [
                 {
@@ -5046,7 +5046,7 @@ export const DATA_DUMB = {
         },
         {
             "id": "4",
-            "label": "Menor tiene estatus migratorio de no residentes (estudiantes, deportistas, artistas y estudiantes de intercambio)",
+            "label": "Tiene estadía temporal como estudiante, deportista o artista",
             "slug": "menor-tiene-estatus-migratorio-de-no-residentes-(estudiantes,-deportistas,-artistas-y-estudiantes-de-intercambio)",
             "children": [
                 {
@@ -5060,7 +5060,7 @@ export const DATA_DUMB = {
         },
         {
             "id": "5",
-            "label": "Menores hijo/as de personal de organismos internacionales acreditados en el país",
+            "label": "Es hijo de personal internacional acreditado en el país",
             "slug": "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país",
             "description": "En teoria no debe necesitar permiso y no pagan impuesto de estadia, preguntar a estefania o maria",
             "children": [
@@ -5180,9 +5180,9 @@ export const DATA_DUMB = {
         },
         {
             id: "6",
-            label: "¿Tu situación no está en la lista de opciones?",
+            label: "No veo mi caso o tengo dudas",
             slug: "tu-situacion-no-esta-en-la-lista-de-opciones",
-            description: "Selecciona esta opción si no estás seguro de qué opción elegir o tu situación no aparece entre las disponibles",
+            description: "Selecciona esta opción si no sabes cuál elegir o tu situación no está en la lista",
             children: []
         }
     ],

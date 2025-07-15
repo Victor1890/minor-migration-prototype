@@ -176,10 +176,9 @@ export function Container() {
     const notViablePage = notFoundCase.find((item) => item === formData.id);
     if (notViablePage) {
       return {
-        title:
-          "No ves la situación del menor en la lista de opciones o no estas seguro de que opción seleccionar?",
+        title: "¿Tienes dudas o no ves el caso del menor entre las opciones?",
         description:
-          "No te preocupes. Si no encuentras la situación del menor o tienes dudas sobre qué opción elegir, te guiaremos para recibir la ayuda adecuada.",
+          "¡No te preocupes! Podemos ayudarte a identificar la opción correcta o guiarte paso a paso si no estás seguro",
         render: <NoViable />,
       };
     }
@@ -233,8 +232,8 @@ export function Container() {
       )}
 
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-1">
-          <h1 className="font-bold text-[28px] text-[#020617]">
+        <div className="flex flex-col gap-1 w-[60%]">
+          <h1 className="font-bold text-[28px] text-[#020617] text-left">
             {renderSpecialView?.title || navigationContext.title}
           </h1>
           <p className="text-base font-normal text-[#727272]">

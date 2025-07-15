@@ -21,25 +21,30 @@ export function NoViable() {
     <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4">
         <p className="font-semibold text-[24px]">
-          Puedes comunicarte con nosotros en nuestros canales digitales
+          Comunícate con nosotros en nuestros canales digitales:
         </p>
         <div className="flex flex-col gap-1">
           <p>
-            <span className="font-bold">Teléfono:</span> (809) 508-2555 Ext.
+            <span className="font-bold">📞 Teléfono:</span> (809) 508-2555 Ext.
             3890
           </p>
           <p>
-            <span className="font-bold">Correo electrónico:</span>{" "}
+            <span className="font-bold">📧 Correo:</span>{" "}
             certificacionesmc@migracion.gob.do
           </p>
           <p>
-            <span className="font-bold">Horario de atención:</span> Lunes a
-            viernes, de 8:00 a m. a 4:00 p. m.
+            <span className="font-bold">🕒 Horario:</span> Lunes a viernes, de
+            8:00 a. m. a 4:00 p. m.
           </p>
         </div>
         <div className="flex flex-col">
           <p>También puedes visitar el portal oficial:</p>
-          <a>https://servicios.migracion.gob.do</a>
+          <a
+            href="https://servicios.migracion.gob.do"
+            rel="noopener noreferrer"
+          >
+            https://servicios.migracion.gob.do
+          </a>
         </div>
       </div>
 
