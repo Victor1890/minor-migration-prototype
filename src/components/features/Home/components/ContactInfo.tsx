@@ -26,7 +26,13 @@ export function ContactInfo() {
         </div>
         <div className="flex flex-col">
           <p>También puedes visitar el portal oficial:</p>
-          <a>https://servicios.migracion.gob.do</a>
+          <a
+            href="https://servicios.migracion.gob.do"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            https://servicios.migracion.gob.do
+          </a>
         </div>
       </div>
     </div>

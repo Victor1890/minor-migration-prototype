@@ -24,37 +24,53 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
                 },
                 time: {
                     label: "Horario de servicio",
-                    desc: "Lunes a viernes de 8:00 am. a 4:00 pm."
-                }
+                    desc: ["Lunes a viernes de 8:00 a.m. a 4:00 p.m.", "Tel: 809 508 2555 Ext. 7010"]
+                },
+            },
+            {
+                branch: {
+                    label: "Oficina Malecón Center",
+                    address: "Av. George Washington No. 500, Zona Universitaria, Santo Domingo ",
+                },
+                time: {
+                    label: "Horario de servicio",
+                    desc: ["Lunes a viernes de 8:00 a.m. – 8:00 p.m. ", "Ext. 2009 - 2071"]
+                },
             },
             {
                 branch: {
                     label: "Oficina Santiago",
-                    address: "Gral. Eusebio Manzueta 21, Santiago",
+                    address: "Calle Gral. Eusebio Manzueta No. 21, Santiago de los Caballeros",
                 },
                 time: {
                     label: "Horario de servicio",
-                    desc: "Lunes a viernes de 8:00 a.m. – 8:00 p.m"
+                    desc: [
+                        "Lunes a viernes de 8:00 a.m. – 4:00 p.m.",
+                        "Ext. 2205 - 2203 - 2206 - 2211"
+                    ]
                 }
             },
             {
                 branch: {
-                    label: "Oficina Puerto Planta",
-                    address: "Parada 57 Av. Bulevard Del Faro, Parque del este",
+                    label: "Oficina Puerto Plata",
+                    address: "Calle Beller, No. 93, Puerto Plata",
                 },
                 time: {
                     label: "Horario de servicio",
-                    desc: "Lunes a viernes de 8:00 a.m. – 5:00 p.m"
+                    desc: [
+                        "Lunes a viernes de 8:00 a.m. – 4:00 p.m.",
+                        "Ext. 3600 - 3601 - 3603 "
+                    ]
                 }
             },
             {
                 branch: {
                     label: "Oficina Punta Cana",
-                    address: "Parada 57 Av. Bulevard Del Faro, Parque del este",
+                    address: "Blvd. 1ro. de Noviembre, Punta Cana",
                 },
                 time: {
                     label: "Horario de servicio",
-                    desc: "Lunes a viernes de 8:00 a.m. – 5:00 p.m"
+                    desc: ["Lunes a viernes de 8:00 a.m. – 4:00 p.m.", "Ext. 3000 - 3001 - 3002 "]
                 }
             }
         ]
@@ -65,11 +81,11 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
             {
                 branch: {
                     label: "Punto GOB Megacentro",
-                    address: "Av. San Vicente de Paúl 321, Santo Domingo Este.",
+                    address: "Av. San Vicente de Paúl 321, Santo Domingo Este",
                 },
                 time: {
                     label: "Horario de servicio",
-                    desc: ["Lunes a viernes de 8:00 a.m. – 8:00 p.m.", "Sábados de 8:00 a.m. – 2:00 p.m."]
+                    desc: ["Lunes a viernes de 8:00 a.m. – 8:00 p.m.", "Sábados de 9:00 a.m. – 6:00 p.m"]
                 }
             },
             {
@@ -80,70 +96,72 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
                 time: {
                     label: "Horario de servicio",
                     desc: [
-                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m",
-                        "Sábados de 9:00 a.m – 6:00 p.m."
+                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
+                        "Sábados de 9:00 a.m. – 6:00 p.m."
                     ]
                 }
             },
             {
                 branch: {
                     label: "Punto GOB Parque del Este",
-                    address: "Parada 57 Av. Bulevard Del Faro, Parque del este",
-                },
-                time: {
-                    label: "Horario de servicio",
-                    desc: "Lunes a viernes de 8:00 a.m. – 5:00 p.m"
-                }
-            },
-            {
-                branch: {
-                    label: "Punto GOB Santo Domingo Oeste",
-                    address: "Occidental Mall. Av. Prolongación 27 de Febrero.",
+                    address: "Parada 57 Av. Bulevard Del Faro, Parque del Este Santo Domingo",
                 },
                 time: {
                     label: "Horario de servicio",
                     desc: [
-                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m",
-                        "Sábados de 9:00 a.m – 6:00 p.m."
+                        "Lunes a viernes de 8:00 a.m. – 5:00 p.m."
                     ]
                 }
             },
             {
                 branch: {
-                    label: "Punto GOB Santo Doming Norte",
-                    address: "Av. Pdte. Jacobo Majluta Azar, Santo Domingo",
+                    label: "Punto GOB Santo Domingo Oeste",
+                    address: "Occidental Mall, Av. Prolongación 27 de Febrero"
                 },
                 time: {
                     label: "Horario de servicio",
                     desc: [
                         "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
-                        "Sábados de 9:00 a.m – 6:00 p.m."
+                        "Sábados de 9:00 a.m. – 6:00 p.m."
+                    ]
+                }
+            },
+            {
+                branch: {
+                    label: "Punto GOB Santo Domingo Norte",
+                    address: "Av. Pdte. Jacobo Majluta Azar, Santo Domingo Norte",
+                },
+                time: {
+                    label: "Horario de servicio",
+                    desc: [
+                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
+                        "Sábados de 9:00 a.m. – 6:00 p.m."
                     ]
                 }
             },
             {
                 branch: {
                     label: "Punto GOB Santiago",
-                    address: "La Sirena. Autopista Duarte Km 2 1/2, Santiago",
+                    address: "La Sirena, Autopista Duarte Km 2 1/2, Santiago",
                 },
                 time: {
                     label: "Horario de servicio",
                     desc: [
                         "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
-                        "Sábados de 9:00 a.m – 6:00 p.m."
+                        "Sábados de 9:00 a. m. – 6:00 p. m. "
                     ]
                 }
             },
             {
                 branch: {
                     label: "Punto GOB San Cristóbal",
-                    address: "Supermercado Bravo. El Esfuerzo 3, San Cristóbal",
+                    address: "Supermercado Bravo, El Esfuerzo 3, San Cristóbal",
                 },
                 time: {
                     label: "Horario de servicio",
                     desc: [
                         "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
-                        "Sábados de 9:00 a.m – 6:00 p.m."
+                        "Sábados de 9:00 a.m. – 6:00 p.m."
                     ]
                 }
             },

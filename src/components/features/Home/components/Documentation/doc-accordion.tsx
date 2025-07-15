@@ -16,9 +16,11 @@ import {
 import type { HierarchyNode } from "@/data";
 import { COST_DATA } from "@/data/documentation-data";
 import { useFormDataStore } from "@/store/form-data.store";
-import { CircleMinus, CirclePlus } from "lucide-react";
+import { AlertCircleIcon, CircleMinus, CirclePlus } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Wiki } from "../Wiki";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { STEP_TO_REQUIRED_SERVICE } from "@/data/step-icon";
 
 interface Document {
   label: string;
@@ -122,6 +124,28 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                 );
               })}
             </div>
+            <Alert className="bg-white border-white relative grid-cols-none">
+              <div className="absolute top-3 left-3">
+                <AlertCircleIcon className="w-6 h-6 text-[#0076DE]" />
+              </div>
+
+              <div className="ml-8 space-y-1">
+                <div className="font-semibold">
+                  Información a tener en cuenta:
+                </div>
+                <AlertDescription>
+                  <ul className="list-disc list-inside space-y-1 text-sm text-[#1E293B]">
+                    {[
+                      "El permiso tiene vigencia de 90 días.",
+                      "La autorización de viaje solo puede tramitarse en República Dominicana.",
+                      "Si el menor tiene custodia exclusiva por sentencia, esta debe presentarse además del permiso judicial (si aplica).",
+                    ].map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </AlertDescription>
+              </div>
+            </Alert>
             <div className="flex flex-col gap-4">
               <span className="font-semibold text-[#1E293B] text-xl">
                 Costo
@@ -160,32 +184,6 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                 </CardContent>
               </Card>
             </div>
-            {/* <Alert className="bg-white border-white relative grid-cols-none">
-              <div className="absolute top-3 left-3">
-                <AlertCircleIcon className="w-6 h-6 " />
-              </div>
-
-              <div className="ml-8 space-y-1">
-                <div className="font-semibold">Nota adicional</div>
-                <AlertDescription>
-                  <ul className="list-disc list-inside space-y-1 text-sm">
-                    <li>
-                      El permiso de salida tiene una vigencia de 90 días desde
-                      su emisión.
-                    </li>
-                    <li>
-                      La autorización judicial solo puede ser tramitada en
-                      República Dominicana.
-                    </li>
-                    <li>
-                      Si el menor tiene custodia exclusiva otorgada por
-                      sentencia, esta debe presentarse además del permiso
-                      judicial (si aplica).
-                    </li>
-                  </ul>
-                </AlertDescription>
-              </div>
-            </Alert> */}
           </div>
         </AccordionContent>
       </AccordionItem>
@@ -208,7 +206,7 @@ export function DocAccordion({ formData }: DocAccordionProps) {
         <AccordionContent className="px-6 pb-6">
           <div className="space-y-4">
             <div className="space-y-4">
-              {process_online?.map((process, idx) => {
+              {STEP_TO_REQUIRED_SERVICE?.map((process, idx) => {
                 if (!process.label) return null;
                 return (
                   <div key={process.label}>
@@ -218,22 +216,16 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                     {Array.isArray(process.details) ? (
                       <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
                         {process.details?.map((desc, descIndex) => (
-                          <li
-                            key={descIndex}
-                            // dangerouslySetInnerHTML={{ __html: desc }}
-                          >
+                          <li key={descIndex}>
                             <Wiki value={desc} />
                           </li>
                         ))}
                       </ul>
-                    ) : (
-                      <p
-                        className="text-sm font-normal text-[#475569]"
-                        // dangerouslySetInnerHTML={{ __html: process.details }}
-                      >
+                    ) : process.details ? (
+                      <p className="text-sm font-normal text-[#475569]">
                         <Wiki value={process.details} />
                       </p>
-                    )}
+                    ) : null}
                   </div>
                 );
               })}

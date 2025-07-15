@@ -1,19 +1,18 @@
 export const FooterMessage = () => (
-  <p className="max-w-[896px] w-full text-[#031942] font-normal text-base">
-    Si tu situación no está entre las opciones disponibles, puedes comunicarte
-    con la Dirección General de Migración para recibir orientación. Puedes
-    llamar al{" "}
-    <span className="text-[#0076DE] font-extrabold underline">
-      (809) 508-2555 Ext. 3890
-    </span>
-    , escribir al correo{" "}
-    <span className="text-[#0076DE] font-extrabold underline">
-      certificacionesmc@migracion.gob.do
-    </span>
-    , o visitar sus oficinas en la{" "}
-    <span className="text-[#0076DE] font-extrabold underline">
-      Autopista 30 de Mayo, Esquina Héroes de Luperón, Santo Domingo
-    </span>
-    .
-  </p>
+  <div className="max-w-[896px] w-full text-[#031942] font-normal text-base flex flex-col gap-4">
+    ¿No encuentras tu caso? Comunícate con la Dirección de Migración:
+    <div className="flex flex-col gap-1">
+      <p>
+        <span className="font-bold">Teléfono:</span> (809) 508-2555 Ext. 3890
+      </p>
+      <p>
+        <span className="font-bold">Correo electrónico:</span>{" "}
+        certificacionesmc@migracion.gob.do
+      </p>
+      <p>
+        <span className="font-bold">Horario de atención:</span> Lunes a viernes,
+        de 8:00 a m. a 4:00 p. m.
+      </p>
+    </div>
+  </div>
 );

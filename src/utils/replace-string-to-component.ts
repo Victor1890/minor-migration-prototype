@@ -82,3 +82,11 @@ export const replaceStringToComponent = (
         sourceArray.map((x) => (isString(x) ? replaceString(x, match, fn) : x))
     );
 };
+
+
+export function normalize(value: string) {
+    return value.toLowerCase()
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
+}

@@ -42,6 +42,7 @@ export function NoViable() {
           <a
             href="https://servicios.migracion.gob.do"
             rel="noopener noreferrer"
+            target="_blank"
           >
             https://servicios.migracion.gob.do
           </a>

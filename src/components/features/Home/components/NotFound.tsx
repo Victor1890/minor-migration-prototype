@@ -22,7 +22,7 @@ export function NotFound() {
           {historySteps.map((item) => (
             <li key={item.slug}>
               {item?.slug
-                ? LABEL_DETAILT_NOT_FOUND[item?.slug]?.label
+                ? LABEL_DETAILT_NOT_FOUND[item?.slug]?.label || item.label
                 : item.label}
             </li>
           ))}

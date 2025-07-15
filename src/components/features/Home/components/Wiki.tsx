@@ -4,7 +4,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { DATA_DUMB } from "@/data";
-import { replaceStringToComponent } from "@/utils/replace-string-to-component";
+import {
+  normalize,
+  replaceStringToComponent,
+} from "@/utils/replace-string-to-component";
 import { memo, useMemo, useState, type JSX } from "react";
 
 const { termLegal } = DATA_DUMB;
@@ -28,47 +31,41 @@ const WikiComponent = ({
   const ContentComp = asContent || "p";
 
   const termLegalData = useMemo(() => {
-    const data = termLegal.find((term) => {
-      const isValid = value.split(" ").some((word) => {
-        return term["Término legal"].toLowerCase().includes(word.toLowerCase());
-      });
-
-      return isValid;
+    const found = termLegal.find((term) => {
+      const legalTerm = normalize(term["Término legal"] || "");
+      return normalize(value).includes(legalTerm);
     });
 
-    if (!data) return { label: "", explanation: "" };
+    if (!found) return { label: "", explanation: "" };
 
     return {
-      label: data?.["Término legal"] || "",
-      explanation: data?.["Descripción"] || "",
+      label: found["Término legal"] || "",
+      explanation: found["Descripción"] || "",
     };
   }, [value]);
 
   const termData = useMemo(() => {
-    const data = termLegal.find((term) => {
-      const isTermIncluded = value.split(" ").some((word) => {
-        return term["Término"]?.toLowerCase().includes(word.toLowerCase());
-      });
+    const words = value.split(/\s+/).map((w) => normalize(w));
+    const found = termLegal.find((term) => {
+      // Check "Término"
+      const mainTerm = normalize(term["Término"] || "");
+      if (words.includes(mainTerm)) return true;
 
-      if (isTermIncluded) return true;
-
-      const isSynonymIncluded = value.split(" ").some((word) => {
-        return term["Sinónimos o equivalentes"]
-          ?.toLowerCase()
+      // Check "Sinónimos o equivalentes"
+      if (term["Sinónimos o equivalentes"]) {
+        const synonyms = term["Sinónimos o equivalentes"]
           .split(",")
-          .some((synonym) => {
-            return synonym.trim().toLowerCase().includes(word.toLowerCase());
-          });
-      });
-
-      return isSynonymIncluded;
+          .map((syn) => normalize(syn));
+        return words.some((w) => synonyms.includes(w));
+      }
+      return false;
     });
 
-    if (!data) return { label: "", explanation: "" };
+    if (!found) return { label: "", explanation: "" };
 
     return {
-      label: data?.["Término"] || "",
-      explanation: data?.["Explicación sencilla"] || "",
+      label: found["Término"] || "",
+      explanation: found["Explicación sencilla"] || "",
     };
   }, [value]);
 
@@ -82,19 +79,23 @@ const WikiComponent = ({
         component?.(source) || (
           <Tooltip>
             <TooltipTrigger>
-              <TriggerComp className="text-[#0072D7] font-semibold cursor-pointer">
-                {source}
-              </TriggerComp>
+              <TriggerComp
+                className="font-semibold cursor-pointer underline"
+                dangerouslySetInnerHTML={{ __html: source }}
+              />
             </TooltipTrigger>
             <TooltipContent
               classNameArrow="bg-white fill-white"
-              className="bg-white text-black shadow-lg p-2 rounded-md max-w-xs"
+              className="bg-white text-black shadow-lg p-2 rounded-md max-w-[319px] max-h-[112px] text-[14px] text-balance"
             >
-              <ContentComp>
-                {termLegalData?.explanation ||
-                  termData.explanation ||
-                  "No description available."}
-              </ContentComp>
+              <ContentComp
+                dangerouslySetInnerHTML={{
+                  __html:
+                    termLegalData?.explanation ||
+                    termData.explanation ||
+                    "No description available.",
+                }}
+              />
             </TooltipContent>
           </Tooltip>
         )

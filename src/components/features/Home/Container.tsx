@@ -63,7 +63,7 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
         className={cn(
           "flex flex-col",
           "border hover:shadow-md transition-shadow cursor-pointer",
-          formData.slug === item.slug && "bg-card/90 ring-2 ring-blue-500"
+          "hover:bg-card/90 hover:ring-2 hover:ring-blue-500"
         )}
         onClick={() => {
           pushToStack(formData.id);
@@ -75,7 +75,7 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
       >
         <CardHeader className="flex flex-col items-start">
           {Icon && <Icon />}
-          <CardTitle className="text-left font-semibold text-[18px]">
+          <CardTitle className="text-left font-semibold text-[18px] text-balance">
             <Wiki value={label || item.label} />
           </CardTitle>
         </CardHeader>
@@ -97,7 +97,7 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
                 setData(item);
               }}
               variant={"ghost"}
-              className="text-base font-normal text-[#0072D7] cursor-pointer hover:text-[#0056A3] flex items-center gap-2"
+              className="text-base font-normal text-black cursor-pointer hover:underline flex items-center gap-2"
             >
               Ver más información
             </Button>
@@ -117,9 +117,11 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
               <div className="flex flex-col items-start gap-1">
                 <Label className="font-semibold text-xl">Descripción</Label>
                 <DialogDescription className="text-base font-normal text-[#475569]">
-                  <Wiki
-                    value={data.description || "Descripción no disponible."}
-                  />
+                  {data.description ? (
+                    <Wiki value={data.description} />
+                  ) : (
+                    "Descripción no disponible."
+                  )}
                 </DialogDescription>
               </div>
               {/* <div className="flex flex-col items-start gap-1">
@@ -170,6 +172,7 @@ export function Container() {
         description:
           "No te preocupes, no necesitas un permiso especial para este caso.",
         render: <NotFound />,
+        type: "not-found",
       };
     }
 
@@ -180,6 +183,7 @@ export function Container() {
         description:
           "¡No te preocupes! Podemos ayudarte a identificar la opción correcta o guiarte paso a paso si no estás seguro",
         render: <NoViable />,
+        type: "no-viable",
       };
     }
 
@@ -188,10 +192,11 @@ export function Container() {
     );
     if (documentationPage) {
       return {
-        title: "Documentos obligatorios y pasos para tu caso",
+        title: "Documentos obligatorios y pasos a seguir",
         description:
-          "Antes de iniciar tu solicitud, asegúrate de contar con todos los documentos requeridos y sigue los pasos detallados para completar el proceso sin contratiempos. Esta guía está basada en tu caso específico.",
+          "Antes de iniciar tu solicitud, asegúrate de contar con todos los documentos necesarios y seguir el paso a paso para completar el proceso sin contratiempos",
         render: <Documentation />,
+        type: "documentation",
       };
     }
 
@@ -201,38 +206,61 @@ export function Container() {
   return (
     <div className="flex flex-col mx-auto">
       {navigationStack.length > 0 && formData.slug && (
-        <div className="pb-8 flex justify-start items-center gap-4">
-          <Button
-            variant={"outline"}
-            className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
-            onClick={() => {
-              const prevId = popFromStack();
-              const prevForm = getNodeById(cases as any, prevId || "");
-              setProgress(progress - 20);
-              if (prevForm) return setFormData(prevForm);
-              resetFormData();
-            }}
-          >
-            <MoveLeft />
-            Paso anterior
-          </Button>
-          {renderSpecialView?.title && (
+        <div className="flex items-center justify-between">
+          <div className="pb-8 flex justify-start items-center gap-4">
             <Button
-              variant={"ghost"}
-              className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7]"
+              variant={"outline"}
+              className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
               onClick={() => {
+                const prevId = popFromStack();
+                const prevForm = getNodeById(cases as any, prevId || "");
+                setProgress(progress - 20);
+                if (prevForm) return setFormData(prevForm);
                 resetFormData();
-                resetProgress();
               }}
             >
-              Volver al inicio
+              <MoveLeft />
+              Paso anterior
+            </Button>
+            {renderSpecialView?.title && (
+              <Button
+                variant={"ghost"}
+                className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
+                onClick={() => {
+                  resetFormData();
+                  resetProgress();
+                }}
+              >
+                Volver al inicio
+              </Button>
+            )}
+          </div>
+
+          {renderSpecialView?.type !== "no-viable" && (
+            <Button
+              asChild
+              variant={"default"}
+              className="rounded-full flex gap-2 items-center bg-[#0072D7] hover:bg-[#0072D7]/90 text-white border-[#0072D7] max-w-[257px] w-full cursor-pointer"
+            >
+              <a
+                href="https://servicios.migracion.gob.do/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ir al portal para iniciar la solicitud
+              </a>
             </Button>
           )}
         </div>
       )}
 
       <div className="flex flex-col gap-8">
-        <div className="flex flex-col gap-1 w-[60%]">
+        <div
+          className={cn(
+            "flex flex-col gap-1",
+            renderSpecialView?.type === "not-found" && "w-[60%]"
+          )}
+        >
           <h1 className="font-bold text-[28px] text-[#020617] text-left">
             {renderSpecialView?.title || navigationContext.title}
           </h1>
@@ -264,9 +292,13 @@ export function Container() {
               )}
             </Fragment>
           )}
-          <div className="py-12">
-            <FooterMessage />
-          </div>
+          {["no-viable", "not-found"].includes(
+            renderSpecialView?.type || ""
+          ) ? null : (
+            <div className="py-12">
+              <FooterMessage />
+            </div>
+          )}
         </div>
       </div>
     </div>
