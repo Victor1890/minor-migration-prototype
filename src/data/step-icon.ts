@@ -85,25 +85,3 @@ export const LABEL_DETAILT_NOT_FOUND: Record<string, Partial<StatusMigrationMino
         label: "Viajará con un tercero o una aerolínea"
     },
 }
-
-export const STEP_TO_REQUIRED_SERVICE = [
-    {
-        label: "Ingresar al portal de servicios de la Dirección General de Migración y completa el formulario de solicitud.",
-        details: [
-            "El usuario debe crear una cuenta y contraseña, si no la tiene.",
-            "De la lista de servicios disponibles elija la opción “Permiso de menor” hacer clic en el botón solicitar y complete la información requerida en los formularios."
-        ]
-    },
-    {
-        label: "Los documentos deben estar escaneados en formato JPG para ser cargados en la página web."
-    },
-    {
-        label: "En caso de que sus documentos estén incompletos se le notificará vía correo que debe completar la solicitud con los documentos faltantes en la plataforma."
-    },
-    {
-        label: "Si los documentos cargados a la página Web están correcto recibirá una notificación vía correo electrónico para que proceda a realizar el pago (en línea, a través de Banreservas o con tarjetas en caja de certificaciones."
-    },
-    {
-        label: "Una vez recibida la notificación o transcurrido 24 horas laborables de haber enviado su solicitud debe dirigirse a la oficina seleccionada con los documentos requeridos."
-    }
-]

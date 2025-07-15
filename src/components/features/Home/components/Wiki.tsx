@@ -8,7 +8,7 @@ import {
   normalize,
   replaceStringToComponent,
 } from "@/utils/replace-string-to-component";
-import { memo, useMemo, useState, type JSX } from "react";
+import { memo, useMemo, isValidElement, type JSX } from "react";
 
 const { termLegal } = DATA_DUMB;
 
@@ -74,15 +74,20 @@ const WikiComponent = ({
     match ||
       termLegalData?.label.toLowerCase() ||
       termData?.label.toLowerCase(),
-    (source: string) => {
+    (source) => {
+      if (!source) return null;
+
       return (
         component?.(source) || (
           <Tooltip>
             <TooltipTrigger>
-              <TriggerComp
-                className="font-semibold cursor-pointer underline"
-                dangerouslySetInnerHTML={{ __html: source }}
-              />
+              {isValidElement(source) ? (
+                source
+              ) : (
+                <TriggerComp className="font-semibold cursor-pointer underline">
+                  {source}
+                </TriggerComp>
+              )}
             </TooltipTrigger>
             <TooltipContent
               classNameArrow="bg-white fill-white"

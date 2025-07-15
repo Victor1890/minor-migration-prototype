@@ -5188,6 +5188,15 @@ export const DATA_DUMB = {
     ],
     "termLegal": [
         {
+            "Término legal": "Guarda custodia",
+            "Descripción": "Se refiere a quien cuida al menor en caso de divorcio o separación.",
+            "Otorgado por": "Tribunal de NNA",
+            "Término": "Código QR",
+            "Explicación sencilla": "Código de barras cuadrado que puede ser escaneado con un celular para verificar información.",
+            "Traducción para usuarios no técnicos": "Imagen cuadrada que se escanea con el teléfono y contiene datos del documento.",
+            "Sinónimos o equivalentes": "Código escaneable, lector de QR"
+        },
+        {
             "Término legal": "Tutor legal",
             "Descripción": "Es una tercera persona o institucion, a quien un tribunal le concede los derechos legales sobre el menor.",
             "Otorgado por": "Tribunal de NNA",
@@ -5197,7 +5206,7 @@ export const DATA_DUMB = {
             "Sinónimos o equivalentes": "Digitalizar, subir como imagen"
         },
         {
-            "Término legal": "Guarda y custodia legal/derecho",
+            "Término legal": "Guarda legal",
             "Descripción": "Significa asumir la responsabilidad del cuidado, protección, educación y supervisión directa del niño o adolescente y se otorga a traves de un tribunal",
             "Otorgado por": "Tribunal de NNA",
             "Término": "Formato JPG / JPEG",

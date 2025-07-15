@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Table,
@@ -15,12 +16,10 @@ import {
 } from "@/components/ui/table";
 import type { HierarchyNode } from "@/data";
 import { COST_DATA } from "@/data/documentation-data";
-import { useFormDataStore } from "@/store/form-data.store";
 import { AlertCircleIcon, CircleMinus, CirclePlus } from "lucide-react";
-import { useMemo, useState } from "react";
+import { isValidElement, useMemo, useState } from "react";
 import { Wiki } from "../Wiki";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { STEP_TO_REQUIRED_SERVICE } from "@/data/step-icon";
+import { STEP_TO_REQUIRED_SERVICE } from "@/data/documentation-data/service";
 
 interface Document {
   label: string;
@@ -210,21 +209,55 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                 if (!process.label) return null;
                 return (
                   <div key={process.label}>
-                    <p className="font-semibold text-slate-800 text-base">
+                    <p className="font-semibold text-[#1E293B] text-base">
                       {idx + 1}. <Wiki value={process.label} />
                     </p>
+
                     {Array.isArray(process.details) ? (
-                      <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
-                        {process.details?.map((desc, descIndex) => (
-                          <li key={descIndex}>
-                            <Wiki value={desc} />
-                          </li>
-                        ))}
-                      </ul>
+                      process.details.map((detail, detailIdx) => {
+                        if (
+                          typeof detail === "object" &&
+                          detail !== null &&
+                          "label" in detail &&
+                          "list" in detail
+                        ) {
+                          return (
+                            <div key={detailIdx} className="mb-2">
+                              <p className="text-sm text-[#1E293B]">
+                                {isValidElement(detail.label) ? (
+                                  detail.label
+                                ) : (
+                                  <Wiki value={detail.label as string} />
+                                )}
+                              </p>
+                              <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
+                                {detail.list.map((item, itemIdx) => (
+                                  <li key={itemIdx}>
+                                    <Wiki value={item} />
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        }
+                        // If detail is a string (array of strings)
+                        return (
+                          <p
+                            key={detailIdx}
+                            className="text-sm font-normal text-[#475569]"
+                          >
+                            <Wiki value={detail as string} />
+                          </p>
+                        );
+                      })
                     ) : process.details ? (
-                      <p className="text-sm font-normal text-[#475569]">
-                        <Wiki value={process.details} />
-                      </p>
+                      isValidElement(process.details) ? (
+                        process.details
+                      ) : (
+                        <p className="text-sm font-normal text-[#475569]">
+                          <Wiki value={process.details as string} />
+                        </p>
+                      )
                     ) : null}
                   </div>
                 );
