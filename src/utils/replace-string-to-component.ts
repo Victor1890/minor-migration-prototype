@@ -10,8 +10,6 @@ const escapeRegExp = (string: string): string => {
         : string;
 };
 
-const isString = (value: unknown): value is string => typeof value === 'string';
-
 const flatten = <T>(array: T[][] | T[]): T[] =>
     array.reduce<T[]>((acc, item) => acc.concat(item), []);
 
@@ -34,7 +32,7 @@ const replaceString = (
 
     if (str === '') return [str];
 
-    if (!isString(str)) {
+    if (!(typeof str === 'string')) {
         throw new TypeError(
             'First argument to react-string-replace#replaceString must be a string'
         );
@@ -46,12 +44,12 @@ const replaceString = (
 
     // Apply fn to all odd elements
     for (let i = 1; i < result.length; i += 2) {
-        if (result[i] === undefined || result[i - 1] === undefined) {
-            console.warn(
-                'reactStringReplace: Encountered undefined value during string replacement. Your RegExp may not be working as expected.'
-            );
-            continue;
-        }
+        // if (!result[i] || !result[i - 1]) {
+        //     console.warn(
+        //         'reactStringReplace: Encountered undefined value during string replacement. Your RegExp may not be working as expected.', result[i]
+        //     );
+        //     continue;
+        // }
 
         const curCharLen = result[i].length;
         curCharStart += result[i - 1].length;
@@ -78,9 +76,27 @@ export const replaceStringToComponent = (
 ): (string | unknown | React.ReactNode)[] => {
     const sourceArray = Array.isArray(source) ? source : [source];
 
-    return flatten(
-        sourceArray.map((x) => (isString(x) ? replaceString(x, match, fn) : x))
+    const flattened = flatten(
+        sourceArray.map((x) => (typeof x === 'string' ? replaceString(x, match, fn) : x))
     );
+
+    const result: (string | unknown | React.ReactNode)[] = [];
+    for (const item of flattened) {
+
+        if (!item) continue;
+
+        if (typeof item === 'string') {
+            if (typeof result[result.length - 1] === 'string') {
+                result[result.length - 1] = (result[result.length - 1] as string) + item;
+            } else {
+                result.push(item);
+            }
+        } else {
+            result.push(item);
+        }
+    }
+
+    return result;
 };
 
 
