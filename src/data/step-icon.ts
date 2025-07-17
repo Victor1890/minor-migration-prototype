@@ -9,26 +9,32 @@ interface StatusMigrationMinor {
 export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
     "menor-tiene-únicamente-nacionalidad-dominicana": {
         icon: DominicanIcon,
+        label: "Menor tiene únicamente nacionalidad dominicana",
         description: "El menor tiene nacionalidad dominicana y no cuenta con otra nacionalidad ni residencia en otro país"
     },
     "menor-dominicano-con-otra-nacionalidad-o-residencia-en-el-extranjero": {
         icon: DominicanWordIcon,
+        label: 'Tiene doble nacionalidad o residencia en el extranjero',
         description: "El menor tiene nacionalidad dominicana y además cuenta con nacionalidad extranjera o residencia legal en otro país"
     },
     "menor-es-extranjero-con-residencia-en-la-república-dominicana": {
         icon: WordDominicanIcon,
-        description: " El menor tiene pasaporte extranjero, pero cuenta con residencia legal vigente en República Dominicana"
+        label: "Es extranjero con residencia en República Dominicana",
+        description: "El menor tiene pasaporte extranjero, pero cuenta con residencia legal vigente en República Dominicana"
     },
-    "menor-tiene-estatus-migratorio-de-no-residentes-(estudiantes,-deportistas,-artistas-y-estudiantes-de-intercambio)": {
+    "menor-tiene-estatus-migratorio-de-no-residente-(estudiante,-deportista,-artista-y-estudiante-de-intercambio)": {
         icon: SchoolIcon,
+        label: "Tiene estadía temporal como estudiante, deportista o artista",
         description: "El menor está en República Dominicana por un tiempo limitado como estudiante, deportista, artista o sin residencia fija"
     },
     "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país": {
         icon: WordInternationalIcon,
+        label: "Es hijo de personal internacional acreditado en el país",
         description: "El menor es hijo de personal de un organismo internacional oficialmente acreditado en República Dominicana"
     },
     "tu-situacion-no-esta-en-la-lista-de-opciones": {
         icon: QuestionIcon,
+        label: "No veo mi caso o tengo dudas",
         description: "Selecciona esta opción si no estás seguro de qué opción elegir o tu situación no aparece entre las disponibles"
     },
     "viaja-con-ambos-padres": {
@@ -66,7 +72,7 @@ export const LABEL_DETAILT_NOT_FOUND: Record<string, Partial<StatusMigrationMino
     "menor-es-extranjero-con-residencia-en-la-república-dominicana": {
         label: "Es extranjero con residencia en República Dominicana"
     },
-    "menor-tiene-estatus-migratorio-de-no-residentes-(estudiantes,-deportistas,-artistas-y-estudiantes-de-intercambio)": {
+    "menor-tiene-estatus-migratorio-de-no-residente-(estudiante,-deportista,-artista-y-estudiante-de-intercambio)": {
         label: "Tiene estadía temporal como estudiante, deportista o artista"
     },
     "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país": {

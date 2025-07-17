@@ -2,7 +2,7 @@ export const DATA_DUMB = {
     "cases": [
         {
             "id": "1",
-            "label": "Tiene nacionalidad dominicana únicamente",
+            "label": "Menor tiene únicamente nacionalidad dominicana",
             "slug": "menor-tiene-únicamente-nacionalidad-dominicana",
             "children": [
                 {
@@ -235,7 +235,7 @@ export const DATA_DUMB = {
                                 {
                                     "document": {
                                         "Requisitos": "Acta de nacimiento",
-                                        "Notas requisitos": "Presentar acta en el  punto de Control Migratorio"
+                                        "Notas requisitos": "No requiere el permiso, pero debe presentar acta de nacimiento en el  punto de Control Migratorio"
                                     },
                                     "process_online": {}
                                 }
@@ -249,7 +249,7 @@ export const DATA_DUMB = {
                             "children": [
                                 {
                                     "document": {
-                                        "Requisitos": "Mostrar en Control Migratorio el acta de defunción y acta de nacimiento del menor"
+                                        "Requisitos": "No requiere el permiso, pero debe mostrar en Control Migratorio el acta de defunción y acta de nacimiento del menor"
                                     },
                                     "process_online": {}
                                 }
@@ -1279,6 +1279,13 @@ export const DATA_DUMB = {
                                 },
                                 {
                                     "document": {
+                                        "Requisitos": "Acta de defunción del padre fallecido  con codigo QR y legible",
+                                        "Notas requisitos": "Si el padre o madre fallece en el extranjero, debe presentar Acta de defunción extranjera (Certificate of Death). Aquellas que no sean en ingles, portuges, italiano deben ser traducidas ya que el personal no domina otros idiomas"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
                                         "Requisitos": "Foto o copia de acta de nacimiento original del menor, con el código QR legible"
                                     },
                                     "process_online": {
@@ -1357,12 +1364,6 @@ export const DATA_DUMB = {
                                     "document": {
                                         "Requisitos": "Recibo de pago del servicio",
                                         "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
-                                    },
-                                    "process_online": {}
-                                },
-                                {
-                                    "document": {
-                                        "Requisitos": "Acta de defunción del padre fallecido  con codigo QR legible"
                                     },
                                     "process_online": {}
                                 }
@@ -1686,7 +1687,7 @@ export const DATA_DUMB = {
         },
         {
             "id": "2",
-            "label": "Tiene doble nacionalidad o residencia en el extranjero",
+            "label": "Menor dominicano con otra nacionalidad o residencia en el extranjero",
             "slug": "menor-dominicano-con-otra-nacionalidad-o-residencia-en-el-extranjero",
             "children": [
                 {
@@ -1908,7 +1909,7 @@ export const DATA_DUMB = {
                                     "children": [
                                         {
                                             "document": {
-                                                "Requisitos": "Acta de nacimiento",
+                                                "Requisitos": "No requiere el permiso, pero debe mostrar Acta de Nacimiento ante Control Migratorio",
                                                 "Notas requisitos": "Presentar acta en el aeropuerto"
                                             },
                                             "process_online": {}
@@ -3371,7 +3372,7 @@ export const DATA_DUMB = {
         },
         {
             "id": "3",
-            "label": "Es extranjero con residencia en República Dominicana",
+            "label": "Menor es extranjero con residencia en la República Dominicana",
             "slug": "menor-es-extranjero-con-residencia-en-la-república-dominicana",
             "children": [
                 {
@@ -3593,8 +3594,8 @@ export const DATA_DUMB = {
                                     "children": [
                                         {
                                             "document": {
-                                                "Requisitos": "Acta de nacimiento",
-                                                "Notas requisitos": "Presentar acta en el aeropuerto"
+                                                "Requisitos": "No requiere el permiso, pero debe presentar Acta de nacimiento ante Control Migratorio",
+                                                "Notas requisitos": "Presentar Acta de Nacimiento en el aeropuerto"
                                             },
                                             "process_online": {}
                                         }
@@ -3618,6 +3619,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.1.5",
                                     "label": "Menor adoptado por personas extranjeras y viaja por primera vez",
                                     "slug": "menor-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                                    "description": "Cuando el menor adoptado viaja con uno de los padres adoptivos",
                                     "children": [
                                         {
                                             "document": {
@@ -3717,6 +3719,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.1.6",
                                     "label": "Uno de los padres vive en el extranjero",
                                     "slug": "uno-de-los-padres-vive-en-el-extranjero",
+                                    "description": "Cuando el padre o madre que reside en el extranjero autoriza al otro padre o madre que residen en la República Dominicana a viajar con el menor",
                                     "children": [
                                         {
                                             "document": {
@@ -3816,6 +3819,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.1.7",
                                     "label": "Tiene autorización de viaje del menor del tribunal Niños, Niñas y Adolescentes",
                                     "slug": "tiene-autorización-de-viaje-del-menor-del-tribunal-niños,-niñas-y-adolescentes",
+                                    "description": "Cuando el menor viaja con la persona que tiene la guarda legal con autorización de viaje",
                                     "children": [
                                         {
                                             "document": {
@@ -3915,6 +3919,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.1.8",
                                     "label": "Viaja a una actividad cultural, escolar o deportiva",
                                     "slug": "viaja-a-una-actividad-cultural,-escolar-o-deportiva",
+                                    "description": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                                     "children": [
                                         {
                                             "document": {
@@ -4115,6 +4120,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.2.1",
                                     "label": "Viaja con la aerolínea",
                                     "slug": "viaja-con-la-aerolínea",
+                                    "description": "Cuando el menor viaja con la Aerolínea y cuenta con la autorización de ambos padres, padre, madre o tutor legal",
                                     "children": [
                                         {
                                             "document": {
@@ -4206,6 +4212,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.2.2",
                                     "label": "Viaja con el colegio, centro educativo o institución cultural",
                                     "slug": "viaja-con-el-colegio,-centro-educativo-o-institución-cultural",
+                                    "description": "Cuando el menor viaja con  una academia, centro educativo o institución cultural, y cuenta con la autorización de los padres, padre, madre o tutor legal",
                                     "children": [
                                         {
                                             "document": {
@@ -4305,6 +4312,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.2.3",
                                     "label": "Viaja con academia, selección o liga deportiva",
                                     "slug": "viaja-con-academia,-selección-o-liga-deportiva",
+                                    "description": "Cuando el menor viaja con  una academia, selecció o liga deportiva, y cuenta con la autorización de ambos padres, padre, madre o tutor legal",
                                     "children": [
                                         {
                                             "document": {
@@ -4418,6 +4426,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.2.4",
                                     "label": "Viaja con la persona que posee la guarda custodia (de hecho o legal)",
                                     "slug": "viaja-con-la-persona-que-posee-la-guarda-custodia-(de-hecho-o-legal)",
+                                    "description": "Cuando el menor viaja con la persona que tiene la guarda legal con autorización de viaje",
                                     "children": [
                                         {
                                             "document": {
@@ -4516,6 +4525,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.2.5",
                                     "label": "Menor  tiene un solo apellido (materno) y  no viaja con su madre",
                                     "slug": "menor-tiene-un-solo-apellido-(materno)-y-no-viaja-con-su-madre",
+                                    "description": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
                                     "children": [
                                         {
                                             "document": {
@@ -4615,6 +4625,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.2.6",
                                     "label": "Uno de los padres ha fallecido y no viaja con el padre/madre sobreviviente",
                                     "slug": "uno-de-los-padres-ha-fallecido-y-no-viaja-con-el-padre/madre-sobreviviente",
+                                    "description": "Cuando el menor viaja con la persona que ha autorizado el padre o madre sobreviviente",
                                     "children": [
                                         {
                                             "document": {
@@ -4720,6 +4731,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.2.7",
                                     "label": "Viaja con una persona autorizada por el tutor legal",
                                     "slug": "viaja-con-una-persona-autorizada-por-el-tutor-legal",
+                                    "description": "Cuando el menor viaja con la persona que ha autorizado el tutor legal",
                                     "children": [
                                         {
                                             "document": {
@@ -4824,6 +4836,7 @@ export const DATA_DUMB = {
                                     "id": "3.1.2.8",
                                     "label": "Viaja con abuelos, tíos, amigos u otras personas que no son los padres",
                                     "slug": "viaja-con-abuelos,-tíos,-amigos-u-otras-personas-que-no-son-los-padres",
+                                    "description": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                                     "children": [
                                         {
                                             "document": {
@@ -5046,28 +5059,376 @@ export const DATA_DUMB = {
         },
         {
             "id": "4",
-            "label": "Tiene estadía temporal como estudiante, deportista o artista",
-            "slug": "menor-tiene-estatus-migratorio-de-no-residentes-(estudiantes,-deportistas,-artistas-y-estudiantes-de-intercambio)",
+            "label": "Menor tiene estatus migratorio de no residente (estudiante, deportista, artista y estudiante de intercambio)",
+            "slug": "menor-tiene-estatus-migratorio-de-no-residente-(estudiante,-deportista,-artista-y-estudiante-de-intercambio)",
             "children": [
                 {
-                    "document": {
-                        "Requisitos": "No requiere presentar PSM",
-                        "Notas requisitos": "No requiere presentar PSM"
-                    },
-                    "process_online": {}
+                    "id": "4.1",
+                    "label": "El menor ha estado más de 6 meses en el país",
+                    "slug": "el-menor-ha-estado-más-de-6-meses-en-el-país",
+                    "children": [
+                        {
+                            "id": "4.1.1",
+                            "label": "El menor viaja acompañado con la persona o entidad autorizada con la que entró y se dirigirse a su pais de origen.",
+                            "slug": "el-menor-viaja-acompañado-con-la-persona-o-entidad-autorizada-con-la-que-entró-y-se-dirigirse-a-su-pais-de-origen.",
+                            "description": "EL menor saldra del país con la misma persona u organizació con la que ingresó, y se dirige al mismo país de origen.",
+                            "children": [
+                                {
+                                    "document": {
+                                        "Requisitos": "Poder notarial extranjero autorizando la salida del menor",
+                                        "Notas requisitos": "debe ser recibido en original y debe contener la apostilla de La Haya en original. Debe ser traducido al español y legalizada ante la procuraduría."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Acta de nacimiento del menor"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos"
+                                    }
+                                },
+                                {
+                                    "document": {},
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago"
+                                    }
+                                },
+                                {
+                                    "document": {},
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración"
+                                    }
+                                },
+                                {
+                                    "document": {},
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4.1.2",
+                            "label": "El menor viaja acompañado  de ambos padres",
+                            "slug": "el-menor-viaja-acompañado-de-ambos-padres",
+                            "description": "No requiere el permiso de salida pero debe mostrar Acta de nacimiento del menor",
+                            "children": [
+                                {
+                                    "document": {
+                                        "Requisitos": "No requiere el permiso, pero debe mostrar el acta de nacimiento del menor"
+                                    },
+                                    "process_online": {}
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4.1.3",
+                            "label": "El menor viaja con uno de los padres",
+                            "slug": "el-menor-viaja-con-uno-de-los-padres",
+                            "description": "Cuando uno de los padres autoriza al otro a viajar con el menor",
+                            "children": [
+                                {
+                                    "document": {
+                                        "Requisitos": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del país con el otro padre, legalizado por procuraduría.",
+                                        "Notas requisitos": "El padre que no viaja debe firmar el poder notarial autorizando la salida del menor."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Este poder debe ser legalizado en la Procuraduría General de la República o en PuntoGOB"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Acta de nacimiento del menor"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Crear un usuario en el portal de migración"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula de identidad del padre o madre que realiza la solicitud",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Completar los formularios con los datos del menor y del acompañante."
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la cédula del otro padre que autoriza",
+                                        "Notas requisitos": "Versión nueva"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Escanear todos los documentos requeridos"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía o trabajo del acompañante",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia de la visa / residencia / permiso de estadía del menor",
+                                        "Notas requisitos": "Si viaja a un país que requiera visa o residencia"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Esperar validación de los documentos"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del acompañante",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Realizar el pago"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Foto o copia del pasaporte del menor",
+                                        "Notas requisitos": "De la página principal con los datos biométricos."
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Depositar los documentos originales en la oficina de Migración"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "1 Foto 2x2 reciente del menor",
+                                        "Notas requisitos": "De frente, reciente y fondo claro"
+                                    },
+                                    "process_online": {
+                                        "Paso a paso": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    }
+                                },
+                                {
+                                    "document": {
+                                        "Requisitos": "Recibo de pago del servicio",
+                                        "Notas requisitos": "Puede realizarse en línea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
+                                    },
+                                    "process_online": {}
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "4.2",
+                    "label": "El menor no ha estado más de 6 meses en el país",
+                    "slug": "el-menor-no-ha-estado-más-de-6-meses-en-el-país",
+                    "children": [
+                        {
+                            "id": "4.2.1",
+                            "label": "El menor viaja acompañado con una de las personas con las que entro y se dirigirse a su pais de origen.",
+                            "slug": "el-menor-viaja-acompañado-con-una-de-las-personas-con-las-que-entro-y-se-dirigirse-a-su-pais-de-origen.",
+                            "description": "EL menor saldra del país con la misma persona u organizació con la que ingresó, y se dirige al mismo país de origen.",
+                            "children": [
+                                {
+                                    "document": {
+                                        "Requisitos": "No requiere el permiso",
+                                        "Notas requisitos": "No lo requiere si el menor viaja acompañado con una de las personas con las que entro y se dirigirse a su pais de origen."
+                                    },
+                                    "process_online": {}
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4.2.2",
+                            "label": "El menor viaja acompañado  de ambos padres",
+                            "slug": "el-menor-viaja-acompañado-de-ambos-padres",
+                            "description": "No requiere el permiso de salida pero debe mostrar Acta de nacimiento del menor",
+                            "children": [
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Crear un usuario en el portal de migración"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Completar los formularios con los datos del menor y del acompañante."
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Escanear todos los documentos requeridos"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Esperar validación de los documentos"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Realizar el pago"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Depositar los documentos originales en la oficina de Migración"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    },
+                                    "process_online": {}
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4.2.3",
+                            "label": "El menor viaja con uno de los padres",
+                            "slug": "el-menor-viaja-con-uno-de-los-padres",
+                            "description": "Cuando uno de los padres autoriza al otro a viajar con el menor",
+                            "children": [
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Entrar al portal  https://servicios.migracion.gob.do"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Crear un usuario en el portal de migración"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Completar los formularios con los datos del menor y del acompañante."
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Escanear todos los documentos requeridos"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Cargar los documentos escaneados o fotos a la plataforma"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Esperar validación de los documentos"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Realizar el pago"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Depositar los documentos originales en la oficina de Migración"
+                                    },
+                                    "process_online": {}
+                                },
+                                {
+                                    "document": {
+                                        "Notas requisitos": "Descargar la certificación en la plataforma: https://servicios.migracion.gob.do"
+                                    },
+                                    "process_online": {}
+                                }
+                            ]
+                        }
+                    ]
                 }
             ]
         },
         {
             "id": "5",
-            "label": "Es hijo de personal internacional acreditado en el país",
+            "label": "Menores hijo/as de personal de organismos internacionales acreditados en el país",
             "slug": "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país",
-            "description": "En teoria no debe necesitar permiso y no pagan impuesto de estadia, preguntar a estefania o maria",
             "children": [
                 {
                     "id": "5.1",
-                    "label": "Ambos padres están  en República Dominicana",
-                    "slug": "ambos-padres-están-en-república-dominicana",
+                    "label": "El menor viaja acompañado  de ambos padres",
+                    "slug": "el-menor-viaja-acompañado-de-ambos-padres",
+                    "description": "Cuando el menor viaja con ambos padres",
                     "children": [
                         {
                             "document": {
@@ -5080,8 +5441,9 @@ export const DATA_DUMB = {
                 },
                 {
                     "id": "5.2",
-                    "label": "Un padre está en el extranjero y otro en República Dominicana",
-                    "slug": "un-padre-está-en-el-extranjero-y-otro-en-república-dominicana",
+                    "label": "El menor viaja con uno de los padres",
+                    "slug": "el-menor-viaja-con-uno-de-los-padres",
+                    "description": "Cuando el menor viaja con uno de los padres",
                     "children": [
                         {
                             "document": {
@@ -5179,23 +5541,14 @@ export const DATA_DUMB = {
             ]
         },
         {
-            id: "6",
-            label: "No veo mi caso o tengo dudas",
-            slug: "tu-situacion-no-esta-en-la-lista-de-opciones",
-            description: "Selecciona esta opción si no sabes cuál elegir o tu situación no está en la lista",
-            children: []
+            "id": "6",
+            "label": "No veo mi caso o tengo dudas",
+            "slug": "tu-situacion-no-esta-en-la-lista-de-opciones",
+            "description": "Selecciona esta opción si no sabes cuál elegir o tu situación no está en la lista",
+            "children": []
         }
     ],
     "termLegal": [
-        {
-            "Término legal": "Guarda custodia",
-            "Descripción": "Se refiere a quien cuida al menor en caso de divorcio o separación.",
-            "Otorgado por": "Tribunal de NNA",
-            "Término": "Código QR",
-            "Explicación sencilla": "Código de barras cuadrado que puede ser escaneado con un celular para verificar información.",
-            "Traducción para usuarios no técnicos": "Imagen cuadrada que se escanea con el teléfono y contiene datos del documento.",
-            "Sinónimos o equivalentes": "Código escaneable, lector de QR"
-        },
         {
             "Término legal": "Tutor legal",
             "Descripción": "Es una tercera persona o institucion, a quien un tribunal le concede los derechos legales sobre el menor.",
@@ -5271,7 +5624,6 @@ export const DATA_DUMB = {
         {
             "Término legal": "Poder notarial",
             "Descripción": "Documento otorgado ante notario donde una persona (poderdante) autoriza a otra (apoderado) a actuar en su nombre.",
-            "Otorgado por": null,
             "Término": "Portal web",
             "Explicación sencilla": "Página oficial de Migración en Internet.",
             "Traducción para usuarios no técnicos": "Página web del gobierno para trámites.",
@@ -5280,7 +5632,6 @@ export const DATA_DUMB = {
         {
             "Término legal": "Poder consular",
             "Descripción": "Acto notarial realizado en un consulado dominicano en el exterior, que autentica firmas para documentos que luego serán legalizados u homologados.",
-            "Otorgado por": null,
             "Término": "Click",
             "Explicación sencilla": "Acción de presionar un botón del mouse.",
             "Traducción para usuarios no técnicos": "Presiona, selecciona con el mouse.",
@@ -5289,7 +5640,6 @@ export const DATA_DUMB = {
         {
             "Término legal": "Apostilla",
             "Descripción": "Certificación oficial bajo el Convenio de La Haya (1961) emitida por el MIREX que autentica la firma, sello y origen de un documento público dominicano para su validación en otros países .",
-            "Otorgado por": null,
             "Término": "Sistema",
             "Explicación sencilla": "Conjunto de herramientas digitales que procesan tu solicitud.",
             "Traducción para usuarios no técnicos": "La parte tecnológica que hace funcionar el portal.",
@@ -5298,7 +5648,6 @@ export const DATA_DUMB = {
         {
             "Término legal": "Legalización de documentos mediante la Procuraduría General",
             "Descripción": "Consiste en autenticar la firma, sello y, por extensión, la corporación o calidad del funcionario público que certificó el documento. Es un trámite oficial que garantiza la validez de firmas en actos notariales, judiciales y documentos oficiales.",
-            "Otorgado por": null,
             "Término": "Validación de documentos",
             "Explicación sencilla": "Verificación de que todo esté correcto.",
             "Traducción para usuarios no técnicos": "Revisión para ver si los papeles están bien.",
@@ -5307,7 +5656,6 @@ export const DATA_DUMB = {
         {
             "Término legal": "Homologación",
             "Descripción": "Reconocimiento formal de validez de documentos emitidos en el extranjero, que puede requerir traducción, apostilla/legalización y aprobación por entidades dominicanas.",
-            "Otorgado por": null,
             "Término": "Notificación",
             "Explicación sencilla": "Mensaje que informa algo sobre tu trámite.",
             "Traducción para usuarios no técnicos": "Aviso por correo o en el portal.",
@@ -5316,7 +5664,6 @@ export const DATA_DUMB = {
         {
             "Término legal": "Tribunal de NNA",
             "Descripción": "Órgano judicial especializado en temas de Niños, Niñas y Adolescentes, encargado de tutelas, custodia y temas migratorios que involucren menores.",
-            "Otorgado por": null,
             "Término": "Término",
             "Explicación sencilla": "Explicación sencilla",
             "Traducción para usuarios no técnicos": "Traducción para usuarios no técnicos",
@@ -5325,7 +5672,6 @@ export const DATA_DUMB = {
         {
             "Término legal": "Certificación de no apelación (no REVOCACIÓN)",
             "Descripción": "Documento judicial que certifica que una resolución sobre un menor ya es firme, al no haberse apelado o revocado dentro del plazo legal.",
-            "Otorgado por": null,
             "Término": "Certificación descargable",
             "Explicación sencilla": "Documento que puedes guardar desde el portal.",
             "Traducción para usuarios no técnicos": "Comprobante que se puede imprimir.",
@@ -5334,7 +5680,6 @@ export const DATA_DUMB = {
         {
             "Término legal": "Estatus migratorio",
             "Descripción": "Se refiere a la condición legal de una persona dentro de un país",
-            "Otorgado por": null,
             "Término": "Formulario",
             "Explicación sencilla": "Documento con preguntas para llenar.",
             "Traducción para usuarios no técnicos": "Pantalla donde escribes la información solicitada.",
@@ -5343,20 +5688,19 @@ export const DATA_DUMB = {
         {
             "Término legal": "Carta de ruta o salvo conducto",
             "Descripción": "Documento expedido por autoridades migratorias que permite el tránsito o regreso seguro al país, usualmente para casos especiales o menores sin documentos regulares.",
-            "Otorgado por": null,
             "Término": "Datos biometricos",
             "Explicación sencilla": "Información personal (huellas, foto, iris) requerida por migración para identificación del menor en emisión de documentos migratorios, permisos y seguimiento.",
-            "Traducción para usuarios no técnicos": "foto y datos de identificación",
-            "Sinónimos o equivalentes": null
+            "Traducción para usuarios no técnicos": "foto y datos de identificación"
         },
         {
             "Término legal": "Interes superior del menor",
-            "Descripción": "Principio jurídico prioritario que coloca el bienestar y derechos del menor como la consideración principal en cualquier decisión administrativa o judicial.",
-            "Otorgado por": null,
-            "Término": null,
-            "Explicación sencilla": null,
-            "Traducción para usuarios no técnicos": null,
-            "Sinónimos o equivalentes": null
+            "Descripción": "Principio jurídico prioritario que coloca el bienestar y derechos del menor como la consideración principal en cualquier decisión administrativa o judicial."
+        },
+        {
+            "Término legal": "Certificación de sentencia  (actualización)"
+        },
+        {
+            "Término legal": "Legalización de certificación de sentencia"
         }
     ],
     "notPermissions": [
@@ -5372,7 +5716,8 @@ export const DATA_DUMB = {
         "3.1.1.3",
         "3.1.1.4",
         "3.2",
-        "4"
+        // "4",
+        "4.1.2"
     ],
     "notFoundCase": [
         "6"
