@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Container } from "./Container";
+import { Container } from "./container";
 
 export function HomePage() {
   return (

@@ -53,7 +53,7 @@ export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
         description: "El menor viajará con alguien que no es su padre ni su madre, o bajo cuidado del personal de la aerolínea"
     },
     "el-menor-ha-estado-más-de-6-meses-en-el-país": {
-        label: "Si",
+        label: "Sí",
         description: "El menor tiene más de seis meses en República Dominicana desde su última entrada al país"
     },
     "el-menor-no-ha-estado-más-de-6-meses-en-el-país": {

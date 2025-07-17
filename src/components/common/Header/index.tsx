@@ -23,7 +23,6 @@ export const Header = memo(() => {
           >
             <Logo
               aria-label="Logo de Migración"
-              tabIndex={0}
               className="md:h-11 md:w-[222.44px] h-[33.5px] w-[169.36px]"
             />
             <div
