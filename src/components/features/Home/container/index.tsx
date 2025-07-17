@@ -129,9 +129,9 @@ export function Container() {
           <h1 className="font-bold text-[28px] text-[#020617] text-left">
             {renderSpecialView?.title || navigationContext.title}
           </h1>
-          <p className="text-base font-normal text-[#727272]">
+          <h2 className="text-base font-normal text-[#727272]">
             {renderSpecialView?.description || navigationContext.description}
-          </p>
+          </h2>
         </div>
         <div className="pb-6 w-full">
           {renderSpecialView?.render || (
@@ -145,25 +145,13 @@ export function Container() {
                   )}
                 >
                   {formData.children.map((item: any, idx) => {
-                    return (
-                      <HierarchyNodeCard
-                        key={item.slug}
-                        item={item}
-                        idx={Number(`10${idx}`)}
-                      />
-                    );
+                    return <HierarchyNodeCard key={item.slug} item={item} />;
                   })}
                 </div>
               ) : (
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
                   {cases.map((item, idx) => {
-                    return (
-                      <HierarchyNodeCard
-                        key={item.slug}
-                        item={item}
-                        idx={Number(`10${idx}`)}
-                      />
-                    );
+                    return <HierarchyNodeCard key={item.slug} item={item} />;
                   })}
                 </div>
               )}

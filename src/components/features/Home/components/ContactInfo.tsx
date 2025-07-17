@@ -1,9 +1,9 @@
 export function ContactInfo() {
   return (
     <div>
-      <p className="text-xl font-semibold text-[#020617]">
+      <h3 className="text-xl font-semibold text-[#020617]">
         ¿Tienes dudas o necesitas confirmar esta información?
-      </p>
+      </h3>
       <div className="text-[#031942] flex flex-col gap-4">
         <p className="">
           Si tienes alguna pregunta sobre tu caso o deseas asegurarte de que los

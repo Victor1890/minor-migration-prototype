@@ -67,7 +67,7 @@ export const STEP_TO_REQUIRED_SERVICE: StepToRequiredService[] = [
         label: "Puedes pagar:",
         list: [
           "En línea, con tarjeta de crédito.",
-          "En línea, a través de la aplicación de Banreservas.",
+          // "En línea, a través de la aplicación de Banreservas.",
           "En una sucursal de Banreservas.",
         ],
       },

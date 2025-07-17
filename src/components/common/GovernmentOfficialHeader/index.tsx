@@ -68,7 +68,7 @@ export const GovernmentOfficialHeader = memo(function ({
                 <a
                   role="link"
                   href="https://migracion.gob.do/"
-                  target="_blank"
+                  // target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 nowrap"
                 >

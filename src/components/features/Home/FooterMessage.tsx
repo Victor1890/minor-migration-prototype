@@ -1,6 +1,6 @@
 export const FooterMessage = () => (
   <div className="max-w-[896px] w-full text-[#031942] font-normal text-base flex flex-col gap-4">
-    ¿No encuentras tu caso? Comunícate con la Dirección de Migración:
+    <p>¿No encuentras tu caso? Comunícate con la Dirección de Migración:</p>
     <div className="flex flex-col gap-1">
       <p>
         <span className="font-bold">Teléfono:</span> (809) 508-2555 Ext. 3890

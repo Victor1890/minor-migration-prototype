@@ -76,18 +76,13 @@ const WikiComponent = ({
       termData?.label.toLowerCase(),
     (source) => {
       if (!source) return null;
-
       return (
         component?.(source) || (
           <Tooltip>
-            <TooltipTrigger>
-              {isValidElement(source) ? (
-                source
-              ) : (
-                <TriggerComp className="font-semibold cursor-pointer underline">
-                  {source}
-                </TriggerComp>
-              )}
+            <TooltipTrigger asChild>
+              <TriggerComp className="font-semibold cursor-pointer underline">
+                {source}
+              </TriggerComp>
             </TooltipTrigger>
             <TooltipContent
               classNameArrow="bg-white fill-white"

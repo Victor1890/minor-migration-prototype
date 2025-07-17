@@ -4,7 +4,7 @@ import { LABEL_ICON_DETAILS } from "@/data/step-icon";
 import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
-import { Fragment, useEffect, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { Wiki } from "../components/Wiki";
 import { Button } from "@/components/ui/button";
 import {
@@ -22,10 +22,9 @@ const { cases } = DATA_DUMB;
 
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
-  idx: number;
 }
 
-export const HierarchyNodeCard = ({ item, idx }: HierarchyNodeCardProps) => {
+export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
   const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
   const [data, setData] = useState<HierarchyNode | null>(null);
   const { setProgress, progress } = useProgressBarStore();
@@ -42,6 +41,21 @@ export const HierarchyNodeCard = ({ item, idx }: HierarchyNodeCardProps) => {
     label,
   } = useMemo(() => LABEL_ICON_DETAILS[item.slug] || {}, [item.slug]);
 
+  const handleClick = useCallback(() => {
+    pushToStack(formData.id);
+    setFormData(item);
+    setShow(true);
+    setProgress(progress + 20);
+  }, [
+    formData.id,
+    item,
+    pushToStack,
+    setFormData,
+    setShow,
+    setProgress,
+    progress,
+  ]);
+
   useEffect(() => {
     const isProgressReset = cases.some(
       (caseItem) => caseItem.slug === item.slug
@@ -54,25 +68,28 @@ export const HierarchyNodeCard = ({ item, idx }: HierarchyNodeCardProps) => {
   return (
     <Fragment>
       <Card
-        tabIndex={idx}
+        role="button"
+        aria-pressed="false"
+        tabIndex={0}
         className={cn(
           "flex flex-col",
           "border hover:shadow-md transition-shadow cursor-pointer",
-          "hover:bg-card/90 hover:ring-2 hover:ring-blue-500"
+          "hover:bg-card/90 hover:ring-2 hover:ring-blue-500",
+          "focus-visible:ring-2 focus-visible:ring-blue-500"
         )}
-        onClick={() => {
-          pushToStack(formData.id);
-          setFormData(item);
-          setShow(true);
-          setProgress(progress + 20);
+        onClick={handleClick}
+        onKeyDown={({ key }) => {
+          if (key === "Enter" || key === " ") {
+            handleClick();
+          }
         }}
         key={item.slug}
       >
         <CardHeader className="flex flex-col items-start">
           {Icon && <Icon />}
-          <CardTitle className="text-left font-semibold text-[18px] text-balance">
+          <h3 className="text-left font-semibold text-[18px] text-balance">
             <Wiki value={label || item.label} />
-          </CardTitle>
+          </h3>
         </CardHeader>
         <CardFooter className="bg-[#F9FAFB] px-8 py-4 rounded-b-xl grow">
           {!isMoreInfoAvailable ? (

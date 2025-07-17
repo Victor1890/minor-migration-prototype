@@ -22,12 +22,15 @@ export const Header = memo(() => {
             className="flex items-center justify-between w-full"
           >
             <Logo
-              aria-label="Logo de Migración"
+              aria-label="Logo de Dirección General de Migración"
+              title="Logo de Dirección General de Migración"
               className="md:h-11 md:w-[222.44px] h-[33.5px] w-[169.36px]"
+              role="link"
+              href="https://migracion.gob.do/"
+              rel="noopener noreferrer"
             />
             <div
               role="menu"
-              aria-labelledby="menu-item-elements"
               className="items-center justify-between gap-5 hidden xl:flex"
             >
               <a
@@ -59,6 +62,11 @@ export const Header = memo(() => {
         value={progress}
         className="bg-[#E2E8F0] rounded-none"
         classNameIndicator="bg-[#0072D7]"
+        aria-valuenow={progress}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        role="progressbar"
+        aria-label="Barra de progreso del proceso de Dirección General de Migración"
       />
     </>
   );
