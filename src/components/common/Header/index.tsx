@@ -43,7 +43,7 @@ export const Header = memo(() => {
               >
                 <p className="flex items-center justify-between gap-1.5 capitalize">
                   ¿Necesitas ayuda?
-                  <span className="font-bold">809-508-2555</span>
+                  <span className="font-bold">809-508-2555 Ext. 3890</span>
                 </p>
                 <Headset className="size-6" />
               </a>
