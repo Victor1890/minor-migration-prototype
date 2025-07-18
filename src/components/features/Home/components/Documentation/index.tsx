@@ -4,6 +4,7 @@ import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
 import { useEffect } from "react";
 import { LABEL_DETAILT_NOT_FOUND } from "@/data/step-icon";
+import { NavigationButtons } from "../../container/Navigation";
 
 export function Documentation() {
   const { formData, historySteps } = useFormDataStore();
@@ -33,6 +34,20 @@ export function Documentation() {
       <Divider className="my-12" />
 
       <DocAccordion formData={formData} />
+
+      <div className="pt-12">
+        <NavigationButtons
+          renderSpecialView={{
+            title: "Documentación",
+            description:
+              "Aquí tienes la documentación necesaria para continuar.",
+            render: <Documentation />,
+            type: "documentation",
+          }}
+        />
+      </div>
+
+      <Divider className="my-12 mb-5" />
     </div>
   );
 }

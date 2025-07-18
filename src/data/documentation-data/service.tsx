@@ -14,8 +14,10 @@ interface StepToRequiredService {
 export const STEP_TO_REQUIRED_SERVICE: StepToRequiredService[] = [
   {
     label: "Reúne todos los documentos obligatorios",
-    details:
-      "Asegúrate de tener todos los documentos vigentes, completos y organizados.(Pasaportes, acta de nacimiento, cédulas, fotos, poder notarial, entre otros).",
+    details: [
+      "Asegúrate de tener todos los documentos vigentes, completos y organizados.",
+      "(Pasaportes, acta de nacimiento, cédulas, fotos, poder notarial, entre otros).",
+    ],
   },
   {
     label: "Entra al portal de servicios de Migración",
@@ -26,17 +28,15 @@ export const STEP_TO_REQUIRED_SERVICE: StepToRequiredService[] = [
             Ve a{" "}
             <a
               href="https://servicios.migracion.gob.do"
-              target="_black"
               rel="noopener noreferrer"
             >
               https://servicios.migracion.gob.do
             </a>
-            ,
           </>
         ),
         list: [
           "Crea una cuenta si no tienes.",
-          "Elige el servicio “Permiso de menor” y completa el formulario con los datos solicitados.",
+          "Elige el servicio <strong>Permiso de menor</strong> y completa el formulario con los datos solicitados.",
         ],
       },
     ],
@@ -52,7 +52,7 @@ export const STEP_TO_REQUIRED_SERVICE: StepToRequiredService[] = [
     label: "Espera la validación de tu solicitud",
     details: [
       {
-        label: "Migración revisará los documentos cargados.",
+        label: "Migración revisará los documentos cargados",
         list: [
           "Si falta algo, recibirás un correo para completar la solicitud.",
           "Si todo está correcto, te llegará una notificación para realizar el pago.",
@@ -85,7 +85,20 @@ export const STEP_TO_REQUIRED_SERVICE: StepToRequiredService[] = [
       "Preséntate en la oficina seleccionada con los documentos originales",
     details: [
       "Luego de 24 horas laborables desde que enviaste la solicitud, acude con todos los documentos originales y el comprobante de pago.",
-      "Horario: lunes a viernes de 8:00 a.m. a 4:00 p.m. (hasta las 6:00 p.m. en temporada alta).",
+      "Horario: lunes a viernes de 8:00 a. m. a 4:00 p. m. (hasta las 6:00 p. m. en temporada alta).",
+    ],
+  },
+  {
+    label: "Descarga e imprime el permiso",
+    details: [
+      {
+        label:
+          "Recibirás un correo electrónico notificándote que tu permiso está listo, en un plazo de hasta 48 horas laborables.",
+        list: [
+          "Ingresa a la plataforma para descargarlo.",
+          "Imprímelo a color y preséntalo junto a los demás documentos en el aeropuerto, ante los oficiales de Migración.",
+        ],
+      },
     ],
   },
 ];

@@ -12,6 +12,7 @@ import { NotFound } from "../components/NotFound";
 import { NoViable } from "../components/NoViable";
 import { FooterMessage } from "../FooterMessage";
 import { HierarchyNodeCard } from "./HierarchyNodeCard";
+import { NavigationButtons } from "./Navigation";
 
 const { cases, notPermissions, notFoundCase } = DATA_DUMB;
 
@@ -69,54 +70,9 @@ export function Container() {
   }, [formData]);
 
   return (
-    <div className="flex flex-col mx-auto">
+    <div className="flex flex-col mx-auto gap-4">
       {navigationStack.length > 0 && formData.slug && (
-        <div className="flex items-center justify-between">
-          <div className="pb-8 flex justify-start items-center gap-4">
-            <Button
-              variant={"outline"}
-              className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
-              onClick={() => {
-                const prevId = popFromStack();
-                const prevForm = getNodeById(cases as any, prevId || "");
-                setProgress(progress - 20);
-                if (prevForm) return setFormData(prevForm);
-                resetFormData();
-              }}
-            >
-              <MoveLeft />
-              Paso anterior
-            </Button>
-            {renderSpecialView?.title && (
-              <Button
-                variant={"ghost"}
-                className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
-                onClick={() => {
-                  resetFormData();
-                  resetProgress();
-                }}
-              >
-                Volver al inicio
-              </Button>
-            )}
-          </div>
-
-          {renderSpecialView?.type !== "no-viable" && (
-            <Button
-              asChild
-              variant={"default"}
-              className="rounded-full flex gap-2 items-center bg-[#0072D7] hover:bg-[#0072D7]/90 text-white border-[#0072D7] max-w-[257px] w-full cursor-pointer"
-            >
-              <a
-                href="https://servicios.migracion.gob.do/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Ir al portal para iniciar la solicitud
-              </a>
-            </Button>
-          )}
-        </div>
+        <NavigationButtons renderSpecialView={renderSpecialView!} />
       )}
 
       <div className="flex flex-col gap-8">
@@ -164,6 +120,13 @@ export function Container() {
               <FooterMessage />
             </div>
           )}
+          {navigationStack.length > 0 &&
+            formData.slug &&
+            renderSpecialView?.type === "no-viable" && (
+              <div className="pt-5">
+                <NavigationButtons renderSpecialView={renderSpecialView!} />
+              </div>
+            )}
         </div>
       </div>
     </div>

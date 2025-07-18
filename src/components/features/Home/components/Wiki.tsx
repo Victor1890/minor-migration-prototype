@@ -69,7 +69,7 @@ const WikiComponent = ({
     };
   }, [value]);
 
-  return replaceStringToComponent(
+  const replacedValue = replaceStringToComponent(
     value,
     match ||
       termLegalData?.label.toLowerCase() ||
@@ -80,9 +80,10 @@ const WikiComponent = ({
         component?.(source) || (
           <Tooltip>
             <TooltipTrigger asChild>
-              <TriggerComp className="font-semibold cursor-pointer underline">
-                {source}
-              </TriggerComp>
+              <TriggerComp
+                className="font-semibold cursor-pointer underline"
+                dangerouslySetInnerHTML={{ __html: source }}
+              />
             </TooltipTrigger>
             <TooltipContent
               classNameArrow="bg-white fill-white"
@@ -102,6 +103,8 @@ const WikiComponent = ({
       );
     }
   ) as React.ReactNode;
+
+  return replacedValue;
 };
 
 export const Wiki = memo(WikiComponent);

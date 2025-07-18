@@ -179,6 +179,32 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                         ))}
                       </TableBody>
                     </Table>
+                    {/* <div className="w-full">
+                        <div className="grid grid-cols-2 gap-4 border-b border-gray-200 pb-4 mb-4">
+                          <div className="text-left font-semibold text-gray-900">
+                            Concepto
+                          </div>
+                          <div className="text-right font-semibold text-gray-900">
+                            Precio
+                          </div>
+                        </div>
+
+                        <div className="space-y-4">
+                          {COST_DATA.map((item, index) => (
+                            <div
+                              key={index}
+                              className="grid grid-cols-2 gap-4 py-4 border-b border-gray-100 last:border-b-0"
+                            >
+                              <div className="text-gray-900 font-medium">
+                                {item.concepto}
+                              </div>
+                              <div className="text-right text-gray-600">
+                                {item.precio}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div> */}
                   </div>
                 </CardContent>
               </Card>
@@ -200,7 +226,7 @@ export function DocAccordion({ formData }: DocAccordionProps) {
           ) : (
             <CirclePlus className="shrink-0 translate-y-0.5 transition-transform duration-200 " />
           )}
-          Pasos para iniciar la solicitud del permiso en línea
+          Pasos para solicitar el permiso de viaje del menor
         </AccordionTrigger>
         <AccordionContent className="px-6 pb-6">
           <div className="space-y-4">
@@ -242,12 +268,14 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                         }
                         // If detail is a string (array of strings)
                         return (
-                          <p
+                          <div
                             key={detailIdx}
-                            className="text-sm font-normal text-[#475569]"
+                            className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569]"
                           >
-                            <Wiki value={detail as string} />
-                          </p>
+                            <li>
+                              <Wiki value={detail} />
+                            </li>
+                          </div>
                         );
                       })
                     ) : process.details ? (
