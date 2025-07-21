@@ -59,7 +59,7 @@ export function NavigationButtons({
         <Button
           asChild
           variant={"outline"}
-          className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-full lg:max-w-[257px] w-full hover:text-[#0072D7] cursor-pointer"
+          className="rounded-full flex gap-2 items-center bg-[#0072D7] hover:bg-[#0072D7]/90 border-none max-w-full lg:max-w-[257px] w-full hover:text-white cursor-pointer"
         >
           <a
             href="https://servicios.migracion.gob.do/"
