@@ -289,12 +289,12 @@ export const DETAILS_OF_PROCESS_DOCUMENTATION = [
 
 export const COST_DATA = [
     {
-        concepto: "Permiso de salida para un menor",
-        precio: "RD$ 2,000",
+        concept: "Permiso de salida para un menor",
+        price: "RD$ 2,000",
     },
     {
-        concepto: "Cada menor adicional en el mismo documento (hermanos)",
-        precio: "RD$ 1,500",
+        concept: "Cada menor adicional en el mismo documento (hermanos)",
+        price: "RD$ 1,500",
     },
     // {
     //     concepto: "Poder notarial (tramitado con abogado externo)",

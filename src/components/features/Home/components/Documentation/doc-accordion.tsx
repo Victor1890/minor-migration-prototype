@@ -137,9 +137,9 @@ export function DocAccordion({ formData }: DocAccordionProps) {
               </span>
               <Card className="bg-white border-none rounded-[8px] shadow-none">
                 <CardContent className="p-0">
-                  <div className="bg-white rounded-lg p-6 pt-0">
-                    <div className="w-full py-6">
-                      <div className="grid grid-cols-2 gap-4 border-b border-gray-200 pb-4 mb-4">
+                  <div className="bg-white rounded-lg px-6 py-0">
+                    <div className="w-full py-3">
+                      <div className="grid grid-cols-2 gap-4 border-b border-[#F1F5F9]">
                         <div className="text-left text-base font-semibold text-[#031942] py-4">
                           Concepto
                         </div>
@@ -152,13 +152,13 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                         {COST_DATA.map((item, index) => (
                           <div
                             key={index}
-                            className="grid grid-cols-2 gap-4 py-4 border-b border-gray-100 last:border-b-0"
+                            className="grid grid-cols-2 gap-4 border-b border-[#F1F5F9] last:border-b-0"
                           >
                             <div className="py-4 text-base text-[#031942] font-semibold">
-                              {item.concepto}
+                              {item.concept}
                             </div>
-                            <div className="py-4 text-base text-right font-normal text-[#475569]">
-                              {item.precio}
+                            <div className="py-2 text-base text-right font-normal text-[#475569]">
+                              {item.price}
                             </div>
                           </div>
                         ))}
