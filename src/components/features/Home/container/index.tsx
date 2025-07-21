@@ -72,7 +72,9 @@ export function Container() {
   return (
     <div className="flex flex-col mx-auto gap-4">
       {navigationStack.length > 0 && formData.slug && (
-        <NavigationButtons renderSpecialView={renderSpecialView!} />
+        <div className="mb-9">
+          <NavigationButtons renderSpecialView={renderSpecialView!} />
+        </div>
       )}
 
       <div className="flex flex-col gap-8">

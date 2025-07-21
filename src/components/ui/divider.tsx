@@ -12,6 +12,7 @@ const Divider = React.forwardRef<HTMLHRElement, DividerProps>(
         {...props}
         ref={ref}
         role="separator"
+        aria-label="Dividor"
         className={cn(
           "shrink-0 border-none w-full bg-[#E2E8F0] h-[1px]",
           className

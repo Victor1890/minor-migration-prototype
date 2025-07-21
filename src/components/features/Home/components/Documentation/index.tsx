@@ -17,10 +17,13 @@ export function Documentation() {
   return (
     <div className="">
       <div className="flex flex-col gap-4">
-        <h2 className="text-2xl font-semibold">
+        <h3 className="text-2xl font-semibold">
           Según los datos que nos indicaste, el menor:
-        </h2>
-        <ul className="list-disc pl-6">
+        </h3>
+        <ul
+          className="list-disc pl-6"
+          aria-label="Lista de pasos anteriores previamente completados"
+        >
           {historySteps.map((item) => (
             <li className="font-semibold text-base" key={item.slug}>
               {item.slug

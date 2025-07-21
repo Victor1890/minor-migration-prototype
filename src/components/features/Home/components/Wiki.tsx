@@ -47,7 +47,6 @@ const WikiComponent = ({
   const termData = useMemo(() => {
     const words = value.split(/\s+/).map((w) => normalize(w));
     const found = termLegal.find((term) => {
-      // Check "Término"
       const mainTerm = normalize(term["Término"] || "");
       if (words.includes(mainTerm)) return true;
 
@@ -82,6 +81,7 @@ const WikiComponent = ({
             <TooltipTrigger asChild>
               <TriggerComp
                 className="font-semibold cursor-pointer underline"
+                aria-label={source}
                 dangerouslySetInnerHTML={{ __html: source }}
               />
             </TooltipTrigger>
@@ -90,11 +90,16 @@ const WikiComponent = ({
               className="bg-white text-black shadow-lg p-2 rounded-md max-w-[319px] max-h-[112px] text-[14px] text-balance"
             >
               <ContentComp
+                aria-label={
+                  termLegalData?.explanation ||
+                  termData.explanation ||
+                  "No descriptiong available."
+                }
                 dangerouslySetInnerHTML={{
                   __html:
                     termLegalData?.explanation ||
                     termData.explanation ||
-                    "No description available.",
+                    "No descriptiong available.",
                 }}
               />
             </TooltipContent>

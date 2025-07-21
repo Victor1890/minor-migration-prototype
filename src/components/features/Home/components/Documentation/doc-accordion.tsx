@@ -119,7 +119,10 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                   Información a tener en cuenta:
                 </div>
                 <AlertDescription>
-                  <ul className="list-disc list-inside space-y-1 text-sm text-[#1E293B]">
+                  <ul
+                    className="list-disc list-inside space-y-1 text-sm text-[#1E293B]"
+                    aria-label="Información a tener en cuenta"
+                  >
                     {[
                       "El permiso tiene vigencia de 90 días.",
                       "La autorización de viaje solo puede tramitarse en República Dominicana.",
