@@ -10,7 +10,7 @@ export interface NavigationContextMap {
 }
 
 const TravelWithParentData: NavigationContext = {
-    title: "Selecciona quién viajará el menor",
+    title: "Selecciona con quién viajará el menor",
     description: "Selecciona quien acompañará o será el responsable del menor al momento de viajar."
 }
 
