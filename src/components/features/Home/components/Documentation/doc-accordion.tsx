@@ -6,20 +6,12 @@ import {
 } from "@/components/ui/accordion";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
 import type { HierarchyNode } from "@/data";
 import { COST_DATA } from "@/data/documentation-data";
+import { STEP_TO_REQUIRED_SERVICE } from "@/data/documentation-data/service";
 import { AlertCircleIcon, CircleMinus, CirclePlus } from "lucide-react";
 import { isValidElement, useMemo, useState } from "react";
 import { Wiki } from "../Wiki";
-import { STEP_TO_REQUIRED_SERVICE } from "@/data/documentation-data/service";
 
 interface Document {
   label: string;
@@ -103,19 +95,13 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                     {Array.isArray(doc.details) ? (
                       <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
                         {doc.details?.map((desc, descIndex) => (
-                          <li
-                            key={descIndex}
-                            // dangerouslySetInnerHTML={{ __html: desc }}
-                          >
+                          <li key={descIndex}>
                             <Wiki value={desc} />
                           </li>
                         ))}
                       </ul>
                     ) : (
-                      <p
-                        className="text-sm font-normal text-[#475569]"
-                        // dangerouslySetInnerHTML={{ __html: doc.details }}
-                      >
+                      <p className="text-sm font-normal text-[#475569]">
                         <Wiki value={doc.details} />
                       </p>
                     )}
@@ -152,59 +138,32 @@ export function DocAccordion({ formData }: DocAccordionProps) {
               <Card className="bg-white border-none rounded-[8px] shadow-none">
                 <CardContent className="p-0">
                   <div className="bg-white rounded-lg p-6 pt-0">
-                    <Table>
-                      <TableHeader>
-                        <TableRow className="border-b border-gray-200 hover:bg-transparent cursor-default">
-                          <TableHead className="text-left text-base font-semibold text-[#031942] py-4">
-                            Concepto
-                          </TableHead>
-                          <TableHead className="text-right font-semibold text-[#031942] py-4">
-                            Precio
-                          </TableHead>
-                        </TableRow>
-                      </TableHeader>
-                      <TableBody>
-                        {COST_DATA.map((item) => (
-                          <TableRow
-                            key={item.concepto}
-                            className="border-b border-gray-100 last:border-b-0 hover:bg-transparent cursor-default"
-                          >
-                            <TableCell className="py-4 text-base text-[#031942] font-semibold">
-                              {item.concepto}
-                            </TableCell>
-                            <TableCell className="py-4 text-base text-right font-normal text-[#475569]">
-                              {item.precio}
-                            </TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                    {/* <div className="w-full">
-                        <div className="grid grid-cols-2 gap-4 border-b border-gray-200 pb-4 mb-4">
-                          <div className="text-left font-semibold text-gray-900">
-                            Concepto
-                          </div>
-                          <div className="text-right font-semibold text-gray-900">
-                            Precio
-                          </div>
+                    <div className="w-full py-6">
+                      <div className="grid grid-cols-2 gap-4 border-b border-gray-200 pb-4 mb-4">
+                        <div className="text-left text-base font-semibold text-[#031942] py-4">
+                          Concepto
                         </div>
+                        <div className="text-right font-semibold text-[#031942] py-4">
+                          Precio
+                        </div>
+                      </div>
 
-                        <div className="space-y-4">
-                          {COST_DATA.map((item, index) => (
-                            <div
-                              key={index}
-                              className="grid grid-cols-2 gap-4 py-4 border-b border-gray-100 last:border-b-0"
-                            >
-                              <div className="text-gray-900 font-medium">
-                                {item.concepto}
-                              </div>
-                              <div className="text-right text-gray-600">
-                                {item.precio}
-                              </div>
+                      <div className="space-y-4">
+                        {COST_DATA.map((item, index) => (
+                          <div
+                            key={index}
+                            className="grid grid-cols-2 gap-4 py-4 border-b border-gray-100 last:border-b-0"
+                          >
+                            <div className="py-4 text-base text-[#031942] font-semibold">
+                              {item.concepto}
                             </div>
-                          ))}
-                        </div>
-                      </div> */}
+                            <div className="py-4 text-base text-right font-normal text-[#475569]">
+                              {item.precio}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
