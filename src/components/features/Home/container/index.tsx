@@ -17,15 +17,7 @@ import { NavigationButtons } from "./Navigation";
 const { cases, notPermissions, notFoundCase } = DATA_DUMB;
 
 export function Container() {
-  const {
-    formData,
-    show,
-    popFromStack,
-    setFormData,
-    resetFormData,
-    navigationStack,
-  } = useFormDataStore();
-  const { setProgress, progress, resetProgress } = useProgressBarStore();
+  const { formData, show, navigationStack } = useFormDataStore();
 
   const isAtRoot = isRootLevel(formData.slug, navigationStack.length);
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);

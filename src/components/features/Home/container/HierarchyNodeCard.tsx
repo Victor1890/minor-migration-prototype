@@ -1,12 +1,5 @@
-import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { DATA_DUMB, type HierarchyNode } from "@/data";
-import { LABEL_ICON_DETAILS } from "@/data/step-icon";
-import { cn } from "@/lib/utils";
-import { useFormDataStore } from "@/store/form-data.store";
-import { useProgressBarStore } from "@/store/progress-bar.store";
-import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
-import { Wiki } from "../components/Wiki";
 import { Button } from "@/components/ui/button";
+import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -17,6 +10,13 @@ import {
 } from "@/components/ui/dialog";
 import { Divider } from "@/components/ui/divider";
 import { Label } from "@/components/ui/label";
+import { DATA_DUMB, type HierarchyNode } from "@/data";
+import { LABEL_ICON_DETAILS } from "@/data/step-icon";
+import { cn } from "@/lib/utils";
+import { useFormDataStore } from "@/store/form-data.store";
+import { useProgressBarStore } from "@/store/progress-bar.store";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
+import { Wiki } from "../components/Wiki";
 
 const { cases } = DATA_DUMB;
 
