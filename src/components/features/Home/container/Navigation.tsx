@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { DATA_DUMB } from "@/data";
+import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
 import { getNodeById } from "@/utils/array";
@@ -59,7 +60,12 @@ export function NavigationButtons({
         <Button
           asChild
           variant={"outline"}
-          className="rounded-full flex gap-2 items-center bg-[#0072D7] hover:bg-[#0072D7]/90 border-none max-w-full lg:max-w-[257px] w-full hover:text-white cursor-pointer"
+          className={cn(
+            "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
+            renderSpecialView?.type === "documentation"
+              ? "bg-[#0072D7] hover:bg-[#0072D7]/90 border-none hover:text-white"
+              : "text-[#0072D7] hover:text-[#0072D7] border-[#0072D7]"
+          )}
         >
           <a
             href="https://servicios.migracion.gob.do/"
