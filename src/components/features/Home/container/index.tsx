@@ -76,10 +76,10 @@ export function Container() {
             renderSpecialView?.type === "not-found" && "w-[60%]"
           )}
         >
-          <h1 className="font-bold text-[28px] text-[#020617] text-left">
+          <h1 className="font-bold text-[28px] text-[#1E293B] text-left">
             {renderSpecialView?.title || navigationContext.title}
           </h1>
-          <h2 className="text-base font-normal text-[#727272]">
+          <h2 className="text-base font-normal text-[#475569]">
             {renderSpecialView?.description || navigationContext.description}
           </h2>
         </div>
