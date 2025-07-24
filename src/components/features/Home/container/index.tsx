@@ -1,11 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { DATA_DUMB } from "@/data";
 import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
 import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
-import { useProgressBarStore } from "@/store/progress-bar.store";
-import { getNodeById } from "@/utils/array";
-import { MoveLeft } from "lucide-react";
 import { Fragment, useMemo } from "react";
 import { Documentation } from "../components/Documentation";
 import { NotFound } from "../components/NotFound";

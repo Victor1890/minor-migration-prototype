@@ -17,6 +17,7 @@ import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { Wiki } from "../components/Wiki";
+import { useQueryState } from "nuqs";
 
 const { cases } = DATA_DUMB;
 
@@ -25,6 +26,10 @@ interface HierarchyNodeCardProps {
 }
 
 export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
+  const [stepParam, setStepParam] = useQueryState(`${item.slug}`, {
+    defaultValue: "",
+  });
+
   const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
   const [data, setData] = useState<HierarchyNode | null>(null);
   const { setProgress, progress } = useProgressBarStore();
@@ -44,6 +49,7 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
   const handleClick = useCallback(() => {
     pushToStack(formData.id);
     setFormData(item);
+    setStepParam(item.id);
     setShow(true);
     setProgress(progress + 20);
   }, [
