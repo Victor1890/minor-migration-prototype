@@ -8,7 +8,7 @@ import {
   normalize,
   replaceStringToComponent,
 } from "@/utils/replace-string-to-component";
-import { memo, useMemo, isValidElement, type JSX } from "react";
+import { memo, useMemo, isValidElement, type JSX, Fragment } from "react";
 
 const { termLegal } = DATA_DUMB;
 
@@ -107,9 +107,13 @@ const WikiComponent = ({
         )
       );
     }
-  ) as React.ReactNode;
+  ) as (React.ReactNode | string)[];
 
-  return replacedValue;
+  return replacedValue.map((item, index) => (
+    <Fragment key={`wiki-${index}`}>
+      {isValidElement(item) ? item : item}
+    </Fragment>
+  ));
 };
 
 export const Wiki = memo(WikiComponent);

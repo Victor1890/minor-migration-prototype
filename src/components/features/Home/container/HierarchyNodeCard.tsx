@@ -15,9 +15,9 @@ import { LABEL_ICON_DETAILS } from "@/data/step-icon";
 import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
+import { parseAsString, useQueryState } from "nuqs";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { Wiki } from "../components/Wiki";
-import { useQueryState } from "nuqs";
 
 const { cases } = DATA_DUMB;
 
@@ -26,8 +26,8 @@ interface HierarchyNodeCardProps {
 }
 
 export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
-  const [stepParam, setStepParam] = useQueryState(`${item.slug}`, {
-    defaultValue: "",
+  const [stepParam, setStepParam] = useQueryState(item.slug, {
+    history: "push",
   });
 
   const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
@@ -70,6 +70,12 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
     if (!isProgressReset) return;
     setProgress(20);
   }, [item, formData]);
+
+  useEffect(() => {
+    if (!stepParam) return;
+
+    console.log("stepParam: ", stepParam);
+  }, [stepParam, item.children]);
 
   return (
     <Fragment>
