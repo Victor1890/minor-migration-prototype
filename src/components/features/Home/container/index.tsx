@@ -1,79 +1,92 @@
-import { Button } from "@/components/ui/button";
-import { DATA_DUMB } from "@/data";
 import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
 import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
-import { useProgressBarStore } from "@/store/progress-bar.store";
-import { getNodeById } from "@/utils/array";
-import { MoveLeft } from "lucide-react";
-import { Fragment, useMemo } from "react";
-import { Documentation } from "../components/Documentation";
-import { NotFound } from "../components/NotFound";
-import { NoViable } from "../components/NoViable";
-import { FooterMessage } from "../FooterMessage";
-import { HierarchyNodeCard } from "./HierarchyNodeCard";
+import { ContentSection } from "./ContentSection";
 import { NavigationButtons } from "./Navigation";
+import { specialView } from "./SpecialView";
+import { useProgressBarStore } from "@/store/progress-bar.store";
+import { useQueryState } from "nuqs";
+import { useCallback, useEffect } from "react";
+import { getHistoryNodeById, getNodeById } from "@/utils/array";
+import { DATA_DUMB } from "@/data";
 
-const { cases, notPermissions, notFoundCase } = DATA_DUMB;
+const { cases } = DATA_DUMB;
 
 export function Container() {
   const {
     formData,
     show,
-    popFromStack,
+    historySteps,
     setFormData,
+    setShow,
     resetFormData,
-    navigationStack,
+    setHistoryStep,
   } = useFormDataStore();
-  const { setProgress, progress, resetProgress } = useProgressBarStore();
-
-  const isAtRoot = isRootLevel(formData.slug, navigationStack.length);
+  const { progress, setProgress } = useProgressBarStore();
+  const isAtRoot = isRootLevel(formData.slug, historySteps.length);
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
+  const renderSpecialView = specialView(formData);
+  const [stepParam, setStepParam] = useQueryState<string | null>("paso", {
+    history: "push",
+    shallow: false,
+    parse: (v) => v ?? null,
+    serialize: (v) => v ?? "",
+  });
 
-  const renderSpecialView = useMemo(() => {
-    const notPermission = notPermissions.find((item) => item === formData.id);
-    if (notPermission) {
-      return {
-        title: "No necesitas permiso para este caso",
-        description:
-          "No te preocupes, no necesitas un permiso especial para este caso.",
-        render: <NotFound />,
-        type: "not-found",
-      };
+  const goToStart = useCallback(() => setStepParam(null), [setStepParam]);
+
+  const goToStep = useCallback(
+    (id: string) => setStepParam(id),
+    [setStepParam]
+  );
+
+  const goBack = useCallback(() => {
+    if (!stepParam) return;
+
+    const prevId = stepParam.split(".").slice(0, -1).join(".");
+    if (!prevId) {
+      setStepParam(null);
+      resetFormData();
+      setProgress(20);
+      return;
     }
 
-    const notViablePage = notFoundCase.find((item) => item === formData.id);
-    if (notViablePage) {
-      return {
-        title: "¿Tienes dudas o no ves el caso del menor entre las opciones?",
-        description:
-          "¡No te preocupes! Podemos ayudarte a identificar la opción correcta o guiarte paso a paso si no estás seguro",
-        render: <NoViable />,
-        type: "no-viable",
-      };
+    const prevForm = getNodeById(cases as any, prevId || "");
+    setStepParam(prevId);
+
+    setProgress((value) => value - 20);
+    if (prevForm) return setFormData(prevForm);
+
+    resetFormData();
+  }, [setProgress, setFormData, resetFormData, stepParam]);
+
+  useEffect(() => {
+    if (!stepParam) return;
+
+    const historials = getHistoryNodeById(cases as any, stepParam, "id");
+    if (historials.length) {
+      historials.forEach((node) => {
+        if (!node.id) return;
+        setHistoryStep(node);
+      });
     }
 
-    const documentationPage = formData?.children?.some(
-      (child: any) => Object.keys(child?.["process_online"] || {}).length > 0
-    );
-    if (documentationPage) {
-      return {
-        title: "Documentos obligatorios y pasos a seguir",
-        description:
-          "Antes de iniciar tu solicitud, asegúrate de contar con todos los documentos necesarios y seguir el paso a paso para completar el proceso sin contratiempos",
-        render: <Documentation />,
-        type: "documentation",
-      };
-    }
+    const foundNode = getNodeById(cases, stepParam, "id");
+    if (!foundNode) return;
 
-    return null;
-  }, [formData]);
+    setFormData(foundNode);
+    setShow(true);
+  }, [stepParam, setFormData, setShow]);
 
   return (
     <div className="flex flex-col mx-auto gap-4">
-      {navigationStack.length > 0 && formData.slug && (
+      {historySteps.length > 0 && formData.slug && (
         <div className="mb-9">
-          <NavigationButtons renderSpecialView={renderSpecialView!} />
+          <NavigationButtons
+            renderSpecialView={renderSpecialView!}
+            goBack={goBack}
+            goToStart={goToStart}
+          />
         </div>
       )}
 
@@ -84,52 +97,22 @@ export function Container() {
             renderSpecialView?.type === "not-found" && "w-[60%]"
           )}
         >
-          <h1 className="font-bold text-[28px] text-[#020617] text-left">
+          <h1 className="font-bold text-[28px] text-[#1E293B] text-left">
             {renderSpecialView?.title || navigationContext.title}
           </h1>
-          <h2 className="text-base font-normal text-[#727272]">
+          <h2 className="text-base font-normal text-[#475569]">
             {renderSpecialView?.description || navigationContext.description}
           </h2>
         </div>
-        <div className="pb-6 w-full">
-          {renderSpecialView?.render || (
-            <Fragment>
-              {show && formData?.children ? (
-                <div
-                  className={cn(
-                    "grid grid-cols-1 gap-4",
-                    formData.children.length == 2 && "lg:grid-cols-2",
-                    formData.children.length > 2 && "lg:grid-cols-3"
-                  )}
-                >
-                  {formData.children.map((item: any, idx) => {
-                    return <HierarchyNodeCard key={item.slug} item={item} />;
-                  })}
-                </div>
-              ) : (
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                  {cases.map((item, idx) => {
-                    return <HierarchyNodeCard key={item.slug} item={item} />;
-                  })}
-                </div>
-              )}
-            </Fragment>
-          )}
-          {["no-viable", "not-found"].includes(
-            renderSpecialView?.type || ""
-          ) ? null : (
-            <div className="py-12">
-              <FooterMessage />
-            </div>
-          )}
-          {navigationStack.length > 0 &&
-            formData.slug &&
-            renderSpecialView?.type === "no-viable" && (
-              <div className="pt-5">
-                <NavigationButtons renderSpecialView={renderSpecialView!} />
-              </div>
-            )}
-        </div>
+        <ContentSection
+          renderSpecialView={renderSpecialView}
+          show={show}
+          formData={formData}
+          historySteps={historySteps}
+          goToStep={goToStep}
+          goBack={goBack}
+          goToStart={goToStart}
+        />
       </div>
     </div>
   );

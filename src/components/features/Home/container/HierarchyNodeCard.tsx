@@ -1,12 +1,5 @@
-import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { DATA_DUMB, type HierarchyNode } from "@/data";
-import { LABEL_ICON_DETAILS } from "@/data/step-icon";
-import { cn } from "@/lib/utils";
-import { useFormDataStore } from "@/store/form-data.store";
-import { useProgressBarStore } from "@/store/progress-bar.store";
-import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
-import { Wiki } from "../components/Wiki";
 import { Button } from "@/components/ui/button";
+import { Card, CardFooter, CardHeader } from "@/components/ui/card";
 import {
   Dialog,
   DialogContent,
@@ -18,17 +11,31 @@ import {
 import { Divider } from "@/components/ui/divider";
 import { Label } from "@/components/ui/label";
 
+import { DATA_DUMB, type HierarchyNode } from "@/data";
+import { LABEL_ICON_DETAILS } from "@/data/step-icon";
+import { cn } from "@/lib/utils";
+import { useFormDataStore } from "@/store/form-data.store";
+import { useProgressBarStore } from "@/store/progress-bar.store";
+import { useQueryState } from "nuqs";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
+import { Wiki } from "../components/Wiki";
+
 const { cases } = DATA_DUMB;
 
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
+  goToStep?: (id: string) => void;
 }
 
-export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
-  const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
+export const HierarchyNodeCard = ({
+  item,
+  goToStep,
+}: HierarchyNodeCardProps) => {
+  const { formData, setFormData, setShow } = useFormDataStore();
   const [data, setData] = useState<HierarchyNode | null>(null);
   const { setProgress, progress } = useProgressBarStore();
 
+  // Determina si hay más información disponible
   const isMoreInfoAvailable = useMemo(() => {
     const isValid = ["1.1", "2.2", "3.2", "4"].includes(item.id);
     if (isValid) return false;
@@ -42,28 +49,27 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
   } = useMemo(() => LABEL_ICON_DETAILS[item.slug] || {}, [item.slug]);
 
   const handleClick = useCallback(() => {
-    pushToStack(formData.id);
     setFormData(item);
+    if (goToStep) goToStep(item.id);
     setShow(true);
     setProgress(progress + 20);
   }, [
     formData.id,
     item,
-    pushToStack,
     setFormData,
     setShow,
     setProgress,
     progress,
+    goToStep,
   ]);
 
   useEffect(() => {
     const isProgressReset = cases.some(
       (caseItem) => caseItem.slug === item.slug
     );
-
     if (!isProgressReset) return;
     setProgress(20);
-  }, [item, formData]);
+  }, [item, formData, setProgress, cases]);
 
   return (
     <Fragment>

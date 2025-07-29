@@ -1,6 +1,7 @@
 ---
 import { GovernmentOfficialHeader } from "@/components/common/GovernmentOfficialHeader";
 import { Header } from "@/components/common/Header";
+import { SEO } from "@/data/seo"
 import '@fontsource-variable/roboto';
 import '@/styles/global.css';
 ---
@@ -10,7 +11,11 @@ import '@/styles/global.css';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<title>Permiso de salida de menor - Dirección General de Migración</title>
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
+		<title>{SEO.title}</title>
+		<meta name="description" content={SEO.description} />
+		<meta name="keywords" content={SEO.keywords} />
 	</head>
 	<body class='antialiased'>
 		<GovernmentOfficialHeader client:load />
