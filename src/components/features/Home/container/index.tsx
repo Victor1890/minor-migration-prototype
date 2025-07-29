@@ -54,11 +54,11 @@ export function Container() {
     const prevForm = getNodeById(cases as any, prevId || "");
     setStepParam(prevId);
 
-    setProgress(progress - 20);
+    setProgress((value) => value - 20);
     if (prevForm) return setFormData(prevForm);
 
     resetFormData();
-  }, [setProgress, setFormData, resetFormData, progress, stepParam]);
+  }, [setProgress, setFormData, resetFormData, stepParam]);
 
   useEffect(() => {
     if (!stepParam) return;
