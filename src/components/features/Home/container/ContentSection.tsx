@@ -1,4 +1,4 @@
-import { DATA_DUMB } from "@/data";
+import { DATA_DUMB, type HierarchyNode } from "@/data";
 import { cn } from "@/lib/utils";
 import { Fragment, useMemo } from "react";
 import { FooterMessage } from "../FooterMessage";
@@ -12,7 +12,7 @@ interface ContentSectionProps {
   renderSpecialView: RenderSpecialView | null;
   show: boolean;
   formData: any;
-  navigationStack: any[];
+  historySteps: Partial<HierarchyNode>[];
   goToStep: (id: string) => void;
   goBack: () => void;
   goToStart: () => void;
@@ -21,7 +21,7 @@ export function ContentSection({
   renderSpecialView,
   show,
   formData,
-  navigationStack,
+  historySteps,
   goToStep,
   goBack,
   goToStart,
@@ -32,10 +32,10 @@ export function ContentSection({
 
   const shouldShowNavButtons = useMemo(
     () =>
-      navigationStack.length > 0 &&
+      historySteps.length > 0 &&
       formData.slug &&
       renderSpecialView?.type === "no-viable",
-    [navigationStack.length, formData.slug, renderSpecialView?.type]
+    [historySteps.length, formData.slug, renderSpecialView?.type]
   );
 
   return (

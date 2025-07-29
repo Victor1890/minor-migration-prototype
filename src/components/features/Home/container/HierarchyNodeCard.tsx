@@ -31,7 +31,7 @@ export const HierarchyNodeCard = ({
   item,
   goToStep,
 }: HierarchyNodeCardProps) => {
-  const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
+  const { formData, setFormData, setShow } = useFormDataStore();
   const [data, setData] = useState<HierarchyNode | null>(null);
   const { setProgress, progress } = useProgressBarStore();
 
@@ -48,9 +48,7 @@ export const HierarchyNodeCard = ({
     label,
   } = useMemo(() => LABEL_ICON_DETAILS[item.slug] || {}, [item.slug]);
 
-  // Al hacer click, actualiza el estado y la URL (vía prop)
   const handleClick = useCallback(() => {
-    pushToStack(formData.id);
     setFormData(item);
     if (goToStep) goToStep(item.id);
     setShow(true);
@@ -58,7 +56,6 @@ export const HierarchyNodeCard = ({
   }, [
     formData.id,
     item,
-    pushToStack,
     setFormData,
     setShow,
     setProgress,

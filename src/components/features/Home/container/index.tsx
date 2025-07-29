@@ -16,19 +16,17 @@ export function Container() {
   const {
     formData,
     show,
-    navigationStack,
+    historySteps,
     setFormData,
     setShow,
-    popFromStack,
     resetFormData,
-    pushToStack,
     setHistoryStep,
   } = useFormDataStore();
   const { progress, setProgress } = useProgressBarStore();
-  const isAtRoot = isRootLevel(formData.slug, navigationStack.length);
+  const isAtRoot = isRootLevel(formData.slug, historySteps.length);
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
   const renderSpecialView = specialView(formData);
-  const [stepParam, setStepParam] = useQueryState<string | null>("step", {
+  const [stepParam, setStepParam] = useQueryState<string | null>("paso", {
     history: "push",
     shallow: false,
     parse: (v) => v ?? null,
@@ -38,7 +36,10 @@ export function Container() {
   const goToStart = useCallback(() => setStepParam(null), [setStepParam]);
 
   const goToStep = useCallback(
-    (id: string) => setStepParam(id),
+    (id: string) => {
+      console.log("goToStep", id);
+      setStepParam(id);
+    },
     [setStepParam]
   );
 
@@ -60,14 +61,7 @@ export function Container() {
     if (prevForm) return setFormData(prevForm);
 
     resetFormData();
-  }, [
-    setProgress,
-    setFormData,
-    resetFormData,
-    popFromStack,
-    progress,
-    stepParam,
-  ]);
+  }, [setProgress, setFormData, resetFormData, progress, stepParam]);
 
   useEffect(() => {
     if (!stepParam) return;
@@ -76,7 +70,6 @@ export function Container() {
     if (historials.length) {
       historials.forEach((node) => {
         if (!node.id) return;
-        pushToStack(node.id);
         setHistoryStep(node);
       });
     }
@@ -90,7 +83,7 @@ export function Container() {
 
   return (
     <div className="flex flex-col mx-auto gap-4">
-      {navigationStack.length > 0 && formData.slug && (
+      {historySteps.length > 0 && formData.slug && (
         <div className="mb-9">
           <NavigationButtons
             renderSpecialView={renderSpecialView!}
@@ -118,7 +111,7 @@ export function Container() {
           renderSpecialView={renderSpecialView}
           show={show}
           formData={formData}
-          navigationStack={navigationStack}
+          historySteps={historySteps}
           goToStep={goToStep}
           goBack={goBack}
           goToStart={goToStart}
