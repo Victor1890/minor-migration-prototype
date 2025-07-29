@@ -11,6 +11,7 @@ interface FormDataState {
     setShow: (show: boolean) => void;
     setFormData: (data: FormDataState['formData']) => void;
     resetFormData: () => void;
+    setHistoryStep: (step: HierarchyNode) => void;
 }
 
 export const useFormDataStore = create<FormDataState>((set, get) => ({
@@ -44,5 +45,18 @@ export const useFormDataStore = create<FormDataState>((set, get) => ({
 
         return set({ formData: data, historySteps })
     },
+
+    setHistoryStep: data => {
+
+        const historyStepData = [...get().historySteps, { label: data.label, slug: data.slug }];
+
+        const historySteps = Array.from(
+            new Map(historyStepData.map((item) => [item.slug, item])).values()
+        )
+
+        return set({ historySteps })
+
+    },
+
     resetFormData: () => set({ formData: {} as FormDataState['formData'], navigationStack: [], historySteps: [] }),
 }));

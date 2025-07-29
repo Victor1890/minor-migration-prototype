@@ -1,9 +1,9 @@
-import { Fragment } from "react";
-import { cn } from "@/lib/utils";
-import { HierarchyNodeCard } from "./HierarchyNodeCard";
-import { FooterMessage } from "../FooterMessage";
-import { NavigationButtons } from "./Navigation";
 import { DATA_DUMB } from "@/data";
+import { cn } from "@/lib/utils";
+import { Fragment, useMemo } from "react";
+import { FooterMessage } from "../FooterMessage";
+import { HierarchyNodeCard } from "./HierarchyNodeCard";
+import { NavigationButtons } from "./Navigation";
 import type { RenderSpecialView } from "./SpecialView";
 
 const { cases } = DATA_DUMB;
@@ -13,21 +13,30 @@ interface ContentSectionProps {
   show: boolean;
   formData: any;
   navigationStack: any[];
+  goToStep: (id: string) => void;
+  goBack: () => void;
+  goToStart: () => void;
 }
-
 export function ContentSection({
   renderSpecialView,
   show,
   formData,
   navigationStack,
+  goToStep,
+  goBack,
+  goToStart,
 }: ContentSectionProps) {
   const shouldShowFooter = !["no-viable", "not-found"].includes(
     renderSpecialView?.type || ""
   );
-  const shouldShowNavButtons =
-    navigationStack.length > 0 &&
-    formData.slug &&
-    renderSpecialView?.type === "no-viable";
+
+  const shouldShowNavButtons = useMemo(
+    () =>
+      navigationStack.length > 0 &&
+      formData.slug &&
+      renderSpecialView?.type === "no-viable",
+    [navigationStack.length, formData.slug, renderSpecialView?.type]
+  );
 
   return (
     <div className="pb-6 w-full">
@@ -42,13 +51,21 @@ export function ContentSection({
               )}
             >
               {formData.children.map((item: any) => (
-                <HierarchyNodeCard key={item.slug} item={item} />
+                <HierarchyNodeCard
+                  key={item.slug}
+                  item={item}
+                  goToStep={goToStep}
+                />
               ))}
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               {cases.map((item: any) => (
-                <HierarchyNodeCard key={item.slug} item={item} />
+                <HierarchyNodeCard
+                  key={item.slug}
+                  item={item}
+                  goToStep={goToStep}
+                />
               ))}
             </div>
           )}
@@ -61,7 +78,11 @@ export function ContentSection({
       )}
       {shouldShowNavButtons && (
         <div className="pt-5">
-          <NavigationButtons renderSpecialView={renderSpecialView!} />
+          <NavigationButtons
+            renderSpecialView={renderSpecialView!}
+            goBack={goBack}
+            goToStart={goToStart}
+          />
         </div>
       )}
     </div>

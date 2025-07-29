@@ -17,3 +17,30 @@ export function getNodeById(data: HierarchyNode[], id: string, property: keyof H
     }
     return undefined;
 }
+
+export function getHistoryNodeById(
+    data: HierarchyNode[],
+    targetId: string,
+    property: keyof HierarchyNode = 'id'
+): HierarchyNode[] {
+    if (!property) {
+        throw new Error("Property must be specified to search for the node.");
+    }
+
+    function findPath(nodes: HierarchyNode[], id: string): HierarchyNode[] | undefined {
+        for (const node of nodes) {
+            if (node[property] === id) {
+                return [node];
+            }
+            if (Array.isArray(node.children)) {
+                const childPath = findPath(node.children as HierarchyNode[], id);
+                if (childPath) {
+                    return [node, ...childPath];
+                }
+            }
+        }
+        return undefined;
+    }
+
+    return findPath(data, targetId) || [];
+}

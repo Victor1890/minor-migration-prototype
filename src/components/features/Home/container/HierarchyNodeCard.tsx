@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Divider } from "@/components/ui/divider";
 import { Label } from "@/components/ui/label";
+
 import { DATA_DUMB, type HierarchyNode } from "@/data";
 import { LABEL_ICON_DETAILS } from "@/data/step-icon";
 import { cn } from "@/lib/utils";
@@ -23,17 +24,18 @@ const { cases } = DATA_DUMB;
 
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
+  goToStep?: (id: string) => void;
 }
 
-export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
-  // const [stepParam, setStepParam] = useQueryState(item.slug, {
-  //   history: "push",
-  // });
-
+export const HierarchyNodeCard = ({
+  item,
+  goToStep,
+}: HierarchyNodeCardProps) => {
   const { formData, setFormData, pushToStack, setShow } = useFormDataStore();
   const [data, setData] = useState<HierarchyNode | null>(null);
   const { setProgress, progress } = useProgressBarStore();
 
+  // Determina si hay más información disponible
   const isMoreInfoAvailable = useMemo(() => {
     const isValid = ["1.1", "2.2", "3.2", "4"].includes(item.id);
     if (isValid) return false;
@@ -46,10 +48,11 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
     label,
   } = useMemo(() => LABEL_ICON_DETAILS[item.slug] || {}, [item.slug]);
 
+  // Al hacer click, actualiza el estado y la URL (vía prop)
   const handleClick = useCallback(() => {
     pushToStack(formData.id);
     setFormData(item);
-    // setStepParam(item.id);
+    if (goToStep) goToStep(item.id);
     setShow(true);
     setProgress(progress + 20);
   }, [
@@ -60,22 +63,16 @@ export const HierarchyNodeCard = ({ item }: HierarchyNodeCardProps) => {
     setShow,
     setProgress,
     progress,
+    goToStep,
   ]);
 
   useEffect(() => {
     const isProgressReset = cases.some(
       (caseItem) => caseItem.slug === item.slug
     );
-
     if (!isProgressReset) return;
     setProgress(20);
-  }, [item, formData]);
-
-  // useEffect(() => {
-  //   if (!stepParam) return;
-
-  //   console.log("stepParam: ", stepParam);
-  // }, [stepParam, item.children]);
+  }, [item, formData, setProgress, cases]);
 
   return (
     <Fragment>
