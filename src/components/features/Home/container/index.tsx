@@ -9,6 +9,7 @@ import { useQueryState } from "nuqs";
 import { useCallback, useEffect } from "react";
 import { getHistoryNodeById, getNodeById } from "@/utils/array";
 import { DATA_DUMB } from "@/data";
+import { Button } from "@/components/ui/button";
 
 const { cases } = DATA_DUMB;
 
@@ -33,7 +34,11 @@ export function Container() {
     serialize: (v) => v ?? "",
   });
 
-  const goToStart = useCallback(() => setStepParam(null), [setStepParam]);
+  const goToStart = useCallback(() => {
+    setStepParam(null);
+    resetFormData();
+    setProgress(20);
+  }, [setStepParam]);
 
   const goToStep = useCallback(
     (id: string) => setStepParam(id),
@@ -97,9 +102,30 @@ export function Container() {
             renderSpecialView?.type === "not-found" && "w-[60%]"
           )}
         >
-          <h1 className="font-bold text-[28px] text-[#1E293B] text-left">
-            {renderSpecialView?.title || navigationContext.title}
-          </h1>
+          <div className="flex flex-row items-center justify-between gap-2">
+            <h1 className="font-bold text-[28px] text-[#1E293B] text-left">
+              {renderSpecialView?.title || navigationContext.title}
+            </h1>
+            {!historySteps.length && (
+              <Button
+                asChild
+                variant={"outline"}
+                className={cn(
+                  "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
+                  renderSpecialView?.type === "documentation"
+                    ? "bg-[#0072D7] hover:bg-[#0072D7]/90 border-none hover:text-white"
+                    : "text-[#0072D7] hover:text-[#0072D7] border-[#0072D7]"
+                )}
+              >
+                <a
+                  href="https://servicios.migracion.gob.do/"
+                  rel="noopener noreferrer"
+                >
+                  Ir al portal para iniciar la solicitud
+                </a>
+              </Button>
+            )}
+          </div>
           <h2 className="text-base font-normal text-[#475569]">
             {renderSpecialView?.description || navigationContext.description}
           </h2>

@@ -42,6 +42,7 @@ export const useFormDataStore = create<FormDataState>((set, get) => ({
 
     resetFormData: () => set({
         formData: {} as FormDataState['formData'],
-        historySteps: []
+        historySteps: [],
+        show: false
     }),
 }));
