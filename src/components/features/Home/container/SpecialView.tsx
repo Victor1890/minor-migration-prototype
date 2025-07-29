@@ -18,7 +18,7 @@ export function specialView(formData: HierarchyNode) {
     const notPermission = notPermissions.find((item) => item === formData.id);
     if (notPermission) {
       return {
-        title: "No necesitas permiso para este caso",
+        title: "El menor no necesita permiso para salir del país",
         description:
           "No te preocupes, no necesitas un permiso especial para este caso.",
         render: <NotFound />,

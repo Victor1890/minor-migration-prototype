@@ -7,27 +7,27 @@ interface StatusMigrationMinor {
 }
 
 export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
-    "menor-tiene-únicamente-nacionalidad-dominicana": {
+    "menor-tiene-únicamente-nacionalidad-dominicana": { // 1
         icon: DominicanIcon,
-        label: "Menor tiene únicamente nacionalidad dominicana",
+        label: "Tiene nacionalidad dominicana únicamente",
         description: "El menor tiene nacionalidad dominicana y no cuenta con otra nacionalidad ni residencia en otro país"
     },
-    "menor-dominicano-con-otra-nacionalidad-o-residencia-en-el-extranjero": {
+    "menor-dominicano-con-otra-nacionalidad-o-residencia-en-el-extranjero": { // 2
         icon: DominicanWordIcon,
         label: 'Tiene doble nacionalidad o residencia en el extranjero',
         description: "El menor tiene nacionalidad dominicana y además cuenta con nacionalidad extranjera o residencia legal en otro país"
     },
-    "menor-es-extranjero-con-residencia-en-la-república-dominicana": {
+    "menor-es-extranjero-con-residencia-en-la-república-dominicana": { // 3
         icon: WordDominicanIcon,
         label: "Es extranjero con residencia en República Dominicana",
         description: "El menor tiene pasaporte extranjero, pero cuenta con residencia legal vigente en República Dominicana"
     },
-    "menor-tiene-estatus-migratorio-de-no-residente-(estudiante,-deportista,-artista-y-estudiante-de-intercambio)": {
+    "menor-tiene-estatus-migratorio-de-no-residente-(estudiante,-deportista,-artista-y-estudiante-de-intercambio)": { // 4
         icon: SchoolIcon,
         label: "Tiene estadía temporal como estudiante, deportista o artista",
         description: "El menor está en República Dominicana por un tiempo limitado como estudiante, deportista, artista o sin residencia fija"
     },
-    "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país": {
+    "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país": { // 5
         icon: WordInternationalIcon,
         label: "Es hijo de personal internacional acreditado en el país",
         description: "El menor es hijo de personal de un organismo internacional oficialmente acreditado en República Dominicana"
@@ -35,7 +35,7 @@ export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
     "tu-situacion-no-esta-en-la-lista-de-opciones": {
         icon: QuestionIcon,
         label: "No veo mi caso o tengo dudas",
-        description: "Selecciona esta opción si no estás seguro de qué opción elegir o tu situación no aparece entre las disponibles"
+        description: "Selecciona esta opción si no sabes cuál elegir o tu situación no está en la lista"
     },
     "viaja-con-ambos-padres": {
         icon: PeopleTravelIcon,
