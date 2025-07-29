@@ -36,10 +36,7 @@ export function Container() {
   const goToStart = useCallback(() => setStepParam(null), [setStepParam]);
 
   const goToStep = useCallback(
-    (id: string) => {
-      console.log("goToStep", id);
-      setStepParam(id);
-    },
+    (id: string) => setStepParam(id),
     [setStepParam]
   );
 
