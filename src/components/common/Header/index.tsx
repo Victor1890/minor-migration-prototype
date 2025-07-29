@@ -2,7 +2,7 @@ import { RequirementIcon } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { CircleHelp, Headset } from "lucide-react";
 import { Logo } from "./logo";
-// import { TemplateOfInterest } from "./templates-of-interest";
+import { TemplateOfInterest } from "./templatesOfInterest";
 import { memo } from "react";
 import { Progress } from "@/components/ui/progress";
 import { useProgressBarStore } from "@/store/progress-bar.store";
@@ -48,13 +48,13 @@ export const Header = memo(() => {
                 <Headset className="size-6" />
               </a>
               <div className="h-[38px] rounded-full w-[1px] hidden xl:flex bg-gray-200" />
-              {/* <div className="items-center gap-2 ml-2 xl:flex">
-                        <TemplateOfInterest />
-                    </div> */}
+              <div className="items-center gap-2 ml-2 xl:flex">
+                <TemplateOfInterest />
+              </div>
             </div>
           </nav>
           <div className="flex items-center justify-center xl:hidden">
-            {/* <TemplateOfInterest /> */}
+            <TemplateOfInterest />
           </div>
         </header>
       </div>

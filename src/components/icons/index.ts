@@ -1,3 +1,5 @@
+export { MenuIcon } from './MenuIcon'
+
 export { QuestionIcon } from './QuestionIcon'
 
 export { WordInternationalIcon } from './WordInternationalIcon'
