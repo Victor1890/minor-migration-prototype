@@ -18,7 +18,7 @@ export function NoViable() {
   }, [setProgress]);
 
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12 fade-in duration-500 animate-in">
       <div className="flex flex-col gap-4">
         <p className="font-semibold text-[24px]">
           Comunícate con nosotros en nuestros canales digitales:

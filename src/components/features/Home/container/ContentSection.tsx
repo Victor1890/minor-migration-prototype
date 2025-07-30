@@ -39,7 +39,7 @@ export function ContentSection({
   );
 
   return (
-    <div className="pb-6 w-full">
+    <div className="pb-6 w-full fade-in duration-500 animate-in">
       {renderSpecialView?.render || (
         <Fragment>
           {show && formData?.children ? (

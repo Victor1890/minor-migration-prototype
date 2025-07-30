@@ -15,7 +15,7 @@ export function Documentation() {
   }, [setProgress]);
 
   return (
-    <div className="">
+    <div className="fade-in duration-500 animate-in">
       <div className="flex flex-col gap-4">
         <h3 className="text-2xl font-semibold">
           Según los datos que nos indicaste, el menor:

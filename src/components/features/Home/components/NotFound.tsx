@@ -13,7 +13,7 @@ export function NotFound() {
   }, [setProgress]);
 
   return (
-    <div className="w-full flex flex-col gap-8">
+    <div className="w-full flex flex-col gap-8 fade-in duration-500 animate-in">
       <section
         aria-labelledby="info-title"
         className="p-6 rounded-[8px] flex flex-col gap-4 bg-[#EFF7FF]"

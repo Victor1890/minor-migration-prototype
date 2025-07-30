@@ -78,6 +78,7 @@ export const HierarchyNodeCard = ({
         aria-pressed="false"
         tabIndex={0}
         className={cn(
+          "fade-in duration-500 animate-in",
           "flex flex-col",
           "border hover:shadow-md transition-shadow cursor-pointer",
           "hover:bg-card/90 hover:ring-2 hover:ring-blue-500",
