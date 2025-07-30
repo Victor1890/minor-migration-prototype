@@ -15,7 +15,7 @@ export function HomePage() {
               }
             >
               <Card className="gap-2 w-full h-full flex-1 overflow-hidden p-0 rounded-none shadow-none border-none min-[550px]:rounded-[8px] min-[550px]:border min-h-full flex flex-col ">
-                <CardContent className="px-6 lg:px-8 w-full py-0 m-0 flex-1">
+                <CardContent className="w-full p-0 px-2 lg:px-0">
                   <Container />
                 </CardContent>
               </Card>

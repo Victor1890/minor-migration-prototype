@@ -84,7 +84,14 @@ export function Container() {
   }, [stepParam, setFormData, setShow]);
 
   return (
-    <div className="flex flex-col mx-auto gap-4">
+    <div
+      className={cn(
+        "flex flex-col mx-auto gap-4",
+        ["not-found", "no-viable"].includes(renderSpecialView?.type || "")
+          ? "max-w-[768px]"
+          : "max-w-[992px]"
+      )}
+    >
       {historySteps.length > 0 && formData.slug && (
         <div className="mb-9">
           <NavigationButtons
@@ -102,7 +109,7 @@ export function Container() {
             renderSpecialView?.type === "not-found" && "w-[60%]"
           )}
         >
-          <div className="flex flex-row items-center justify-between gap-2">
+          <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-9 lg:gap-2">
             <h1 className="font-bold text-[28px] text-[#1E293B] text-left">
               {renderSpecialView?.title || navigationContext.title}
             </h1>
