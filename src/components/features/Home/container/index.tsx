@@ -89,7 +89,8 @@ export function Container() {
         "flex flex-col mx-auto gap-4",
         ["not-found", "no-viable"].includes(renderSpecialView?.type || "")
           ? "max-w-[768px]"
-          : "max-w-[992px]"
+          : "max-w-[992px]",
+        formData.slug && "fade-in duration-500 animate-in"
       )}
     >
       {historySteps.length > 0 && formData.slug && (
@@ -105,6 +106,7 @@ export function Container() {
       <div className="flex flex-col gap-8">
         <div
           className={cn(
+            "fade-in duration-500 animate-in",
             "flex flex-col gap-1",
             renderSpecialView?.type === "not-found" && "w-[60%]"
           )}
