@@ -151,11 +151,11 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                         </div>
                       </div>
 
-                      <div className="space-y-4">
+                      <div className="space-y-3">
                         {COST_DATA.map((item, index) => (
                           <div
                             key={index}
-                            className="grid grid-cols-2 gap-4 border-b border-[#F1F5F9] last:border-b-0"
+                            className="flex items-center justify-between gap-4 border-b border-[#F1F5F9] last:border-b-0 m-0"
                           >
                             <div className="py-4 text-base text-[#031942] font-semibold">
                               {item.concept}
