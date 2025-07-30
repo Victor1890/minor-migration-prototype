@@ -1,27 +1,44 @@
 ---
 import { GovernmentOfficialHeader } from "@/components/common/GovernmentOfficialHeader";
 import { Header } from "@/components/common/Header";
-import { SEO } from "@/data/seo"
-import '@fontsource-variable/roboto';
-import '@/styles/global.css';
+import { SEO } from "@/data/seo";
+import "@fontsource-variable/roboto";
+import "@/styles/global.css";
 ---
 
 <!doctype html>
-<html lang='es-ES'>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/favicon.ico" />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<title>{SEO.title}</title>
-		<meta name="description" content={SEO.description} />
-		<meta name="keywords" content={SEO.keywords} />
-	</head>
-	<body class='antialiased'>
-		<GovernmentOfficialHeader client:load />
-		<Header client:load />
-		<main role='main' class='bg-background antialiased'>
-			<slot />
-		</main>
-	</body>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="canonical" href={SEO.og.url} />
+
+    <title>{SEO.title}</title>
+
+    <meta name="description" content={SEO.description} />
+    <meta name="keywords" content={SEO.keywords} />
+
+    <meta property="og:title" content={SEO.title} />
+    <meta property="og:description" content={SEO.description} />
+    <meta property="og:image" content={SEO.og.image} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content={SEO.og.url} />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={SEO.title} />
+    <meta name="twitter:description" content={SEO.description} />
+    <meta name="twitter:image" content={SEO.og.image} />
+  </head>
+  <body class="antialiased">
+    <GovernmentOfficialHeader client:load />
+    <Header client:load />
+    <main role="main" class="bg-background antialiased">
+      <slot />
+    </main>
+  </body>
 </html>
