@@ -1,0 +1,8 @@
+services:
+  migration_minor_web_prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: migration-minor-web:${VERSION}
+    ports:
+      - 4321:4321
