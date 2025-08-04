@@ -23,7 +23,7 @@ export function Container() {
     resetFormData,
     setHistoryStep,
   } = useFormDataStore();
-  const { progress, setProgress } = useProgressBarStore();
+  const { setProgress } = useProgressBarStore();
   const isAtRoot = isRootLevel(formData.slug, historySteps.length);
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
   const renderSpecialView = specialView(formData);
@@ -90,7 +90,9 @@ export function Container() {
         ["not-found", "no-viable"].includes(renderSpecialView?.type || "")
           ? "max-w-[768px]"
           : "max-w-[992px]",
-        formData.slug && "fade-in duration-500 animate-in"
+        renderSpecialView?.type !== "not-found" &&
+          formData.slug &&
+          "fade-in duration-500 animate-in"
       )}
     >
       {historySteps.length > 0 && formData.slug && (
