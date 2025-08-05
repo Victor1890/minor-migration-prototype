@@ -110,7 +110,9 @@ export function Container() {
           className={cn(
             "fade-in duration-500 animate-in",
             "flex flex-col gap-1",
-            renderSpecialView?.type === "not-found" && "w-[60%]"
+            renderSpecialView?.type === "not-found" && "w-[60%]",
+            renderSpecialView?.type === "documentation" && "max-w-[700px]",
+            renderSpecialView?.type === "not-found" && "max-w-[768px]"
           )}
         >
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-9 lg:gap-2">

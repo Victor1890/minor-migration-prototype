@@ -12,6 +12,7 @@ import { STEP_TO_REQUIRED_SERVICE } from "@/data/documentation-data/service";
 import { AlertCircleIcon, CircleMinus, CirclePlus } from "lucide-react";
 import { isValidElement, useMemo, useState } from "react";
 import { Wiki } from "../Wiki";
+import { cn } from "@/lib/utils";
 
 interface Document {
   label: string;
@@ -66,11 +67,14 @@ export function DocAccordion({ formData }: DocAccordionProps) {
     >
       <AccordionItem
         value="mandatory-documents"
-        className="bg-[#F1F5F9] border-none rounded-lg"
+        className="bg-[#F1F5F9] border-none rounded-lg p-6"
       >
         <AccordionTrigger
           disableArrow
-          className="font-semibold px-5 py-3 hover:no-underline text-2xl flex items-center justify-start gap-2"
+          className={cn(
+            "font-semibold p-0 hover:no-underline text-2xl flex items-center justify-start gap-2",
+            selected === "mandatory-documents" && "pb-8"
+          )}
         >
           {selected === "mandatory-documents" ? (
             <CircleMinus className="shrink-0 translate-y-0.5 transition-transform duration-200" />
@@ -79,7 +83,7 @@ export function DocAccordion({ formData }: DocAccordionProps) {
           )}
           Documentos obligatorios
         </AccordionTrigger>
-        <AccordionContent className="px-6 pb-6">
+        <AccordionContent>
           <div className="flex flex-col gap-4">
             <span className="font-semibold text-[#1E293B] text-xl">
               Requisitos
@@ -134,7 +138,7 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                 </AlertDescription>
               </div>
             </Alert>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 pt-8">
               <span className="font-semibold text-[#1E293B] text-xl">
                 Costo
               </span>
@@ -177,11 +181,14 @@ export function DocAccordion({ formData }: DocAccordionProps) {
 
       <AccordionItem
         value="process-online"
-        className="bg-[#F1F5F9] border-none rounded-lg"
+        className="bg-[#F1F5F9] border-none rounded-lg p-6"
       >
         <AccordionTrigger
           disableArrow
-          className="font-semibold px-5 py-3 hover:no-underline text-2xl flex items-center justify-start gap-2"
+          className={cn(
+            "font-semibold p-0 hover:no-underline text-2xl flex items-center justify-start gap-2",
+            selected === "process-online" && "pb-8"
+          )}
         >
           {selected === "process-online" ? (
             <CircleMinus className="shrink-0 translate-y-0.5 transition-transform duration-200" />
@@ -190,7 +197,7 @@ export function DocAccordion({ formData }: DocAccordionProps) {
           )}
           Pasos para solicitar el permiso de viaje del menor
         </AccordionTrigger>
-        <AccordionContent className="px-6 pb-6">
+        <AccordionContent>
           <div className="space-y-4">
             <div className="space-y-4">
               {STEP_TO_REQUIRED_SERVICE?.map((process, idx) => {

@@ -1,9 +1,3 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Divider } from "@/components/ui/divider";
 import { BRANCH_OFFICE_DATA } from "@/data/no-viable";
@@ -51,16 +45,19 @@ export function NoViable() {
 
       <Divider className="my-3" />
 
-      <Accordion type="single" collapsible defaultValue="no-viable">
+      <div className="flex flex-col gap-12">
         {BRANCH_OFFICE_DATA.map((branch, index) => (
-          <AccordionItem value={`branch-${index}`} key={index}>
-            <AccordionTrigger className="font-semibold text-2xl text-[#020617] cursor-pointer">
+          <div
+            key={`branch-${index}`}
+            className="flex items-start justify-center flex-col gap-4"
+          >
+            <h3 className="font-semibold text-2xl text-[#020617]">
               {branch.title}
-            </AccordionTrigger>
-            <AccordionContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {branch.data.map((item, idx) => (
                 <Card
-                  className="bg-[#F1F5F9] border-0 border-none rounded-[8px]"
+                  className="bg-[#F1F5F9] border-0 border-none rounded-[8px] shadow-none"
                   key={idx}
                 >
                   <CardContent className="p-6">
@@ -91,10 +88,10 @@ export function NoViable() {
                   </CardContent>
                 </Card>
               ))}
-            </AccordionContent>
-          </AccordionItem>
+            </div>
+          </div>
         ))}
-      </Accordion>
+      </div>
     </div>
   );
 }

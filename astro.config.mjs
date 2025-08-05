@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://migracion-production.up.railway.app',
+  site: 'https://permisosalidamenor.migracion.gob.do',
   vite: {
     plugins: [tailwindcss()]
   },

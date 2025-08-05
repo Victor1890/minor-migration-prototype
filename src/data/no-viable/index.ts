@@ -80,12 +80,15 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
         data: [
             {
                 branch: {
-                    label: "Punto GOB Megacentro",
-                    address: "Av. San Vicente de Paúl 321, Santo Domingo Este",
+                    label: "Punto GOB Santo Domingo Norte",
+                    address: "Av. Pdte. Jacobo Majluta Azar, Santo Domingo Norte",
                 },
                 time: {
                     label: "Horario de servicio",
-                    desc: ["Lunes a viernes de 8:00 a.m. – 8:00 p.m.", "Sábados de 9:00 a.m. – 6:00 p.m"]
+                    desc: [
+                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
+                        "Sábados de 9:00 a.m. – 6:00 p.m."
+                    ]
                 }
             },
             {
@@ -103,13 +106,14 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
             },
             {
                 branch: {
-                    label: "Punto GOB Parque del Este",
-                    address: "Parada 57 Av. Bulevard Del Faro, Parque del Este Santo Domingo",
+                    label: "Punto GOB San Cristóbal",
+                    address: "Supermercado Bravo, El Esfuerzo 3, San Cristóbal",
                 },
                 time: {
                     label: "Horario de servicio",
                     desc: [
-                        "Lunes a viernes de 8:00 a.m. – 5:00 p.m."
+                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
+                        "Sábados de 9:00 a.m. – 6:00 p.m."
                     ]
                 }
             },
@@ -117,45 +121,6 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
                 branch: {
                     label: "Punto GOB Santo Domingo Oeste",
                     address: "Occidental Mall, Av. Prolongación 27 de Febrero"
-                },
-                time: {
-                    label: "Horario de servicio",
-                    desc: [
-                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
-                        "Sábados de 9:00 a.m. – 6:00 p.m."
-                    ]
-                }
-            },
-            {
-                branch: {
-                    label: "Punto GOB Santo Domingo Norte",
-                    address: "Av. Pdte. Jacobo Majluta Azar, Santo Domingo Norte",
-                },
-                time: {
-                    label: "Horario de servicio",
-                    desc: [
-                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
-                        "Sábados de 9:00 a.m. – 6:00 p.m."
-                    ]
-                }
-            },
-            {
-                branch: {
-                    label: "Punto GOB Santiago",
-                    address: "La Sirena, Autopista Duarte Km 2 1/2, Santiago",
-                },
-                time: {
-                    label: "Horario de servicio",
-                    desc: [
-                        "Lunes a viernes de 8:00 a.m. – 8:00 p.m.",
-                        "Sábados de 9:00 a. m. – 6:00 p. m. "
-                    ]
-                }
-            },
-            {
-                branch: {
-                    label: "Punto GOB San Cristóbal",
-                    address: "Supermercado Bravo, El Esfuerzo 3, San Cristóbal",
                 },
                 time: {
                     label: "Horario de servicio",
