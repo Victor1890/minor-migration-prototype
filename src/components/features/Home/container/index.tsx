@@ -90,7 +90,7 @@ export function Container() {
         ["not-found", "no-viable"].includes(renderSpecialView?.type || "")
           ? "max-w-[768px]"
           : "max-w-[992px]",
-        renderSpecialView?.type !== "not-found" &&
+        !["not-found", "no-viable"].includes(renderSpecialView?.type || "") &&
           formData.slug &&
           "fade-in duration-500 animate-in"
       )}

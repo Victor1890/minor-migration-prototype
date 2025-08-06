@@ -1,6 +1,6 @@
 import { DominicanIcon, DominicanWordIcon, PeopleTravelIcon, PeopleTravelWordIcon, PersonIcon, QuestionIcon, SchoolIcon, WordDominicanIcon, WordInternationalIcon } from "@/components/icons";
 
-interface StatusMigrationMinor {
+export interface StatusMigrationMinor {
     icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
     label?: string;
     description: string;

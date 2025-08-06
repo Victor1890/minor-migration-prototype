@@ -16,7 +16,6 @@ import { LABEL_ICON_DETAILS } from "@/data/step-icon";
 import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
-import { useQueryState } from "nuqs";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { Wiki } from "../components/Wiki";
 
@@ -93,7 +92,7 @@ export const HierarchyNodeCard = ({
         key={item.slug}
       >
         <CardHeader className="flex flex-col items-start grow">
-          {Icon && <Icon />}
+          {!isMoreInfoAvailable ? Icon && <Icon /> : null}
           <h3 className="text-left font-semibold text-[18px] text-balance font-family-robo">
             <Wiki value={label || item.label} />
           </h3>
