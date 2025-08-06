@@ -77,7 +77,7 @@ export const HierarchyNodeCard = ({
         aria-pressed="false"
         tabIndex={0}
         className={cn(
-          "fade-in duration-500 animate-in",
+          "fade-in duration-500 animate-in h-full",
           "flex flex-col",
           "border hover:shadow-md transition-shadow cursor-pointer",
           "hover:bg-card/90 hover:ring-2 hover:ring-blue-500",
@@ -97,7 +97,11 @@ export const HierarchyNodeCard = ({
             <Wiki value={label || item.label} />
           </h3>
         </CardHeader>
-        <CardFooter className={cn("bg-[#F9FAFB] rounded-b-xl p-0 px-6 py-4")}>
+        <CardFooter
+          className={
+            "bg-[#F9FAFB] rounded-b-xl p-0 px-6 py-4 flex items-center min-h-[80px]"
+          }
+        >
           {!isMoreInfoAvailable ? (
             <p className="text-base font-normal text-[#4B5563]">
               <Wiki
