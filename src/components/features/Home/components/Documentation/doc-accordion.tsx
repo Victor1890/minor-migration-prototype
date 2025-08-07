@@ -31,7 +31,7 @@ interface DocAccordionProps {
 export function DocAccordion({ formData }: DocAccordionProps) {
   const [selected, setSelected] = useState<string>("");
 
-  const { documents, process_online } = useMemo<Data>(() => {
+  const { documents } = useMemo<Data>(() => {
     return formData.children.reduce((acc, item: any) => {
       if (!acc["documents"]) acc["documents"] = [];
       if (!acc["process_online"]) acc["process_online"] = [];

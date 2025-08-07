@@ -1,4 +1,4 @@
-import type { HierarchyNode } from "@/data";
+import { DATA_DUMB, type HierarchyNode } from "@/data";
 
 export function getNodeById(data: HierarchyNode[], id: string, property: keyof HierarchyNode = 'id'): HierarchyNode | undefined {
     if (!property) {
@@ -43,4 +43,53 @@ export function getHistoryNodeById(
     }
 
     return findPath(data, targetId) || [];
+}
+
+
+/**
+ * Finds a case by its slug path
+ * @param slugPath Full slug path to search for
+ * @returns The matching case object or undefined if not found
+ */
+export const findCaseBySlugPath = (slugPath: string): any | undefined => {
+    if (!slugPath) return undefined;
+
+    const slugSegments = slugPath.split('/');
+    let currentItems = DATA_DUMB.cases as any[];
+    let result: any = undefined;
+
+    for (let i = 0; i < slugSegments.length; i++) {
+        const currentSlug = slugSegments[i];
+        const foundItem = currentItems.find((item: any) => item.slug === currentSlug);
+
+        if (!foundItem) return undefined;
+
+        if (i === slugSegments.length - 1) {
+            result = foundItem;
+        } else if (foundItem.children && Array.isArray(foundItem.children)) {
+            // Filter children to only include objects with ID and slug
+            currentItems = foundItem.children.filter((child: any) =>
+                typeof child === 'object' && 'id' in child && 'slug' in child
+            );
+        } else {
+            return undefined;
+        }
+    }
+
+    return result;
+};
+
+export function extractNodes(items: HierarchyNode[], parentPath = "") {
+
+    let result: { slug: string, node: HierarchyNode }[] = []
+
+    for (const item of items) {
+        if (!item.slug) continue; // Skip items without a slug
+        const currentPath = parentPath ? `${parentPath}/${item.slug}` : item.slug;
+        result.push({ slug: currentPath, node: item });
+        if (item.children && item.children.length > 0) {
+            result = result.concat(extractNodes(item.children as HierarchyNode[], currentPath));
+        }
+    }
+    return result;
 }

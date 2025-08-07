@@ -38,10 +38,31 @@ export function Container() {
     setStepParam(null);
     resetFormData();
     setProgress(20);
+    window.history.pushState(null, "", "/");
   }, [setStepParam]);
 
   const goToStep = useCallback(
-    (id: string) => setStepParam(id),
+    (id: string) => {
+      const foundNode = getNodeById(cases, id, "id");
+
+      if (!foundNode) {
+        console.warn(`Node with id ${id} not found.`);
+        return;
+      }
+
+      const currentPathUrl = decodeURIComponent(
+        new URL(window.location.href).pathname
+      );
+
+      const newHistoryState =
+        currentPathUrl === "/"
+          ? `/${foundNode.slug}`
+          : `${currentPathUrl}/${foundNode?.slug}`;
+
+      window.history.pushState(null, "", newHistoryState);
+
+      setStepParam(id);
+    },
     [setStepParam]
   );
 
@@ -53,8 +74,16 @@ export function Container() {
       setStepParam(null);
       resetFormData();
       setProgress(20);
+      window.history.pushState(null, "", "/");
       return;
     }
+
+    const currentPathUrl = decodeURIComponent(
+      new URL(window.location.href).pathname
+    );
+    const currentPath = currentPathUrl.split("/").filter(Boolean);
+    const currentPathRest = currentPath.slice(0, -1).join("/");
+    window.history.pushState(null, "", `/${currentPathRest}`);
 
     const prevForm = getNodeById(cases as any, prevId || "");
     setStepParam(prevId);
