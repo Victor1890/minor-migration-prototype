@@ -1,14 +1,8 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Divider } from "@/components/ui/divider";
 import { BRANCH_OFFICE_DATA } from "@/data/no-viable";
 import { useProgressBarStore } from "@/store/progress-bar.store";
-import { useEffect } from "react";
+import { Fragment, useEffect } from "react";
 
 export function NoViable() {
   const { setProgress } = useProgressBarStore();
@@ -18,7 +12,7 @@ export function NoViable() {
   }, [setProgress]);
 
   return (
-    <div className="flex flex-col gap-12 fade-in duration-500 animate-in">
+    <div className="flex flex-col gap-12">
       <div className="flex flex-col gap-4">
         <p className="font-semibold text-[24px]">
           Comunícate con nosotros en nuestros canales digitales:
@@ -51,50 +45,54 @@ export function NoViable() {
 
       <Divider className="my-3" />
 
-      <Accordion type="single" collapsible defaultValue="no-viable">
+      <div className="flex flex-col gap-12 pb-4">
         {BRANCH_OFFICE_DATA.map((branch, index) => (
-          <AccordionItem value={`branch-${index}`} key={index}>
-            <AccordionTrigger className="font-semibold text-2xl text-[#020617] cursor-pointer">
-              {branch.title}
-            </AccordionTrigger>
-            <AccordionContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {branch.data.map((item, idx) => (
-                <Card
-                  className="bg-[#F1F5F9] border-0 border-none rounded-[8px]"
-                  key={idx}
-                >
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-center flex-col">
-                      <h2 className="text-xl font-bold text-gray-800">
-                        {item.branch.label}
-                      </h2>
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        {item.branch.address}
-                      </p>
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-gray-800 mb-2">
-                        {item.time.label}
-                      </h3>
-                      {Array.isArray(item.time.desc) ? (
-                        <ul className="list-disc pl-5">
-                          {item.time.desc.map((desc, descIndex) => (
-                            <li key={descIndex} className="text-gray-600">
-                              {desc}
-                            </li>
-                          ))}
-                        </ul>
-                      ) : (
-                        <p className="text-gray-600">{item.time.desc}</p>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </AccordionContent>
-          </AccordionItem>
+          <Fragment key={`branch-${index}`}>
+            <div className="flex items-start justify-center flex-col gap-4">
+              <h3 className="font-semibold text-2xl text-[#020617]">
+                {branch.title}
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {branch.data.map((item, idx) => (
+                  <Card
+                    className="bg-[#F1F5F9] border-0 border-none rounded-[8px] shadow-none"
+                    key={idx}
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-center flex-col">
+                        <h2 className="text-xl font-bold text-gray-800">
+                          {item.branch.label}
+                        </h2>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                          {item.branch.address}
+                        </p>
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-gray-800 mb-2">
+                          {item.time.label}
+                        </h3>
+                        {Array.isArray(item.time.desc) ? (
+                          <ul className="list-disc pl-5">
+                            {item.time.desc.map((desc, descIndex) => (
+                              <li key={descIndex} className="text-gray-600">
+                                {desc}
+                              </li>
+                            ))}
+                          </ul>
+                        ) : (
+                          <p className="text-gray-600">{item.time.desc}</p>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            {index < BRANCH_OFFICE_DATA.length - 1 && <Divider />}
+          </Fragment>
         ))}
-      </Accordion>
+      </div>
     </div>
   );
 }

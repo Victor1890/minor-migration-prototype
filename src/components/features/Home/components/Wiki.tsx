@@ -27,13 +27,15 @@ const WikiComponent = ({
   asTrigger,
   component,
 }: WikiProps) => {
+  if (!value) return null;
+
   const TriggerComp = asTrigger || "span";
   const ContentComp = asContent || "p";
 
   const termLegalData = useMemo(() => {
     const found = termLegal.find((term) => {
       const legalTerm = normalize(term["Término legal"] || "");
-      return normalize(value).includes(legalTerm);
+      return normalize(value || "").includes(legalTerm);
     });
 
     if (!found) return { label: "", explanation: "" };
@@ -45,7 +47,7 @@ const WikiComponent = ({
   }, [value]);
 
   const termData = useMemo(() => {
-    const words = value.split(/\s+/).map((w) => normalize(w));
+    const words = value.split(/\s+/).map((w) => normalize(w || ""));
     const found = termLegal.find((term) => {
       const mainTerm = normalize(term["Término"] || "");
       if (words.includes(mainTerm)) return true;
@@ -54,7 +56,7 @@ const WikiComponent = ({
       if (term["Sinónimos o equivalentes"]) {
         const synonyms = term["Sinónimos o equivalentes"]
           .split(",")
-          .map((syn) => normalize(syn));
+          .map((syn) => normalize(syn || ""));
         return words.some((w) => synonyms.includes(w));
       }
       return false;

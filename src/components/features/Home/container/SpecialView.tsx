@@ -10,7 +10,7 @@ export interface RenderSpecialView {
   title: string;
   description: string;
   render: JSX.Element;
-  type: string;
+  type: "not-found" | "no-viable" | "documentation";
 }
 
 export function specialView(formData: HierarchyNode) {
@@ -53,5 +53,5 @@ export function specialView(formData: HierarchyNode) {
     return null;
   }, [formData]);
 
-  return renderSpecialView;
+  return renderSpecialView as RenderSpecialView;
 }

@@ -1,5 +1,3 @@
-import { Info } from "lucide-react";
-
 // Tipos de datos para documentación
 interface RequiredDocument {
     title: string;

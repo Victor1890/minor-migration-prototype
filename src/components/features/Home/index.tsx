@@ -1,8 +1,28 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Container } from "./container";
 import { NuqsAdapter } from "nuqs/adapters/react";
+import type { HierarchyNode } from "@/data";
+import { useFormDataStore } from "@/store/form-data.store";
+import { useEffect, useState } from "react";
+import { Placeholder } from "./components/Placeholder";
 
-export function HomePage() {
+interface HomePageProps {
+  node: HierarchyNode;
+}
+
+export function HomePage({ node }: HomePageProps) {
+  const { setFormData } = useFormDataStore();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setFormData(node);
+  }, [node]);
+
+  useEffect(() => {
+    const timeOut = setTimeout(() => setLoading(false), 1 * 100);
+    return () => clearTimeout(timeOut);
+  }, []);
+
   return (
     <NuqsAdapter>
       <section className="relative">
@@ -16,7 +36,7 @@ export function HomePage() {
             >
               <Card className="gap-2 w-full h-full flex-1 overflow-hidden p-0 rounded-none shadow-none border-none min-[550px]:rounded-[8px] min-[550px]:border min-h-full flex flex-col ">
                 <CardContent className="w-full p-0 px-2 lg:px-0">
-                  <Container />
+                  {loading ? <Placeholder /> : <Container />}
                 </CardContent>
               </Card>
             </div>

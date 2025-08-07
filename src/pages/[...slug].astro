@@ -1,0 +1,39 @@
+---
+import { HomePage } from "@/components/features/Home";
+import { DATA_DUMB } from "@/data";
+import Layout from '../layouts/Layout.astro';
+import { MainLayout } from '../layouts/MainLayout';
+import { extractNodes } from "@/utils/array";
+
+
+export function getStaticPaths() {
+  
+  const nodes = extractNodes(DATA_DUMB.cases).concat([
+    {
+      node: {
+        slug: "",
+        children: [],
+        id: "",
+        label: "",
+        description: ""
+      },
+      slug: "/"
+    }
+  ]);
+  
+  const params = nodes.map((node) => ({
+    params: { slug: `/${node.slug}` },
+  }))
+
+  return params
+}
+
+const { node } = Astro.locals.node
+
+---
+
+<Layout>
+	<MainLayout client:load>
+		<HomePage client:load node={node} />
+	</MainLayout>
+</Layout>

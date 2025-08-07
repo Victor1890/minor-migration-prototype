@@ -24,7 +24,7 @@ export function NavigationButtons({
       <div className="flex justify-start items-center gap-4 w-full">
         <Button
           variant={"outline"}
-          className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-full lg:max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
+          className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-full lg:max-w-[163px] w-full hover:text-white hover:bg-[#0072D7] cursor-pointer"
           onClick={goBack}
         >
           <MoveLeft />

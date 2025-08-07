@@ -1,11 +1,10 @@
-import { RequirementIcon } from "@/components/icons";
+import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import { CircleHelp, Headset } from "lucide-react";
+import { useProgressBarStore } from "@/store/progress-bar.store";
+import { Headset } from "lucide-react";
+import { memo } from "react";
 import { Logo } from "./logo";
 import { TemplateOfInterest } from "./templatesOfInterest";
-import { memo } from "react";
-import { Progress } from "@/components/ui/progress";
-import { useProgressBarStore } from "@/store/progress-bar.store";
 
 export const Header = memo(() => {
   const { progress } = useProgressBarStore();

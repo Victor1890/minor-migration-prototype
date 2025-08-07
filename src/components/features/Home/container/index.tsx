@@ -23,7 +23,7 @@ export function Container() {
     resetFormData,
     setHistoryStep,
   } = useFormDataStore();
-  const { progress, setProgress } = useProgressBarStore();
+  const { setProgress } = useProgressBarStore();
   const isAtRoot = isRootLevel(formData.slug, historySteps.length);
   const navigationContext = getNavigationContext(formData.slug, isAtRoot);
   const renderSpecialView = specialView(formData);
@@ -38,10 +38,31 @@ export function Container() {
     setStepParam(null);
     resetFormData();
     setProgress(20);
+    window.history.pushState(null, "", "/");
   }, [setStepParam]);
 
   const goToStep = useCallback(
-    (id: string) => setStepParam(id),
+    (id: string) => {
+      const foundNode = getNodeById(cases, id, "id");
+
+      if (!foundNode) {
+        console.warn(`Node with id ${id} not found.`);
+        return;
+      }
+
+      const currentPathUrl = decodeURIComponent(
+        new URL(window.location.href).pathname
+      );
+
+      const newHistoryState =
+        currentPathUrl === "/"
+          ? `/${foundNode.slug}`
+          : `${currentPathUrl}/${foundNode?.slug}`;
+
+      window.history.pushState(null, "", newHistoryState);
+
+      setStepParam(id);
+    },
     [setStepParam]
   );
 
@@ -53,8 +74,16 @@ export function Container() {
       setStepParam(null);
       resetFormData();
       setProgress(20);
+      window.history.pushState(null, "", "/");
       return;
     }
+
+    const currentPathUrl = decodeURIComponent(
+      new URL(window.location.href).pathname
+    );
+    const currentPath = currentPathUrl.split("/").filter(Boolean);
+    const currentPathRest = currentPath.slice(0, -1).join("/");
+    window.history.pushState(null, "", `/${currentPathRest}`);
 
     const prevForm = getNodeById(cases as any, prevId || "");
     setStepParam(prevId);
@@ -90,7 +119,9 @@ export function Container() {
         ["not-found", "no-viable"].includes(renderSpecialView?.type || "")
           ? "max-w-[768px]"
           : "max-w-[992px]",
-        formData.slug && "fade-in duration-500 animate-in"
+        !["not-found", "no-viable"].includes(renderSpecialView?.type || "") &&
+          formData.slug &&
+          "fade-in duration-500 animate-in"
       )}
     >
       {historySteps.length > 0 && formData.slug && (
@@ -108,7 +139,9 @@ export function Container() {
           className={cn(
             "fade-in duration-500 animate-in",
             "flex flex-col gap-1",
-            renderSpecialView?.type === "not-found" && "w-[60%]"
+            renderSpecialView?.type === "not-found" && "w-[60%]",
+            renderSpecialView?.type === "documentation" && "max-w-[700px]",
+            renderSpecialView?.type === "not-found" && "max-w-[768px]"
           )}
         >
           <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-9 lg:gap-2">
