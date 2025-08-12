@@ -47,9 +47,9 @@ export function NavigationButtons({
           variant={"outline"}
           className={cn(
             "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
-            renderSpecialView?.type === "documentation"
-              ? "bg-[#0072D7] hover:bg-[#0072D7]/90 border-none hover:text-white"
-              : "text-[#0072D7] hover:text-[#0072D7] border-[#0072D7]"
+            "text-[#0072D7] border-[#0072D7] hover:text-white hover:bg-[#0072D7] cursor-pointer",
+            renderSpecialView?.type === "documentation" &&
+              "bg-[#0072D7] hover:bg-[#0072D7]/90 border-none text-white"
           )}
         >
           <a

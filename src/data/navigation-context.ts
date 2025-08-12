@@ -31,7 +31,7 @@ export const NAVIGATION_CONTEXTS: NavigationContextMap = {
     "menor-tiene-únicamente-nacionalidad-dominicana": TravelWithParentData,
     "menor-dominicano-con-otra-nacionalidad-o-residencia-en-el-extranjero": MinorSixMonthsData,
     "menor-es-extranjero-con-residencia-en-la-república-dominicana": MinorSixMonthsData,
-    "menor-tiene-estatus-migratorio-de-no-residentes-(estudiantes,-deportistas,-artistas-y-estudiantes-de-intercambio)": MinorSixMonthsData,
+    "menor-tiene-estatus-migratorio-de-no-residente-(estudiante,-deportista,-artista-y-estudiante-de-intercambio)": MinorSixMonthsData,
     "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país": MinorSixMonthsData,
     "viaja-con-ambos-padres": DifferentSituationCase,
     "viaja-con-uno-de-los-padres": DifferentSituationCase,

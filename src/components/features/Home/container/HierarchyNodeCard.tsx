@@ -19,7 +19,7 @@ import { useProgressBarStore } from "@/store/progress-bar.store";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { Wiki } from "../components/Wiki";
 
-const { cases } = DATA_DUMB;
+const { cases, notPermissions } = DATA_DUMB;
 
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
@@ -36,16 +36,20 @@ export const HierarchyNodeCard = ({
 
   // Determina si hay más información disponible
   const isMoreInfoAvailable = useMemo(() => {
-    const isValid = ["1.1", "2.2", "3.2", "4"].includes(item.id);
-    if (isValid) return false;
-    return item?.children?.some((child: any) => child?.["document"]);
+    const isNotPermissionValid = notPermissions
+      .filter((x) => x !== "4.1.2")
+      .includes(item.id);
+    if (isNotPermissionValid) return false;
+    const isValid = item?.children?.some((child: any) => child?.["document"]);
+
+    return isValid;
   }, [item]);
 
   const {
     description,
     icon: Icon,
     label,
-  } = useMemo(() => LABEL_ICON_DETAILS[item.slug] || {}, [item.slug]);
+  } = LABEL_ICON_DETAILS[item.slug] || {};
 
   const handleClick = useCallback(() => {
     setFormData(item);

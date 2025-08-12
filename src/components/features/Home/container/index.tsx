@@ -118,10 +118,7 @@ export function Container() {
         "flex flex-col mx-auto gap-4",
         ["not-found", "no-viable"].includes(renderSpecialView?.type || "")
           ? "max-w-[768px]"
-          : "max-w-[992px]",
-        !["not-found", "no-viable"].includes(renderSpecialView?.type || "") &&
-          formData.slug &&
-          "fade-in duration-500 animate-in"
+          : "max-w-[992px]"
       )}
     >
       {historySteps.length > 0 && formData.slug && (
