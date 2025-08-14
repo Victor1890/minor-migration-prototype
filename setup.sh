@@ -36,5 +36,5 @@ echo "Starting container with version: $version"
 docker compose -f compose.build.yaml up -d
 
 echo "✅ Application is running!"
-echo "🌐 Open http://localhost:4321 in your browser"
+echo "🌐 Open http://localhost:3000 in your browser"
 echo "📊 View logs with: docker compose -f compose.build.yaml logs -f"
