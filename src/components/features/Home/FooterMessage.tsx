@@ -20,7 +20,7 @@ export const FooterMessage = () => (
       </p>
       <p>
         <a
-          href="https://maps.google.com/?q=Autopista+30+de+Mayo,+Santo+Domingo"
+          href="https://www.google.com/maps/place/Direcci%C3%B3n+General+de+Migraci%C3%B3n/@18.4446532,-69.9629156,14z/data=!4m6!3m5!1s0x8ea5626b93b642a9:0x7a0ecf8f60e1e2db!8m2!3d18.4446532!4d-69.9268667!16s%2Fg%2F1tfwr06f?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
           className="no-underline hover:underline"

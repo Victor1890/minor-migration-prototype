@@ -35,15 +35,10 @@ export const HierarchyNodeCard = ({
   const { setProgress, progress } = useProgressBarStore();
 
   // Determina si hay más información disponible
-  const isMoreInfoAvailable = useMemo(() => {
-    const isNotPermissionValid = notPermissions
-      .filter((x) => x !== "4.1.2")
-      .includes(item.id);
-    if (isNotPermissionValid) return false;
-    const isValid = item?.children?.some((child: any) => child?.["document"]);
-
-    return isValid;
-  }, [item]);
+  const isMoreInfoAvailable = useMemo(
+    () => (item as any).type === "modal-info",
+    [item]
+  );
 
   const {
     description,
@@ -145,7 +140,7 @@ export const HierarchyNodeCard = ({
               <div className="flex flex-col items-start gap-1">
                 <Label className="text-[18px] font-semibold">Descripción</Label>
                 <DialogDescription className="text-base font-normal text-[#475569]">
-                  {data.description ? (
+                  {data?.description ? (
                     <Wiki value={data.description} />
                   ) : (
                     "Descripción no disponible."
