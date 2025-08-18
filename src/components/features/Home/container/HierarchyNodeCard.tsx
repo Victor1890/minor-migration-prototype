@@ -19,7 +19,7 @@ import { useProgressBarStore } from "@/store/progress-bar.store";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { Wiki } from "../components/Wiki";
 
-const { cases, notPermissions } = DATA_DUMB;
+const { cases } = DATA_DUMB;
 
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
@@ -97,9 +97,11 @@ export const HierarchyNodeCard = ({
           </h3>
         </CardHeader>
         <CardFooter
-          className={
-            "bg-[#F9FAFB] rounded-b-xl p-0 px-6 py-4 flex items-center min-h-[80px]"
-          }
+          className={cn(
+            "flex-1 bg-[#F9FAFB] px-6 py-4 rounded-b-lg flex items-start",
+            cases.some((x) => x.slug === item.slug) && "min-h-34",
+            isMoreInfoAvailable && "min-h-22 items-center"
+          )}
         >
           {!isMoreInfoAvailable ? (
             <p className="text-base font-normal text-[#4B5563]">
@@ -140,11 +142,9 @@ export const HierarchyNodeCard = ({
               <div className="flex flex-col items-start gap-1">
                 <Label className="text-[18px] font-semibold">Descripción</Label>
                 <DialogDescription className="text-base font-normal text-[#475569]">
-                  {data?.description ? (
-                    <Wiki value={data.description} />
-                  ) : (
-                    "Descripción no disponible."
-                  )}
+                  <Wiki
+                    value={data?.description || "Descripción no disponible."}
+                  />
                 </DialogDescription>
               </div>
             </div>
