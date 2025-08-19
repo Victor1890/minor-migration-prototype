@@ -133,6 +133,14 @@ export const DATA_DUMB = {
             "Sinónimos o equivalentes": "Alerta, mensaje"
         },
         {
+            "Término legal": "Homologación",
+            "Descripción": "Reconocimiento formal de validez de documentos emitidos en el extranjero, que puede requerir traducción, apostilla/legalización y aprobación por entidades dominicanas.",
+            "Término": "Notificándote",
+            "Explicación sencilla": "Mensaje que informa algo sobre tu trámite.",
+            "Traducción para usuarios no técnicos": "Aviso por correo o en el portal.",
+            "Sinónimos o equivalentes": "Alerta, mensaje"
+        },
+        {
             "Término legal": "Tribunal de NNA",
             "Descripción": "Órgano judicial especializado en temas de Niños, Niñas y Adolescentes, encargado de tutelas, custodia y temas migratorios que involucren menores.",
             "Término": "Término",

@@ -56,7 +56,7 @@ const WikiComponent = ({
       if (term["Sinónimos o equivalentes"]) {
         const synonyms = term["Sinónimos o equivalentes"]
           .split(",")
-          .map((syn) => normalize(syn || ""));
+          .map((syn) => normalize(syn.replace(/\s+/g, "") || ""));
         return words.some((w) => synonyms.includes(w));
       }
       return false;

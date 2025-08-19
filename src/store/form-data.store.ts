@@ -23,7 +23,7 @@ export const useFormDataStore = create<FormDataState>((set, get) => ({
 
         const historySteps = Array.from(
             new Map(historyStepData.map((item) => [item.slug, item])).values()
-        )
+        ).filter((item) => Boolean(item.slug));
 
         return set({ formData: data, historySteps })
     },

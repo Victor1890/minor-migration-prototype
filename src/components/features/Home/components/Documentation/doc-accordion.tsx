@@ -29,7 +29,10 @@ interface DocAccordionProps {
 }
 
 export function DocAccordion({ formData }: DocAccordionProps) {
-  const [selected, setSelected] = useState<string>("");
+  const [selected, setSelected] = useState<string[]>([
+    "mandatory-documents",
+    "process-online",
+  ]);
 
   const { documents } = useMemo<Data>(() => {
     return formData.children.reduce((acc, item: any) => {
@@ -59,9 +62,9 @@ export function DocAccordion({ formData }: DocAccordionProps) {
 
   return (
     <Accordion
-      type="single"
-      collapsible
-      defaultValue="mandatory-documents"
+      type="multiple"
+      // collapsible
+      defaultValue={["mandatory-documents", "process-online"]}
       className="space-y-4"
       onValueChange={(value) => setSelected(value)}
     >
@@ -73,10 +76,10 @@ export function DocAccordion({ formData }: DocAccordionProps) {
           disableArrow
           className={cn(
             "font-semibold p-0 hover:no-underline text-2xl flex items-center justify-start gap-2",
-            selected === "mandatory-documents" && "pb-8"
+            selected.includes("mandatory-documents") && "pb-8"
           )}
         >
-          {selected === "mandatory-documents" ? (
+          {selected.includes("mandatory-documents") ? (
             <CircleMinus className="shrink-0 translate-y-0.5 transition-transform duration-200" />
           ) : (
             <CirclePlus className="shrink-0 translate-y-0.5 transition-transform duration-200 " />
@@ -187,10 +190,10 @@ export function DocAccordion({ formData }: DocAccordionProps) {
           disableArrow
           className={cn(
             "font-semibold p-0 hover:no-underline text-2xl flex items-center justify-start gap-2",
-            selected === "process-online" && "pb-8"
+            selected.includes("process-online") && "pb-8"
           )}
         >
-          {selected === "process-online" ? (
+          {selected.includes("process-online") ? (
             <CircleMinus className="shrink-0 translate-y-0.5 transition-transform duration-200" />
           ) : (
             <CirclePlus className="shrink-0 translate-y-0.5 transition-transform duration-200 " />
