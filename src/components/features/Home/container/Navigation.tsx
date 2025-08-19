@@ -33,18 +33,16 @@ export function NavigationButtons({
           <MoveLeft />
           Paso anterior
         </Button>
-        {renderSpecialView?.title && (
-          <Button
-            variant={"ghost"}
-            className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-full lg:max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
-            onClick={() => {
-              goToStart?.();
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
-          >
-            Volver al inicio
-          </Button>
-        )}
+        <Button
+          variant={"ghost"}
+          className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-full lg:max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
+          onClick={() => {
+            goToStart?.();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          Volver al inicio
+        </Button>
       </div>
 
       {renderSpecialView?.type !== "no-viable" && (
