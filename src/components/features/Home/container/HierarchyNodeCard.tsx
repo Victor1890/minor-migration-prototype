@@ -51,6 +51,7 @@ export const HierarchyNodeCard = ({
     if (goToStep) goToStep(item.id);
     setShow(true);
     setProgress(progress + 20);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, [
     formData.id,
     item,

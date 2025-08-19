@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "perf:optimize": "node scripts/optimize-build.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

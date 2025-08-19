@@ -25,7 +25,10 @@ export function NavigationButtons({
         <Button
           variant={"outline"}
           className="rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-full lg:max-w-[163px] w-full hover:text-white hover:bg-[#0072D7] cursor-pointer"
-          onClick={goBack}
+          onClick={() => {
+            goBack?.();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
         >
           <MoveLeft />
           Paso anterior
@@ -34,7 +37,10 @@ export function NavigationButtons({
           <Button
             variant={"ghost"}
             className="rounded-full flex gap-2 items-center text-[#0072D7] max-w-full lg:max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
-            onClick={goToStart}
+            onClick={() => {
+              goToStart?.();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
             Volver al inicio
           </Button>
