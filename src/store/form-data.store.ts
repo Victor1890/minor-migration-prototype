@@ -5,6 +5,7 @@ interface FormDataState {
     formData: HierarchyNode;
     historySteps: Partial<HierarchyNode>[];
     show: boolean;
+    popHistoryStep: () => void;
     setShow: (show: boolean) => void;
     setFormData: (data: FormDataState['formData']) => void;
     resetFormData: () => void;
@@ -15,6 +16,10 @@ export const useFormDataStore = create<FormDataState>((set, get) => ({
     formData: {} as FormDataState['formData'],
     historySteps: [],
     show: false,
+    popHistoryStep: () => {
+        const historySteps = get().historySteps.slice(0, -1);
+        return set({ historySteps });
+    },
     setShow: (show) => set({ show }),
 
     setFormData: (data) => {
