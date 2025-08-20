@@ -22,19 +22,20 @@ import "@/styles/global.css";
     <meta name="description" content={SEO.description} />
     <meta name="keywords" content={SEO.keywords} />
 
-    <meta property="og:title" content={SEO.title} />
-    <meta property="og:description" content={SEO.description} />
-    <meta property="og:image" content={SEO.og.image} />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:title" content={SEO.og.title} />
+    <meta property="og:description" content={SEO.og.description} />
+    <meta property="og:image" content={SEO.og.image.url} />
+    <meta property="og:image:type" content={SEO.og.image.type} />
+    <meta property="og:image:width" content={SEO.og.image.width} />
+    <meta property="og:image:height" content={SEO.og.image.height} />
     <meta property="og:url" content={SEO.og.url} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={SEO.og.type} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={SEO.title} />
-    <meta name="twitter:description" content={SEO.description} />
-    <meta name="twitter:image" content={SEO.og.image} />
+    <meta name="twitter:description" content={SEO.og.description} />
+    <meta name="twitter:image" content={SEO.og.image.url} />
+    
   </head>
   <body class="antialiased">
     <GovernmentOfficialHeader client:load />

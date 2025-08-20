@@ -57,7 +57,7 @@ export function NavigationButtons({
           )}
         >
           <a
-            href="https://servicios.migracion.gob.do/"
+            href="https://servicios.migracion.gob.do/es"
             rel="noopener noreferrer"
           >
             Ir al portal para iniciar la solicitud
