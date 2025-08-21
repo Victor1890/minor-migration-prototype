@@ -251,13 +251,14 @@ export const CASE_04 = {
                 },
                 {
                     "id": "4.2.2",
-                    "label": "El menor viaja acompañado  de ambos padres",
+                    "label": "El menor viaja acompañado de ambos padres",
                     "slug": "el-menor-viaja-acompañado-de-ambos-padres",
                     "description": "No requiere el permiso de salida pero debe mostrar Acta de nacimiento del menor",
                     "type": "modal-info",
                     "children": [
                         {
                             "document": {
+                                "Requisitos": "",
                                 "Notas requisitos": "Entrar al portal  https://servicios.migracion.gob.do"
                             },
                             "process_online": {}

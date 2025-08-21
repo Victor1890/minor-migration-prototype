@@ -37,9 +37,12 @@ export function specialView(formData: HierarchyNode) {
       };
     }
 
-    const documentationPage = formData?.children?.some(
-      (child: any) => Object.keys(child?.["process_online"] || {}).length > 0
-    );
+    const documentationPage = formData?.children?.some((child: any) => {
+      if (Object.keys(child?.["process_online"] || {}).length > 0) return true;
+      if (Object.keys(child?.["document"] || {}).length > 0) return true;
+      return false;
+    });
+
     if (documentationPage) {
       return {
         title: "Documentos obligatorios y pasos a seguir",
