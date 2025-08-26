@@ -48,7 +48,6 @@ export const HierarchyNodeCard = ({
     [item]
   );
 
-  console.log("isFirstLoad: ", !isMoreInfoAvailable || isFirstLoad);
   const {
     description,
     icon: Icon,
