@@ -12,16 +12,27 @@ export function ContactInfo() {
         </p>
         <div className="flex flex-col gap-1">
           <p>
-            <span className="font-bold">📞 Teléfono:</span> (809) 508-2555 Ext.
-            3890
+            <a href="tel:+18095082555" className="no-underline hover:underline">
+              📞 Tel. (809) 508-2555 ext. 3890
+            </a>
           </p>
           <p>
-            <span className="font-bold">📧 Correo:</span>{" "}
-            certificacionesmc@migracion.gob.do
+            <a
+              href="mailto:certificacionesmc@migracion.gob.do"
+              className="no-underline hover:underline"
+            >
+              ✉️ certificacionesmc@migracion.gob.do
+            </a>
           </p>
           <p>
-            <span className="font-bold">🕒 Horario de atención:</span> lunes a
-            viernes, de 8:00 a.m. a 4:00 p.m.
+            <a
+              href="https://www.google.com/maps/place/Direcci%C3%B3n+General+de+Migraci%C3%B3n/@18.4446532,-69.9629156,14z/data=!4m6!3m5!1s0x8ea5626b93b642a9:0x7a0ecf8f60e1e2db!8m2!3d18.4446532!4d-69.9268667!16s%2Fg%2F1tfwr06f?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="no-underline hover:underline"
+            >
+              📍 Autopista 30 de Mayo, Santo Domingo
+            </a>
           </p>
         </div>
         <div className="flex flex-col">

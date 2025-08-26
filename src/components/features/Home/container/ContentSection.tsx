@@ -65,6 +65,7 @@ export function ContentSection({
                   key={item.slug}
                   item={item}
                   goToStep={goToStep}
+                  isFirstLoad
                 />
               ))}
             </div>

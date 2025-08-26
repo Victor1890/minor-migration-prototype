@@ -15,8 +15,8 @@ export interface RenderSpecialView {
 
 export function specialView(formData: HierarchyNode) {
   const renderSpecialView = useMemo(() => {
-    const notPermission = notPermissions.find((item) => item === formData.id);
-    if (notPermission) {
+    const noRequiredPermission = formData.type === "not_required_permission";
+    if (noRequiredPermission) {
       return {
         title: "El menor no necesita permiso para salir del país",
         description:
@@ -26,7 +26,7 @@ export function specialView(formData: HierarchyNode) {
       };
     }
 
-    const notViablePage = notFoundCase.find((item) => item === formData.id);
+    const notViablePage = formData.type === "not_found";
     if (notViablePage) {
       return {
         title: "¿Tienes dudas o no ves el caso del menor entre las opciones?",
@@ -37,13 +37,8 @@ export function specialView(formData: HierarchyNode) {
       };
     }
 
-    const documentationPage = formData?.children?.some((child: any) => {
-      if (Object.keys(child?.["process_online"] || {}).length > 0) return true;
-      if (Object.keys(child?.["document"] || {}).length > 0) return true;
-      return false;
-    });
-
-    if (documentationPage) {
+    const isDocumentationCase = Object.hasOwn(formData, "requirements");
+    if (isDocumentationCase) {
       return {
         title: "Documentos obligatorios y pasos a seguir",
         description:

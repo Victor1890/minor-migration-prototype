@@ -24,11 +24,13 @@ const { cases } = DATA_DUMB;
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
   goToStep?: (id: string) => void;
+  isFirstLoad?: boolean;
 }
 
 export const HierarchyNodeCard = ({
   item,
   goToStep,
+  isFirstLoad = false,
 }: HierarchyNodeCardProps) => {
   const { formData, setFormData, setShow } = useFormDataStore();
   const [data, setData] = useState<HierarchyNode | null>(null);
@@ -36,10 +38,17 @@ export const HierarchyNodeCard = ({
 
   // Determina si hay más información disponible
   const isMoreInfoAvailable = useMemo(
-    () => (item as any).type === "modal-info",
+    () =>
+      (["document", "not_required_permission", "not_found"].includes(
+        item.type || ""
+      ) &&
+        Object.hasOwn(item, "requirements")) ||
+      item.type === "not_found" ||
+      item.type === "not_required_permission",
     [item]
   );
 
+  console.log("isFirstLoad: ", !isMoreInfoAvailable || isFirstLoad);
   const {
     description,
     icon: Icon,
@@ -92,7 +101,7 @@ export const HierarchyNodeCard = ({
         key={item.slug}
       >
         <CardHeader className="flex flex-col items-start grow">
-          {!isMoreInfoAvailable ? Icon && <Icon /> : null}
+          {isFirstLoad ? Icon && <Icon /> : null}
           <h3 className="text-left font-semibold text-[18px] text-balance font-family-robo">
             <Wiki value={label || item.label} />
           </h3>
@@ -107,11 +116,7 @@ export const HierarchyNodeCard = ({
           {!isMoreInfoAvailable ? (
             <p className="text-base font-normal text-[#4B5563]">
               <Wiki
-                value={
-                  description ||
-                  item.description ||
-                  "Descripción no disponible."
-                }
+                value={description || item.desc || "Descripción no disponible."}
               />
             </p>
           ) : (
@@ -143,9 +148,7 @@ export const HierarchyNodeCard = ({
               <div className="flex flex-col items-start gap-1">
                 <Label className="text-[18px] font-semibold">Descripción</Label>
                 <DialogDescription className="text-base font-normal text-[#475569]">
-                  <Wiki
-                    value={data?.description || "Descripción no disponible."}
-                  />
+                  <Wiki value={data?.desc || "Descripción no disponible."} />
                 </DialogDescription>
               </div>
             </div>

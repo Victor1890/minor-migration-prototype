@@ -1,8 +1,7 @@
 import { useFormDataStore } from "@/store/form-data.store";
-import { ContactInfo } from "./ContactInfo";
-import { useEffect } from "react";
 import { useProgressBarStore } from "@/store/progress-bar.store";
-import { LABEL_DETAILT_NOT_FOUND } from "@/data/step-icon";
+import { useEffect } from "react";
+import { ContactInfo } from "./ContactInfo";
 
 export function NotFound() {
   const { historySteps } = useFormDataStore();
@@ -27,11 +26,7 @@ export function NotFound() {
           className="list-disc font-semibold text-[16px] ml-6"
         >
           {historySteps.map((item) => (
-            <li key={item.slug}>
-              {item?.slug
-                ? LABEL_DETAILT_NOT_FOUND[item?.slug]?.label || item.label
-                : item.label}
-            </li>
+            <li key={item.slug}>{item?.label}</li>
           ))}
         </ul>
 

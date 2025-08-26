@@ -3,7 +3,6 @@ import { DocAccordion } from "./doc-accordion";
 import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
 import { useCallback, useEffect } from "react";
-import { LABEL_DETAILT_NOT_FOUND } from "@/data/step-icon";
 import { NavigationButtons } from "../../container/Navigation";
 import { getNodeById } from "@/utils/array";
 import { DATA_DUMB } from "@/data";
@@ -74,9 +73,7 @@ export function Documentation() {
         >
           {historySteps.map((item) => (
             <li className="font-semibold text-base" key={item.slug}>
-              {item.slug
-                ? LABEL_DETAILT_NOT_FOUND[item.slug]?.label || item.label
-                : item.label}
+              {item.label}
             </li>
           ))}
         </ul>
