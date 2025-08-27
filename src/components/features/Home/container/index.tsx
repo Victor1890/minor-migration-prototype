@@ -1,15 +1,14 @@
+import { DATA_DUMB } from "@/data";
 import { getNavigationContext, isRootLevel } from "@/data/navigation-context";
 import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
+import { useProgressBarStore } from "@/store/progress-bar.store";
+import { getHistoryNodeById, getNodeById } from "@/utils/array";
+import { useQueryState } from "nuqs";
+import { useCallback, useEffect, useMemo } from "react";
 import { ContentSection } from "./ContentSection";
 import { NavigationButtons } from "./Navigation";
 import { specialView } from "./SpecialView";
-import { useProgressBarStore } from "@/store/progress-bar.store";
-import { useQueryState } from "nuqs";
-import { useCallback, useEffect, useMemo } from "react";
-import { getHistoryNodeById, getNodeById } from "@/utils/array";
-import { DATA_DUMB } from "@/data";
-import { Button } from "@/components/ui/button";
 
 const { cases } = DATA_DUMB;
 
@@ -48,7 +47,7 @@ export function Container() {
 
   const goToStep = useCallback(
     (id: string) => {
-      const foundNode = getNodeById(cases, id, "id");
+      const foundNode = getNodeById(cases as any, id, "id");
 
       if (!foundNode) {
         console.warn(`Node with id ${id} not found.`);
@@ -110,7 +109,7 @@ export function Container() {
       });
     }
 
-    const foundNode = getNodeById(cases, stepParam, "id");
+    const foundNode = getNodeById(cases as any, stepParam, "id");
     if (!foundNode) return;
 
     setFormData(foundNode);
@@ -158,7 +157,6 @@ export function Container() {
             className={cn(
               "fade-in duration-500 animate-in",
               "flex flex-col gap-1",
-              renderSpecialView?.type === "not-found" && "w-[60%]",
               renderSpecialView?.type === "documentation" && "max-w-[700px]",
               renderSpecialView?.type === "not-found" && "max-w-[768px]"
             )}

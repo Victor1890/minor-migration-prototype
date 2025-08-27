@@ -1,10 +1,8 @@
-import { DATA_DUMB, type HierarchyNode } from "@/data";
+import { type HierarchyNode } from "@/data";
 import { useMemo, type JSX } from "react";
+import { Documentation } from "../components/Documentation";
 import { NotFound } from "../components/NotFound";
 import { NoViable } from "../components/NoViable";
-import { Documentation } from "../components/Documentation";
-
-const { notPermissions, notFoundCase } = DATA_DUMB;
 
 export interface RenderSpecialView {
   title: string;

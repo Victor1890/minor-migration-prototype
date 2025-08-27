@@ -9,10 +9,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import type { HierarchyNode } from "@/data";
 import { COST_DATA } from "@/data/documentation-data";
 import { STEP_TO_REQUIRED_SERVICE } from "@/data/documentation-data/service";
-import { AlertCircleIcon, CircleMinus, CirclePlus } from "lucide-react";
-import { isValidElement, useMemo, useState } from "react";
-import { Wiki } from "../Wiki";
 import { cn } from "@/lib/utils";
+import { AlertCircleIcon, CircleMinus, CirclePlus } from "lucide-react";
+import { isValidElement, useState } from "react";
+import { Wiki } from "../Wiki";
 
 interface Document {
   label: string;
@@ -35,32 +35,6 @@ export function DocAccordion({ formData }: DocAccordionProps) {
   ]);
 
   console.log("formData: ", formData);
-
-  const { documents } = useMemo<Data>(() => {
-    return formData.children.reduce((acc, item: any) => {
-      if (!acc["documents"]) acc["documents"] = [];
-      if (!acc["process_online"]) acc["process_online"] = [];
-
-      const document = item?.["document"];
-      const processOnline = item?.["process_online"];
-
-      if (document) {
-        acc["documents"].push({
-          label: document?.["Requisitos"] || "",
-          details: document?.["Notas requisitos"] || "",
-        });
-      }
-
-      if (processOnline) {
-        acc["process_online"].push({
-          label: processOnline?.["Paso a paso"] || "",
-          details: processOnline?.["Notas paso a paso"] || "",
-        });
-      }
-
-      return acc;
-    }, {} as Data);
-  }, [formData]);
 
   return (
     <Accordion
@@ -90,18 +64,18 @@ export function DocAccordion({ formData }: DocAccordionProps) {
         </AccordionTrigger>
         <AccordionContent>
           <div className="flex flex-col gap-4">
-            <span className="font-semibold text-[#1E293B] text-xl">
-              Requisitos
-            </span>
             <div className="flex flex-col gap-4">
-              {documents?.map((doc, idx) => {
-                if (!doc.label) return null;
+              {formData.requirements?.map((doc, idx) => {
+                if (!doc.requirement) return null;
                 return (
-                  <div key={doc.label}>
+                  <div key={doc.requirement}>
                     <p className="font-semibold text-[#1E293B] text-base">
-                      {idx + 1}. <Wiki value={doc.label} />
+                      {idx + 1}. <Wiki value={doc.requirement} />
                     </p>
-                    {Array.isArray(doc.details) ? (
+                    <p className="text-sm font-normal text-[#475569]">
+                      <Wiki value={doc.requirement_notes} />
+                    </p>
+                    {/* {Array.isArray(doc.details) ? (
                       <ul className="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
                         {doc.details?.map((desc, descIndex) => (
                           <li key={descIndex}>
@@ -111,9 +85,9 @@ export function DocAccordion({ formData }: DocAccordionProps) {
                       </ul>
                     ) : (
                       <p className="text-sm font-normal text-[#475569]">
-                        <Wiki value={doc.details} />
+                        <Wiki value={doc.requirement_notes} />
                       </p>
-                    )}
+                    )} */}
                   </div>
                 );
               })}

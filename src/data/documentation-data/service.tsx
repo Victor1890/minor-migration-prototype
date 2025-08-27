@@ -36,7 +36,7 @@ export const STEP_TO_REQUIRED_SERVICE: StepToRequiredService[] = [
         ),
         list: [
           "Crea una cuenta si no tienes.",
-          "Elige el servicio <strong>Permiso de menor</strong> y completa el formulario con los datos solicitados.",
+          "Elige el servicio Permiso de menor y completa el formulario con los datos solicitados.",
         ],
       },
     ],

@@ -2820,7 +2820,7 @@ export const DATA_DUMB = {
                     "id": "4.2",
                     "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
                     "requirements": [
                         {
@@ -2828,16 +2828,7 @@ export const DATA_DUMB = {
                             "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
                         }
                     ],
-                    "children": [
-                        {
-                            "id": "4.2.1",
-                            "label": "No se requiere permiso.",
-                            "desc": "EL menor saldra del pa\u00eds con la misma persona u organizaci\u00f3 con la que ingres\u00f3, y se dirige al mismo pa\u00eds de origen.",
-                            "type": null,
-                            "slug": "no-se-requiere-permiso.",
-                            "children": []
-                        }
-                    ]
+                    "children": []
                 }
             ]
         },
@@ -3139,42 +3130,12 @@ export const DATA_DUMB = {
         {
             "Término legal": "Legalización de certificación de sentencia"
         }
-    ],
-    "notPermissions": [
-        // "1",
-        "1.1",
-        "1.2.3",
-        "1.2.4",
-        // "2",
-        "2.1.1",
-        "2.1.2.3",
-        "2.1.2.4",
-        "2.2",
-        // "3",
-        "3.1.1",
-        "3.1.2.3",
-        "3.1.2.4",
-        "3.2",
-        "4.2",
-        // "4",
-        "4.1.2",
-        "4.2.1",
-        "5.1"
-    ],
-    "notFoundCase": [
-        "6",
-        "1.2.10",
-        "1.3.10",
-        "2.1.2.10",
-        "2.1.3.10",
-        "3.1.2.10",
-        "3.1.3.10",
-        "4.1.4",
     ]
 }
 
-export type HierarchyNode = typeof DATA_DUMB.cases[number]
-
-export type NotPermission = typeof DATA_DUMB.notPermissions;
-
-export type NotFoundCase = typeof DATA_DUMB.notFoundCase;
+export type HierarchyNode = typeof DATA_DUMB.cases[number] & {
+    requirements: {
+        requirement: string;
+        requirement_notes: string;
+    }[];
+}
