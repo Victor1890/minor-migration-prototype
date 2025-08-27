@@ -47,7 +47,8 @@ export function ContentSection({
               className={cn(
                 "grid grid-cols-1 gap-4",
                 formData.children.length == 2 && "lg:grid-cols-2",
-                formData.children.length > 2 && "lg:grid-cols-3"
+                formData.children.length > 3 && "lg:grid-cols-2",
+                formData.children.length == 3 && "lg:grid-cols-3"
               )}
             >
               {formData.children.map((item: any) => (
@@ -55,6 +56,10 @@ export function ContentSection({
                   key={item.slug}
                   item={item}
                   goToStep={goToStep}
+                  isFirstLoad={
+                    formData.children.length === 6 ||
+                    formData.children.length === 3
+                  }
                 />
               ))}
             </div>

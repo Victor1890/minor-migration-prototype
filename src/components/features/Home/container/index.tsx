@@ -35,7 +35,7 @@ export function Container() {
 
   const isStepValid = useMemo(() => {
     if (!stepParam) return true;
-    return formData.type === "document";
+    // return formData.type === "document";
   }, [formData, stepParam]);
 
   const goToStart = useCallback(() => {
