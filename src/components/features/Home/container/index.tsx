@@ -127,12 +127,12 @@ export function Container() {
       )}
     >
       {isStepValid && (
-        <div className="flex flex-col items-start justify-center gap-1">
+        <div className="flex flex-col items-start justify-center gap-1 max-w-[88%]">
           <h1 className="text-[#003876] font-semibold text-[32px] leading-[120%]">
             Viajar con un menor: guía oficial para solicitar el permiso
           </h1>
           {formData.type !== "document" && (
-            <p className="text-[#475569] text-base font-normal md:w-[80%]">
+            <p className="text-[#475569] text-base font-normal">
               En esta página podrás consultar si necesitas el permiso de viaje y
               cómo solicitarlo. Responde las preguntas para obtener la
               información específica para tu caso.
@@ -165,25 +165,6 @@ export function Container() {
               <h2 className="font-bold text-[28px] text-[#1E293B] text-left">
                 {renderSpecialView?.title || navigationContext.title}
               </h2>
-              {/* {!historySteps.length && (
-                <Button
-                  asChild
-                  variant={"outline"}
-                  className={cn(
-                    "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
-                    renderSpecialView?.type === "documentation"
-                      ? "bg-[#0072D7] hover:bg-[#0072D7]/90 border-none hover:text-white"
-                      : "text-[#0072D7] hover:text-[#0072D7] border-[#0072D7]"
-                  )}
-                >
-                  <a
-                    href="https://servicios.migracion.gob.do/es"
-                    rel="noopener noreferrer"
-                  >
-                    Ir al portal para iniciar la solicitud
-                  </a>
-                </Button>
-              )} */}
             </div>
             <h2 className="text-base font-normal text-[#475569]">
               {renderSpecialView?.description || navigationContext.description}

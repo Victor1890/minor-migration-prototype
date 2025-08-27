@@ -24,12 +24,12 @@ const { cases } = DATA_DUMB;
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
   goToStep?: (id: string) => void;
-  isFirstLoad?: boolean;
+  showIcon?: boolean;
 }
 
 export const HierarchyNodeCard = ({
   item,
-  isFirstLoad = false,
+  showIcon = false,
   goToStep,
 }: HierarchyNodeCardProps) => {
   const { formData, setFormData, setShow } = useFormDataStore();
@@ -92,20 +92,20 @@ export const HierarchyNodeCard = ({
       key={item.slug}
     >
       <CardHeader className="flex flex-col items-center justify-center grow">
-        {isDisableIcon ? null : isFirstLoad && Icon ? <Icon /> : null}
-        <h3 className="text-center font-semibold text-[16px] leading-[130%] font-family-robo">
+        {isDisableIcon ? null : showIcon && Icon ? <Icon /> : null}
+        <h3 className="text-center font-semibold text-[16px] leading-[100%] font-family-robo">
           <Wiki value={label || item.label} />
         </h3>
       </CardHeader>
       {isDescAvailable && (
         <CardFooter
           className={cn(
-            "flex-1 bg-[#F9FAFB] px-6 py-4 rounded-b-lg flex items-start",
+            "flex-1 bg-[#F9FAFB] px-8 py-4 rounded-b-lg flex items-center",
             cases.some((x) => x.slug === item.slug) && "min-h-34",
             "min-h-22 items-center"
           )}
         >
-          <p className="text-base font-normal text-[#4B5563]">
+          <p className="text-[14px] leading-[150%] font-normal text-[#4B5563] text-center">
             <Wiki
               value={description || item.desc || "Descripción no disponible."}
             />

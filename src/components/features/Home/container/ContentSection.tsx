@@ -56,9 +56,10 @@ export function ContentSection({
                   key={item.slug}
                   item={item}
                   goToStep={goToStep}
-                  isFirstLoad={
+                  showIcon={
                     formData.children.length === 6 ||
-                    formData.children.length === 3
+                    formData.children.length === 3 ||
+                    formData.children.length === 2
                   }
                 />
               ))}
@@ -70,7 +71,7 @@ export function ContentSection({
                   key={item.slug}
                   item={item}
                   goToStep={goToStep}
-                  isFirstLoad
+                  showIcon
                 />
               ))}
             </div>
