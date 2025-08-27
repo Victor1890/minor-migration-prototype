@@ -38,13 +38,13 @@ export const HierarchyNodeCard = ({
 
   // Determina si hay más información disponible
   const isMoreInfoAvailable = useMemo(
-    () =>
-      (["document", "not_required_permission", "not_found"].includes(
-        item.type || ""
-      ) &&
-        Object.hasOwn(item, "requirements")) ||
-      item.type === "not_found" ||
-      item.type === "not_required_permission",
+    () => Object.hasOwn(item, "requirements") || item.type === "not_found",
+    // (["document", "not_required_permission", "not_found"].includes(
+    //   item.type || ""
+    // ) &&
+    //   Object.hasOwn(item, "requirements")) ||
+    // item.type === "not_found" ||
+    // item.type === "not_required_permission",
     [item]
   );
 

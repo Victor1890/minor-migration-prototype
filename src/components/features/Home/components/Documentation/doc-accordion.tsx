@@ -34,6 +34,8 @@ export function DocAccordion({ formData }: DocAccordionProps) {
     "process-online",
   ]);
 
+  console.log("formData: ", formData);
+
   const { documents } = useMemo<Data>(() => {
     return formData.children.reduce((acc, item: any) => {
       if (!acc["documents"]) acc["documents"] = [];

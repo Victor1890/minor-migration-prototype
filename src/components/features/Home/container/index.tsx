@@ -129,11 +129,11 @@ export function Container() {
     >
       {isStepValid && (
         <div className="flex flex-col items-start justify-center gap-1">
-          <h1 className="text-[#003876] font-semibold text-[32px]">
+          <h1 className="text-[#003876] font-semibold text-[32px] leading-[120%]">
             Viajar con un menor: guía oficial para solicitar el permiso
           </h1>
           {formData.type !== "document" && (
-            <p className="text-[#475569] text-base font-normal">
+            <p className="text-[#475569] text-base font-normal md:w-[80%]">
               En esta página podrás consultar si necesitas el permiso de viaje y
               cómo solicitarlo. Responde las preguntas para obtener la
               información específica para tu caso.
@@ -163,11 +163,11 @@ export function Container() {
               renderSpecialView?.type === "not-found" && "max-w-[768px]"
             )}
           >
-            <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-9 lg:gap-2">
+            <div className="flex flex-col lg:flex-row items-center justify-start">
               <h2 className="font-bold text-[28px] text-[#1E293B] text-left">
                 {renderSpecialView?.title || navigationContext.title}
               </h2>
-              {!historySteps.length && (
+              {/* {!historySteps.length && (
                 <Button
                   asChild
                   variant={"outline"}
@@ -179,13 +179,13 @@ export function Container() {
                   )}
                 >
                   <a
-                    href="https://servicios.migracion.gob.do/"
+                    href="https://servicios.migracion.gob.do/es"
                     rel="noopener noreferrer"
                   >
                     Ir al portal para iniciar la solicitud
                   </a>
                 </Button>
-              )}
+              )} */}
             </div>
             <h2 className="text-base font-normal text-[#475569]">
               {renderSpecialView?.description || navigationContext.description}
