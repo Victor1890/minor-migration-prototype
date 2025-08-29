@@ -44,33 +44,3 @@ export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
         description: "El menor tiene menos de seis meses en República Dominicana desde su última entrada al país"
     }
 }
-
-// export const LABEL_DETAILT_NOT_FOUND: Record<string, Partial<StatusMigrationMinor>> = {
-//     "menor-tiene-únicamente-nacionalidad-dominicana": {
-//         label: "Tiene nacionalidad dominicana únicamente"
-//     },
-//     "menor-dominicano-con-otra-nacionalidad-o-residencia-en-el-extranjero": {
-//         label: "Tiene doble nacionalidad o residencia en el extranjero"
-//     },
-//     "menor-es-extranjero-con-residencia-en-la-república-dominicana": {
-//         label: "Es extranjero con residencia en República Dominicana"
-//     },
-//     "menor-tiene-estatus-migratorio-de-no-residente-(estudiante,-deportista,-artista-y-estudiante-de-intercambio)": {
-//         label: "Tiene estadía temporal como estudiante, deportista o artista"
-//     },
-//     "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país": {
-//         label: "Es hijo de personal internacional acreditado en el país"
-//     },
-//     "tu-situacion-no-esta-en-la-lista-de-opciones": {
-//         label: "No veo mi caso o tengo dudas"
-//     },
-//     "viaja-con-ambos-padres": {
-//         label: "Viajará con su padre y madre"
-//     },
-//     "viaja-con-uno-de-los-padres": {
-//         label: "Viajará con uno de los padres"
-//     },
-//     "viaja-con-un-tercero": {
-//         label: "Viajará con un tercero o una aerolínea"
-//     },
-// }
