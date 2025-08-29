@@ -1,4 +1,4 @@
-import { DominicanIcon, DominicanWordIcon, PeopleTravelIcon, PeopleTravelWordIcon, PersonIcon, QuestionIcon, SchoolIcon, WordDominicanIcon, WordInternationalIcon } from "@/components/icons";
+import { ChildInternationalPersonnelIcon, DominicanFlagIcon, DominicanFlagWithWordIcon, FamilyTravelIcon, HelpQuestionIcon, SingleParentTravelIcon, StudentAthleteIcon, ThirdPartyAirlineTravelIcon, WordIcon } from "@/components/icons/v2";
 
 export interface StatusMigrationMinor {
     icon?: React.ComponentType<React.SVGProps<SVGSVGElement>>;
@@ -8,49 +8,32 @@ export interface StatusMigrationMinor {
 
 export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad": { // 1
-        icon: DominicanIcon,
+        icon: DominicanFlagIcon,
         label: "Tiene nacionalidad dominicana únicamente",
-        // description: "El menor tiene nacionalidad dominicana y no cuenta con otra nacionalidad ni residencia en otro país"
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero": { // 2
-        icon: DominicanWordIcon,
-        label: 'Tiene doble nacionalidad o residencia en el extranjero',
-        // description: "El menor tiene nacionalidad dominicana y además cuenta con nacionalidad extranjera o residencia legal en otro país"
+        icon: DominicanFlagWithWordIcon,
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana": { // 3
-        icon: WordDominicanIcon,
-        label: "Es extranjero con residencia en República Dominicana",
-        // description: "El menor tiene pasaporte extranjero, pero cuenta con residencia legal vigente en República Dominicana"
+        icon: WordIcon,
     },
     "el-menor-tiene-estadia-temporal-como-estudiante,-deportista-o-artista": { // 4
-        icon: SchoolIcon,
-        label: "Tiene estadía temporal como estudiante, deportista o artista",
-        // description: "El menor está en República Dominicana por un tiempo limitado como estudiante, deportista, artista o sin residencia fija"
+        icon: StudentAthleteIcon,
     },
     "el-menor-es-hijo/a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": { // 5
-        icon: WordInternationalIcon,
-        label: "Es hijo de personal internacional acreditado en el país",
-        // description: "El menor es hijo de personal de un organismo internacional oficialmente acreditado en República Dominicana"
+        icon: ChildInternationalPersonnelIcon,
     },
     "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
-        icon: QuestionIcon,
-        // label: "No veo mi caso o tengo dudas",
-        // description: "Selecciona esta opción si no sabes cuál elegir o tu situación no está en la lista"
+        icon: HelpQuestionIcon,
     },
     "viajara-con-ambos-padres": {
-        icon: PeopleTravelIcon,
-        // label: "Viajará con su padre y madre",
-        // description: "El menor saldrá del país con ambos padres"
+        icon: FamilyTravelIcon,
     },
     "viajara-con-uno-de-los-padres": {
-        icon: PersonIcon,
-        // label: "Viajará con uno de los padres",
-        // description: "El menor saldrá del país solo con uno de los padres"
+        icon: SingleParentTravelIcon,
     },
     "viajara-con-un-tercero": {
-        icon: PeopleTravelWordIcon,
-        // label: "Viajará con un tercero o una aerolínea",
-        // description: "El menor viajará con alguien que no es su padre ni su madre, o bajo cuidado del personal de la aerolínea"
+        icon: ThirdPartyAirlineTravelIcon,
     },
     "el-menor-ha-estado-mas-de-6-meses-en-el-pais": {
         label: "Sí",

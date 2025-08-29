@@ -4,10 +4,11 @@ import { useEffect } from "react";
 import { ContactInfo } from "./ContactInfo";
 
 export function NotFound() {
-  const { historySteps } = useFormDataStore();
+  const { historySteps, formData } = useFormDataStore();
   const { setProgress } = useProgressBarStore();
 
   useEffect(() => {
+    console.log("formData: ", formData);
     setProgress(100);
   }, [setProgress]);
 
@@ -30,7 +31,8 @@ export function NotFound() {
           ))}
         </ul>
 
-        <p>
+        <p>Aun así, debes llevar los documentos requeridos para el viaje:</p>
+        {/* <p>
           En tu caso,{" "}
           <strong>
             no es necesario solicitar el permiso de salida para el menor
@@ -39,7 +41,20 @@ export function NotFound() {
           (como pasaporte, acta de nacimiento y visa si corresponde), ya que
           podrían ser solicitados por Migración u otras autoridades al momento
           del viaje.
-        </p>
+        </p> */}
+
+        <ul
+          aria-label="Lista de pasos seleccionados"
+          className="list-disc font-semibold text-[16px] ml-6"
+        >
+          {[
+            "Pasaporte",
+            "Acta de nacimiento",
+            "Visa (en caso de que sea necesaria)",
+          ].map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       </section>
 
       <ContactInfo />

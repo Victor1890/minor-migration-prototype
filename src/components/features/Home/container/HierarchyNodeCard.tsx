@@ -1,22 +1,11 @@
-import { Button } from "@/components/ui/button";
 import { Card, CardFooter, CardHeader } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Divider } from "@/components/ui/divider";
-import { Label } from "@/components/ui/label";
 
 import { DATA_DUMB, type HierarchyNode } from "@/data";
 import { LABEL_ICON_DETAILS } from "@/data/step-icon";
 import { cn } from "@/lib/utils";
 import { useFormDataStore } from "@/store/form-data.store";
 import { useProgressBarStore } from "@/store/progress-bar.store";
-import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo } from "react";
 import { Wiki } from "../components/Wiki";
 
 const { cases } = DATA_DUMB;
@@ -75,8 +64,10 @@ export const HierarchyNodeCard = ({
     <Card
       role="button"
       aria-pressed="false"
+      data-slug={item.slug}
       tabIndex={0}
       className={cn(
+        "shadow-none",
         "fade-in duration-500 animate-in h-full",
         "flex flex-col",
         "border hover:shadow-md transition-shadow cursor-pointer",
@@ -93,7 +84,7 @@ export const HierarchyNodeCard = ({
     >
       <CardHeader className="flex flex-col items-center justify-center grow">
         {isDisableIcon ? null : showIcon && Icon ? <Icon /> : null}
-        <h3 className="text-center font-semibold text-[16px] leading-[100%] font-family-robo">
+        <h3 className="text-[#1E293B] text-center font-semibold text-[16px] leading-[100%] font-family-robo">
           <Wiki value={label || item.label} />
         </h3>
       </CardHeader>
