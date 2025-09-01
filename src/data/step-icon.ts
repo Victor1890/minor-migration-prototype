@@ -9,18 +9,18 @@ export interface StatusMigrationMinor {
 export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad": { // 1
         icon: DominicanFlagIcon,
-        label: "Tiene nacionalidad dominicana únicamente",
+        // label: "Tiene nacionalidad dominicana únicamente",
     },
-    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero": { // 2
+    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero": { // 2
         icon: DominicanFlagWithWordIcon,
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana": { // 3
         icon: WordIcon,
     },
-    "el-menor-tiene-estadia-temporal-como-estudiante,-deportista-o-artista": { // 4
+    "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista": { // 4
         icon: StudentAthleteIcon,
     },
-    "el-menor-es-hijo/a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": { // 5
+    "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": { // 5
         icon: ChildInternationalPersonnelIcon,
     },
     "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {

@@ -262,7 +262,7 @@ export const DATA_DUMB = {
                             "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
                             "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje ",
                             "type": "document",
-                            "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos,-ninas-y-adolescentes",
+                            "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
                             "requirements": [
                                 {
                                     "requirement": "Autorizaci\u00f3n judicial (sentencia, auto o resoluci\u00f3n) que autoriza el viaje del Menor",
@@ -312,7 +312,7 @@ export const DATA_DUMB = {
                             "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
                             "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                             "type": "document",
-                            "slug": "viajara-a-una-actividad-cultural,-escolar,-religiosa,-deportiva-u-otra",
+                            "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial del padre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda. ",
@@ -471,7 +471,7 @@ export const DATA_DUMB = {
                             "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
                             "desc": "Cuando el menor viaja con  una academia, centro educativo o instituci\u00f3n cultural, y cuenta con la autorizaci\u00f3n de los padres, padre, madre o tutor legal",
                             "type": "document",
-                            "slug": "viajara-con-el-colegio,-centro-educativo-o-institucion-cultural",
+                            "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial de los padres o tutores, autorizando la salida del menor del pa\u00eds con el centro educativo, legalizado por procuradur\u00eda",
@@ -521,7 +521,7 @@ export const DATA_DUMB = {
                             "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
                             "desc": "Cuando el menor viaja con  una academia, selecci\u00f3 o liga deportiva, y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                             "type": "document",
-                            "slug": "viajara-con-academia,-seleccion-o-liga-deportiva",
+                            "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial (colectivo o individual) de los padres, autorizando la salida del o los menores del pa\u00eds, legalizado por procuradur\u00eda. En caso de que los padres esten fuera del pais, debera entregar el poder consular. En caso de que uno de los padres no quiere que viaje o no este presente en la vida del menor, debera entregar Autorizacion Judicial. ",
@@ -787,7 +787,7 @@ export const DATA_DUMB = {
                             "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
                             "desc": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                             "type": "document",
-                            "slug": "viajara-con-abuelos,-tios,-amigos-u-otras-personas-que-no-son-los-padres",
+                            "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial de los padres, autorizando la salida del menor del pa\u00eds con el acompa\u00f1ante, legalizado por procuradur\u00eda",
@@ -903,7 +903,7 @@ export const DATA_DUMB = {
             "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
             "desc": null,
             "type": null,
-            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero",
+            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
             "children": [
                 {
                     "id": "2.1",
@@ -1140,7 +1140,7 @@ export const DATA_DUMB = {
                                     "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
                                     "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje",
                                     "type": "document",
-                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos,-ninas-y-adolescentes",
+                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
                                     "requirements": [
                                         {
                                             "requirement": "Autorizaci\u00f3n judicial (sentencia, auto o resoluci\u00f3n) que autoriza el viaje del Menor",
@@ -1190,7 +1190,7 @@ export const DATA_DUMB = {
                                     "label": "Viajar\u00e1 a una actividad cultural, escolar o deportiva",
                                     "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                                     "type": "document",
-                                    "slug": "viajara-a-una-actividad-cultural,-escolar-o-deportiva",
+                                    "slug": "viajara-a-una-actividad-cultural-escolar-o-deportiva",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial del padre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda",
@@ -1349,7 +1349,7 @@ export const DATA_DUMB = {
                                     "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
                                     "desc": "Cuando el menor viaja con  una academia, centro educativo o instituci\u00f3n cultural, y cuenta con la autorizaci\u00f3n de los padres, padre, madre o tutor legal",
                                     "type": "document",
-                                    "slug": "viajara-con-el-colegio,-centro-educativo-o-institucion-cultural",
+                                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial de los padres o tutores, autorizando la salida del menor del pa\u00eds con el centro educativo, legalizado por procuradur\u00eda",
@@ -1399,7 +1399,7 @@ export const DATA_DUMB = {
                                     "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
                                     "desc": "Cuando el menor viaja con  una academia, selecci\u00f3 o liga deportiva, y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                                     "type": "document",
-                                    "slug": "viajara-con-academia,-seleccion-o-liga-deportiva",
+                                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial (colectivo o individual) de los padres, autorizando la salida del o los menores del pa\u00eds, legalizado por procuradur\u00eda. En caso de que los padres esten fuera del pais, debera entregar el poder consular. En caso de que uno de los padres no quiere que viaje o no este presente en la vida del menor, debera entregar Autorizacion Judicial. ",
@@ -1665,7 +1665,7 @@ export const DATA_DUMB = {
                                     "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
                                     "desc": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                                     "type": "document",
-                                    "slug": "viajara-con-abuelos,-tios,-amigos-u-otras-personas-que-no-son-los-padres",
+                                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial de los padres, autorizando la salida del menor del pa\u00eds con el acompa\u00f1ante, legalizado por procuradur\u00eda",
@@ -2028,7 +2028,7 @@ export const DATA_DUMB = {
                                     "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
                                     "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje",
                                     "type": "document",
-                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos,-ninas-y-adolescentes",
+                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
                                     "requirements": [
                                         {
                                             "requirement": "Autorizaci\u00f3n judicial (sentencia, auto o resoluci\u00f3n) que autoriza el viaje del Menor",
@@ -2078,7 +2078,7 @@ export const DATA_DUMB = {
                                     "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
                                     "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                                     "type": "document",
-                                    "slug": "viajara-a-una-actividad-cultural,-escolar,-religiosa,-deportiva-u-otra",
+                                    "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial del padre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda",
@@ -2237,7 +2237,7 @@ export const DATA_DUMB = {
                                     "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
                                     "desc": "Cuando el menor viaja con  una academia, centro educativo o instituci\u00f3n cultural, y cuenta con la autorizaci\u00f3n de los padres, padre, madre o tutor legal",
                                     "type": "document",
-                                    "slug": "viajara-con-el-colegio,-centro-educativo-o-institucion-cultural",
+                                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
                                     "requirements": [
                                         {
                                             "requirement": "Si ambos padres est\u00e1n en el pa\u00eds:\r\n\r\nPresentar un Poder Notarial (individual o conjunto) emitido por los padres, autorizando la salida del menor. Este poder debe estar legalizado por la Procuradur\u00eda General de la Rep\u00fablica\r\n\r\nSi uno o ambos padres est\u00e1n fuera del pa\u00eds:\r\n\r\nPresentar un Poder Consular emitido desde el pa\u00eds donde se encuentren, autorizando la salida del menor.\r\n\r\nSi uno de los padres no est\u00e1 de acuerdo o no est\u00e1 presente en la vida del menor:\r\n\r\nPresentar una Autorizaci\u00f3n Judicial, emitida por un tribunal competente, que permita la salida del menor.",
@@ -2287,7 +2287,7 @@ export const DATA_DUMB = {
                                     "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
                                     "desc": "Cuando el menor viaja con  una academia, selecci\u00f3 o liga deportiva, y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                                     "type": "document",
-                                    "slug": "viajara-con-academia,-seleccion-o-liga-deportiva",
+                                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
                                     "requirements": [
                                         {
                                             "requirement": "Si ambos padres est\u00e1n en el pa\u00eds:\r\n\r\nPresentar un Poder Notarial (individual o conjunto) emitido por los padres, autorizando la salida del menor. Este poder debe estar legalizado por la Procuradur\u00eda General de la Rep\u00fablica.\r\n\r\nSi uno o ambos padres est\u00e1n fuera del pa\u00eds:\r\n\r\nPresentar un Poder Consular emitido desde el pa\u00eds donde se encuentren, autorizando la salida del menor.\r\n\r\nSi uno de los padres no est\u00e1 de acuerdo o no est\u00e1 presente en la vida del menor:\r\n\r\nPresentar una Autorizaci\u00f3n Judicial, emitida por un tribunal competente, que permita la salida del menor.",
@@ -2553,7 +2553,7 @@ export const DATA_DUMB = {
                                     "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
                                     "desc": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                                     "type": "document",
-                                    "slug": "viajara-con-abuelos,-tios,-amigos-u-otras-personas-que-no-son-los-padres",
+                                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial de los padres, autorizando la salida del menor del pa\u00eds con el acompa\u00f1ante, legalizado por procuradur\u00eda",
@@ -2679,7 +2679,7 @@ export const DATA_DUMB = {
             "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
             "desc": null,
             "type": null,
-            "slug": "el-menor-tiene-estadia-temporal-como-estudiante,-deportista-o-artista",
+            "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
             "children": [
                 {
                     "id": "4.1",
@@ -2828,7 +2828,16 @@ export const DATA_DUMB = {
                             "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
                         }
                     ],
-                    "children": []
+                    "children": [
+                        {
+                            "id": "4.2.1",
+                            "label": "No se requiere permiso.",
+                            "desc": "EL menor saldra del pa\u00eds con la misma persona u organizaci\u00f3 con la que ingres\u00f3, y se dirige al mismo pa\u00eds de origen.",
+                            "type": null,
+                            "slug": "no-se-requiere-permiso.",
+                            "children": []
+                        }
+                    ]
                 }
             ]
         },
@@ -2837,13 +2846,13 @@ export const DATA_DUMB = {
             "label": "El menor es hijo/a de personal de organismos internacionales acreditados en el pa\u00eds",
             "desc": null,
             "type": null,
-            "slug": "el-menor-es-hijo/a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
+            "slug": "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
             "children": [
                 {
                     "id": "5.1",
                     "label": "El menor viajar\u00e1 acompa\u00f1ado de ambos padres",
                     "desc": "Cuando el menor viaja con ambos padres",
-                    "type": "document",
+                    "type": "not_required_permission",
                     "slug": "el-menor-viajara-acompanado-de-ambos-padres",
                     "requirements": [
                         {
