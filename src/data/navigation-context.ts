@@ -28,20 +28,20 @@ export const NAVIGATION_CONTEXTS: NavigationContextMap = {
         title: "Selecciona estatus migratorio del menor",
         description: "Haz click en la opción que mejor represente el estatus migratorio del menor."
     },
-    "menor-tiene-únicamente-nacionalidad-dominicana": TravelWithParentData,
-    "menor-dominicano-con-otra-nacionalidad-o-residencia-en-el-extranjero": MinorSixMonthsData,
-    "menor-es-extranjero-con-residencia-en-la-república-dominicana": MinorSixMonthsData,
-    "menor-tiene-estatus-migratorio-de-no-residente-(estudiante,-deportista,-artista-y-estudiante-de-intercambio)": MinorSixMonthsData,
-    "menores-hijo/as-de-personal-de-organismos-internacionales-acreditados-en-el-país": MinorSixMonthsData,
-    "viaja-con-ambos-padres": DifferentSituationCase,
-    "viaja-con-uno-de-los-padres": DifferentSituationCase,
-    "viaja-con-un-tercero": DifferentSituationCase,
+    "el-menor-es-dominicano-y-no-posee-otra-nacionalidad": TravelWithParentData,
+    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero": MinorSixMonthsData,
+    "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana": MinorSixMonthsData,
+    "el-menor-tiene-estadia-temporal-como-estudiante,-deportista-o-artista": MinorSixMonthsData,
+    "el-menor-es-hijo/a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": MinorSixMonthsData,
+    "viajara-con-ambos-padres": DifferentSituationCase,
+    "viajara-con-uno-de-los-padres": DifferentSituationCase,
+    "viajara-con-un-tercero": DifferentSituationCase,
 
-    "el-menor-ha-estado-más-de-6-meses-en-el-país": TravelWithParentData,
-    "el-menor-no-ha-estado-más-de-6-meses-en-el-país": TravelWithParentData,
+    "el-menor-ha-estado-mas-de-6-meses-en-el-pais": TravelWithParentData,
+    "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": TravelWithParentData,
     "default": {
-        title: "Selecciona una opción",
-        description: "Elige la opción que mejor se adapte a tu situación."
+        title: "default",
+        description: "default"
     }
 }
 
