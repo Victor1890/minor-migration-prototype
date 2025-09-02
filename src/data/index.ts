@@ -6,6 +6,7 @@ export const DATA_DUMB = {
             "label": "El menor es dominicano y no posee otra nacionalidad",
             "desc": null,
             "type": null,
+            "has_icon": true,
             "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
             "children": [
                 {
@@ -13,6 +14,7 @@ export const DATA_DUMB = {
                     "label": "Viajar\u00e1 con ambos padres",
                     "desc": "Cuando ambos padres viajaran con el menor",
                     "type": "not_required_permission",
+                    "has_icon": true,
                     "slug": "viajara-con-ambos-padres",
                     "requirements": [
                         {
@@ -27,6 +29,7 @@ export const DATA_DUMB = {
                     "label": "Viajar\u00e1 con uno de los padres",
                     "desc": "Cuando el menor viaja con uno de los padres",
                     "type": null,
+                    "has_icon": true,
                     "slug": "viajara-con-uno-de-los-padres",
                     "children": [
                         {
@@ -34,6 +37,7 @@ export const DATA_DUMB = {
                             "label": "Uno de los padres autoriza al otro a viajar",
                             "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
                             "requirements": [
                                 {
@@ -84,6 +88,7 @@ export const DATA_DUMB = {
                             "label": "Viajar\u00e1 con la persona que posee la guarda legal",
                             "desc": "Cuando el menor viaja con la persona que tiene la guarda legal de este",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
                             "requirements": [
                                 {
@@ -134,6 +139,7 @@ export const DATA_DUMB = {
                             "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
                             "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien le acompa\u00f1a a viajar",
                             "type": "not_required_permission",
+                            "has_icon": false,
                             "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
                             "requirements": [
                                 {
@@ -148,6 +154,7 @@ export const DATA_DUMB = {
                             "label": "Viajar\u00e1 con uno de los padres y el otro ha fallecido",
                             "desc": "Cuando el menor viaja acompa\u00f1ado por su \u00fanico padre o madre que a\u00fan est\u00e1 vivo",
                             "type": "not_required_permission",
+                            "has_icon": false,
                             "slug": "viajara-con-uno-de-los-padres-y-el-otro-ha-fallecido",
                             "requirements": [
                                 {
@@ -162,6 +169,7 @@ export const DATA_DUMB = {
                             "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
                             "desc": "cuando el menor viaja por primera vez luego de ser adoptado por personas extranjeras",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
                             "requirements": [
                                 {
@@ -212,6 +220,7 @@ export const DATA_DUMB = {
                             "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
                             "desc": "Cuando el menor viaja acompa\u00f1ado por el padre o madre que est\u00e1 en el pa\u00eds, y el padre o madre en el extranjero es quien autoriza la salida del menor",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
                             "requirements": [
                                 {
@@ -262,7 +271,8 @@ export const DATA_DUMB = {
                             "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
                             "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje ",
                             "type": "document",
-                            "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos,-ninas-y-adolescentes",
+                            "has_icon": false,
+                            "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
                             "requirements": [
                                 {
                                     "requirement": "Autorizaci\u00f3n judicial (sentencia, auto o resoluci\u00f3n) que autoriza el viaje del Menor",
@@ -312,7 +322,8 @@ export const DATA_DUMB = {
                             "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
                             "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                             "type": "document",
-                            "slug": "viajara-a-una-actividad-cultural,-escolar,-religiosa,-deportiva-u-otra",
+                            "has_icon": false,
+                            "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial del padre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda. ",
@@ -362,6 +373,7 @@ export const DATA_DUMB = {
                             "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
                             "desc": "Cuando uno de los padres se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor.",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
                             "requirements": [
                                 {
@@ -408,6 +420,7 @@ export const DATA_DUMB = {
                             "label": "No veo el caso del menor o tengo dudas para elegir",
                             "desc": "No veo el caso del menor o tengo dudas para elegir",
                             "type": "not_found",
+                            "has_icon": false,
                             "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
                             "children": []
                         }
@@ -415,16 +428,122 @@ export const DATA_DUMB = {
                 },
                 {
                     "id": "1.3",
-                    "label": "Viajar\u00e1 con un tercero\u00a0",
-                    "desc": "Cuando ambos padres o tutor legal autoriza a otra persona a viaja con el menor (familiares, amigos, aerol\u00ednea, centro educativo, liga deportiva, instituci\u00f3n cultural, entre otros)",
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "desc": null,
                     "type": null,
-                    "slug": "viajara-con-un-tercero",
+                    "has_icon": true,
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
                     "children": [
                         {
                             "id": "1.3.1",
+                            "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                            "desc": null,
+                            "type": "document",
+                            "has_icon": false,
+                            "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                            "requirements": [
+                                {
+                                    "requirement": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda. ",
+                                    "requirement_notes": "\u00b7 El padre que no viaja debe firmar el poder notarial autorizando la salida del menor\r\n\u00b7 Este poder debe ser legalizado en la Procuradur\u00eda General de la Rep\u00fablica o en PuntoGOB "
+                                },
+                                {
+                                    "requirement": "Sentencia judicial que otorga la tutor\u00eda legal sobre el/los menor/es",
+                                    "requirement_notes": null
+                                },
+                                {
+                                    "requirement": "Foto o copia de acta de nacimiento original del menor, con el c\u00f3digo QR legible",
+                                    "requirement_notes": null
+                                },
+                                {
+                                    "requirement": "Foto o copia de la c\u00e9dula de identidad del padre o madre que realiza la solicitud",
+                                    "requirement_notes": "Versi\u00f3n nueva"
+                                },
+                                {
+                                    "requirement": "Foto o copia de la c\u00e9dula del otro padre que autoriza",
+                                    "requirement_notes": "Versi\u00f3n nueva"
+                                },
+                                {
+                                    "requirement": "Foto o copia de la visa / residencia / permiso de estad\u00eda o trabajo del acompa\u00f1ante",
+                                    "requirement_notes": "Si viaja a un pa\u00eds que requiera visa o residencia"
+                                },
+                                {
+                                    "requirement": "Foto o copia de la visa / residencia / permiso de estad\u00eda del menor",
+                                    "requirement_notes": "Si viaja a un pa\u00eds que requiera visa o residencia"
+                                },
+                                {
+                                    "requirement": "Foto o copia del pasaporte del acompa\u00f1ante",
+                                    "requirement_notes": "De la p\u00e1gina principal con los datos biom\u00e9tricos"
+                                },
+                                {
+                                    "requirement": "Foto o copia del pasaporte del menor",
+                                    "requirement_notes": "De la p\u00e1gina principal con los datos biom\u00e9tricos"
+                                },
+                                {
+                                    "requirement": "1 Foto 2x2 reciente del menor",
+                                    "requirement_notes": "De frente, reciente y fondo claro"
+                                },
+                                {
+                                    "requirement": "Recibo de pago del servicio ",
+                                    "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
+                                }
+                            ],
+                            "children": []
+                        },
+                        {
+                            "id": "1.3.2",
+                            "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                            "desc": null,
+                            "type": "document",
+                            "has_icon": false,
+                            "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                            "requirements": [
+                                {
+                                    "requirement": "No requiere el permiso, pero debe mostrar en Control Migratorio la sentencia que muestra la tutor\u00eda legal \u00fanica sobre el/los menor/es",
+                                    "requirement_notes": null
+                                }
+                            ],
+                            "children": []
+                        },
+                        {
+                            "id": "1.3.3",
+                            "label": "El menor viajar\u00e1 con ambos tutores legales",
+                            "desc": null,
+                            "type": "document",
+                            "has_icon": false,
+                            "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                            "requirements": [
+                                {
+                                    "requirement": "Presentar la sentencia que otorga la tutor\u00eda legal de/los menor/es",
+                                    "requirement_notes": "No requiere presentar PSM en Control Migratorio"
+                                }
+                            ],
+                            "children": []
+                        },
+                        {
+                            "id": "1.3.4",
+                            "label": "No veo el caso del menor o tengo dudas para elegir",
+                            "desc": null,
+                            "type": "not_found",
+                            "has_icon": false,
+                            "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "id": "1.4",
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "desc": "Cuando ambos padres o tutor legal autoriza a otra persona a viaja con el menor (familiares, amigos, aerol\u00ednea, centro educativo, liga deportiva, instituci\u00f3n cultural, entre otros)",
+                    "type": null,
+                    "has_icon": true,
+                    "slug": "viajara-con-un-tercero",
+                    "children": [
+                        {
+                            "id": "1.4.1",
                             "label": "Viajar\u00e1 con la aerol\u00ednea",
                             "desc": "Cuando el menor viaja con la Aerol\u00ednea y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "viajara-con-la-aerolinea",
                             "requirements": [
                                 {
@@ -467,11 +586,12 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.2",
+                            "id": "1.4.2",
                             "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
                             "desc": "Cuando el menor viaja con  una academia, centro educativo o instituci\u00f3n cultural, y cuenta con la autorizaci\u00f3n de los padres, padre, madre o tutor legal",
                             "type": "document",
-                            "slug": "viajara-con-el-colegio,-centro-educativo-o-institucion-cultural",
+                            "has_icon": false,
+                            "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial de los padres o tutores, autorizando la salida del menor del pa\u00eds con el centro educativo, legalizado por procuradur\u00eda",
@@ -517,11 +637,12 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.3",
+                            "id": "1.4.3",
                             "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
                             "desc": "Cuando el menor viaja con  una academia, selecci\u00f3 o liga deportiva, y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                             "type": "document",
-                            "slug": "viajara-con-academia,-seleccion-o-liga-deportiva",
+                            "has_icon": false,
+                            "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial (colectivo o individual) de los padres, autorizando la salida del o los menores del pa\u00eds, legalizado por procuradur\u00eda. En caso de que los padres esten fuera del pais, debera entregar el poder consular. En caso de que uno de los padres no quiere que viaje o no este presente en la vida del menor, debera entregar Autorizacion Judicial. ",
@@ -575,11 +696,12 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.4",
-                            "label": "Viajar\u00e1 con la persona que posee la guarda custodia (de hecho o legal)",
+                            "id": "1.4.4",
+                            "label": "Viajar\u00e1 con la persona que posee la guarda legal",
                             "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje ",
                             "type": "document",
-                            "slug": "viajara-con-la-persona-que-posee-la-guarda-custodia-(de-hecho-o-legal)",
+                            "has_icon": false,
+                            "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial de ambos padres, autorizando la salida del menor del pa\u00eds con el guarda custodia (de hecho o legal), legalizado por procuradur\u00eda",
@@ -625,10 +747,11 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.5",
+                            "id": "1.4.5",
                             "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
                             "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
                             "requirements": [
                                 {
@@ -675,10 +798,11 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.6",
+                            "id": "1.4.6",
                             "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
                             "desc": "Cuando el menor viaja con la persona que ha autorizado el padre o madre sobreviviente",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
                             "requirements": [
                                 {
@@ -729,10 +853,11 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.7",
+                            "id": "1.4.7",
                             "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
                             "desc": "Cuando el menor viaja con la persona que ha autorizado el tutor legal",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
                             "requirements": [
                                 {
@@ -783,11 +908,12 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.8",
+                            "id": "1.4.8",
                             "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
                             "desc": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                             "type": "document",
-                            "slug": "viajara-con-abuelos,-tios,-amigos-u-otras-personas-que-no-son-los-padres",
+                            "has_icon": false,
+                            "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
                             "requirements": [
                                 {
                                     "requirement": "Poder Notarial de los padres, autorizando la salida del menor del pa\u00eds con el acompa\u00f1ante, legalizado por procuradur\u00eda",
@@ -833,10 +959,11 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.9",
+                            "id": "1.4.9",
                             "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
                             "desc": "Cuando no se tiene la autorizaci\u00f3n de viaje de parte de uno de los padres",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
                             "requirements": [
                                 {
@@ -887,10 +1014,11 @@ export const DATA_DUMB = {
                             "children": []
                         },
                         {
-                            "id": "1.3.10",
+                            "id": "1.4.10",
                             "label": "No veo el caso del menor o tengo dudas para elegir",
                             "desc": "No veo el caso del menor o tengo dudas para elegir",
                             "type": "not_found",
+                            "has_icon": false,
                             "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
                             "children": []
                         }
@@ -903,27 +1031,40 @@ export const DATA_DUMB = {
             "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
             "desc": null,
             "type": null,
-            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero",
+            "has_icon": true,
+            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
             "children": [
                 {
                     "id": "2.1",
                     "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
                     "desc": null,
                     "type": null,
+                    "has_icon": false,
                     "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
                     "children": [
                         {
                             "id": "2.1.1",
+                            "label": "Viajar\u00e1 con ambos padres",
+                            "desc": null,
+                            "type": "not_required_permission",
+                            "has_icon": true,
+                            "slug": "viajara-con-ambos-padres",
+                            "children": []
+                        },
+                        {
+                            "id": "2.1.2",
                             "label": "Viajar\u00e1 con uno de los padres",
                             "desc": "Cuando el menor viaja con uno de los padres",
                             "type": null,
+                            "has_icon": true,
                             "slug": "viajara-con-uno-de-los-padres",
                             "children": [
                                 {
-                                    "id": "2.1.1.1",
+                                    "id": "2.1.2.1",
                                     "label": "Uno de los padres autoriza al otro a viajar",
                                     "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
                                     "requirements": [
                                         {
@@ -970,10 +1111,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.2",
+                                    "id": "2.1.2.2",
                                     "label": "Viajar\u00e1 con la persona que posee la guarda legal",
                                     "desc": "Cuando el menor viaja con la persona que tiene la guarda legal de este",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
                                     "requirements": [
                                         {
@@ -1020,26 +1162,29 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.3",
+                                    "id": "2.1.2.3",
                                     "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
                                     "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien le acompa\u00f1a a viajar",
-                                    "type": "not_required_permission",
+                                    "type": "document",
+                                    "has_icon": false,
                                     "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.4",
+                                    "id": "2.1.2.4",
                                     "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
                                     "desc": "Cuando el menor viaja acompa\u00f1ado por su \u00fanico padre o madre que a\u00fan est\u00e1 vivo",
-                                    "type": "not_required_permission",
+                                    "type": "document",
+                                    "has_icon": false,
                                     "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.5",
+                                    "id": "2.1.2.5",
                                     "label": "El menor fue adoptado por personas extranjeras y viajar\u00e1 por primera vez",
                                     "desc": "Cuando el menor viaja por primera vez luego de ser adoptado por personas extranjeras",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viajara-por-primera-vez",
                                     "requirements": [
                                         {
@@ -1086,10 +1231,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.6",
+                                    "id": "2.1.2.6",
                                     "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
                                     "desc": "Cuando el menor viaja acompa\u00f1ado por el padre o madre que est\u00e1 en el pa\u00eds, y el padre o madre en el extranjero es quien autoriza la salida del menor",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
                                     "requirements": [
                                         {
@@ -1136,11 +1282,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.7",
+                                    "id": "2.1.2.7",
                                     "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
                                     "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje",
                                     "type": "document",
-                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos,-ninas-y-adolescentes",
+                                    "has_icon": false,
+                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
                                     "requirements": [
                                         {
                                             "requirement": "Autorizaci\u00f3n judicial (sentencia, auto o resoluci\u00f3n) que autoriza el viaje del Menor",
@@ -1186,11 +1333,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.8",
+                                    "id": "2.1.2.8",
                                     "label": "Viajar\u00e1 a una actividad cultural, escolar o deportiva",
                                     "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                                     "type": "document",
-                                    "slug": "viajara-a-una-actividad-cultural,-escolar-o-deportiva",
+                                    "has_icon": false,
+                                    "slug": "viajara-a-una-actividad-cultural-escolar-o-deportiva",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial del padre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda",
@@ -1236,10 +1384,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.9",
+                                    "id": "2.1.2.9",
                                     "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
                                     "desc": "Cuando uno de los padres se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor.",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
                                     "requirements": [
                                         {
@@ -1282,27 +1431,134 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.1.10",
+                                    "id": "2.1.2.10",
                                     "label": "No veo el caso del menor o tengo dudas para elegir",
                                     "desc": "No veo el caso del menor o tengo dudas para elegir",
                                     "type": "not_found",
+                                    "has_icon": false,
                                     "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
                                     "children": []
                                 }
                             ]
                         },
                         {
-                            "id": "2.1.2",
+                            "id": "2.1.3",
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "desc": null,
+                            "type": null,
+                            "has_icon": true,
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "children": [
+                                {
+                                    "id": "2.1.3.1",
+                                    "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                                    "desc": null,
+                                    "type": "document",
+                                    "has_icon": false,
+                                    "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                                    "requirements": [
+                                        {
+                                            "requirement": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda. ",
+                                            "requirement_notes": "\u00b7 El padre que no viaja debe firmar el poder notarial autorizando la salida del menor\r\n\u00b7 Este poder debe ser legalizado en la Procuradur\u00eda General de la Rep\u00fablica o en PuntoGOB "
+                                        },
+                                        {
+                                            "requirement": "Sentencia judicial que otorga la tutor\u00eda legal sobre el/los menor/es",
+                                            "requirement_notes": null
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de acta de nacimiento original del menor, con el c\u00f3digo QR legible",
+                                            "requirement_notes": null
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de la c\u00e9dula de identidad del padre o madre que realiza la solicitud",
+                                            "requirement_notes": "Versi\u00f3n nueva"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de la c\u00e9dula del otro padre que autoriza",
+                                            "requirement_notes": "Versi\u00f3n nueva"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de la visa / residencia / permiso de estad\u00eda o trabajo del acompa\u00f1ante",
+                                            "requirement_notes": "Si viaja a un pa\u00eds que requiera visa o residencia"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de la visa / residencia / permiso de estad\u00eda del menor",
+                                            "requirement_notes": "Si viaja a un pa\u00eds que requiera visa o residencia"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia del pasaporte del acompa\u00f1ante",
+                                            "requirement_notes": "De la p\u00e1gina principal con los datos biom\u00e9tricos"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia del pasaporte del menor",
+                                            "requirement_notes": "De la p\u00e1gina principal con los datos biom\u00e9tricos"
+                                        },
+                                        {
+                                            "requirement": "1 Foto 2x2 reciente del menor",
+                                            "requirement_notes": "De frente, reciente y fondo claro"
+                                        },
+                                        {
+                                            "requirement": "Recibo de pago del servicio ",
+                                            "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
+                                        }
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "id": "2.1.3.2",
+                                    "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                                    "desc": null,
+                                    "type": "document",
+                                    "has_icon": false,
+                                    "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                                    "requirements": [
+                                        {
+                                            "requirement": "No requiere el permiso, pero debe mostrar en Control Migratorio la sentencia que muestra la tutor\u00eda legal \u00fanica sobre el/los menor/es",
+                                            "requirement_notes": null
+                                        }
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "id": "2.1.3.3",
+                                    "label": "El menor viajar\u00e1 con ambos tutores legales",
+                                    "desc": null,
+                                    "type": "document",
+                                    "has_icon": false,
+                                    "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                                    "requirements": [
+                                        {
+                                            "requirement": "Presentar la sentencia que otorga la tutor\u00eda legal de/los menor/es",
+                                            "requirement_notes": "No requiere presentar PSM en Control Migratorio"
+                                        }
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "id": "2.1.3.4",
+                                    "label": "No veo el caso del menor o tengo dudas para elegir",
+                                    "desc": null,
+                                    "type": "not_found",
+                                    "has_icon": false,
+                                    "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "2.1.4",
                             "label": "Viajar\u00e1 con un tercero\u00a0",
                             "desc": null,
                             "type": null,
+                            "has_icon": true,
                             "slug": "viajara-con-un-tercero",
                             "children": [
                                 {
-                                    "id": "2.1.2.1",
+                                    "id": "2.1.4.1",
                                     "label": "Viajar\u00e1 con la aerol\u00ednea",
                                     "desc": "Cuando el menor viaja con la Aerol\u00ednea y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "viajara-con-la-aerolinea",
                                     "requirements": [
                                         {
@@ -1345,11 +1601,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.2",
+                                    "id": "2.1.4.2",
                                     "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
                                     "desc": "Cuando el menor viaja con  una academia, centro educativo o instituci\u00f3n cultural, y cuenta con la autorizaci\u00f3n de los padres, padre, madre o tutor legal",
                                     "type": "document",
-                                    "slug": "viajara-con-el-colegio,-centro-educativo-o-institucion-cultural",
+                                    "has_icon": false,
+                                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial de los padres o tutores, autorizando la salida del menor del pa\u00eds con el centro educativo, legalizado por procuradur\u00eda",
@@ -1395,11 +1652,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.3",
+                                    "id": "2.1.4.3",
                                     "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
                                     "desc": "Cuando el menor viaja con  una academia, selecci\u00f3 o liga deportiva, y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                                     "type": "document",
-                                    "slug": "viajara-con-academia,-seleccion-o-liga-deportiva",
+                                    "has_icon": false,
+                                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial (colectivo o individual) de los padres, autorizando la salida del o los menores del pa\u00eds, legalizado por procuradur\u00eda. En caso de que los padres esten fuera del pais, debera entregar el poder consular. En caso de que uno de los padres no quiere que viaje o no este presente en la vida del menor, debera entregar Autorizacion Judicial. ",
@@ -1453,11 +1711,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.4",
-                                    "label": "Viaja con la persona que posee la guarda custodia (de hecho o legal)",
+                                    "id": "2.1.4.4",
+                                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
                                     "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje ",
                                     "type": "document",
-                                    "slug": "viaja-con-la-persona-que-posee-la-guarda-custodia-(de-hecho-o-legal)",
+                                    "has_icon": false,
+                                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial de ambos padres, autorizando la salida del menor del pa\u00eds con el guarda custodia (de hecho o legal), legalizado por procuradur\u00eda. ",
@@ -1503,10 +1762,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.5",
+                                    "id": "2.1.4.5",
                                     "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
                                     "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
                                     "requirements": [
                                         {
@@ -1553,10 +1813,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.6",
+                                    "id": "2.1.4.6",
                                     "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
                                     "desc": "Cuando el menor viaja con la persona que ha autorizado el padre o madre sobreviviente",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
                                     "requirements": [
                                         {
@@ -1607,10 +1868,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.7",
+                                    "id": "2.1.4.7",
                                     "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
                                     "desc": "Cuando el menor viaja con la persona que ha autorizado el tutor legal",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
                                     "requirements": [
                                         {
@@ -1661,11 +1923,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.8",
+                                    "id": "2.1.4.8",
                                     "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
                                     "desc": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                                     "type": "document",
-                                    "slug": "viajara-con-abuelos,-tios,-amigos-u-otras-personas-que-no-son-los-padres",
+                                    "has_icon": false,
+                                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial de los padres, autorizando la salida del menor del pa\u00eds con el acompa\u00f1ante, legalizado por procuradur\u00eda",
@@ -1711,10 +1974,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.9",
+                                    "id": "2.1.4.9",
                                     "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
                                     "desc": "Cuando uno de los padres se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
                                     "requirements": [
                                         {
@@ -1765,10 +2029,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "2.1.2.10",
+                                    "id": "2.1.4.10",
                                     "label": "No veo el caso del menor o tengo dudas para elegir",
                                     "desc": "No veo el caso del menor o tengo dudas para elegir",
                                     "type": "not_found",
+                                    "has_icon": false,
                                     "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
                                     "children": []
                                 }
@@ -1781,37 +2046,61 @@ export const DATA_DUMB = {
                     "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
                     "desc": null,
                     "type": "not_required_permission",
+                    "has_icon": false,
                     "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
-                    "children": []
+                    "children": [
+                        {
+                            "id": "2.2.1",
+                            "label": "No se requiere permiso",
+                            "desc": null,
+                            "type": "document",
+                            "has_icon": false,
+                            "slug": "no-se-requiere-permiso",
+                            "children": []
+                        }
+                    ]
                 }
             ]
         },
         {
             "id": "3",
             "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
-            "desc": null,
+            "desc": "El menor dominicano con otra nacionalidad o con residencia en el extranjero que ha estado menos de seis meses no requiere el Permiso de Salida del Menor",
             "type": null,
+            "has_icon": true,
             "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
             "children": [
                 {
                     "id": "3.1",
                     "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
-                    "desc": null,
+                    "desc": "Cuando el menor viaja con uno de los padres",
                     "type": null,
+                    "has_icon": false,
                     "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
                     "children": [
                         {
                             "id": "3.1.1",
+                            "label": "Viajar\u00e1 con ambos padres",
+                            "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
+                            "type": "not_required_permission",
+                            "has_icon": true,
+                            "slug": "viajara-con-ambos-padres",
+                            "children": []
+                        },
+                        {
+                            "id": "3.1.2",
                             "label": "Viajar\u00e1 con uno de los padres",
-                            "desc": "Cuando el menor viaja con uno de los padres",
+                            "desc": "Cuando el menor viaja con la persona que tiene la guarda legal de este",
                             "type": null,
+                            "has_icon": true,
                             "slug": "viajara-con-uno-de-los-padres",
                             "children": [
                                 {
-                                    "id": "3.1.1.1",
+                                    "id": "3.1.2.1",
                                     "label": "Uno de los padres autoriza al otro a viajar",
-                                    "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
+                                    "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
                                     "requirements": [
                                         {
@@ -1858,10 +2147,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.2",
+                                    "id": "3.1.2.2",
                                     "label": "Viajar\u00e1 con la persona que posee la guarda legal",
-                                    "desc": "Cuando el menor viaja con la persona que tiene la guarda legal de este",
+                                    "desc": "Cuando el menor viaja acompa\u00f1ado por su \u00fanico padre o madre que a\u00fan est\u00e1 vivo",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
                                     "requirements": [
                                         {
@@ -1908,26 +2198,29 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.3",
+                                    "id": "3.1.2.3",
                                     "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
-                                    "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
-                                    "type": "not_required_permission",
+                                    "desc": "Cuando el menor adoptado viaja con uno de los padres adoptivos",
+                                    "type": "document",
+                                    "has_icon": false,
                                     "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.4",
+                                    "id": "3.1.2.4",
                                     "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
-                                    "desc": "Cuando el menor viaja acompa\u00f1ado por su \u00fanico padre o madre que a\u00fan est\u00e1 vivo",
-                                    "type": "not_required_permission",
+                                    "desc": "Cuando el padre o madre que reside en el extranjero autoriza al otro padre o madre que residen en la Rep\u00fablica Dominicana a viajar con el menor",
+                                    "type": "document",
+                                    "has_icon": false,
                                     "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.5",
+                                    "id": "3.1.2.5",
                                     "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
-                                    "desc": "Cuando el menor adoptado viaja con uno de los padres adoptivos",
+                                    "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
                                     "requirements": [
                                         {
@@ -1974,10 +2267,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.6",
+                                    "id": "3.1.2.6",
                                     "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
-                                    "desc": "Cuando el padre o madre que reside en el extranjero autoriza al otro padre o madre que residen en la Rep\u00fablica Dominicana a viajar con el menor",
+                                    "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
                                     "requirements": [
                                         {
@@ -2024,11 +2318,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.7",
+                                    "id": "3.1.2.7",
                                     "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
-                                    "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje",
+                                    "desc": "Cuando uno de los padres se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor.",
                                     "type": "document",
-                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos,-ninas-y-adolescentes",
+                                    "has_icon": false,
+                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
                                     "requirements": [
                                         {
                                             "requirement": "Autorizaci\u00f3n judicial (sentencia, auto o resoluci\u00f3n) que autoriza el viaje del Menor",
@@ -2074,11 +2369,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.8",
+                                    "id": "3.1.2.8",
                                     "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
-                                    "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor para participar en actividad cultural, escolar, religiosa, deportiva u otra.",
+                                    "desc": "No veo el caso del menor o tengo dudas para elegir",
                                     "type": "document",
-                                    "slug": "viajara-a-una-actividad-cultural,-escolar,-religiosa,-deportiva-u-otra",
+                                    "has_icon": false,
+                                    "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial del padre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda",
@@ -2124,10 +2420,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.9",
+                                    "id": "3.1.2.9",
                                     "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
-                                    "desc": "Cuando uno de los padres se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor.",
+                                    "desc": null,
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
                                     "requirements": [
                                         {
@@ -2170,27 +2467,134 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.1.10",
+                                    "id": "3.1.2.10",
                                     "label": "No veo el caso del menor o tengo dudas para elegir",
-                                    "desc": "No veo el caso del menor o tengo dudas para elegir",
+                                    "desc": null,
                                     "type": "not_found",
+                                    "has_icon": false,
                                     "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
                                     "children": []
                                 }
                             ]
                         },
                         {
-                            "id": "3.1.2",
-                            "label": "Viaja con un tercero\u00a0",
+                            "id": "3.1.3",
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
                             "desc": null,
                             "type": null,
-                            "slug": "viaja-con-un-tercero",
+                            "has_icon": true,
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
                             "children": [
                                 {
-                                    "id": "3.1.2.1",
+                                    "id": "3.1.3.1",
+                                    "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                                    "desc": null,
+                                    "type": "document",
+                                    "has_icon": false,
+                                    "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                                    "requirements": [
+                                        {
+                                            "requirement": "Poder Notarial del padre o madre que no viaja, autorizando la salida del menor del pa\u00eds con el otro padre, legalizado por procuradur\u00eda. ",
+                                            "requirement_notes": "\u00b7 El padre que no viaja debe firmar el poder notarial autorizando la salida del menor\r\n\u00b7 Este poder debe ser legalizado en la Procuradur\u00eda General de la Rep\u00fablica o en PuntoGOB "
+                                        },
+                                        {
+                                            "requirement": "Sentencia judicial que otorga la tutor\u00eda legal sobre el/los menor/es",
+                                            "requirement_notes": null
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de acta de nacimiento original del menor, con el c\u00f3digo QR legible",
+                                            "requirement_notes": null
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de la c\u00e9dula de identidad del padre o madre que realiza la solicitud",
+                                            "requirement_notes": "Versi\u00f3n nueva"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de la c\u00e9dula del otro padre que autoriza",
+                                            "requirement_notes": "Versi\u00f3n nueva"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de la visa / residencia / permiso de estad\u00eda o trabajo del acompa\u00f1ante",
+                                            "requirement_notes": "Si viaja a un pa\u00eds que requiera visa o residencia"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia de la visa / residencia / permiso de estad\u00eda del menor",
+                                            "requirement_notes": "Si viaja a un pa\u00eds que requiera visa o residencia"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia del pasaporte del acompa\u00f1ante",
+                                            "requirement_notes": "De la p\u00e1gina principal con los datos biom\u00e9tricos"
+                                        },
+                                        {
+                                            "requirement": "Foto o copia del pasaporte del menor",
+                                            "requirement_notes": "De la p\u00e1gina principal con los datos biom\u00e9tricos"
+                                        },
+                                        {
+                                            "requirement": "1 Foto 2x2 reciente del menor",
+                                            "requirement_notes": "De frente, reciente y fondo claro"
+                                        },
+                                        {
+                                            "requirement": "Recibo de pago del servicio ",
+                                            "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
+                                        }
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "id": "3.1.3.2",
+                                    "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                                    "desc": null,
+                                    "type": "document",
+                                    "has_icon": false,
+                                    "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                                    "requirements": [
+                                        {
+                                            "requirement": "No requiere el permiso, pero debe mostrar en Control Migratorio la sentencia que muestra la tutor\u00eda legal \u00fanica sobre el/los menor/es",
+                                            "requirement_notes": null
+                                        }
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "id": "3.1.3.3",
+                                    "label": "El menor viajar\u00e1 con ambos tutores legales",
+                                    "desc": null,
+                                    "type": "document",
+                                    "has_icon": false,
+                                    "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                                    "requirements": [
+                                        {
+                                            "requirement": "Presentar la sentencia que otorga la tutor\u00eda legal de/los menor/es",
+                                            "requirement_notes": "No requiere presentar PSM en Control Migratorio"
+                                        }
+                                    ],
+                                    "children": []
+                                },
+                                {
+                                    "id": "3.1.3.4",
+                                    "label": "No veo el caso del menor o tengo dudas para elegir",
+                                    "desc": null,
+                                    "type": "not_found",
+                                    "has_icon": false,
+                                    "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
+                                    "children": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "3.1.4",
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "desc": null,
+                            "type": null,
+                            "has_icon": true,
+                            "slug": "viajara-con-un-tercero",
+                            "children": [
+                                {
+                                    "id": "3.1.4.1",
                                     "label": "Viajar\u00e1 con la aerol\u00ednea",
                                     "desc": "Cuando el menor viaja con la Aerol\u00ednea y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "viajara-con-la-aerolinea",
                                     "requirements": [
                                         {
@@ -2233,11 +2637,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.2",
+                                    "id": "3.1.4.2",
                                     "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
                                     "desc": "Cuando el menor viaja con  una academia, centro educativo o instituci\u00f3n cultural, y cuenta con la autorizaci\u00f3n de los padres, padre, madre o tutor legal",
                                     "type": "document",
-                                    "slug": "viajara-con-el-colegio,-centro-educativo-o-institucion-cultural",
+                                    "has_icon": false,
+                                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
                                     "requirements": [
                                         {
                                             "requirement": "Si ambos padres est\u00e1n en el pa\u00eds:\r\n\r\nPresentar un Poder Notarial (individual o conjunto) emitido por los padres, autorizando la salida del menor. Este poder debe estar legalizado por la Procuradur\u00eda General de la Rep\u00fablica\r\n\r\nSi uno o ambos padres est\u00e1n fuera del pa\u00eds:\r\n\r\nPresentar un Poder Consular emitido desde el pa\u00eds donde se encuentren, autorizando la salida del menor.\r\n\r\nSi uno de los padres no est\u00e1 de acuerdo o no est\u00e1 presente en la vida del menor:\r\n\r\nPresentar una Autorizaci\u00f3n Judicial, emitida por un tribunal competente, que permita la salida del menor.",
@@ -2283,11 +2688,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.3",
+                                    "id": "3.1.4.3",
                                     "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
                                     "desc": "Cuando el menor viaja con  una academia, selecci\u00f3 o liga deportiva, y cuenta con la autorizaci\u00f3n de ambos padres, padre, madre o tutor legal",
                                     "type": "document",
-                                    "slug": "viajara-con-academia,-seleccion-o-liga-deportiva",
+                                    "has_icon": false,
+                                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
                                     "requirements": [
                                         {
                                             "requirement": "Si ambos padres est\u00e1n en el pa\u00eds:\r\n\r\nPresentar un Poder Notarial (individual o conjunto) emitido por los padres, autorizando la salida del menor. Este poder debe estar legalizado por la Procuradur\u00eda General de la Rep\u00fablica.\r\n\r\nSi uno o ambos padres est\u00e1n fuera del pa\u00eds:\r\n\r\nPresentar un Poder Consular emitido desde el pa\u00eds donde se encuentren, autorizando la salida del menor.\r\n\r\nSi uno de los padres no est\u00e1 de acuerdo o no est\u00e1 presente en la vida del menor:\r\n\r\nPresentar una Autorizaci\u00f3n Judicial, emitida por un tribunal competente, que permita la salida del menor.",
@@ -2341,11 +2747,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.4",
-                                    "label": "Viaja con la persona que posee la guarda custodia (de hecho o legal)",
+                                    "id": "3.1.4.4",
+                                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
                                     "desc": "Cuando el menor viaja con la persona que tiene la guarda legal con autorizaci\u00f3n de viaje ",
                                     "type": "document",
-                                    "slug": "viaja-con-la-persona-que-posee-la-guarda-custodia-(de-hecho-o-legal)",
+                                    "has_icon": false,
+                                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial de ambos padres, autorizando la salida del menor del pa\u00eds con el guarda custodia (de hecho o legal), legalizado por procuradur\u00eda",
@@ -2391,10 +2798,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.5",
+                                    "id": "3.1.4.5",
                                     "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
                                     "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien autoriza a otra persona a viajar con el menor",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
                                     "requirements": [
                                         {
@@ -2441,10 +2849,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.6",
+                                    "id": "3.1.4.6",
                                     "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
                                     "desc": "Cuando el menor viaja con la persona que ha autorizado el padre o madre sobreviviente",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
                                     "requirements": [
                                         {
@@ -2495,10 +2904,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.7",
+                                    "id": "3.1.4.7",
                                     "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
                                     "desc": "Cuando el menor viaja con la persona que ha autorizado el tutor legal",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
                                     "requirements": [
                                         {
@@ -2549,11 +2959,12 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.8",
+                                    "id": "3.1.4.8",
                                     "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
                                     "desc": "Cuando el menor viaja con terceros que han sido autorizado los padres o tutores legales",
                                     "type": "document",
-                                    "slug": "viajara-con-abuelos,-tios,-amigos-u-otras-personas-que-no-son-los-padres",
+                                    "has_icon": false,
+                                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
                                     "requirements": [
                                         {
                                             "requirement": "Poder Notarial de los padres, autorizando la salida del menor del pa\u00eds con el acompa\u00f1ante, legalizado por procuradur\u00eda",
@@ -2599,10 +3010,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.9",
+                                    "id": "3.1.4.9",
                                     "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
                                     "desc": "Cuando uno de los padres se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor.",
                                     "type": "document",
+                                    "has_icon": false,
                                     "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
                                     "requirements": [
                                         {
@@ -2653,10 +3065,11 @@ export const DATA_DUMB = {
                                     "children": []
                                 },
                                 {
-                                    "id": "3.1.2.10",
+                                    "id": "3.1.4.10",
                                     "label": "No veo el caso del menor o tengo dudas para elegir",
                                     "desc": "No veo el caso del menor o tengo dudas para elegir",
                                     "type": "not_found",
+                                    "has_icon": false,
                                     "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
                                     "children": []
                                 }
@@ -2667,10 +3080,21 @@ export const DATA_DUMB = {
                 {
                     "id": "3.2",
                     "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
-                    "desc": null,
+                    "desc": "Menor es extranjero con residencia en la Rep\u00fablica Dominicana y ha estado menos de seis meses no requiere el Permiso de Salida del Menor",
                     "type": "not_required_permission",
+                    "has_icon": false,
                     "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
-                    "children": []
+                    "children": [
+                        {
+                            "id": "3.2.1",
+                            "label": "No se requiere permiso.",
+                            "desc": null,
+                            "type": "document",
+                            "has_icon": false,
+                            "slug": "no-se-requiere-permiso.",
+                            "children": []
+                        }
+                    ]
                 }
             ]
         },
@@ -2679,13 +3103,15 @@ export const DATA_DUMB = {
             "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
             "desc": null,
             "type": null,
-            "slug": "el-menor-tiene-estadia-temporal-como-estudiante,-deportista-o-artista",
+            "has_icon": true,
+            "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
             "children": [
                 {
                     "id": "4.1",
                     "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
                     "desc": null,
                     "type": null,
+                    "has_icon": false,
                     "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
                     "children": [
                         {
@@ -2693,6 +3119,7 @@ export const DATA_DUMB = {
                             "label": "El menor viajar\u00e1 acompa\u00f1ado con la persona o entidad autorizada con la que entr\u00f3 y se dirigirse a su pa\u00eds de origen",
                             "desc": "EL menor saldra del pa\u00eds con la misma persona u organizaci\u00f3 con la que ingres\u00f3, y se dirige al mismo pa\u00eds de origen.",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "el-menor-viajara-acompanado-con-la-persona-o-entidad-autorizada-con-la-que-entro-y-se-dirigirse-a-su-pais-de-origen",
                             "requirements": [
                                 {
@@ -2747,6 +3174,7 @@ export const DATA_DUMB = {
                             "label": "El menor viajar\u00e1 acompa\u00f1ado de ambos padres",
                             "desc": "No requiere el permiso de salida pero debe mostrar Acta de nacimiento del menor",
                             "type": "not_required_permission",
+                            "has_icon": false,
                             "slug": "el-menor-viajara-acompanado-de-ambos-padres",
                             "requirements": [
                                 {
@@ -2761,6 +3189,7 @@ export const DATA_DUMB = {
                             "label": "El menor viajar\u00e1 con uno de los padres",
                             "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
                             "type": "document",
+                            "has_icon": false,
                             "slug": "el-menor-viajara-con-uno-de-los-padres",
                             "requirements": [
                                 {
@@ -2811,6 +3240,7 @@ export const DATA_DUMB = {
                             "label": "No veo el caso del menor o tengo dudas para elegir",
                             "desc": "No veo el caso del menor o tengo dudas para elegir",
                             "type": "not_found",
+                            "has_icon": false,
                             "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
                             "children": []
                         }
@@ -2821,29 +3251,42 @@ export const DATA_DUMB = {
                     "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
                     "desc": null,
                     "type": "not_required_permission",
+                    "has_icon": false,
                     "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
-                    "requirements": [
+                    "children": [
                         {
-                            "requirement": "No requiere el permiso",
-                            "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
+                            "id": "4.2.1",
+                            "label": "No se requiere permiso.",
+                            "desc": null,
+                            "type": "document",
+                            "has_icon": false,
+                            "slug": "no-se-requiere-permiso.",
+                            "requirements": [
+                                {
+                                    "requirement": "No requiere el permiso",
+                                    "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
+                                }
+                            ],
+                            "children": []
                         }
-                    ],
-                    "children": []
+                    ]
                 }
             ]
         },
         {
             "id": "5",
             "label": "El menor es hijo/a de personal de organismos internacionales acreditados en el pa\u00eds",
-            "desc": null,
+            "desc": "EL menor saldra del pa\u00eds con la misma persona u organizaci\u00f3 con la que ingres\u00f3, y se dirige al mismo pa\u00eds de origen.",
             "type": null,
-            "slug": "el-menor-es-hijo/a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
+            "has_icon": true,
+            "slug": "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
             "children": [
                 {
                     "id": "5.1",
                     "label": "El menor viajar\u00e1 acompa\u00f1ado de ambos padres",
                     "desc": "Cuando el menor viaja con ambos padres",
-                    "type": "document",
+                    "type": "not_required_permission",
+                    "has_icon": false,
                     "slug": "el-menor-viajara-acompanado-de-ambos-padres",
                     "requirements": [
                         {
@@ -2858,6 +3301,7 @@ export const DATA_DUMB = {
                     "label": "El menor viajar\u00e1 con uno de los padres",
                     "desc": "Cuando el menor viaja con uno de los padres ",
                     "type": "document",
+                    "has_icon": false,
                     "slug": "el-menor-viajara-con-uno-de-los-padres",
                     "requirements": [
                         {
@@ -2908,6 +3352,7 @@ export const DATA_DUMB = {
                     "label": "El menor viajar\u00e1 con un tercero\u00a0",
                     "desc": null,
                     "type": "document",
+                    "has_icon": false,
                     "slug": "el-menor-viajara-con-un-tercero",
                     "requirements": [
                         {
@@ -2954,6 +3399,7 @@ export const DATA_DUMB = {
                     "label": "No veo el caso del menor o tengo dudas para elegir",
                     "desc": null,
                     "type": "not_found",
+                    "has_icon": false,
                     "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
                     "children": []
                 }
@@ -2964,6 +3410,7 @@ export const DATA_DUMB = {
             "label": "No veo el caso del menor o tengo dudas para elegir",
             "desc": "No veo el caso del menor o tengo dudas para elegir",
             "type": "not_found",
+            "has_icon": true,
             "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
             "children": []
         }

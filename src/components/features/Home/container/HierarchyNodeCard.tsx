@@ -13,12 +13,10 @@ const { cases } = DATA_DUMB;
 interface HierarchyNodeCardProps {
   item: HierarchyNode;
   goToStep?: (id: string) => void;
-  showIcon?: boolean;
 }
 
 export const HierarchyNodeCard = ({
   item,
-  showIcon = false,
   goToStep,
 }: HierarchyNodeCardProps) => {
   const { formData, setFormData, setShow } = useFormDataStore();
@@ -29,13 +27,6 @@ export const HierarchyNodeCard = ({
     icon: Icon,
     label,
   } = LABEL_ICON_DETAILS[item.slug] || {};
-
-  console.log("item: ", item);
-
-  const isDisableIcon = useMemo(
-    () => item.children.some((node) => Object.values(node).length === 0),
-    [item]
-  );
 
   const handleClick = useCallback(() => {
     setFormData(item);
@@ -70,7 +61,7 @@ export const HierarchyNodeCard = ({
       className={cn(
         "shadow-none",
         "fade-in duration-500 animate-in h-full",
-        "flex flex-col",
+        "flex flex-col items-center justify-center",
         "border hover:shadow-md transition-shadow cursor-pointer",
         "hover:bg-card/90 hover:ring-2 hover:ring-blue-500",
         "focus-visible:ring-2 focus-visible:ring-blue-500"
@@ -84,7 +75,7 @@ export const HierarchyNodeCard = ({
       key={item.slug}
     >
       <CardHeader className="flex flex-col items-center justify-center gap-2">
-        {isDisableIcon ? null : showIcon && Icon ? <Icon /> : null}
+        {item.has_icon && Icon ? <Icon /> : null}
         <h3 className="text-[#1E293B] text-center font-semibold text-[16px] leading-[100%]">
           <Wiki value={label || item.label} />
         </h3>

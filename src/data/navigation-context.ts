@@ -33,26 +33,29 @@ export const NAVIGATION_CONTEXTS: NavigationContextMap = {
     "/el-menor-es-dominicano-y-no-posee-otra-nacionalidad": TravelWithParentData,
     "/el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres": DifferentSituationCase,
     "/el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero": DifferentSituationCase,
+    "/el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-su-tutor-legal---tutores-legales": DifferentSituationCase,
 
     // Case 2
-    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero": MinorSixMonthsData,
-    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais": DifferentSituationCase,
-    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": DifferentSituationCase,
-    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres": DifferentSituationCase,
-    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero": DifferentSituationCase,
+    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero": MinorSixMonthsData,
+    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais": DifferentSituationCase,
+    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": DifferentSituationCase,
+    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres": DifferentSituationCase,
+    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero": DifferentSituationCase,
+    "/el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-su-tutor-legal---tutores-legales": DifferentSituationCase,
 
     // Case 3
     "/el-menor-es-extranjero-con-residencia-en-la-republica-dominicana": MinorSixMonthsData,
     "/el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais": TravelWithParentData,
     "/el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres": DifferentSituationCase,
-    "/el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viaja-con-un-tercero": DifferentSituationCase,
+    "/el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero": DifferentSituationCase,
+    "/el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-su-tutor-legal---tutores-legales": DifferentSituationCase,
 
     // Case 4
-    "/el-menor-tiene-estadia-temporal-como-estudiante,-deportista-o-artista": MinorSixMonthsData,
-    "/el-menor-tiene-estadia-temporal-como-estudiante,-deportista-o-artista/el-menor-ha-estado-mas-de-6-meses-en-el-pais": DifferentSituationCase,
+    "/el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista": MinorSixMonthsData,
+    "/el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista/el-menor-ha-estado-mas-de-6-meses-en-el-pais": DifferentSituationCase,
 
     // Case 5
-    "/el-menor-es-hijo/a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": DifferentSituationCase,
+    "/el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": DifferentSituationCase,
 
     "default": {
         title: "default",

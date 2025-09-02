@@ -56,11 +56,6 @@ export function ContentSection({
                   key={item.slug}
                   item={item}
                   goToStep={goToStep}
-                  showIcon={
-                    formData.children.length === 6 ||
-                    formData.children.length === 3 ||
-                    formData.children.length === 2
-                  }
                 />
               ))}
             </div>
@@ -71,7 +66,6 @@ export function ContentSection({
                   key={item.slug}
                   item={item}
                   goToStep={goToStep}
-                  showIcon
                 />
               ))}
             </div>

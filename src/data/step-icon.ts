@@ -11,16 +11,16 @@ export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
         icon: DominicanFlagIcon,
         label: "Tiene nacionalidad dominicana únicamente",
     },
-    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y/o-reside-en-el-extranjero": { // 2
+    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero": { // 2
         icon: DominicanFlagWithWordIcon,
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana": { // 3
         icon: WordIcon,
     },
-    "el-menor-tiene-estadia-temporal-como-estudiante,-deportista-o-artista": { // 4
+    "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista": { // 4
         icon: StudentAthleteIcon,
     },
-    "el-menor-es-hijo/a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": { // 5
+    "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": { // 5
         icon: ChildInternationalPersonnelIcon,
     },
     "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
@@ -29,13 +29,25 @@ export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
     "viajara-con-ambos-padres": {
         icon: FamilyTravelIcon,
     },
+    "el-menor-viajara-acompanado-de-ambos-padres": { // TODO: This key is temporal
+        icon: FamilyTravelIcon,
+    },
+    "viajara-con-su-tutor-legal---tutores-legales": {
+        icon: FamilyTravelIcon,
+    },
     "viajara-con-uno-de-los-padres": {
+        icon: SingleParentTravelIcon,
+    },
+    "el-menor-viajara-con-uno-de-los-padres": { // TODO: This key is temporal
         icon: SingleParentTravelIcon,
     },
     "viajara-con-un-tercero": {
         icon: ThirdPartyAirlineTravelIcon,
     },
     "viaja-con-un-tercero": { // TODO: This key is temporal
+        icon: ThirdPartyAirlineTravelIcon,
+    },
+    "el-menor-viajara-con-un-tercero": { // TODO: This key is temporal
         icon: ThirdPartyAirlineTravelIcon,
     },
     "el-menor-ha-estado-mas-de-6-meses-en-el-pais": {
