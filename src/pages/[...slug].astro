@@ -1,39 +1,45 @@
 ---
-import { HomePage } from "@/components/features/Home";
-import { DATA_DUMB } from "@/data";
+import { DATA_ROUTER } from "@/data/data-route";
 import Layout from '../layouts/Layout.astro';
 import { MainLayout } from '../layouts/MainLayout';
-import { extractNodes } from "@/utils/array";
-
+import { Card, CardContent } from "@/components/ui/card";
+import { HomeContainer } from "@/components/features/Home";
 
 export function getStaticPaths() {
-  
-  const nodes = extractNodes(DATA_DUMB.cases).concat([
-    {
-      node: {
-        slug: "",
-        children: [],
-        id: "",
-        label: "",
-        description: ""
-      },
-      slug: "/"
+
+  const params = Object.entries(DATA_ROUTER).map(item => {
+    const [key, value] = item
+    return {
+      params: { slug: `/${key}` },
+      props: { value }
     }
-  ]);
-  
-  const params = nodes.map((node) => ({
-    params: { slug: `/${node.slug}` },
-  }))
+  })
 
   return params
 }
 
-const { node } = Astro.locals.node
-
+const { value } = Astro.props
 ---
 
 <Layout>
 	<MainLayout client:load>
-		<HomePage client:load node={node} />
+		<section class="relative">
+        <div class="absolute w-full lg:h-[55vh] z-0" />
+        <div class="layout-container relative">
+          <div class="min-[190px]:flex h-full">
+            <div
+              class={
+                "flex-1 relative p-0 min-[550px]:px-5 top-12 flex min-[850px]:flex-row md:flex-nowrap flex-wrap flex-col justify-center md:items-start items-center min-[550px]:gap-5 mx-auto"
+              }
+            >
+               <Card className="gap-2 w-full h-full flex-1 overflow-hidden p-0 rounded-none shadow-none border-none min-[550px]:rounded-[8px] min-[550px]:border min-h-full flex flex-col ">
+                <CardContent className="w-full p-0 px-2 lg:px-0">
+                  <HomeContainer client:only value={value} />
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
 	</MainLayout>
 </Layout>

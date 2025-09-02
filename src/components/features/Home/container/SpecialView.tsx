@@ -1,4 +1,4 @@
-import { type HierarchyNode } from "@/data";
+import type { NodeCase } from "@/data/data-route";
 import { useMemo, type JSX } from "react";
 import { Documentation } from "../components/Documentation";
 import { NotFound } from "../components/NotFound";
@@ -11,8 +11,10 @@ export interface RenderSpecialView {
   type: "not-found" | "no-viable" | "documentation";
 }
 
-export function specialView(formData: HierarchyNode) {
+export function specialView(formData: NodeCase) {
   const renderSpecialView = useMemo(() => {
+    if (Array.isArray(formData)) return null;
+
     const noRequiredPermission = formData.type === "not_required_permission";
     if (noRequiredPermission) {
       return {
@@ -35,7 +37,7 @@ export function specialView(formData: HierarchyNode) {
       };
     }
 
-    const isDocumentationCase = Object.hasOwn(formData, "requirements");
+    const isDocumentationCase = formData.type === "document";
     if (isDocumentationCase) {
       return {
         title: "Documentos obligatorios y pasos a seguir",

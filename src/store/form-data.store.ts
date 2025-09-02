@@ -1,15 +1,16 @@
-import type { HierarchyNode } from "@/data";
+// import type { HierarchyNode } from "@/data";
+import type { NodeCase } from "@/data/data-route";
 import { create } from "zustand";
 
 interface FormDataState {
-    formData: HierarchyNode;
-    historySteps: Partial<HierarchyNode>[];
+    formData: NodeCase;
+    historySteps: Partial<NodeCase>[];
     show: boolean;
     popHistoryStep: () => void;
     setShow: (show: boolean) => void;
     setFormData: (data: FormDataState['formData']) => void;
     resetFormData: () => void;
-    setHistoryStep: (step: HierarchyNode) => void;
+    setHistoryStep: (step: FormDataState['formData']) => void;
 }
 
 export const useFormDataStore = create<FormDataState>((set, get) => ({
