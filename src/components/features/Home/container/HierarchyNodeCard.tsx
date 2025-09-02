@@ -30,6 +30,8 @@ export const HierarchyNodeCard = ({
     label,
   } = LABEL_ICON_DETAILS[item.slug] || {};
 
+  console.log("item: ", item);
+
   const isDisableIcon = useMemo(
     () => item.children.some((node) => Object.values(node).length === 0),
     [item]
@@ -83,7 +85,7 @@ export const HierarchyNodeCard = ({
     >
       <CardHeader className="flex flex-col items-center justify-center gap-2">
         {isDisableIcon ? null : showIcon && Icon ? <Icon /> : null}
-        <h3 className="text-[#1E293B] text-left font-semibold text-[16px] leading-[100%]">
+        <h3 className="text-[#1E293B] text-center font-semibold text-[16px] leading-[100%]">
           <Wiki value={label || item.label} />
         </h3>
       </CardHeader>

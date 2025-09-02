@@ -35,6 +35,9 @@ export const LABEL_ICON_DETAILS: Record<string, StatusMigrationMinor> = {
     "viajara-con-un-tercero": {
         icon: ThirdPartyAirlineTravelIcon,
     },
+    "viaja-con-un-tercero": { // TODO: This key is temporal
+        icon: ThirdPartyAirlineTravelIcon,
+    },
     "el-menor-ha-estado-mas-de-6-meses-en-el-pais": {
         label: "Sí",
         description: "El menor tiene más de seis meses en República Dominicana desde su última entrada al país"

@@ -49,25 +49,26 @@ export function NavigationButtons({
         </Button>
       </div>
 
-      {renderSpecialView?.type !== "no-viable" && (
-        <Button
-          asChild
-          variant={"outline"}
-          className={cn(
-            "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
-            "text-[#0072D7] border-[#0072D7] hover:text-white hover:bg-[#0072D7] cursor-pointer",
-            renderSpecialView?.type === "documentation" &&
-              "bg-[#0072D7] hover:bg-[#0072D7]/90 border-none text-white"
-          )}
-        >
-          <a
-            href="https://servicios.migracion.gob.do/es"
-            rel="noopener noreferrer"
+      {renderSpecialView?.type === "no-viable" ||
+        (renderSpecialView?.type === "documentation" && (
+          <Button
+            asChild
+            variant={"outline"}
+            className={cn(
+              "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
+              "text-[#0072D7] border-[#0072D7] hover:text-white hover:bg-[#0072D7] cursor-pointer",
+              renderSpecialView?.type === "documentation" &&
+                "bg-[#0072D7] hover:bg-[#0072D7]/90 border-none text-white"
+            )}
           >
-            Ir al portal para iniciar la solicitud
-          </a>
-        </Button>
-      )}
+            <a
+              href="https://servicios.migracion.gob.do/es"
+              rel="noopener noreferrer"
+            >
+              Ir al portal para iniciar la solicitud
+            </a>
+          </Button>
+        ))}
     </div>
   );
 }

@@ -24,7 +24,12 @@ export function Container() {
   } = useFormDataStore();
   const { setProgress } = useProgressBarStore();
   const isAtRoot = isRootLevel(formData.slug, historySteps.length);
-  const navigationContext = getNavigationContext(formData.slug, isAtRoot);
+
+  const currentPathUrl = decodeURIComponent(
+    new URL(window.location.href).pathname
+  );
+
+  const navigationContext = getNavigationContext(currentPathUrl, isAtRoot);
   const renderSpecialView = specialView(formData);
   const [stepParam, setStepParam] = useQueryState<string | null>("paso", {
     history: "push",
@@ -114,6 +119,8 @@ export function Container() {
     setFormData(foundNode);
     setShow(true);
   }, [stepParam, setFormData, setShow]);
+
+  console.log("formData: ", formData);
 
   return (
     <div
