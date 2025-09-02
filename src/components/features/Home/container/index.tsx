@@ -133,17 +133,41 @@ export function Container() {
       )}
     >
       {isStepValid && (
-        <div className="flex flex-col items-start justify-center gap-1 max-w-[88%]">
+        <div className="flex flex-col items-start justify-center gap-6 max-w-[88%]">
           <h1 className="text-[#003876] font-semibold text-[32px] leading-[120%]">
             Viajar con un menor: guía oficial para solicitar el permiso
           </h1>
-          {formData.type !== "document" && (
-            <p className="text-[#475569] text-base font-normal">
-              En esta página podrás consultar si necesitas el permiso de viaje y
-              cómo solicitarlo. Responde las preguntas para obtener la
-              información específica para tu caso.
-            </p>
-          )}
+          <div className="hidden lg:flex flex-col items-start justify-center gap-4">
+            <div>
+              <p className="font-semibold text-[20px] leading-[120%] text-[#1E293B]">
+                Qué es
+              </p>
+              <p className="text-[#475569] text-base font-normal">
+                El permiso de salida del menor es la certificación mediante la
+                cual uno o ambos padres autorizan a un menor dominicano, o
+                extranjero con residencia legal, a salir del territorio
+                nacional.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-[20px] leading-[120%] text-[#1E293B]">
+                A quién va dirigido
+              </p>
+              <p className="text-[#475569] text-base font-normal">
+                Está dirigido al padre, la madre, ambos padres o el tutor legal
+                del menor.
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-[20px] leading-[120%] text-[#1E293B]">
+                Cómo solicitarlo
+              </p>
+              <p className="text-[#475569] text-base font-normal">
+                Responde las preguntas de esta guía para conocer cuáles son los
+                documentos que debes presentar y los pasos a seguir.
+              </p>
+            </div>
+          </div>
         </div>
       )}
 
