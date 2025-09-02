@@ -1,3 +1,5 @@
+export { HouseIcon } from "./HouseIcon";
+
 export { ThirdPartyAirlineTravelIcon } from "./ThirdPartyAirlineTravelIcon";
 
 export { SingleParentTravelIcon } from "./SingleParentTravelIcon";
