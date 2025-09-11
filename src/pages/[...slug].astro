@@ -1,39 +1,92 @@
 ---
-import { HomePage } from "@/components/features/Home";
-import { DATA_DUMB } from "@/data";
-import Layout from '../layouts/Layout.astro';
-import { MainLayout } from '../layouts/MainLayout';
-import { extractNodes } from "@/utils/array";
+import Layout from "../layouts/Layout.astro";
+import { MainLayout } from "../layouts/MainLayout";
+import { Card, CardContent } from "@/components/ui/card";
+import HierarchyNodeCard from "@/components/HierarchyNodeCard.astro";
+import Footer from "@/components/Footer.astro";
+import Wrapper from "@/components/Wrapper.astro";
+import NoRequiredPermission from "@/components/NoRequiredPermission.astro";
 
+import { DATA_ROUTE } from "@/data/data-route";
+import {
+  getNavigationContext,
+  getViewComponentByType,
+} from "@/data/navigation-context";
+import { cn } from "@/lib/utils";
 
 export function getStaticPaths() {
-  
-  const nodes = extractNodes(DATA_DUMB.cases).concat([
-    {
-      node: {
-        slug: "",
-        children: [],
-        id: "",
-        label: "",
-        description: ""
-      },
-      slug: "/"
-    }
-  ]);
-  
-  const params = nodes.map((node) => ({
-    params: { slug: `/${node.slug}` },
-  }))
+  const params = Object.entries(DATA_ROUTE).map((item) => {
+    const [slug, value] = item;
+    return {
+      params: { slug },
+      props: { data: value, slug },
+    };
+  });
 
-  return params
+  return params;
 }
 
-const { node } = Astro.locals.node
+const { data, slug } = Astro.props;
+
+const cases = Array.isArray(data) ? data : [];
+
+const navigationContext = getNavigationContext(slug);
+console.log("navigationContext:", navigationContext);
+
+const viewComponent = getViewComponentByType(data);
 
 ---
 
 <Layout>
-	<MainLayout client:load>
-		<HomePage client:load node={node} />
-	</MainLayout>
+  <MainLayout client:load>
+    <section class="relative">
+      <div class="absolute w-full lg:h-[55vh] z-0"></div>
+      <div class="layout-container relative">
+        <div class="min-[190px]:flex h-full">
+          <div
+            class={"flex-1 relative p-0 min-[550px]:px-5 top-12 flex min-[850px]:flex-row md:flex-nowrap flex-wrap flex-col justify-center md:items-start items-center min-[550px]:gap-5 mx-auto"}
+          >
+            <Card
+              className="gap-2 w-full h-full flex-1 overflow-hidden p-0 rounded-none shadow-none border-none min-[550px]:rounded-[8px] min-[550px]:border min-h-full flex flex-col"
+            >
+              <CardContent className="w-full p-0 px-2 lg:px-0">
+                <Wrapper
+                  type={viewComponent?.type}
+                  title={viewComponent?.title || navigationContext.title}
+                  description={viewComponent?.description ||
+                    navigationContext.description}
+                >
+                  <div class="pb-6 w-full">
+                    {viewComponent?.type === "not_required_permission" && (
+                      <NoRequiredPermission />
+                    )}
+                    {
+                      !viewComponent || (
+                        <div
+                          class={cn(
+                            "grid grid-cols-1 gap-4 px-[2px]",
+                            cases.length == 2 && "lg:grid-cols-2",
+                            cases.length > 3 && "lg:grid-cols-2",
+                            cases.length == 3 && "lg:grid-cols-3"
+                          )}
+                        >
+                          {cases.map((item: any) => (
+                            <HierarchyNodeCard item={item} />
+                          ))}
+                        </div>
+                      )
+                    }
+
+                    {!viewComponent && <div class="py-12">
+                      <Footer />
+                    </div>}
+                  </div>
+                </Wrapper>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  </MainLayout>
 </Layout>

@@ -1,3 +1,5 @@
+import type { NodeRoute } from "./data-route";
+
 export interface NavigationContext {
     title: string;
     description: string;
@@ -64,16 +66,55 @@ export const NAVIGATION_CONTEXTS: NavigationContextMap = {
 }
 
 export function getNavigationContext(
-    formDataSlug?: string,
+    slug?: string,
     isRoot: boolean = false
 ): NavigationContext {
-    if (isRoot || !formDataSlug) return NAVIGATION_CONTEXTS.root;
 
-    const context = NAVIGATION_CONTEXTS[formDataSlug];
+    if (isRoot || !slug) return NAVIGATION_CONTEXTS.root;
+
+    const context = NAVIGATION_CONTEXTS[slug];
 
     return context || NAVIGATION_CONTEXTS.default;
 }
 
 export function isRootLevel(formDataSlug?: string, navigationStackLength: number = 0): boolean {
     return !formDataSlug || navigationStackLength === 0;
+}
+
+export type ViewComponentType = "not_required_permission" | "not_found" | "documentation"
+
+export function getViewComponentByType(payload: NodeRoute) {
+
+    if (Array.isArray(payload)) throw new Error("Payload cannot be an array");
+
+    const type = payload?.type;
+
+    if (!type) return null
+
+    switch (type) {
+        case "not_required_permission":
+            return {
+                title: "El menor no necesita permiso para salir del país",
+                description:
+                    "No te preocupes, no necesitas un permiso especial para este caso.",
+                type,
+            };
+        case "not_found":
+            return {
+                title: "¿Tienes dudas o no ves el caso del menor entre las opciones?",
+                description:
+                    "¡No te preocupes! Podemos ayudarte a identificar la opción correcta o guiarte paso a paso si no estás seguro",
+                type: "no-viable",
+            }
+        case "documentation":
+            return {
+                title: "Documentos obligatorios y pasos a seguir",
+                description:
+                    "Antes de iniciar tu solicitud, asegúrate de contar con todos los documentos necesarios y seguir el paso a paso para completar el proceso sin contratiempos",
+                type: "documentation",
+            }
+        default:
+            return null;
+    }
+
 }
