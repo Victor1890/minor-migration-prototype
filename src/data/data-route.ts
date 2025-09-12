@@ -3992,17 +3992,7 @@ export const DATA_ROUTE = {
             "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
-            "children": [
-                {
-                    "id": "2.2.1",
-                    "label": "No se requiere permiso",
-                    "desc": null,
-                    "type": "document",
-                    "has_icon": false,
-                    "slug": "no-se-requiere-permiso",
-                    "children": []
-                }
-            ]
+            "children": []
         }
     ],
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais": [
@@ -6935,24 +6925,13 @@ export const DATA_ROUTE = {
         "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
         "children": []
     },
-    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": [
-        {
-            "id": "2.2.1",
-            "label": "No se requiere permiso",
-            "desc": null,
-            "type": "document",
-            "has_icon": false,
-            "slug": "no-se-requiere-permiso",
-            "children": []
-        }
-    ],
-    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais/no-se-requiere-permiso": {
-        "id": "2.2.1",
-        "label": "No se requiere permiso",
+    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": {
+        "id": "2.2",
+        "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
-        "slug": "no-se-requiere-permiso",
+        "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
         "children": []
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana": [
