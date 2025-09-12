@@ -10,6 +10,9 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
+  prefetch: {
+    prefetchAll: true
+  },
   integrations: [
     react(),
     sitemap({

@@ -1,0 +1,39 @@
+---
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import Info from "@/components/ContactInfo/Info.astro"
+
+interface Props {
+  showPortalButton?: boolean;
+}
+
+const { showPortalButton } = Astro.props;
+
+---
+
+<div class="w-full text-[#031942] font-normal text-base flex flex-col gap-4">
+  <div
+    class="flex items-start justify-between w-full flex-col-reverse lg:item-center lg:flex-row"
+  >
+    <p>
+      ¿No encuentras el caso del menor? Comunícate con la Dirección de
+      Migración:
+    </p>
+    {
+      showPortalButton && (
+        <a
+            href="https://servicios.migracion.gob.do/es"
+            rel="noopener noreferrer"
+            class={cn(
+              buttonVariants({ variant: "outline" }),
+              "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
+            "text-[#0072D7] hover:text-[#0072D7] border-[#0072D7]"
+            )}
+          >
+            Ir al portal para iniciar la solicitud
+          </a>
+      )
+    }
+  </div>
+  <Info />
+</div>

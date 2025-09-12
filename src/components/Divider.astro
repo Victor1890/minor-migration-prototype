@@ -1,0 +1,15 @@
+---
+import { cn } from "@/lib/utils";
+
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props
+---
+
+<hr
+  role="separator"
+  aria-label="Dividor"
+  class={cn("shrink-0 border-none w-full bg-[#E2E8F0] h-[1px]", className)}
+/>
