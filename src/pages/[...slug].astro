@@ -6,7 +6,7 @@ import HierarchyNodeCard from "@/components/HierarchyNodeCard.astro";
 import Footer from "@/components/Footer.astro";
 import Wrapper from "@/components/Wrapper.astro";
 import NoRequiredPermission from "@/components/NoRequiredPermission.astro";
-import Documentation from "@/components/Documentation.astro";
+import Documentation from "@/components/Documentation/index.astro";
 import NoFoundYourCase from "@/components/NoFoundYourCase.astro";
 
 import { DATA_ROUTE } from "@/data/data-route";
@@ -64,7 +64,7 @@ const viewComponent = getViewComponentByType(data);
                       <NoFoundYourCase />
                     )}
                     {viewComponent?.type === "document" && (
-                      <Documentation />
+                      <Documentation data={data} />
                     )}
                     {
                       !viewComponent ? (
