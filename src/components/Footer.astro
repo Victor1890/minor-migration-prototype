@@ -1,5 +1,5 @@
 ---
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Info from "@/components/ContactInfo/Info.astro"
 
@@ -21,21 +21,17 @@ const { showPortalButton } = Astro.props;
     </p>
     {
       showPortalButton && (
-        <Button
-          client:visible
-          variant={"outline"}
-          className={cn(
-            "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
-            "text-[#0072D7] hover:text-[#0072D7] border-[#0072D7]"
-          )}
-        >
-          <a
+        <a
             href="https://servicios.migracion.gob.do/es"
             rel="noopener noreferrer"
+            class={cn(
+              buttonVariants({ variant: "outline" }),
+              "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer",
+            "text-[#0072D7] hover:text-[#0072D7] border-[#0072D7]"
+            )}
           >
             Ir al portal para iniciar la solicitud
           </a>
-        </Button>
       )
     }
   </div>

@@ -6,6 +6,8 @@ import HierarchyNodeCard from "@/components/HierarchyNodeCard.astro";
 import Footer from "@/components/Footer.astro";
 import Wrapper from "@/components/Wrapper.astro";
 import NoRequiredPermission from "@/components/NoRequiredPermission.astro";
+import Documentation from "@/components/Documentation.astro";
+import NoFoundYourCase from "@/components/NoFoundYourCase.astro";
 
 import { DATA_ROUTE } from "@/data/data-route";
 import {
@@ -31,8 +33,6 @@ const { data, slug } = Astro.props;
 const cases = Array.isArray(data) ? data : [];
 
 const navigationContext = getNavigationContext(slug);
-console.log("navigationContext:", navigationContext);
-
 const viewComponent = getViewComponentByType(data);
 
 ---
@@ -60,8 +60,14 @@ const viewComponent = getViewComponentByType(data);
                     {viewComponent?.type === "not_required_permission" && (
                       <NoRequiredPermission />
                     )}
+                    {viewComponent?.type === "not_found" && (
+                      <NoFoundYourCase />
+                    )}
+                    {viewComponent?.type === "document" && (
+                      <Documentation />
+                    )}
                     {
-                      !viewComponent || (
+                      !viewComponent ? (
                         <div
                           class={cn(
                             "grid grid-cols-1 gap-4 px-[2px]",
@@ -74,7 +80,7 @@ const viewComponent = getViewComponentByType(data);
                             <HierarchyNodeCard item={item} />
                           ))}
                         </div>
-                      )
+                      ) : null
                     }
 
                     {!viewComponent && <div class="py-12">

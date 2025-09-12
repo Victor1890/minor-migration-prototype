@@ -1,0 +1,47 @@
+---
+import Divider from "../components/Divider.astro";
+
+const historySteps = [
+    { slug: "step1", label: "Paso 1: Información inicial" },
+    { slug: "step2", label: "Paso 2: Detalles del menor" },
+    { slug: "step3", label: "Paso 3: Estatus migratorio" },
+]
+---
+<div class="fade-in duration-500 animate-in">
+  <div class="flex flex-col gap-4">
+    <h3 class="text-2xl font-semibold">
+      Según los datos que nos indicaste, el menor:
+    </h3>
+    <ul
+      class="list-disc pl-6"
+      aria-label="Lista de pasos anteriores previamente completados"
+    >
+      {
+        historySteps.map((item) => (
+          <li class="font-semibold text-base">
+            {item.label}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <Divider className="my-12" />
+
+  <!-- <DocAccordion formData={formData} />
+
+  <div class="pt-12">
+    <NavigationButtons
+      renderSpecialView={{
+        title: "Documentación",
+        description: "Aquí tienes la documentación necesaria para continuar.",
+        render: <Documentation />,
+        type: "documentation",
+      }}
+      goBack={goBack}
+      goToStart={goToStart}
+    />
+  </div> -->
+
+  <Divider className="my-12 mb-5" />
+</div>

@@ -66,9 +66,11 @@ export const NAVIGATION_CONTEXTS: NavigationContextMap = {
 }
 
 export function getNavigationContext(
-    slug?: string,
+    slug: string,
     isRoot: boolean = false
 ): NavigationContext {
+
+    slug = slug.startsWith("/") ? slug : `/${slug}`;
 
     if (isRoot || !slug) return NAVIGATION_CONTEXTS.root;
 
@@ -81,11 +83,17 @@ export function isRootLevel(formDataSlug?: string, navigationStackLength: number
     return !formDataSlug || navigationStackLength === 0;
 }
 
-export type ViewComponentType = "not_required_permission" | "not_found" | "documentation"
+export type ViewComponentType = "not_required_permission" | "not_found" | "document"
 
-export function getViewComponentByType(payload: NodeRoute) {
+interface ViewComponent {
+    title: string;
+    description: string;
+    type: ViewComponentType;
+}
 
-    if (Array.isArray(payload)) throw new Error("Payload cannot be an array");
+export function getViewComponentByType(payload: NodeRoute): ViewComponent | null {
+
+    if (Array.isArray(payload)) return null
 
     const type = payload?.type;
 
@@ -104,14 +112,14 @@ export function getViewComponentByType(payload: NodeRoute) {
                 title: "¿Tienes dudas o no ves el caso del menor entre las opciones?",
                 description:
                     "¡No te preocupes! Podemos ayudarte a identificar la opción correcta o guiarte paso a paso si no estás seguro",
-                type: "no-viable",
+                type,
             }
-        case "documentation":
+        case "document":
             return {
                 title: "Documentos obligatorios y pasos a seguir",
                 description:
                     "Antes de iniciar tu solicitud, asegúrate de contar con todos los documentos necesarios y seguir el paso a paso para completar el proceso sin contratiempos",
-                type: "documentation",
+                type
             }
         default:
             return null;
