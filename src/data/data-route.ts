@@ -9958,35 +9958,7 @@ export const DATA_ROUTE = {
         "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
         "children": []
     },
-    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": [
-        {
-            "id": "2.2.1",
-            "label": "No se requiere permiso",
-            "desc": null,
-            "type": "not_required_permission",
-            "has_icon": false,
-            "slug": "no-se-requiere-permiso",
-            "children": [],
-            "histories": [
-                {
-                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
-                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
-                    "id": "2"
-                },
-                {
-                    "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
-                    "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
-                    "id": "2.2"
-                },
-                {
-                    "label": "No se requiere permiso",
-                    "slug": "no-se-requiere-permiso",
-                    "id": "2.2.1"
-                }
-            ]
-        }
-    ],
-    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais/no-se-requiere-permiso": {
+    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": {
         "id": "2.2.1",
         "label": "No se requiere permiso",
         "desc": null,
@@ -10004,11 +9976,6 @@ export const DATA_ROUTE = {
                 "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
                 "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
                 "id": "2.2"
-            },
-            {
-                "label": "No se requiere permiso",
-                "slug": "no-se-requiere-permiso",
-                "id": "2.2.1"
             }
         ]
     },
