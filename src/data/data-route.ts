@@ -4085,10 +4085,27 @@ export const DATA_ROUTE = {
                     "id": "2.1.1",
                     "label": "Viajar\u00e1 con ambos padres",
                     "desc": null,
-                    "type": null,
+                    "type": "not_required_permission",
                     "has_icon": true,
                     "slug": "viajara-con-ambos-padres",
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con ambos padres",
+                            "slug": "viajara-con-ambos-padres",
+                            "id": "2.1.1"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2",
@@ -5546,7 +5563,7 @@ export const DATA_ROUTE = {
             "id": "2.2",
             "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
             "desc": null,
-            "type": null,
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
             "children": [
@@ -5576,6 +5593,18 @@ export const DATA_ROUTE = {
                         }
                     ]
                 }
+            ],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.2"
+                }
             ]
         }
     ],
@@ -5584,10 +5613,27 @@ export const DATA_ROUTE = {
             "id": "2.1.1",
             "label": "Viajar\u00e1 con ambos padres",
             "desc": null,
-            "type": null,
+            "type": "not_required_permission",
             "has_icon": true,
             "slug": "viajara-con-ambos-padres",
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con ambos padres",
+                    "slug": "viajara-con-ambos-padres",
+                    "id": "2.1.1"
+                }
+            ]
         },
         {
             "id": "2.1.2",
@@ -7040,6 +7086,32 @@ export const DATA_ROUTE = {
             ]
         }
     ],
+    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-ambos-padres": {
+        "id": "2.1.1",
+        "label": "Viajar\u00e1 con ambos padres",
+        "desc": null,
+        "type": "not_required_permission",
+        "has_icon": true,
+        "slug": "viajara-con-ambos-padres",
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con ambos padres",
+                "slug": "viajara-con-ambos-padres",
+                "id": "2.1.1"
+            }
+        ]
+    },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres": [
         {
             "id": "2.1.2.1",
@@ -9953,10 +10025,27 @@ export const DATA_ROUTE = {
                     "id": "3.1.1",
                     "label": "Viajar\u00e1 con ambos padres",
                     "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
-                    "type": null,
+                    "type": "not_required_permission",
                     "has_icon": true,
                     "slug": "viajara-con-ambos-padres",
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con ambos padres",
+                            "slug": "viajara-con-ambos-padres",
+                            "id": "3.1.1"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2",
@@ -11414,7 +11503,7 @@ export const DATA_ROUTE = {
             "id": "3.2",
             "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
             "desc": "Menor es extranjero con residencia en la Rep\u00fablica Dominicana y ha estado menos de seis meses no requiere el Permiso de Salida del Menor",
-            "type": null,
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
             "children": [
@@ -11444,6 +11533,18 @@ export const DATA_ROUTE = {
                         }
                     ]
                 }
+            ],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.2"
+                }
             ]
         }
     ],
@@ -11452,10 +11553,27 @@ export const DATA_ROUTE = {
             "id": "3.1.1",
             "label": "Viajar\u00e1 con ambos padres",
             "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
-            "type": null,
+            "type": "not_required_permission",
             "has_icon": true,
             "slug": "viajara-con-ambos-padres",
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con ambos padres",
+                    "slug": "viajara-con-ambos-padres",
+                    "id": "3.1.1"
+                }
+            ]
         },
         {
             "id": "3.1.2",
@@ -12908,6 +13026,32 @@ export const DATA_ROUTE = {
             ]
         }
     ],
+    "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-ambos-padres": {
+        "id": "3.1.1",
+        "label": "Viajar\u00e1 con ambos padres",
+        "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
+        "type": "not_required_permission",
+        "has_icon": true,
+        "slug": "viajara-con-ambos-padres",
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con ambos padres",
+                "slug": "viajara-con-ambos-padres",
+                "id": "3.1.1"
+            }
+        ]
+    },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres": [
         {
             "id": "3.1.2.1",
@@ -16004,7 +16148,7 @@ export const DATA_ROUTE = {
             "id": "4.2",
             "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
             "desc": null,
-            "type": null,
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
             "children": [
@@ -16039,6 +16183,18 @@ export const DATA_ROUTE = {
                             "id": "4.2.1"
                         }
                     ]
+                }
+            ],
+            "histories": [
+                {
+                    "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                    "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                    "id": "4"
+                },
+                {
+                    "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "4.2"
                 }
             ]
         }
