@@ -1,17 +1,16 @@
 ---
 import ContactInfo from "@/components/ContactInfo/index.astro";
+import type { NodeRoute } from "@/data/data-route";
 
+interface Props {
+  data: NodeRoute;
+}
 
-const historySteps = [
-    {
-        slug: "the-child-is-traveling-with-one-parent",
-        label: "El menor viaja con uno de los padres",
-    },
-    {
-        slug: "the-child-is-traveling-without-parents",
-        label: "El menor viaja sin sus padres",
-    },
-]
+const { data } = Astro.props;
+
+if('histories' in data === false || !Array.isArray(data.histories)) {
+  throw new Error("Just now, we have a problem with the data. Please, try again later.");
+}
 
 ---
 
@@ -28,7 +27,7 @@ const historySteps = [
       aria-label="Lista de pasos seleccionados"
       class="list-disc font-semibold text-[16px] ml-6"
     >
-      {historySteps.map((item) => <li>{item?.label}</li>)}
+      {data?.histories?.map((item) => <li>{item?.label}</li>)}
     </ul>
 
     <p>Aun así, debes llevar los documentos requeridos para el viaje:</p>

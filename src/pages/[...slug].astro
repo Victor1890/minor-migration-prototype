@@ -34,9 +34,6 @@ const cases = Array.isArray(data) ? data : [];
 
 const navigationContext = getNavigationContext(slug);
 const viewComponent = getViewComponentByType(data);
-
-console.log({ data, viewComponent });
-
 ---
 
 <Layout>
@@ -60,13 +57,13 @@ console.log({ data, viewComponent });
                 >
                   <div class="pb-6 w-full">
                     {viewComponent?.type === "not_required_permission" && (
-                      <NoRequiredPermission />
-                    )}
-                    {viewComponent?.type === "not_found" && (
-                      <NoFoundYourCase />
+                      <NoRequiredPermission data={data} />
                     )}
                     {viewComponent?.type === "document" && (
                       <Documentation data={data} />
+                    )}
+                    {viewComponent?.type === "not_found" && (
+                      <NoFoundYourCase />
                     )}
                     {
                       !viewComponent ? (

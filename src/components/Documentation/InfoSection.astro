@@ -1,6 +1,6 @@
 ---
 import type { NodeRoute } from "@/data/data-route";
-import { Wiki } from "@/components/features/Home/components/Wiki";
+import { Wiki } from "@/components/Wiki";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { AlertCircleIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -22,10 +22,10 @@ const InfoDataAlert = [
   "El proceso también puede realizarse en cualquier Punto GOB del país. Ten en cuenta que los horarios pueden variar según la ubicación. Consulta aquí el horario del Punto GOB que deseas visitar.",
 ];
 
-if (Array.isArray(data)) {
-  throw new Error(
-    "InfoSection component only accepts a single NodeRoute object as 'data' prop."
-  );
+console.log("data: ", data)
+
+if('requirements' in data === false || !Array.isArray(data.requirements)) {
+  throw new Error("Just now, we have a problem with the data. Please, try again later.");
 }
 ---
 
@@ -55,10 +55,10 @@ if (Array.isArray(data)) {
                 return (
                   <div>
                     <p class="font-semibold text-[#1E293B] text-base">
-                      {idx + 1}. <Wiki value={doc.requirement} />
+                      {idx + 1}. <Wiki client:load client:load value={doc.requirement} />
                     </p>
                     <p class="text-sm font-normal text-[#475569]">
-                      <Wiki value={doc.requirement_notes} />
+                      <Wiki client:load client:load value={doc.requirement_notes || ""} />
                     </p>
                   </div>
                 );
@@ -150,7 +150,7 @@ if (Array.isArray(data)) {
               return (
                 <div>
                   <p class="font-semibold text-[#1E293B] text-base">
-                    {idx + 1}. <Wiki value={process.label} />
+                    {idx + 1}. <Wiki client:load value={process.label} />
                   </p>
 
                   <div class="ml-3">
@@ -166,7 +166,7 @@ if (Array.isArray(data)) {
                             <div class="mb-2">
                               <p class="text-sm text-[#1E293B]">
                                 {typeof detail.label === "string" ? (
-                                  <Wiki value={detail.label as string} />
+                                  <Wiki client:load value={detail.label as string} />
                                 ) : (
                                   detail.label
                                 )}
@@ -174,7 +174,7 @@ if (Array.isArray(data)) {
                               <ul class="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
                                 {detail.list.map((item) => (
                                   <li>
-                                    <Wiki value={item} />
+                                    <Wiki client:load value={item} />
                                   </li>
                                 ))}
                               </ul>
@@ -185,7 +185,7 @@ if (Array.isArray(data)) {
                         return (
                           <div class="list-disc list-inside space-y-1 text-sm font-normal text-[#475569]">
                             <li>
-                              <Wiki value={detail} />
+                              <Wiki client:load value={detail} />
                             </li>
                           </div>
                         );
@@ -193,11 +193,11 @@ if (Array.isArray(data)) {
                     ) : process.details ? (
                       typeof process.details === "string" ? (
                         <p class="text-sm font-normal text-[#475569]">
-                          <Wiki value={process.details as string} />
+                          <Wiki client:load value={process.details as string} />
                         </p>
                       ) : (
                         <p class="text-sm font-normal text-[#475569]">
-                          <Wiki value={process.details as string} />
+                          <Wiki client:load value={process.details as string} />
                         </p>
                       )
                     ) : null}

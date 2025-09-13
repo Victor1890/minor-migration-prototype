@@ -4,17 +4,15 @@ import NavigationButtons from "@/components/Navegation.astro";
 import InfoSection from "./InfoSection.astro";
 import type { NodeRoute } from "@/data/data-route";
 
-const historySteps = [
-  { slug: "step1", label: "Información inicial" },
-  { slug: "step2", label: "Detalles del menor" },
-  { slug: "step3", label: "Estatus migratorio" },
-];
-
 interface Props {
   data: NodeRoute;
 }
 
 const { data } = Astro.props;
+
+if('histories' in data === false || !Array.isArray(data.histories)) {
+  throw new Error("Just now, we have a problem with the data. Please, try again later.");
+}
 ---
 
 <div class="fade-in duration-500 animate-in">
@@ -27,7 +25,7 @@ const { data } = Astro.props;
       aria-label="Lista de pasos anteriores previamente completados"
     >
       {
-        historySteps.map((item) => (
+        data.histories.map((item) => (
           <li class="font-semibold text-base">{item.label}</li>
         ))
       }

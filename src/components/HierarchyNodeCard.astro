@@ -1,7 +1,7 @@
 ---
 import { CardFooter, CardHeader } from "@/components/ui/card";
 import { LABEL_ICON_DETAILS } from "@/data/step-icon";
-import { Wiki } from "./features/Home/components/Wiki";
+import { Wiki } from "@/components/Wiki";
 import { cn } from "@/lib/utils";
 import { type NodeRoute } from "@/data/data-route";
 
@@ -45,7 +45,7 @@ const hrefLink = (() => {
     <h3
       class="text-[#1E293B] text-center font-semibold text-[16px] leading-[100%]"
     >
-      <Wiki value={label || item.label} />
+      <Wiki client:load value={label || item.label} />
     </h3>
   </CardHeader>
   {
@@ -59,6 +59,7 @@ const hrefLink = (() => {
       >
         <p class="text-[14px] leading-[150%] font-normal text-[#4B5563] text-center">
           <Wiki
+            client:load
             value={description || item.desc || "Descripción no disponible."}
           />
         </p>

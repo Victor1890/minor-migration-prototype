@@ -13,7 +13,19 @@ export const DATA_ROUTE = {
                     "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con ambos padres",
+                    "slug": "viajara-con-ambos-padres",
+                    "id": "1.1"
+                }
+            ]
         },
         {
             "id": "1.2",
@@ -72,7 +84,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "Uno de los padres autoriza al otro a viajar",
+                            "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                            "id": "1.2.1"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.2",
@@ -123,7 +152,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                            "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                            "id": "1.2.2"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.3",
@@ -138,7 +184,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "No requiere el permiso, pero debe presentar acta de nacimiento en el  punto de Control Migratorio"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                            "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                            "id": "1.2.3"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.4",
@@ -153,7 +216,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres y el otro ha fallecido",
+                            "slug": "viajara-con-uno-de-los-padres-y-el-otro-ha-fallecido",
+                            "id": "1.2.4"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.5",
@@ -204,7 +284,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
+                            "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                            "id": "1.2.5"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.6",
@@ -255,7 +352,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                            "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                            "id": "1.2.6"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.7",
@@ -306,7 +420,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                            "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                            "id": "1.2.7"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.8",
@@ -357,7 +488,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
+                            "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
+                            "id": "1.2.8"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.9",
@@ -404,7 +552,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "1.2"
+                        },
+                        {
+                            "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                            "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                            "id": "1.2.9"
+                        }
+                    ]
                 },
                 {
                     "id": "1.2.10",
@@ -478,13 +643,30 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "1.3"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                            "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                            "id": "1.3.1"
+                        }
+                    ]
                 },
                 {
                     "id": "1.3.2",
                     "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
                     "requirements": [
@@ -493,13 +675,30 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "1.3"
+                        },
+                        {
+                            "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                            "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                            "id": "1.3.2"
+                        }
+                    ]
                 },
                 {
                     "id": "1.3.3",
                     "label": "El menor viajar\u00e1 con ambos tutores legales",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "el-menor-viajara-con-ambos-tutores-legales",
                     "requirements": [
@@ -508,7 +707,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "1.3"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 con ambos tutores legales",
+                            "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                            "id": "1.3.3"
+                        }
+                    ]
                 },
                 {
                     "id": "1.3.4",
@@ -574,7 +790,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la aerol\u00ednea",
+                            "slug": "viajara-con-la-aerolinea",
+                            "id": "1.4.1"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.2",
@@ -625,7 +858,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                            "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                            "id": "1.4.2"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.3",
@@ -684,7 +934,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                            "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                            "id": "1.4.3"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.4",
@@ -735,7 +1002,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                            "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                            "id": "1.4.4"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.5",
@@ -786,7 +1070,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                            "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                            "id": "1.4.5"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.6",
@@ -841,7 +1142,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                            "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                            "id": "1.4.6"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.7",
@@ -896,7 +1214,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                            "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                            "id": "1.4.7"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.8",
@@ -947,7 +1282,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                            "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                            "id": "1.4.8"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.9",
@@ -1002,7 +1354,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano y no posee otra nacionalidad",
+                            "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                            "id": "1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "1.4"
+                        },
+                        {
+                            "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                            "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                            "id": "1.4.9"
+                        }
+                    ]
                 },
                 {
                     "id": "1.4.10",
@@ -1029,7 +1398,19 @@ export const DATA_ROUTE = {
                 "requirement_notes": "No requiere presentar PSM en Control Migratorio"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con ambos padres",
+                "slug": "viajara-con-ambos-padres",
+                "id": "1.1"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres": [
         {
@@ -1081,7 +1462,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "Uno de los padres autoriza al otro a viajar",
+                    "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                    "id": "1.2.1"
+                }
+            ]
         },
         {
             "id": "1.2.2",
@@ -1132,7 +1530,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                    "id": "1.2.2"
+                }
+            ]
         },
         {
             "id": "1.2.3",
@@ -1147,7 +1562,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "No requiere el permiso, pero debe presentar acta de nacimiento en el  punto de Control Migratorio"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                    "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                    "id": "1.2.3"
+                }
+            ]
         },
         {
             "id": "1.2.4",
@@ -1162,7 +1594,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres y el otro ha fallecido",
+                    "slug": "viajara-con-uno-de-los-padres-y-el-otro-ha-fallecido",
+                    "id": "1.2.4"
+                }
+            ]
         },
         {
             "id": "1.2.5",
@@ -1213,7 +1662,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
+                    "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                    "id": "1.2.5"
+                }
+            ]
         },
         {
             "id": "1.2.6",
@@ -1264,7 +1730,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                    "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                    "id": "1.2.6"
+                }
+            ]
         },
         {
             "id": "1.2.7",
@@ -1315,7 +1798,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                    "id": "1.2.7"
+                }
+            ]
         },
         {
             "id": "1.2.8",
@@ -1366,7 +1866,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
+                    "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
+                    "id": "1.2.8"
+                }
+            ]
         },
         {
             "id": "1.2.9",
@@ -1413,7 +1930,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "1.2"
+                },
+                {
+                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                    "id": "1.2.9"
+                }
+            ]
         },
         {
             "id": "1.2.10",
@@ -1474,7 +2008,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "Uno de los padres autoriza al otro a viajar",
+                "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                "id": "1.2.1"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/viajara-con-la-persona-que-posee-la-guarda-legal": {
         "id": "1.2.2",
@@ -1525,7 +2076,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                "id": "1.2.2"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-": {
         "id": "1.2.3",
@@ -1540,7 +2108,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "No requiere el permiso, pero debe presentar acta de nacimiento en el  punto de Control Migratorio"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                "id": "1.2.3"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/viajara-con-uno-de-los-padres-y-el-otro-ha-fallecido": {
         "id": "1.2.4",
@@ -1555,7 +2140,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres y el otro ha fallecido",
+                "slug": "viajara-con-uno-de-los-padres-y-el-otro-ha-fallecido",
+                "id": "1.2.4"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez": {
         "id": "1.2.5",
@@ -1606,7 +2208,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
+                "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                "id": "1.2.5"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje": {
         "id": "1.2.6",
@@ -1657,7 +2276,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                "id": "1.2.6"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes": {
         "id": "1.2.7",
@@ -1708,7 +2344,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                "id": "1.2.7"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra": {
         "id": "1.2.8",
@@ -1759,7 +2412,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
+                "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
+                "id": "1.2.8"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor": {
         "id": "1.2.9",
@@ -1806,7 +2476,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "1.2"
+            },
+            {
+                "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                "id": "1.2.9"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-uno-de-los-padres/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "1.2.10",
@@ -1871,13 +2558,30 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "1.3"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                    "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                    "id": "1.3.1"
+                }
+            ]
         },
         {
             "id": "1.3.2",
             "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
             "desc": null,
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
             "requirements": [
@@ -1886,13 +2590,30 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "1.3"
+                },
+                {
+                    "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                    "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                    "id": "1.3.2"
+                }
+            ]
         },
         {
             "id": "1.3.3",
             "label": "El menor viajar\u00e1 con ambos tutores legales",
             "desc": null,
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-viajara-con-ambos-tutores-legales",
             "requirements": [
@@ -1901,7 +2622,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "1.3"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con ambos tutores legales",
+                    "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                    "id": "1.3.3"
+                }
+            ]
         },
         {
             "id": "1.3.4",
@@ -1966,13 +2704,30 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "1.3"
+            },
+            {
+                "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                "id": "1.3.1"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-su-tutor-legal---tutores-legales/el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el": {
         "id": "1.3.2",
         "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
         "requirements": [
@@ -1981,13 +2736,30 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "1.3"
+            },
+            {
+                "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                "id": "1.3.2"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-su-tutor-legal---tutores-legales/el-menor-viajara-con-ambos-tutores-legales": {
         "id": "1.3.3",
         "label": "El menor viajar\u00e1 con ambos tutores legales",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "el-menor-viajara-con-ambos-tutores-legales",
         "requirements": [
@@ -1996,7 +2768,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "No requiere presentar PSM en Control Migratorio"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "1.3"
+            },
+            {
+                "label": "El menor viajar\u00e1 con ambos tutores legales",
+                "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                "id": "1.3.3"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-su-tutor-legal---tutores-legales/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "1.3.4",
@@ -2053,7 +2842,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con la aerol\u00ednea",
+                    "slug": "viajara-con-la-aerolinea",
+                    "id": "1.4.1"
+                }
+            ]
         },
         {
             "id": "1.4.2",
@@ -2104,7 +2910,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                    "id": "1.4.2"
+                }
+            ]
         },
         {
             "id": "1.4.3",
@@ -2163,7 +2986,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                    "id": "1.4.3"
+                }
+            ]
         },
         {
             "id": "1.4.4",
@@ -2214,7 +3054,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                    "id": "1.4.4"
+                }
+            ]
         },
         {
             "id": "1.4.5",
@@ -2265,7 +3122,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                    "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                    "id": "1.4.5"
+                }
+            ]
         },
         {
             "id": "1.4.6",
@@ -2320,7 +3194,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                    "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                    "id": "1.4.6"
+                }
+            ]
         },
         {
             "id": "1.4.7",
@@ -2375,7 +3266,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                    "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                    "id": "1.4.7"
+                }
+            ]
         },
         {
             "id": "1.4.8",
@@ -2426,7 +3334,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                    "id": "1.4.8"
+                }
+            ]
         },
         {
             "id": "1.4.9",
@@ -2481,7 +3406,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano y no posee otra nacionalidad",
+                    "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                    "id": "1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "1.4"
+                },
+                {
+                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                    "id": "1.4.9"
+                }
+            ]
         },
         {
             "id": "1.4.10",
@@ -2538,7 +3480,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con la aerol\u00ednea",
+                "slug": "viajara-con-la-aerolinea",
+                "id": "1.4.1"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/viajara-con-el-colegio-centro-educativo-o-institucion-cultural": {
         "id": "1.4.2",
@@ -2589,7 +3548,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                "id": "1.4.2"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/viajara-con-academia-seleccion-o-liga-deportiva": {
         "id": "1.4.3",
@@ -2648,7 +3624,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                "id": "1.4.3"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/viajara-con-la-persona-que-posee-la-guarda-legal": {
         "id": "1.4.4",
@@ -2699,7 +3692,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                "id": "1.4.4"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-": {
         "id": "1.4.5",
@@ -2750,7 +3760,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                "id": "1.4.5"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente": {
         "id": "1.4.6",
@@ -2805,7 +3832,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                "id": "1.4.6"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/viajara-con-una-persona-autorizada-por-el-tutor-legal-": {
         "id": "1.4.7",
@@ -2860,7 +3904,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                "id": "1.4.7"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres": {
         "id": "1.4.8",
@@ -2911,7 +3972,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                "id": "1.4.8"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor": {
         "id": "1.4.9",
@@ -2966,7 +4044,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano y no posee otra nacionalidad",
+                "slug": "el-menor-es-dominicano-y-no-posee-otra-nacionalidad",
+                "id": "1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "1.4"
+            },
+            {
+                "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                "id": "1.4.9"
+            }
+        ]
     },
     "el-menor-es-dominicano-y-no-posee-otra-nacionalidad/viajara-con-un-tercero/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "1.4.10",
@@ -2990,7 +4085,7 @@ export const DATA_ROUTE = {
                     "id": "2.1.1",
                     "label": "Viajar\u00e1 con ambos padres",
                     "desc": null,
-                    "type": "not_required_permission",
+                    "type": null,
                     "has_icon": true,
                     "slug": "viajara-con-ambos-padres",
                     "children": []
@@ -3052,7 +4147,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "Uno de los padres autoriza al otro a viajar",
+                                    "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                                    "id": "2.1.2.1"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.2",
@@ -3103,25 +4220,91 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                                    "id": "2.1.2.2"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.3",
                             "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
                             "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien le acompa\u00f1a a viajar",
-                            "type": "document",
+                            "type": "not_required_permission",
                             "has_icon": false,
                             "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                                    "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                                    "id": "2.1.2.3"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.4",
                             "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
                             "desc": "Cuando el menor viaja acompa\u00f1ado por su \u00fanico padre o madre que a\u00fan est\u00e1 vivo",
-                            "type": "document",
+                            "type": "not_required_permission",
                             "has_icon": false,
                             "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
+                                    "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                                    "id": "2.1.2.4"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.5",
@@ -3172,7 +4355,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "El menor fue adoptado por personas extranjeras y viajar\u00e1 por primera vez",
+                                    "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viajara-por-primera-vez",
+                                    "id": "2.1.2.5"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.6",
@@ -3223,7 +4428,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                                    "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                                    "id": "2.1.2.6"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.7",
@@ -3274,7 +4501,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                                    "id": "2.1.2.7"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.8",
@@ -3325,7 +4574,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 a una actividad cultural, escolar o deportiva",
+                                    "slug": "viajara-a-una-actividad-cultural-escolar-o-deportiva",
+                                    "id": "2.1.2.8"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.9",
@@ -3372,7 +4643,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "2.1.2"
+                                },
+                                {
+                                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                                    "id": "2.1.2.9"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.2.10",
@@ -3446,13 +4739,35 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                                    "id": "2.1.3"
+                                },
+                                {
+                                    "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                                    "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                                    "id": "2.1.3.1"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.3.2",
                             "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
                             "desc": null,
-                            "type": "document",
+                            "type": "not_required_permission",
                             "has_icon": false,
                             "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
                             "requirements": [
@@ -3461,13 +4776,35 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                                    "id": "2.1.3"
+                                },
+                                {
+                                    "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                                    "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                                    "id": "2.1.3.2"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.3.3",
                             "label": "El menor viajar\u00e1 con ambos tutores legales",
                             "desc": null,
-                            "type": "document",
+                            "type": "not_required_permission",
                             "has_icon": false,
                             "slug": "el-menor-viajara-con-ambos-tutores-legales",
                             "requirements": [
@@ -3476,7 +4813,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                                    "id": "2.1.3"
+                                },
+                                {
+                                    "label": "El menor viajar\u00e1 con ambos tutores legales",
+                                    "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                                    "id": "2.1.3.3"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.3.4",
@@ -3542,7 +4901,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con la aerol\u00ednea",
+                                    "slug": "viajara-con-la-aerolinea",
+                                    "id": "2.1.4.1"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.2",
@@ -3593,7 +4974,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                                    "id": "2.1.4.2"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.3",
@@ -3652,7 +5055,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                                    "id": "2.1.4.3"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.4",
@@ -3703,7 +5128,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                                    "id": "2.1.4.4"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.5",
@@ -3754,7 +5201,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                                    "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                                    "id": "2.1.4.5"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.6",
@@ -3809,7 +5278,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                                    "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                                    "id": "2.1.4.6"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.7",
@@ -3864,7 +5355,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                                    "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                                    "id": "2.1.4.7"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.8",
@@ -3915,7 +5428,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                                    "id": "2.1.4.8"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.9",
@@ -3970,7 +5505,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                                    "id": "2"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "2.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "2.1.4"
+                                },
+                                {
+                                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                                    "id": "2.1.4.9"
+                                }
+                            ]
                         },
                         {
                             "id": "2.1.4.10",
@@ -3989,10 +5546,37 @@ export const DATA_ROUTE = {
             "id": "2.2",
             "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
             "desc": null,
-            "type": "not_required_permission",
+            "type": null,
             "has_icon": false,
             "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
-            "children": []
+            "children": [
+                {
+                    "id": "2.2.1",
+                    "label": "No se requiere permiso",
+                    "desc": null,
+                    "type": "not_required_permission",
+                    "has_icon": false,
+                    "slug": "no-se-requiere-permiso",
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.2"
+                        },
+                        {
+                            "label": "No se requiere permiso",
+                            "slug": "no-se-requiere-permiso",
+                            "id": "2.2.1"
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais": [
@@ -4000,7 +5584,7 @@ export const DATA_ROUTE = {
             "id": "2.1.1",
             "label": "Viajar\u00e1 con ambos padres",
             "desc": null,
-            "type": "not_required_permission",
+            "type": null,
             "has_icon": true,
             "slug": "viajara-con-ambos-padres",
             "children": []
@@ -4062,7 +5646,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "Uno de los padres autoriza al otro a viajar",
+                            "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                            "id": "2.1.2.1"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.2",
@@ -4113,25 +5719,91 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                            "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                            "id": "2.1.2.2"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.3",
                     "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
                     "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien le acompa\u00f1a a viajar",
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                            "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                            "id": "2.1.2.3"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.4",
                     "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
                     "desc": "Cuando el menor viaja acompa\u00f1ado por su \u00fanico padre o madre que a\u00fan est\u00e1 vivo",
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
+                            "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                            "id": "2.1.2.4"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.5",
@@ -4182,7 +5854,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "El menor fue adoptado por personas extranjeras y viajar\u00e1 por primera vez",
+                            "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viajara-por-primera-vez",
+                            "id": "2.1.2.5"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.6",
@@ -4233,7 +5927,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                            "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                            "id": "2.1.2.6"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.7",
@@ -4284,7 +6000,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                            "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                            "id": "2.1.2.7"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.8",
@@ -4335,7 +6073,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 a una actividad cultural, escolar o deportiva",
+                            "slug": "viajara-a-una-actividad-cultural-escolar-o-deportiva",
+                            "id": "2.1.2.8"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.9",
@@ -4382,7 +6142,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "2.1.2"
+                        },
+                        {
+                            "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                            "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                            "id": "2.1.2.9"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.2.10",
@@ -4456,13 +6238,35 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "2.1.3"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                            "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                            "id": "2.1.3.1"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.3.2",
                     "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
                     "requirements": [
@@ -4471,13 +6275,35 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "2.1.3"
+                        },
+                        {
+                            "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                            "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                            "id": "2.1.3.2"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.3.3",
                     "label": "El menor viajar\u00e1 con ambos tutores legales",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "el-menor-viajara-con-ambos-tutores-legales",
                     "requirements": [
@@ -4486,7 +6312,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "2.1.3"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 con ambos tutores legales",
+                            "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                            "id": "2.1.3.3"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.3.4",
@@ -4552,7 +6400,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la aerol\u00ednea",
+                            "slug": "viajara-con-la-aerolinea",
+                            "id": "2.1.4.1"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.2",
@@ -4603,7 +6473,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                            "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                            "id": "2.1.4.2"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.3",
@@ -4662,7 +6554,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                            "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                            "id": "2.1.4.3"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.4",
@@ -4713,7 +6627,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                            "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                            "id": "2.1.4.4"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.5",
@@ -4764,7 +6700,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                            "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                            "id": "2.1.4.5"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.6",
@@ -4819,7 +6777,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                            "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                            "id": "2.1.4.6"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.7",
@@ -4874,7 +6854,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                            "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                            "id": "2.1.4.7"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.8",
@@ -4925,7 +6927,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                            "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                            "id": "2.1.4.8"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.9",
@@ -4980,7 +7004,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                            "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                            "id": "2"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "2.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "2.1.4"
+                        },
+                        {
+                            "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                            "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                            "id": "2.1.4.9"
+                        }
+                    ]
                 },
                 {
                     "id": "2.1.4.10",
@@ -4994,15 +7040,6 @@ export const DATA_ROUTE = {
             ]
         }
     ],
-    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-ambos-padres": {
-        "id": "2.1.1",
-        "label": "Viajar\u00e1 con ambos padres",
-        "desc": null,
-        "type": "not_required_permission",
-        "has_icon": true,
-        "slug": "viajara-con-ambos-padres",
-        "children": []
-    },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres": [
         {
             "id": "2.1.2.1",
@@ -5053,7 +7090,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "Uno de los padres autoriza al otro a viajar",
+                    "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                    "id": "2.1.2.1"
+                }
+            ]
         },
         {
             "id": "2.1.2.2",
@@ -5104,25 +7163,91 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                    "id": "2.1.2.2"
+                }
+            ]
         },
         {
             "id": "2.1.2.3",
             "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
             "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien le acompa\u00f1a a viajar",
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                    "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                    "id": "2.1.2.3"
+                }
+            ]
         },
         {
             "id": "2.1.2.4",
             "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
             "desc": "Cuando el menor viaja acompa\u00f1ado por su \u00fanico padre o madre que a\u00fan est\u00e1 vivo",
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
+                    "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                    "id": "2.1.2.4"
+                }
+            ]
         },
         {
             "id": "2.1.2.5",
@@ -5173,7 +7298,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "El menor fue adoptado por personas extranjeras y viajar\u00e1 por primera vez",
+                    "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viajara-por-primera-vez",
+                    "id": "2.1.2.5"
+                }
+            ]
         },
         {
             "id": "2.1.2.6",
@@ -5224,7 +7371,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                    "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                    "id": "2.1.2.6"
+                }
+            ]
         },
         {
             "id": "2.1.2.7",
@@ -5275,7 +7444,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                    "id": "2.1.2.7"
+                }
+            ]
         },
         {
             "id": "2.1.2.8",
@@ -5326,7 +7517,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 a una actividad cultural, escolar o deportiva",
+                    "slug": "viajara-a-una-actividad-cultural-escolar-o-deportiva",
+                    "id": "2.1.2.8"
+                }
+            ]
         },
         {
             "id": "2.1.2.9",
@@ -5373,7 +7586,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "2.1.2"
+                },
+                {
+                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                    "id": "2.1.2.9"
+                }
+            ]
         },
         {
             "id": "2.1.2.10",
@@ -5434,7 +7669,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "Uno de los padres autoriza al otro a viajar",
+                "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                "id": "2.1.2.1"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/viajara-con-la-persona-que-posee-la-guarda-legal": {
         "id": "2.1.2.2",
@@ -5485,25 +7742,91 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                "id": "2.1.2.2"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-": {
         "id": "2.1.2.3",
         "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
         "desc": "Cuando el menor ha sido declarado solo por la madre y es ella quien le acompa\u00f1a a viajar",
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                "id": "2.1.2.3"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido": {
         "id": "2.1.2.4",
         "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
         "desc": "Cuando el menor viaja acompa\u00f1ado por su \u00fanico padre o madre que a\u00fan est\u00e1 vivo",
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
+                "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                "id": "2.1.2.4"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/el-menor-fue-adoptado-por-personas-extranjeras-y-viajara-por-primera-vez": {
         "id": "2.1.2.5",
@@ -5554,7 +7877,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "El menor fue adoptado por personas extranjeras y viajar\u00e1 por primera vez",
+                "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viajara-por-primera-vez",
+                "id": "2.1.2.5"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje": {
         "id": "2.1.2.6",
@@ -5605,7 +7950,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                "id": "2.1.2.6"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes": {
         "id": "2.1.2.7",
@@ -5656,7 +8023,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                "id": "2.1.2.7"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/viajara-a-una-actividad-cultural-escolar-o-deportiva": {
         "id": "2.1.2.8",
@@ -5707,7 +8096,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "Viajar\u00e1 a una actividad cultural, escolar o deportiva",
+                "slug": "viajara-a-una-actividad-cultural-escolar-o-deportiva",
+                "id": "2.1.2.8"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor": {
         "id": "2.1.2.9",
@@ -5754,7 +8165,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "2.1.2"
+            },
+            {
+                "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                "id": "2.1.2.9"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "2.1.2.10",
@@ -5819,13 +8252,35 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "2.1.3"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                    "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                    "id": "2.1.3.1"
+                }
+            ]
         },
         {
             "id": "2.1.3.2",
             "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
             "desc": null,
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
             "requirements": [
@@ -5834,13 +8289,35 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "2.1.3"
+                },
+                {
+                    "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                    "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                    "id": "2.1.3.2"
+                }
+            ]
         },
         {
             "id": "2.1.3.3",
             "label": "El menor viajar\u00e1 con ambos tutores legales",
             "desc": null,
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-viajara-con-ambos-tutores-legales",
             "requirements": [
@@ -5849,7 +8326,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "2.1.3"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con ambos tutores legales",
+                    "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                    "id": "2.1.3.3"
+                }
+            ]
         },
         {
             "id": "2.1.3.4",
@@ -5914,13 +8413,35 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "2.1.3"
+            },
+            {
+                "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                "id": "2.1.3.1"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-su-tutor-legal---tutores-legales/el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el": {
         "id": "2.1.3.2",
         "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
         "requirements": [
@@ -5929,13 +8450,35 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "2.1.3"
+            },
+            {
+                "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                "id": "2.1.3.2"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-su-tutor-legal---tutores-legales/el-menor-viajara-con-ambos-tutores-legales": {
         "id": "2.1.3.3",
         "label": "El menor viajar\u00e1 con ambos tutores legales",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "el-menor-viajara-con-ambos-tutores-legales",
         "requirements": [
@@ -5944,7 +8487,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "No requiere presentar PSM en Control Migratorio"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "2.1.3"
+            },
+            {
+                "label": "El menor viajar\u00e1 con ambos tutores legales",
+                "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                "id": "2.1.3.3"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-su-tutor-legal---tutores-legales/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "2.1.3.4",
@@ -6001,7 +8566,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con la aerol\u00ednea",
+                    "slug": "viajara-con-la-aerolinea",
+                    "id": "2.1.4.1"
+                }
+            ]
         },
         {
             "id": "2.1.4.2",
@@ -6052,7 +8639,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                    "id": "2.1.4.2"
+                }
+            ]
         },
         {
             "id": "2.1.4.3",
@@ -6111,7 +8720,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                    "id": "2.1.4.3"
+                }
+            ]
         },
         {
             "id": "2.1.4.4",
@@ -6162,7 +8793,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                    "id": "2.1.4.4"
+                }
+            ]
         },
         {
             "id": "2.1.4.5",
@@ -6213,7 +8866,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                    "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                    "id": "2.1.4.5"
+                }
+            ]
         },
         {
             "id": "2.1.4.6",
@@ -6268,7 +8943,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                    "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                    "id": "2.1.4.6"
+                }
+            ]
         },
         {
             "id": "2.1.4.7",
@@ -6323,7 +9020,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                    "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                    "id": "2.1.4.7"
+                }
+            ]
         },
         {
             "id": "2.1.4.8",
@@ -6374,7 +9093,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                    "id": "2.1.4.8"
+                }
+            ]
         },
         {
             "id": "2.1.4.9",
@@ -6429,7 +9170,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "2.1.4"
+                },
+                {
+                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                    "id": "2.1.4.9"
+                }
+            ]
         },
         {
             "id": "2.1.4.10",
@@ -6486,7 +9249,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con la aerol\u00ednea",
+                "slug": "viajara-con-la-aerolinea",
+                "id": "2.1.4.1"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-el-colegio-centro-educativo-o-institucion-cultural": {
         "id": "2.1.4.2",
@@ -6537,7 +9322,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                "id": "2.1.4.2"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-academia-seleccion-o-liga-deportiva": {
         "id": "2.1.4.3",
@@ -6596,7 +9403,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                "id": "2.1.4.3"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-la-persona-que-posee-la-guarda-legal": {
         "id": "2.1.4.4",
@@ -6647,7 +9476,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                "id": "2.1.4.4"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-": {
         "id": "2.1.4.5",
@@ -6698,7 +9549,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                "id": "2.1.4.5"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente": {
         "id": "2.1.4.6",
@@ -6753,7 +9626,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                "id": "2.1.4.6"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-una-persona-autorizada-por-el-tutor-legal-": {
         "id": "2.1.4.7",
@@ -6808,7 +9703,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                "id": "2.1.4.7"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres": {
         "id": "2.1.4.8",
@@ -6859,7 +9776,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                "id": "2.1.4.8"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor": {
         "id": "2.1.4.9",
@@ -6914,7 +9853,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "2.1.4"
+            },
+            {
+                "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                "id": "2.1.4.9"
+            }
+        ]
     },
     "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "2.1.4.10",
@@ -6925,14 +9886,59 @@ export const DATA_ROUTE = {
         "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
         "children": []
     },
-    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": {
-        "id": "2.2",
-        "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": [
+        {
+            "id": "2.2.1",
+            "label": "No se requiere permiso",
+            "desc": null,
+            "type": "not_required_permission",
+            "has_icon": false,
+            "slug": "no-se-requiere-permiso",
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                    "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                    "id": "2"
+                },
+                {
+                    "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "2.2"
+                },
+                {
+                    "label": "No se requiere permiso",
+                    "slug": "no-se-requiere-permiso",
+                    "id": "2.2.1"
+                }
+            ]
+        }
+    ],
+    "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais/no-se-requiere-permiso": {
+        "id": "2.2.1",
+        "label": "No se requiere permiso",
         "desc": null,
         "type": "not_required_permission",
         "has_icon": false,
-        "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
-        "children": []
+        "slug": "no-se-requiere-permiso",
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es dominicano pero tiene doble nacionalidad y/o reside en el extranjero\u00a0",
+                "slug": "el-menor-es-dominicano-pero-tiene-doble-nacionalidad-y-o-reside-en-el-extranjero",
+                "id": "2"
+            },
+            {
+                "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "2.2"
+            },
+            {
+                "label": "No se requiere permiso",
+                "slug": "no-se-requiere-permiso",
+                "id": "2.2.1"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana": [
         {
@@ -6947,7 +9953,7 @@ export const DATA_ROUTE = {
                     "id": "3.1.1",
                     "label": "Viajar\u00e1 con ambos padres",
                     "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
-                    "type": "not_required_permission",
+                    "type": null,
                     "has_icon": true,
                     "slug": "viajara-con-ambos-padres",
                     "children": []
@@ -7009,7 +10015,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "Uno de los padres autoriza al otro a viajar",
+                                    "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                                    "id": "3.1.2.1"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.2",
@@ -7060,7 +10088,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                                    "id": "3.1.2.2"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.3",
@@ -7069,16 +10119,60 @@ export const DATA_ROUTE = {
                             "type": "document",
                             "has_icon": false,
                             "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                                    "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                                    "id": "3.1.2.3"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.4",
                             "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
                             "desc": "Cuando el padre o madre que reside en el extranjero autoriza al otro padre o madre que residen en la Rep\u00fablica Dominicana a viajar con el menor",
-                            "type": "document",
+                            "type": "not_required_permission",
                             "has_icon": false,
                             "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
+                                    "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                                    "id": "3.1.2.4"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.5",
@@ -7129,7 +10223,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
+                                    "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                                    "id": "3.1.2.5"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.6",
@@ -7180,7 +10296,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                                    "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                                    "id": "3.1.2.6"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.7",
@@ -7231,7 +10369,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                                    "id": "3.1.2.7"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.8",
@@ -7282,7 +10442,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
+                                    "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
+                                    "id": "3.1.2.8"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.9",
@@ -7329,7 +10511,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con uno de los padres",
+                                    "slug": "viajara-con-uno-de-los-padres",
+                                    "id": "3.1.2"
+                                },
+                                {
+                                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                                    "id": "3.1.2.9"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.2.10",
@@ -7403,13 +10607,35 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                                    "id": "3.1.3"
+                                },
+                                {
+                                    "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                                    "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                                    "id": "3.1.3.1"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.3.2",
                             "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
                             "desc": null,
-                            "type": "document",
+                            "type": "not_required_permission",
                             "has_icon": false,
                             "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
                             "requirements": [
@@ -7418,13 +10644,35 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                                    "id": "3.1.3"
+                                },
+                                {
+                                    "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                                    "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                                    "id": "3.1.3.2"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.3.3",
                             "label": "El menor viajar\u00e1 con ambos tutores legales",
                             "desc": null,
-                            "type": "document",
+                            "type": "not_required_permission",
                             "has_icon": false,
                             "slug": "el-menor-viajara-con-ambos-tutores-legales",
                             "requirements": [
@@ -7433,7 +10681,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                                    "id": "3.1.3"
+                                },
+                                {
+                                    "label": "El menor viajar\u00e1 con ambos tutores legales",
+                                    "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                                    "id": "3.1.3.3"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.3.4",
@@ -7499,7 +10769,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con la aerol\u00ednea",
+                                    "slug": "viajara-con-la-aerolinea",
+                                    "id": "3.1.4.1"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.2",
@@ -7550,7 +10842,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                                    "id": "3.1.4.2"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.3",
@@ -7609,7 +10923,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                                    "id": "3.1.4.3"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.4",
@@ -7660,7 +10996,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                                    "id": "3.1.4.4"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.5",
@@ -7711,7 +11069,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                                    "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                                    "id": "3.1.4.5"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.6",
@@ -7766,7 +11146,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                                    "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                                    "id": "3.1.4.6"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.7",
@@ -7821,7 +11223,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                                    "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                                    "id": "3.1.4.7"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.8",
@@ -7872,7 +11296,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": null
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                                    "id": "3.1.4.8"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.9",
@@ -7927,7 +11373,29 @@ export const DATA_ROUTE = {
                                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                                 }
                             ],
-                            "children": []
+                            "children": [],
+                            "histories": [
+                                {
+                                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                                    "id": "3"
+                                },
+                                {
+                                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                                    "id": "3.1"
+                                },
+                                {
+                                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                                    "slug": "viajara-con-un-tercero",
+                                    "id": "3.1.4"
+                                },
+                                {
+                                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                                    "id": "3.1.4.9"
+                                }
+                            ]
                         },
                         {
                             "id": "3.1.4.10",
@@ -7946,7 +11414,7 @@ export const DATA_ROUTE = {
             "id": "3.2",
             "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
             "desc": "Menor es extranjero con residencia en la Rep\u00fablica Dominicana y ha estado menos de seis meses no requiere el Permiso de Salida del Menor",
-            "type": "not_required_permission",
+            "type": null,
             "has_icon": false,
             "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
             "children": [
@@ -7954,10 +11422,27 @@ export const DATA_ROUTE = {
                     "id": "3.2.1",
                     "label": "No se requiere permiso.",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "no-se-requiere-permiso.",
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.2"
+                        },
+                        {
+                            "label": "No se requiere permiso.",
+                            "slug": "no-se-requiere-permiso.",
+                            "id": "3.2.1"
+                        }
+                    ]
                 }
             ]
         }
@@ -7967,7 +11452,7 @@ export const DATA_ROUTE = {
             "id": "3.1.1",
             "label": "Viajar\u00e1 con ambos padres",
             "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
-            "type": "not_required_permission",
+            "type": null,
             "has_icon": true,
             "slug": "viajara-con-ambos-padres",
             "children": []
@@ -8029,7 +11514,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "Uno de los padres autoriza al otro a viajar",
+                            "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                            "id": "3.1.2.1"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.2",
@@ -8080,7 +11587,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                            "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                            "id": "3.1.2.2"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.3",
@@ -8089,16 +11618,60 @@ export const DATA_ROUTE = {
                     "type": "document",
                     "has_icon": false,
                     "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                            "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                            "id": "3.1.2.3"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.4",
                     "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
                     "desc": "Cuando el padre o madre que reside en el extranjero autoriza al otro padre o madre que residen en la Rep\u00fablica Dominicana a viajar con el menor",
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
+                            "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                            "id": "3.1.2.4"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.5",
@@ -8149,7 +11722,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
+                            "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                            "id": "3.1.2.5"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.6",
@@ -8200,7 +11795,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                            "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                            "id": "3.1.2.6"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.7",
@@ -8251,7 +11868,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                            "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                            "id": "3.1.2.7"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.8",
@@ -8302,7 +11941,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
+                            "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
+                            "id": "3.1.2.8"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.9",
@@ -8349,7 +12010,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con uno de los padres",
+                            "slug": "viajara-con-uno-de-los-padres",
+                            "id": "3.1.2"
+                        },
+                        {
+                            "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                            "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                            "id": "3.1.2.9"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.2.10",
@@ -8423,13 +12106,35 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "3.1.3"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                            "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                            "id": "3.1.3.1"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.3.2",
                     "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
                     "requirements": [
@@ -8438,13 +12143,35 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "3.1.3"
+                        },
+                        {
+                            "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                            "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                            "id": "3.1.3.2"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.3.3",
                     "label": "El menor viajar\u00e1 con ambos tutores legales",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "el-menor-viajara-con-ambos-tutores-legales",
                     "requirements": [
@@ -8453,7 +12180,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                            "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                            "id": "3.1.3"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 con ambos tutores legales",
+                            "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                            "id": "3.1.3.3"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.3.4",
@@ -8519,7 +12268,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la aerol\u00ednea",
+                            "slug": "viajara-con-la-aerolinea",
+                            "id": "3.1.4.1"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.2",
@@ -8570,7 +12341,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                            "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                            "id": "3.1.4.2"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.3",
@@ -8629,7 +12422,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                            "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                            "id": "3.1.4.3"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.4",
@@ -8680,7 +12495,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                            "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                            "id": "3.1.4.4"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.5",
@@ -8731,7 +12568,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                            "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                            "id": "3.1.4.5"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.6",
@@ -8786,7 +12645,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                            "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                            "id": "3.1.4.6"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.7",
@@ -8841,7 +12722,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                            "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                            "id": "3.1.4.7"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.8",
@@ -8892,7 +12795,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                            "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                            "id": "3.1.4.8"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.9",
@@ -8947,7 +12872,29 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                            "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                            "id": "3"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "3.1"
+                        },
+                        {
+                            "label": "Viajar\u00e1 con un tercero\u00a0",
+                            "slug": "viajara-con-un-tercero",
+                            "id": "3.1.4"
+                        },
+                        {
+                            "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                            "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                            "id": "3.1.4.9"
+                        }
+                    ]
                 },
                 {
                     "id": "3.1.4.10",
@@ -8961,15 +12908,6 @@ export const DATA_ROUTE = {
             ]
         }
     ],
-    "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-ambos-padres": {
-        "id": "3.1.1",
-        "label": "Viajar\u00e1 con ambos padres",
-        "desc": "Cuando uno de los padres autoriza al otro a viajar con el menor",
-        "type": "not_required_permission",
-        "has_icon": true,
-        "slug": "viajara-con-ambos-padres",
-        "children": []
-    },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres": [
         {
             "id": "3.1.2.1",
@@ -9020,7 +12958,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "Uno de los padres autoriza al otro a viajar",
+                    "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                    "id": "3.1.2.1"
+                }
+            ]
         },
         {
             "id": "3.1.2.2",
@@ -9071,7 +13031,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                    "id": "3.1.2.2"
+                }
+            ]
         },
         {
             "id": "3.1.2.3",
@@ -9080,16 +13062,60 @@ export const DATA_ROUTE = {
             "type": "document",
             "has_icon": false,
             "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                    "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                    "id": "3.1.2.3"
+                }
+            ]
         },
         {
             "id": "3.1.2.4",
             "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
             "desc": "Cuando el padre o madre que reside en el extranjero autoriza al otro padre o madre que residen en la Rep\u00fablica Dominicana a viajar con el menor",
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
+                    "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                    "id": "3.1.2.4"
+                }
+            ]
         },
         {
             "id": "3.1.2.5",
@@ -9140,7 +13166,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
+                    "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                    "id": "3.1.2.5"
+                }
+            ]
         },
         {
             "id": "3.1.2.6",
@@ -9191,7 +13239,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                    "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                    "id": "3.1.2.6"
+                }
+            ]
         },
         {
             "id": "3.1.2.7",
@@ -9242,7 +13312,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                    "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                    "id": "3.1.2.7"
+                }
+            ]
         },
         {
             "id": "3.1.2.8",
@@ -9293,7 +13385,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
+                    "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
+                    "id": "3.1.2.8"
+                }
+            ]
         },
         {
             "id": "3.1.2.9",
@@ -9340,7 +13454,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con uno de los padres",
+                    "slug": "viajara-con-uno-de-los-padres",
+                    "id": "3.1.2"
+                },
+                {
+                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                    "id": "3.1.2.9"
+                }
+            ]
         },
         {
             "id": "3.1.2.10",
@@ -9401,7 +13537,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "Uno de los padres autoriza al otro a viajar",
+                "slug": "uno-de-los-padres-autoriza-al-otro-a-viajar",
+                "id": "3.1.2.1"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/viajara-con-la-persona-que-posee-la-guarda-legal": {
         "id": "3.1.2.2",
@@ -9452,7 +13610,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                "id": "3.1.2.2"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-": {
         "id": "3.1.2.3",
@@ -9461,16 +13641,60 @@ export const DATA_ROUTE = {
         "type": "document",
         "has_icon": false,
         "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "El menor tiene solo apellido materno y viajar\u00e1 con su madre ",
+                "slug": "el-menor-tiene-solo-apellido-materno-y-viajara-con-su-madre-",
+                "id": "3.1.2.3"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido": {
         "id": "3.1.2.4",
         "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
         "desc": "Cuando el padre o madre que reside en el extranjero autoriza al otro padre o madre que residen en la Rep\u00fablica Dominicana a viajar con el menor",
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de sus padres y el otro ha fallecido",
+                "slug": "viajara-con-uno-de-sus-padres-y-el-otro-ha-fallecido",
+                "id": "3.1.2.4"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez": {
         "id": "3.1.2.5",
@@ -9521,7 +13745,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "El menor fue adoptado por personas extranjeras y viaja por primera vez",
+                "slug": "el-menor-fue-adoptado-por-personas-extranjeras-y-viaja-por-primera-vez",
+                "id": "3.1.2.5"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje": {
         "id": "3.1.2.6",
@@ -9572,7 +13818,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "Uno de los padres vive en el extranjero y autoriza el viaje",
+                "slug": "uno-de-los-padres-vive-en-el-extranjero-y-autoriza-el-viaje",
+                "id": "3.1.2.6"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes": {
         "id": "3.1.2.7",
@@ -9623,7 +13891,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "Tiene autorizaci\u00f3n de viaje del menor\u00a0del tribunal Ni\u00f1os, Ni\u00f1as y Adolescentes",
+                "slug": "tiene-autorizacion-de-viaje-del-menordel-tribunal-ninos-ninas-y-adolescentes",
+                "id": "3.1.2.7"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra": {
         "id": "3.1.2.8",
@@ -9674,7 +13964,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "Viajar\u00e1 a una actividad cultural, escolar, religiosa, deportiva u otra",
+                "slug": "viajara-a-una-actividad-cultural-escolar-religiosa-deportiva-u-otra",
+                "id": "3.1.2.8"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor": {
         "id": "3.1.2.9",
@@ -9721,7 +14033,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con uno de los padres",
+                "slug": "viajara-con-uno-de-los-padres",
+                "id": "3.1.2"
+            },
+            {
+                "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                "id": "3.1.2.9"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-uno-de-los-padres/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "3.1.2.10",
@@ -9786,13 +14120,35 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "3.1.3"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                    "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                    "id": "3.1.3.1"
+                }
+            ]
         },
         {
             "id": "3.1.3.2",
             "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
             "desc": null,
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
             "requirements": [
@@ -9801,13 +14157,35 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "3.1.3"
+                },
+                {
+                    "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                    "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                    "id": "3.1.3.2"
+                }
+            ]
         },
         {
             "id": "3.1.3.3",
             "label": "El menor viajar\u00e1 con ambos tutores legales",
             "desc": null,
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "el-menor-viajara-con-ambos-tutores-legales",
             "requirements": [
@@ -9816,7 +14194,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                    "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                    "id": "3.1.3"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con ambos tutores legales",
+                    "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                    "id": "3.1.3.3"
+                }
+            ]
         },
         {
             "id": "3.1.3.4",
@@ -9881,13 +14281,35 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "3.1.3"
+            },
+            {
+                "label": "El menor viajar\u00e1 con el tutor legal y el otro tutor autoriza",
+                "slug": "el-menor-viajara-con-el-tutor-legal-y-el-otro-tutor-autoriza",
+                "id": "3.1.3.1"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-su-tutor-legal---tutores-legales/el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el": {
         "id": "3.1.3.2",
         "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
         "requirements": [
@@ -9896,13 +14318,35 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "3.1.3"
+            },
+            {
+                "label": "El menor tiene un solo tutor legal y viajar\u00e1 con \u00e9l",
+                "slug": "el-menor-tiene-un-solo-tutor-legal-y-viajara-con-el",
+                "id": "3.1.3.2"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-su-tutor-legal---tutores-legales/el-menor-viajara-con-ambos-tutores-legales": {
         "id": "3.1.3.3",
         "label": "El menor viajar\u00e1 con ambos tutores legales",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "el-menor-viajara-con-ambos-tutores-legales",
         "requirements": [
@@ -9911,7 +14355,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "No requiere presentar PSM en Control Migratorio"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con su tutor legal / tutores legales",
+                "slug": "viajara-con-su-tutor-legal---tutores-legales",
+                "id": "3.1.3"
+            },
+            {
+                "label": "El menor viajar\u00e1 con ambos tutores legales",
+                "slug": "el-menor-viajara-con-ambos-tutores-legales",
+                "id": "3.1.3.3"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-su-tutor-legal---tutores-legales/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "3.1.3.4",
@@ -9968,7 +14434,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con la aerol\u00ednea",
+                    "slug": "viajara-con-la-aerolinea",
+                    "id": "3.1.4.1"
+                }
+            ]
         },
         {
             "id": "3.1.4.2",
@@ -10019,7 +14507,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                    "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                    "id": "3.1.4.2"
+                }
+            ]
         },
         {
             "id": "3.1.4.3",
@@ -10078,7 +14588,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                    "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                    "id": "3.1.4.3"
+                }
+            ]
         },
         {
             "id": "3.1.4.4",
@@ -10129,7 +14661,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                    "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                    "id": "3.1.4.4"
+                }
+            ]
         },
         {
             "id": "3.1.4.5",
@@ -10180,7 +14734,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                    "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                    "id": "3.1.4.5"
+                }
+            ]
         },
         {
             "id": "3.1.4.6",
@@ -10235,7 +14811,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                    "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                    "id": "3.1.4.6"
+                }
+            ]
         },
         {
             "id": "3.1.4.7",
@@ -10290,7 +14888,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                    "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                    "id": "3.1.4.7"
+                }
+            ]
         },
         {
             "id": "3.1.4.8",
@@ -10341,7 +14961,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                    "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                    "id": "3.1.4.8"
+                }
+            ]
         },
         {
             "id": "3.1.4.9",
@@ -10396,7 +15038,29 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.1"
+                },
+                {
+                    "label": "Viajar\u00e1 con un tercero\u00a0",
+                    "slug": "viajara-con-un-tercero",
+                    "id": "3.1.4"
+                },
+                {
+                    "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                    "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                    "id": "3.1.4.9"
+                }
+            ]
         },
         {
             "id": "3.1.4.10",
@@ -10453,7 +15117,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con la aerol\u00ednea",
+                "slug": "viajara-con-la-aerolinea",
+                "id": "3.1.4.1"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-el-colegio-centro-educativo-o-institucion-cultural": {
         "id": "3.1.4.2",
@@ -10504,7 +15190,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con el colegio, centro educativo o instituci\u00f3n cultural",
+                "slug": "viajara-con-el-colegio-centro-educativo-o-institucion-cultural",
+                "id": "3.1.4.2"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-academia-seleccion-o-liga-deportiva": {
         "id": "3.1.4.3",
@@ -10563,7 +15271,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con academia, selecci\u00f3n o liga deportiva",
+                "slug": "viajara-con-academia-seleccion-o-liga-deportiva",
+                "id": "3.1.4.3"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-la-persona-que-posee-la-guarda-legal": {
         "id": "3.1.4.4",
@@ -10614,7 +15344,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con la persona que posee la guarda legal",
+                "slug": "viajara-con-la-persona-que-posee-la-guarda-legal",
+                "id": "3.1.4.4"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-": {
         "id": "3.1.4.5",
@@ -10665,7 +15417,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "El menor tiene solo apellido materno y no viajar\u00e1 con su madre ",
+                "slug": "el-menor-tiene-solo-apellido-materno-y-no-viajara-con-su-madre-",
+                "id": "3.1.4.5"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente": {
         "id": "3.1.4.6",
@@ -10720,7 +15494,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "Uno de los padres ha fallecido y no viajar\u00e1 con el padre sobreviviente",
+                "slug": "uno-de-los-padres-ha-fallecido-y-no-viajara-con-el-padre-sobreviviente",
+                "id": "3.1.4.6"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-una-persona-autorizada-por-el-tutor-legal-": {
         "id": "3.1.4.7",
@@ -10775,7 +15571,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con una persona autorizada por el tutor legal ",
+                "slug": "viajara-con-una-persona-autorizada-por-el-tutor-legal-",
+                "id": "3.1.4.7"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres": {
         "id": "3.1.4.8",
@@ -10826,7 +15644,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "Viajar\u00e1 con abuelos, t\u00edos, amigos u otras personas que no son los padres",
+                "slug": "viajara-con-abuelos-tios-amigos-u-otras-personas-que-no-son-los-padres",
+                "id": "3.1.4.8"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor": {
         "id": "3.1.4.9",
@@ -10881,7 +15721,29 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.1"
+            },
+            {
+                "label": "Viajar\u00e1 con un tercero\u00a0",
+                "slug": "viajara-con-un-tercero",
+                "id": "3.1.4"
+            },
+            {
+                "label": "Uno de los padres o tutores se niega a autorizar el viaje o est\u00e1 ausente en la vida del menor",
+                "slug": "uno-de-los-padres-o-tutores-se-niega-a-autorizar-el-viaje-o-esta-ausente-en-la-vida-del-menor",
+                "id": "3.1.4.9"
+            }
+        ]
     },
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-ha-estado-mas-de-6-meses-en-el-pais/viajara-con-un-tercero/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "3.1.4.10",
@@ -10897,20 +15759,54 @@ export const DATA_ROUTE = {
             "id": "3.2.1",
             "label": "No se requiere permiso.",
             "desc": null,
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "no-se-requiere-permiso.",
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                    "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                    "id": "3"
+                },
+                {
+                    "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "3.2"
+                },
+                {
+                    "label": "No se requiere permiso.",
+                    "slug": "no-se-requiere-permiso.",
+                    "id": "3.2.1"
+                }
+            ]
         }
     ],
     "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais/no-se-requiere-permiso.": {
         "id": "3.2.1",
         "label": "No se requiere permiso.",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "no-se-requiere-permiso.",
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es extranjero con residencia en la Rep\u00fablica Dominicana\u00a0",
+                "slug": "el-menor-es-extranjero-con-residencia-en-la-republica-dominicana",
+                "id": "3"
+            },
+            {
+                "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "3.2"
+            },
+            {
+                "label": "No se requiere permiso.",
+                "slug": "no-se-requiere-permiso.",
+                "id": "3.2.1"
+            }
+        ]
     },
     "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista": [
         {
@@ -10974,7 +15870,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                            "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                            "id": "4"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "4.1"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 acompa\u00f1ado con la persona o entidad autorizada con la que entr\u00f3 y se dirigirse a su pa\u00eds de origen",
+                            "slug": "el-menor-viajara-acompanado-con-la-persona-o-entidad-autorizada-con-la-que-entro-y-se-dirigirse-a-su-pais-de-origen",
+                            "id": "4.1.1"
+                        }
+                    ]
                 },
                 {
                     "id": "4.1.2",
@@ -10989,7 +15902,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": null
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                            "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                            "id": "4"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "4.1"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 acompa\u00f1ado de ambos padres",
+                            "slug": "el-menor-viajara-acompanado-de-ambos-padres",
+                            "id": "4.1.2"
+                        }
+                    ]
                 },
                 {
                     "id": "4.1.3",
@@ -11040,7 +15970,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                            "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                            "id": "4"
+                        },
+                        {
+                            "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "4.1"
+                        },
+                        {
+                            "label": "El menor viajar\u00e1 con uno de los padres",
+                            "slug": "el-menor-viajara-con-uno-de-los-padres",
+                            "id": "4.1.3"
+                        }
+                    ]
                 },
                 {
                     "id": "4.1.4",
@@ -11057,7 +16004,7 @@ export const DATA_ROUTE = {
             "id": "4.2",
             "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
             "desc": null,
-            "type": "not_required_permission",
+            "type": null,
             "has_icon": false,
             "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
             "children": [
@@ -11065,7 +16012,7 @@ export const DATA_ROUTE = {
                     "id": "4.2.1",
                     "label": "No se requiere permiso.",
                     "desc": null,
-                    "type": "document",
+                    "type": "not_required_permission",
                     "has_icon": false,
                     "slug": "no-se-requiere-permiso.",
                     "requirements": [
@@ -11074,7 +16021,24 @@ export const DATA_ROUTE = {
                             "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
                         }
                     ],
-                    "children": []
+                    "children": [],
+                    "histories": [
+                        {
+                            "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                            "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                            "id": "4"
+                        },
+                        {
+                            "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                            "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                            "id": "4.2"
+                        },
+                        {
+                            "label": "No se requiere permiso.",
+                            "slug": "no-se-requiere-permiso.",
+                            "id": "4.2.1"
+                        }
+                    ]
                 }
             ]
         }
@@ -11133,7 +16097,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                    "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                    "id": "4"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "4.1"
+                },
+                {
+                    "label": "El menor viajar\u00e1 acompa\u00f1ado con la persona o entidad autorizada con la que entr\u00f3 y se dirigirse a su pa\u00eds de origen",
+                    "slug": "el-menor-viajara-acompanado-con-la-persona-o-entidad-autorizada-con-la-que-entro-y-se-dirigirse-a-su-pais-de-origen",
+                    "id": "4.1.1"
+                }
+            ]
         },
         {
             "id": "4.1.2",
@@ -11148,7 +16129,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": null
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                    "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                    "id": "4"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "4.1"
+                },
+                {
+                    "label": "El menor viajar\u00e1 acompa\u00f1ado de ambos padres",
+                    "slug": "el-menor-viajara-acompanado-de-ambos-padres",
+                    "id": "4.1.2"
+                }
+            ]
         },
         {
             "id": "4.1.3",
@@ -11199,7 +16197,24 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                    "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                    "id": "4"
+                },
+                {
+                    "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "4.1"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con uno de los padres",
+                    "slug": "el-menor-viajara-con-uno-de-los-padres",
+                    "id": "4.1.3"
+                }
+            ]
         },
         {
             "id": "4.1.4",
@@ -11264,7 +16279,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                "id": "4"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "4.1"
+            },
+            {
+                "label": "El menor viajar\u00e1 acompa\u00f1ado con la persona o entidad autorizada con la que entr\u00f3 y se dirigirse a su pa\u00eds de origen",
+                "slug": "el-menor-viajara-acompanado-con-la-persona-o-entidad-autorizada-con-la-que-entro-y-se-dirigirse-a-su-pais-de-origen",
+                "id": "4.1.1"
+            }
+        ]
     },
     "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista/el-menor-ha-estado-mas-de-6-meses-en-el-pais/el-menor-viajara-acompanado-de-ambos-padres": {
         "id": "4.1.2",
@@ -11279,7 +16311,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": null
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                "id": "4"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "4.1"
+            },
+            {
+                "label": "El menor viajar\u00e1 acompa\u00f1ado de ambos padres",
+                "slug": "el-menor-viajara-acompanado-de-ambos-padres",
+                "id": "4.1.2"
+            }
+        ]
     },
     "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista/el-menor-ha-estado-mas-de-6-meses-en-el-pais/el-menor-viajara-con-uno-de-los-padres": {
         "id": "4.1.3",
@@ -11330,7 +16379,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial con el impuesto del BanReservas a nombre del padre, madre o tutor."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                "id": "4"
+            },
+            {
+                "label": "El menor ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "4.1"
+            },
+            {
+                "label": "El menor viajar\u00e1 con uno de los padres",
+                "slug": "el-menor-viajara-con-uno-de-los-padres",
+                "id": "4.1.3"
+            }
+        ]
     },
     "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista/el-menor-ha-estado-mas-de-6-meses-en-el-pais/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "4.1.4",
@@ -11346,7 +16412,7 @@ export const DATA_ROUTE = {
             "id": "4.2.1",
             "label": "No se requiere permiso.",
             "desc": null,
-            "type": "document",
+            "type": "not_required_permission",
             "has_icon": false,
             "slug": "no-se-requiere-permiso.",
             "requirements": [
@@ -11355,14 +16421,31 @@ export const DATA_ROUTE = {
                     "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                    "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                    "id": "4"
+                },
+                {
+                    "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                    "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                    "id": "4.2"
+                },
+                {
+                    "label": "No se requiere permiso.",
+                    "slug": "no-se-requiere-permiso.",
+                    "id": "4.2.1"
+                }
+            ]
         }
     ],
     "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais/no-se-requiere-permiso.": {
         "id": "4.2.1",
         "label": "No se requiere permiso.",
         "desc": null,
-        "type": "document",
+        "type": "not_required_permission",
         "has_icon": false,
         "slug": "no-se-requiere-permiso.",
         "requirements": [
@@ -11371,7 +16454,24 @@ export const DATA_ROUTE = {
                 "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                "id": "4"
+            },
+            {
+                "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "4.2"
+            },
+            {
+                "label": "No se requiere permiso.",
+                "slug": "no-se-requiere-permiso.",
+                "id": "4.2.1"
+            }
+        ]
     },
     "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais": [
         {
@@ -11387,7 +16487,19 @@ export const DATA_ROUTE = {
                     "requirement_notes": "No requiere presentar PSM en Control Migratorio"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es hijo/a de personal de organismos internacionales acreditados en el pa\u00eds",
+                    "slug": "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
+                    "id": "5"
+                },
+                {
+                    "label": "El menor viajar\u00e1 acompa\u00f1ado de ambos padres",
+                    "slug": "el-menor-viajara-acompanado-de-ambos-padres",
+                    "id": "5.1"
+                }
+            ]
         },
         {
             "id": "5.2",
@@ -11438,7 +16550,19 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial en BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es hijo/a de personal de organismos internacionales acreditados en el pa\u00eds",
+                    "slug": "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
+                    "id": "5"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con uno de los padres",
+                    "slug": "el-menor-viajara-con-uno-de-los-padres",
+                    "id": "5.2"
+                }
+            ]
         },
         {
             "id": "5.3",
@@ -11485,7 +16609,19 @@ export const DATA_ROUTE = {
                     "requirement_notes": "Puede realizarse en l\u00ednea o presencial en BanReservas a nombre del padre, madre o tutor"
                 }
             ],
-            "children": []
+            "children": [],
+            "histories": [
+                {
+                    "label": "El menor es hijo/a de personal de organismos internacionales acreditados en el pa\u00eds",
+                    "slug": "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
+                    "id": "5"
+                },
+                {
+                    "label": "El menor viajar\u00e1 con un tercero\u00a0",
+                    "slug": "el-menor-viajara-con-un-tercero",
+                    "id": "5.3"
+                }
+            ]
         },
         {
             "id": "5.4",
@@ -11510,7 +16646,19 @@ export const DATA_ROUTE = {
                 "requirement_notes": "No requiere presentar PSM en Control Migratorio"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es hijo/a de personal de organismos internacionales acreditados en el pa\u00eds",
+                "slug": "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
+                "id": "5"
+            },
+            {
+                "label": "El menor viajar\u00e1 acompa\u00f1ado de ambos padres",
+                "slug": "el-menor-viajara-acompanado-de-ambos-padres",
+                "id": "5.1"
+            }
+        ]
     },
     "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais/el-menor-viajara-con-uno-de-los-padres": {
         "id": "5.2",
@@ -11561,7 +16709,19 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial en BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es hijo/a de personal de organismos internacionales acreditados en el pa\u00eds",
+                "slug": "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
+                "id": "5"
+            },
+            {
+                "label": "El menor viajar\u00e1 con uno de los padres",
+                "slug": "el-menor-viajara-con-uno-de-los-padres",
+                "id": "5.2"
+            }
+        ]
     },
     "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais/el-menor-viajara-con-un-tercero": {
         "id": "5.3",
@@ -11608,7 +16768,19 @@ export const DATA_ROUTE = {
                 "requirement_notes": "Puede realizarse en l\u00ednea o presencial en BanReservas a nombre del padre, madre o tutor"
             }
         ],
-        "children": []
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor es hijo/a de personal de organismos internacionales acreditados en el pa\u00eds",
+                "slug": "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais",
+                "id": "5"
+            },
+            {
+                "label": "El menor viajar\u00e1 con un tercero\u00a0",
+                "slug": "el-menor-viajara-con-un-tercero",
+                "id": "5.3"
+            }
+        ]
     },
     "el-menor-es-hijo-a-de-personal-de-organismos-internacionales-acreditados-en-el-pais/no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir": {
         "id": "5.4",
