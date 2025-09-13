@@ -22,9 +22,10 @@ const InfoDataAlert = [
   "El proceso también puede realizarse en cualquier Punto GOB del país. Ten en cuenta que los horarios pueden variar según la ubicación. Consulta aquí el horario del Punto GOB que deseas visitar.",
 ];
 
-console.log("data: ", data)
+// console.log("data: ", data)
 
 if('requirements' in data === false || !Array.isArray(data.requirements)) {
+  console.log("payload: ", data)
   throw new Error("Just now, we have a problem with the data. Please, try again later.");
 }
 ---
