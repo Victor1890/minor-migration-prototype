@@ -1,6 +1,7 @@
 ---
-import { GovernmentOfficialHeader } from "@/components/common/GovernmentOfficialHeader";
-import { Header } from "@/components/common/Header";
+import GovernmentOfficialHeader from "@/components/GovernmentOfficialHeader.astro";
+// import { Header } from "@/components/Header";
+import Header from "@/components/Header/index.astro";
 import { SEO } from "@/data/seo";
 import "@fontsource-variable/roboto";
 import "@/styles/global.css";
@@ -17,8 +18,6 @@ import "@/styles/global.css";
 
     <title>{SEO.title}</title>
 
-    <!-- Remove it when SEO is finalized -->
-    <!-- <meta name="robots" content="noindex, nofollow" /> -->
     <meta name="description" content={SEO.description} />
     <meta name="keywords" content={SEO.keywords} />
 
@@ -38,8 +37,8 @@ import "@/styles/global.css";
     
   </head>
   <body class="antialiased">
-    <GovernmentOfficialHeader client:load />
-    <Header client:load />
+    <GovernmentOfficialHeader />
+    <Header />
     <main role="main" class="bg-background antialiased">
       <slot />
     </main>

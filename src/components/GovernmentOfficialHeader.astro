@@ -1,0 +1,146 @@
+---
+// filepath: src/components/common/GovernmentOfficialHeader/GovernmentOfficialHeader.astro
+import { BackIconCustomHeader } from "@/components/icons/BackIconCustomHeader";
+import { PadLock, WhiteHouseIcon } from "@/components/icons";
+import { cn } from "@/lib/utils";
+import { ChevronDown } from "lucide-react";
+
+interface Props {
+  theme?: "dark" | "light";
+}
+
+const { theme = "dark" } = Astro.props;
+---
+
+<div
+  role="complementary"
+  class={cn(
+    "official-header text-sm border-b border-gray-300",
+    theme === "dark" ? "bg-ps-background text-white" : "bg-white text-black"
+  )}
+>
+  <div class="layout-container">
+    <div class="p-3 flex justify-between">
+      <div class="flex items-center justify-start gap-1 md:gap-3 w-auto">
+        <div class="flex items-center justify-between gap-2">
+          <img
+            width={18}
+            height={12}
+            class="flag h-3"
+            src="/logos/dominican-flag.svg"
+            alt="Bandera de la República Dominicana"
+          />
+          <p class="text-[9px] lg:text-[12px]">
+            Esta es una web oficial del Gobierno de la República Dominicana
+          </p>
+        </div>
+
+        <ChevronDown
+          aria-hidden="true"
+          className="size-4 md:hidden toggle-button"
+        />
+
+        <label
+          class={cn(
+            "hidden gap-1",
+            "md:flex items-center justify-center font-semibold cursor-pointer leading-normal md:text-[11px]",
+            theme === "dark" ? "text-[#9FD0FD]" : "text-[#003670]",
+            "toggle-button"
+          )}
+        >
+          <span class="text-[9px] lg:text-[12px] underline">
+            Así es como puedes saberlo
+          </span>
+          <ChevronDown className="size-4 md:size-3" aria-hidden="true" />
+        </label>
+      </div>
+
+      <div class="hidden md:flex justify-end">
+        <a
+          role="link"
+          href="https://migracion.gob.do/"
+          rel="noopener noreferrer"
+          class="flex items-center justify-center gap-2 nowrap"
+        >
+          <BackIconCustomHeader className="size-4" aria-hidden="true" />
+          <p class="text-[9px] text-nowrap lg:text-[14px]">
+            Retornar a la página de migración
+          </p>
+        </a>
+      </div>
+    </div>
+    <div class="content-container" style="display: none;">
+      <div
+        class="proves container mx-auto flex items-start gap-4 max-w-7xl flex-col md:flex-row pt-5 px-5"
+      >
+        <div class="flex items-start gap-4 w-full md:w-2/5">
+          <span
+            class={cn(
+              "icon flex items-center justify-center rounded-full w-10 p-2 mt-3 text-white",
+              theme === "dark" ? "bg-[#0087FF]" : "bg-[#003670]"
+            )}
+          >
+            <WhiteHouseIcon className="size-4" aria-hidden="true" />
+          </span>
+          <div>
+            <p
+              class={cn(
+                "subtitle font-semibold text-[12px]",
+                theme === "dark" ? "text-white" : "text-[#003670]"
+              )}
+            >
+              Los sitios web oficiales utilizan .gob.do, .gov.do o .mil.do
+            </p>
+            <p class="text-[12px]">
+              Un sitio .gob.do, .gov.do o .mil.do significa que pertenece a una
+              organización oficial del Estado dominicano.
+            </p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 w-full md:w-2/5">
+          <span
+            class={cn(
+              "icon flex items-center justify-center rounded-full w-10 p-2 mt-3 text-white",
+              theme === "dark" ? "bg-[#0087FF]" : "bg-[#003670]"
+            )}
+          >
+            <PadLock className="size-4" />
+          </span>
+          <div>
+            <p
+              class={cn(
+                "subtitle font-semibold text-[12px]",
+                theme === "dark" ? "text-white" : "text-[#003670]"
+              )}
+            >
+              Los sitios web oficiales .gob.do, .gov.do o .mil.do seguros usan
+              HTTPS
+            </p>
+            <p class="text-[12px] pb-5">
+              Un candado (🔒) o https:// significa que estás conectado a un
+              sitio seguro dentro de .gob.do o .gov.do. Comparte información
+              confidencial solo en los sitios seguros de .gob.do o gov.do.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Client-side JavaScript
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggleButtons = document.querySelectorAll(".toggle-button");
+    const contentContainer = document.querySelector(".content-container") as HTMLDivElement;
+
+    if(!contentContainer) return;
+
+    toggleButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const isVisible = contentContainer.style.display !== "none";
+        contentContainer.style.display = isVisible ? "none" : "block";
+      });
+    });
+  });
+</script>

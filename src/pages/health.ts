@@ -4,7 +4,7 @@ export async function GET() {
       status: 'healthy',
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
-      service: 'minor-prototype-web',
+      service: 'Permiso de Salida de Menores',
       version: '1.0.0'
     }),
     {

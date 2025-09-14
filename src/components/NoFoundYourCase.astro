@@ -1,0 +1,84 @@
+---
+import { Card, CardContent } from "@/components/ui/card";
+import Divider from "./Divider.astro";
+import { BRANCH_OFFICE_DATA } from "@/data/no-viable";
+---
+
+<div class="flex flex-col gap-12">
+  <div class="flex flex-col gap-4">
+    <p class="font-semibold text-[24px]">
+      Comunícate con nosotros en nuestros canales digitales:
+    </p>
+    <div class="flex flex-col gap-1">
+      <p>
+        <span class="font-bold">📞 Teléfono:</span> (809) 508-2555 Ext. 3890
+      </p>
+      <p>
+        <span class="font-bold">📧 Correo:</span>{" "}
+        certificacionesmc@migracion.gob.do
+      </p>
+      <p>
+        <span class="font-bold">🕒 Horario:</span> Lunes a viernes, de 8:00 a. m.
+        a 4:00 p. m.
+      </p>
+    </div>
+    <div class="flex flex-col">
+      <p>También puedes visitar el portal oficial:</p>
+      <a
+        href="https://servicios.migracion.gob.do"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        https://servicios.migracion.gob.do
+      </a>
+    </div>
+  </div>
+
+  <Divider className="my-3" />
+
+  <div class="flex flex-col gap-12 pb-4">
+    {
+      BRANCH_OFFICE_DATA.map((branch, index) => (
+        <Fragment key={`branch-${index}`}>
+          <div class="flex items-start justify-center flex-col gap-4">
+            <h3 class="font-semibold text-2xl text-[#020617]">
+              {branch.title}
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {branch.data.map((item, idx) => (
+                <Card className="bg-[#F1F5F9] border-0 border-none rounded-[8px] shadow-none">
+                  <CardContent className="p-6">
+                    <div class="flex items-start justify-center flex-col">
+                      <h2 class="text-xl font-bold text-gray-800">
+                        {item.branch.label}
+                      </h2>
+                      <p class="text-gray-600 mb-6 leading-relaxed">
+                        {item.branch.address}
+                      </p>
+                    </div>
+                    <div>
+                      <h3 class="font-bold text-gray-800 mb-2">
+                        {item.time.label}
+                      </h3>
+                      {Array.isArray(item.time.desc) ? (
+                        <ul class="list-disc pl-5">
+                          {item.time.desc.map((desc, descIndex) => (
+                            <li class="text-gray-600">{desc}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p class="text-gray-600">{item.time.desc}</p>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {index < BRANCH_OFFICE_DATA.length - 1 && <Divider />}
+        </Fragment>
+      ))
+    }
+  </div>
+</div>

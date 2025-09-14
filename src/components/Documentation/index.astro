@@ -1,0 +1,85 @@
+---
+import Divider from "@/components/Divider.astro";
+import NavigationButtons from "@/components/Navegation.astro";
+import InfoSection from "./InfoSection.astro";
+import type { NodeRoute } from "@/data/data-route";
+
+interface Props {
+  data: NodeRoute;
+}
+
+const { data } = Astro.props;
+
+if('histories' in data === false || !Array.isArray(data.histories)) {
+  throw new Error("Just now, we have a problem with the data. Please, try again later.");
+}
+---
+
+<div class="fade-in duration-500 animate-in">
+  <div class="flex flex-col gap-4">
+    <h3 class="text-2xl font-semibold">
+      Según los datos que nos indicaste, el menor:
+    </h3>
+    <ul
+      class="list-disc pl-6"
+      aria-label="Lista de pasos anteriores previamente completados"
+    >
+      {
+        data.histories.map((item) => (
+          <li class="font-semibold text-base">{item.label}</li>
+        ))
+      }
+    </ul>
+  </div>
+
+  <Divider className="my-12" />
+
+  <InfoSection data={data} />
+
+  <div class="pt-12">
+    <NavigationButtons type="document" />
+  </div>
+
+  <Divider className="my-12" />
+
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col space-y-2">
+      <p class="font-semibold text-[20px] leading-[120%] text-[#1E293B]">
+        ¿Tienes dudas o necesitas confirmar esta información?
+      </p>
+      <p class="text-[16px] leading-[150%] text-[#475569]">
+        Si tienes alguna pregunta sobre tu caso o deseas asegurarte de que los
+        documentos estén en orden, puedes comunicarte directamente con la
+        Dirección General de Migración:
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-1">
+      <p>
+        <a href="tel:+18095082555" class="no-underline hover:underline">
+          <span class="font-semibold"> Teléfono: </span> (809) 508-2555 ext. 3890
+        </a>
+      </p>
+      <p>
+        <a
+          href="mailto:certificacionesmc@migracion.gob.do"
+          class="no-underline hover:underline"
+        >
+          <span class="font-semibold"> Correo electrónico: </span>
+          certificacionesmc@migracion.gob.do
+        </a>
+      </p>
+      <p>
+        <span class="font-semibold">Horario de atención:</span>
+        Lunes a viernes, de 8:00 a.m. a 4:00 p.m.
+      </p>
+    </div>
+
+    <div class="flex flex-col gap-1 pt-4">
+      <p>También puedes visitar el portal oficial:</p>
+      <a href="https://servicios.migracion.gob.do" class="no-underline hover:underline cursor-pointer">
+        https://servicios.migracion.gob.do
+      </a>
+    </div>
+  </div>
+</div>

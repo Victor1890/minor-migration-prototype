@@ -1,0 +1,69 @@
+---
+import { CardFooter, CardHeader } from "@/components/ui/card";
+import { LABEL_ICON_DETAILS } from "@/data/step-icon";
+import { Wiki } from "@/components/Wiki";
+import { cn } from "@/lib/utils";
+import { type NodeRoute } from "@/data/data-route";
+
+interface Props {
+  item: NodeRoute;
+}
+
+const { item } = Astro.props;
+
+if (!("slug" in item)) {
+  throw new Error("Expected a single item, but received an array.");
+}
+
+const { label, description, icon: Icon } = LABEL_ICON_DETAILS[item.slug] || {};
+
+const currentPath = Astro.url.pathname;
+
+const hrefLink = (() => {
+  if (currentPath === "/" || currentPath === "") return item.slug;
+  return `${currentPath}/${item.slug}`;
+})();
+---
+
+<a
+  href={hrefLink}
+  rel="noopener noreferrer"
+  aria-pressed="false"
+  data-slug={item.slug}
+  tab-index={0}
+  class={cn(
+    "rounded-lg border bg-card text-card-foreground",
+    "fade-in duration-500 animate-in h-full",
+    "flex flex-col items-center justify-center",
+    "border hover:shadow-md transition-shadow cursor-pointer",
+    "hover:bg-card/90 hover:ring-2 hover:ring-blue-500",
+    "focus-visible:ring-2 focus-visible:ring-blue-500"
+  )}
+>
+  <CardHeader className="flex flex-col items-center justify-center gap-2">
+    {item.has_icon && Icon ? <Icon /> : null}
+    <h3
+      class="text-[#1E293B] text-center font-semibold text-[16px] leading-[100%]"
+    >
+      <Wiki client:load value={label || item.label} />
+    </h3>
+  </CardHeader>
+  {
+    description && (
+      <CardFooter
+        className={cn(
+          "flex-1 bg-[#F9FAFB] px-8 py-4 rounded-b-lg flex items-center",
+          // cases.some((x) => x.slug === item.slug) && "min-h-34",
+          "min-h-22 items-center"
+        )}
+      >
+        <p class="text-[14px] leading-[150%] font-normal text-[#4B5563] text-center">
+          <Wiki
+            client:load
+            value={description || item.desc || "Descripción no disponible."}
+          />
+        </p>
+      </CardFooter>
+    )
+  }
+</a>

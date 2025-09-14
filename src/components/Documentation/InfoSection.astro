@@ -1,0 +1,212 @@
+---
+import type { NodeRoute } from "@/data/data-route";
+import { Wiki } from "@/components/Wiki";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { AlertCircleIcon } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { COST_DATA } from "@/data/documentation-data";
+import { STEP_TO_REQUIRED_SERVICE } from "@/data/documentation-data/service";
+
+interface Props {
+  data: NodeRoute;
+}
+
+const { data } = Astro.props;
+
+const InfoDataAlert = [
+  "El permiso tiene vigencia de 90 días.",
+  "La autorización de viaje solo puede tramitarse en República Dominicana.",
+  "Si el menor tiene custodia exclusiva por sentencia, esta debe presentarse además del permiso judicial (si aplica).",
+  "El tiempo procesamiento es de 48 Horas laborables.",
+  "El horario de atención en las oficinas de la dirección de migración es Lunes a viernes de 8:00 a. m. a 4:00 p. m  (En verano y navidad el horario se extiende hasta las 6:00 p. m.).",
+  "El proceso también puede realizarse en cualquier Punto GOB del país. Ten en cuenta que los horarios pueden variar según la ubicación. Consulta aquí el horario del Punto GOB que deseas visitar.",
+];
+
+if('requirements' in data === false || !Array.isArray(data.requirements)) {
+  console.log("payload: ", data)
+  throw new Error("Just now, we have a problem with the data. Please, try again later.");
+}
+---
+
+<div class="flex flex-col space-y-8">
+  <div class="flex flex-col space-y-4">
+    <div class="flex flex-col space-y-2">
+      <p class="font-semibold text-[24px] leading-[120%] text-[#1E293B]">
+        Documentos, costos y pasos a seguir
+      </p>
+      <p class="text-[16px] leading-[150%] text-[#475569]">
+        Antes de iniciar tu solicitud, asegúrate de contar con todos los
+        documentos necesarios y seguir el paso a paso para completar el proceso
+        sin contratiempos.
+      </p>
+    </div>
+
+    <div class="bg-[#F1F5F9] p-6 rounded-lg flex flex-col space-y-2">
+      <div class="flex flex-col space-y-4">
+        <p class="font-semibold text-[22px] leading-[120%] text-[#1E293B]">
+          Requisitos
+        </p>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-4">
+            {
+              data.requirements?.map((doc, idx) => {
+                if (!doc.requirement) return null;
+                return (
+                  <div>
+                    <p class="font-semibold text-[#1E293B] text-base">
+                      {idx + 1}. <Wiki client:load client:load value={doc.requirement} />
+                    </p>
+                    <p class="text-sm font-normal text-[#475569]">
+                      <Wiki client:load client:load value={doc.requirement_notes || ""} />
+                    </p>
+                  </div>
+                );
+              })
+            }
+          </div>
+
+          <Alert className="bg-white border-white relative grid-cols-none">
+            <div class="absolute top-3 left-3">
+              <AlertCircleIcon className="w-6 h-6 text-[#0076DE]" />
+            </div>
+
+            <div class="ml-8 space-y-1">
+              <div class="font-semibold">Información a tener en cuenta:</div>
+              <AlertDescription>
+                <ul
+                  class="list-disc list-inside space-y-1 text-sm text-[#475569]"
+                  aria-label="Información a tener en cuenta"
+                >
+                  {
+                    [
+                      "El permiso tiene vigencia de 90 días.",
+                      "La autorización de viaje solo puede tramitarse en República Dominicana.",
+                      "Si el menor tiene custodia exclusiva por sentencia, esta debe presentarse además del permiso judicial (si aplica).",
+                    ].map((item) => <li>{item}</li>)
+                  }
+                </ul>
+              </AlertDescription>
+            </div>
+          </Alert>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col space-y-4">
+    <div class="bg-[#F1F5F9] p-6 rounded-lg flex flex-col space-y-2">
+      <div class="flex flex-col space-y-4">
+        <p class="font-semibold text-[22px] leading-[120%] text-[#1E293B]">
+          Costos
+        </p>
+        <Card className="bg-white border-none rounded-[8px] shadow-none">
+          <CardContent className="p-0">
+            <div class="bg-white rounded-lg px-6 py-0">
+              <div class="w-full py-3">
+                <div class="grid grid-cols-2 gap-4 border-b border-[#F1F5F9]">
+                  <div
+                    class="text-left text-base font-semibold text-[#031942] py-4"
+                  >
+                    Concepto
+                  </div>
+                  <div class="text-right font-semibold text-[#031942] py-4">
+                    Precio
+                  </div>
+                </div>
+
+                <div class="space-y-3">
+                  {
+                    COST_DATA.map((item) => (
+                      <div class="flex items-center justify-between gap-4 border-b border-[#F1F5F9] last:border-b-0 m-0">
+                        <div class="py-4 text-base text-[#031942] font-semibold">
+                          {item.concept}
+                        </div>
+                        <div class="py-2 text-base text-right font-normal text-[#475569]">
+                          {item.price}
+                        </div>
+                      </div>
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col space-y-4">
+    <div class="bg-[#F1F5F9] p-6 rounded-lg flex flex-col space-y-2">
+      <div class="flex flex-col space-y-4">
+        <p class="font-semibold text-[22px] leading-[120%] text-[#1E293B]">
+          Pasos
+        </p>
+        <div class="space-y-4">
+          {
+            STEP_TO_REQUIRED_SERVICE?.map((process, idx) => {
+              if (!process.label) return null;
+              return (
+                <div>
+                  <p class="font-semibold text-[#1E293B] text-base">
+                    {idx + 1}. <Wiki client:load value={process.label} />
+                  </p>
+
+                  <div class="ml-3">
+                    {Array.isArray(process.details) ? (
+                      process.details.map((detail) => {
+                        if (
+                          typeof detail === "object" &&
+                          detail !== null &&
+                          "label" in detail &&
+                          "list" in detail
+                        ) {
+                          return (
+                            <div class="mb-2">
+                              <p class="text-sm text-[#1E293B]">
+                                {typeof detail.label === "string" ? (
+                                  <Wiki client:load value={detail.label as string} />
+                                ) : (
+                                  detail.label
+                                )}
+                              </p>
+                              <ul class="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
+                                {detail.list.map((item) => (
+                                  <li>
+                                    <Wiki client:load value={item} />
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          );
+                        }
+
+                        return (
+                          <div class="list-disc list-inside space-y-1 text-sm font-normal text-[#475569]">
+                            <li>
+                              <Wiki client:load value={detail} />
+                            </li>
+                          </div>
+                        );
+                      })
+                    ) : process.details ? (
+                      typeof process.details === "string" ? (
+                        <p class="text-sm font-normal text-[#475569]">
+                          <Wiki client:load value={process.details as string} />
+                        </p>
+                      ) : (
+                        <p class="text-sm font-normal text-[#475569]">
+                          <Wiki client:load value={process.details as string} />
+                        </p>
+                      )
+                    ) : null}
+                  </div>
+                </div>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

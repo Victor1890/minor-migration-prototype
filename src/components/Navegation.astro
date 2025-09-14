@@ -1,0 +1,67 @@
+---
+import { buttonVariants } from "@/components/ui/button";
+import { MoveLeft } from "lucide-react";
+import { cn } from "@/lib/utils";
+import type { ViewComponentType } from "@/data/navigation-context";
+
+interface Props {
+  type?: ViewComponentType;
+}
+
+const { type } = Astro.props;
+
+let pathname = Astro.url.pathname;
+
+pathname = pathname.endsWith("/")
+  ? pathname.slice(0, -1)
+  : pathname;
+
+const hrefBack = pathname.split("/").slice(0, -1).join("/");
+---
+
+<div
+  class="flex flex-col lg:flex-row items-center justify-between gap-1 lg:gap-8 w-full"
+>
+  <div
+    class="flex flex-col lg:flex-row justify-start items-center gap-4 w-full"
+  >
+    <a
+      href={hrefBack || "/"}
+      rel="noopener noreferrer"
+      class={cn(
+        buttonVariants({ variant: "outline", size: "default" }),
+        "rounded-full flex gap-2 items-center text-[#0072D7] border-[#0072D7] max-w-full lg:max-w-[163px] w-full hover:text-white hover:bg-[#0072D7] cursor-pointer"
+      )}
+    >
+      <MoveLeft />
+      Paso anterior
+    </a>
+    <a
+      href="/"
+      rel="noopener noreferrer"
+      class={cn(
+        buttonVariants({ variant: "ghost", size: "default" }),
+        "rounded-full flex gap-2 items-center text-[#0072D7] max-w-full lg:max-w-[163px] w-full hover:text-[#0072D7] cursor-pointer"
+      )}
+    >
+      Volver al inicio
+    </a>
+  </div>
+
+  {
+    type === "document" && (
+      <a
+        href="https://servicios.migracion.gob.do/es"
+        rel="noopener noreferrer"
+        class={cn(
+          buttonVariants({ variant: "outline", size: "default" }),
+          "rounded-full flex gap-2 items-center max-w-full lg:max-w-[257px] w-full cursor-pointer text-[#0072D7] hover:text-white hover:bg-[#0072D7] border-[#0072D7]",
+          type === "document" &&
+            "bg-[#0072D7] hover:bg-[#0072D7]/90 border-none text-white"
+        )}
+      >
+        Ir al portal para iniciar la solicitud
+      </a>
+    )
+  }
+</div>

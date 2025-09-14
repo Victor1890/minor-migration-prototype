@@ -6,16 +6,21 @@ import sitemap from '@astrojs/sitemap'
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'static',
+  trailingSlash: 'never',
   site: 'https://permisosalidamenor.migracion.gob.do',
   vite: {
     plugins: [tailwindcss()]
+  },
+  prefetch: {
+    prefetchAll: true
   },
   integrations: [
     react(),
     sitemap({
       changefreq: 'monthly',
       priority: 0.7,
-      lastmod: new Date('2025-07-23'),
+      lastmod: new Date(),
       i18n: {
         defaultLocale: 'es',
         locales: {

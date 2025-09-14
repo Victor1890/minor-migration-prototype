@@ -1,0 +1,63 @@
+---
+import { cn } from "@/lib/utils";
+import { MainBreadcrumb } from "@/components/MainBreadcrumb";
+import Navegation from "./Navegation.astro";
+import type { ViewComponentType } from "@/data/navigation-context";
+
+interface Props {
+  bannerComp?: HTMLElement;
+  title: string;
+  description: string;
+  type?: ViewComponentType;
+}
+
+const { bannerComp, title, description, type } = Astro.props;
+
+const isAvailableNavigation = Astro.url.pathname !== "/";
+---
+
+<div
+  class={cn(
+    "flex flex-col mx-auto max-w-[992px]",
+    bannerComp ? "gap-12" : "gap-4",
+    type === "not_found" && "max-w-[768px]",
+    type === "not_required_permission" && "max-w-[768px]"
+  )}
+>
+  <div class="flex flex-col items-start justify-center gap-1 max-w-[88%]">
+    <MainBreadcrumb />
+    <slot name="banner" />
+  </div>
+
+  <div class="w-full">
+    {
+      isAvailableNavigation && (
+        <div class="mb-9">
+          <Navegation type={type} />
+        </div>
+      )
+    }
+
+    <div class="flex flex-col gap-8">
+      <div
+        class={cn(
+          "fade-in duration-500 animate-in",
+          "flex flex-col gap-1",
+          type === "document" && "max-w-[700px]",
+          type === "not_found" && "max-w-[768px]"
+        )}
+      >
+        <h2 class="font-bold text-[28px] text-[#1E293B] text-left">
+          {title}
+        </h2>
+        <p class="text-base font-normal text-[#475569]">
+          {description}
+        </p>
+      </div>
+
+      <!-- Content -->
+      <slot />
+      <!-- Content -->
+    </div>
+  </div>
+</div>
