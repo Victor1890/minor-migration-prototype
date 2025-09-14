@@ -48,7 +48,6 @@ export const DATA_DUMB = {
             "type": "not_found",
             "has_icon": true,
             "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
-            "children": []
         }
     ],
     "termLegal": [
