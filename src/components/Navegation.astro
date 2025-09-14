@@ -10,7 +10,12 @@ interface Props {
 
 const { type } = Astro.props;
 
-const pathname = Astro.url.pathname;
+let pathname = Astro.url.pathname;
+
+pathname = pathname.endsWith("/")
+  ? pathname.slice(0, -1)
+  : pathname;
+
 const hrefBack = pathname.split("/").slice(0, -1).join("/");
 ---
 
