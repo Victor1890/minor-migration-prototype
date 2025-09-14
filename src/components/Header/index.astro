@@ -1,0 +1,94 @@
+---
+import { Headset } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { TemplateOfInterest } from "./templatesOfInterest";
+import { Progress } from "@/components/ui/progress";
+import { DATA_PROGRESS } from "@/data/data-progress";
+import { LogoMigrationWithColorIcon } from "@/components/icons";
+
+const pathname = Astro.url.pathname;
+
+const slug = pathname.startsWith("/") ? pathname.slice(1) : pathname;
+
+const progress = DATA_PROGRESS[slug] || 20;
+---
+
+<div class="layout-container bg-white">
+  <header
+    role="banner"
+    class="relative z-10 p-3 flex-shrink-0 flex justify-between items-center h-[82px] top-0 left-0 right-0 transition-colors duration-200"
+  >
+    <nav
+      aria-label="Menu Principal"
+      class="flex items-center justify-between w-full"
+    >
+      <a
+        aria-label="Logo de Dirección General de Migración"
+        title="Logo de Dirección General de Migración"
+        class="md:h-11 md:w-[222.44px] h-[33.5px] w-[169.36px]"
+        role="link"
+        href="https://migracion.gob.do/"
+        rel="noopener noreferrer"
+      >
+        <LogoMigrationWithColorIcon />
+      </a>
+      <div
+        role="menu"
+        class="items-center justify-between gap-5 hidden xl:flex"
+      >
+        <a
+          role="menuitem"
+          href="tel:+8095082555"
+          rel="noopener noreferrer"
+          class={cn(
+            "mr-4 flex items-center pb-[20px] mt-[24px] group border-spacing-4 gap-2 border-b-4 border-transparent hover:border-white transition-all duration-200"
+          )}
+        >
+          <p class="flex items-center justify-between gap-1.5 capitalize">
+            ¿Necesitas ayuda?
+            <span class="font-bold">809-508-2555 Ext. 3890</span>
+          </p>
+          <Headset className="size-6" client:visible aria-hidden="true" />
+        </a>
+        <div class="h-[38px] rounded-full w-[1px] hidden xl:flex bg-gray-200">
+        </div>
+        <div class="items-center gap-2 ml-2 xl:flex">
+          <TemplateOfInterest client:load />
+        </div>
+      </div>
+    </nav>
+    <div class="flex items-center justify-center xl:hidden">
+      <TemplateOfInterest client:load />
+    </div>
+  </header>
+</div>
+<Progress
+  value={progress}
+  className="bg-[#E2E8F0] rounded-none"
+  classNameIndicator="bg-[#0072D7]"
+  aria-valuenow={progress}
+  aria-valuemin={0}
+  aria-valuemax={100}
+  role="progressbar"
+  aria-label="Barra de progreso del proceso de Dirección General de Migración"
+/>
+
+<!-- <script>
+  // If you want to use client-side progress updates
+  import { progressBarStore } from "@/store/progress-bar.store";
+
+  // Only run this code on the client
+  document.addEventListener("DOMContentLoaded", () => {
+    const progressIndicator = document.getElementById("progress-indicator");
+    const progressBar = document.getElementById("progress-bar");
+
+    if (progressIndicator && progressBar) {
+      // Subscribe to store changes if using a client-side store
+      progressBarStore.subscribe((state) => {
+        const { progress } = state;
+        progressIndicator.style.width = `${progress}%`;
+        progressBar.setAttribute("aria-valuenow", progress.toString());
+      });
+    }
+  });
+</script> -->

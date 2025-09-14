@@ -1,7 +1,7 @@
 ---
-// import { GovernmentOfficialHeader } from "@/components/common/GovernmentOfficialHeader";
 import GovernmentOfficialHeader from "@/components/GovernmentOfficialHeader.astro";
-import { Header } from "@/components/common/Header";
+// import { Header } from "@/components/Header";
+import Header from "@/components/Header/index.astro";
 import { SEO } from "@/data/seo";
 import "@fontsource-variable/roboto";
 import "@/styles/global.css";
@@ -38,7 +38,7 @@ import "@/styles/global.css";
   </head>
   <body class="antialiased">
     <GovernmentOfficialHeader />
-    <Header client:load />
+    <Header />
     <main role="main" class="bg-background antialiased">
       <slot />
     </main>
