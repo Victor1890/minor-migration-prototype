@@ -12,10 +12,9 @@ import { DATA_DUMB } from "@/data";
 <Layout>
   <MainLayout client:load>
     <section class="relative">
-      <div class="absolute w-full lg:h-[55vh] z-0"></div>
       <div class="layout-container relative">
         <div class="min-[190px]:flex h-full">
-          <div
+          <article
             class={"flex-1 relative p-0 min-[550px]:px-5 top-12 flex min-[850px]:flex-row md:flex-nowrap flex-wrap flex-col justify-center md:items-start items-center min-[550px]:gap-5 mx-auto"}
           >
             <Card
@@ -28,24 +27,27 @@ import { DATA_DUMB } from "@/data";
                 >
                  <Banner slot="banner" />
                   <div class="pb-6 w-full">
-                    <div
-                      class="grid grid-cols-1 lg:grid-cols-3 gap-4 px-[2px]"
+                    <ul
+                      class="grid grid-cols-1 lg:grid-cols-3 gap-4 px-[2px] list-none"
+                      aria-label="Lista de casos de uso"
                     >
                       {
                         DATA_DUMB.cases.map((item: any) => (
-                          <HierarchyNodeCard item={item} />
+                          <li>
+                            <HierarchyNodeCard item={item} />
+                          </li>
                         ))
                       }
-                    </div>
+                    </ul>
 
-                    <div class="py-12">
+                    <footer class="py-12">
                       <Footer showPortalButton />
-                    </div>
+                    </footer>
                   </div>
                 </Wrapper>
               </CardContent>
             </Card>
-          </div>
+          </article>
         </div>
       </div>
     </section>

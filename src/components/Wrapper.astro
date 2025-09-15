@@ -16,7 +16,8 @@ const { bannerComp, title, description, type } = Astro.props;
 const isAvailableNavigation = Astro.url.pathname !== "/";
 ---
 
-<div
+<main
+  id="main-content"
   class={cn(
     "flex flex-col mx-auto max-w-[992px]",
     bannerComp ? "gap-12" : "gap-4",
@@ -24,22 +25,24 @@ const isAvailableNavigation = Astro.url.pathname !== "/";
     type === "not_required_permission" && "max-w-[768px]"
   )}
 >
-  <div class="flex flex-col items-start justify-center gap-1 max-w-[88%]">
-    <MainBreadcrumb />
+  <header class="flex flex-col items-start justify-center gap-1 max-w-[88%]">
+    <nav aria-label="Breadcrumb navigation">
+      <MainBreadcrumb />
+    </nav>
     <slot name="banner" />
-  </div>
+  </header>
 
   <div class="w-full">
     {
       isAvailableNavigation && (
-        <div class="mb-9">
+        <nav class="mb-9" aria-label="Page navigation">
           <Navegation type={type} />
-        </div>
+        </nav>
       )
     }
 
-    <div class="flex flex-col gap-8">
-      <div
+    <section class="flex flex-col gap-8">
+      <header
         class={cn(
           "fade-in duration-500 animate-in",
           "flex flex-col gap-1",
@@ -53,11 +56,11 @@ const isAvailableNavigation = Astro.url.pathname !== "/";
         <p class="text-base font-normal text-[#475569]">
           {description}
         </p>
-      </div>
+      </header>
 
-      <!-- Content -->
-      <slot />
-      <!-- Content -->
-    </div>
+      <article id="content-section">
+        <slot />
+      </article>
+    </section>
   </div>
-</div>
+</main>

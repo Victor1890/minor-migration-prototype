@@ -16,21 +16,21 @@ if (!("slug" in item)) {
 }
 
 const { label, description, icon: Icon } = LABEL_ICON_DETAILS[item.slug] || {};
+const displayLabel = label || item.label;
+const displayDescription = description || item.desc || "Descripción no disponible.";
 
 const currentPath = Astro.url.pathname;
-
-const hrefLink = (() => {
-  if (currentPath === "/" || currentPath === "") return item.slug;
-  return `${currentPath}/${item.slug}`;
-})();
+const hrefLink = currentPath === "/" || currentPath === "" 
+  ? item.slug 
+  : `${currentPath}/${item.slug}`;
+  
 ---
 
 <a
   href={hrefLink}
   rel="noopener noreferrer"
-  aria-pressed="false"
-  data-slug={item.slug}
-  tab-index={0}
+  aria-label={`${displayLabel}: ${displayDescription}`}
+  tab-index="0"
   class={cn(
     "rounded-lg border bg-card text-card-foreground",
     "fade-in duration-500 animate-in h-full",
@@ -41,11 +41,11 @@ const hrefLink = (() => {
   )}
 >
   <CardHeader className="flex flex-col items-center justify-center gap-2">
-    {item.has_icon && Icon ? <Icon /> : null}
+    {item.has_icon && Icon ? <Icon aria-hidden="true" /> : null}
     <h3
       class="text-[#1E293B] text-center font-semibold text-[16px] leading-[100%]"
     >
-      <Wiki client:load value={label || item.label} />
+      <Wiki client:load value={displayLabel} />
     </h3>
   </CardHeader>
   {
@@ -60,7 +60,7 @@ const hrefLink = (() => {
         <p class="text-[14px] leading-[150%] font-normal text-[#4B5563] text-center">
           <Wiki
             client:load
-            value={description || item.desc || "Descripción no disponible."}
+            value={displayDescription}
           />
         </p>
       </CardFooter>

@@ -34,16 +34,14 @@ const cases = Array.isArray(data) ? data : [];
 
 const navigationContext = getNavigationContext(slug);
 const viewComponent = getViewComponentByType(data);
-
 ---
 
 <Layout>
   <MainLayout client:load>
     <section class="relative">
-      <div class="absolute w-full lg:h-[55vh] z-0"></div>
       <div class="layout-container relative">
         <div class="min-[190px]:flex h-full">
-          <div
+          <article
             class={"flex-1 relative p-0 min-[550px]:px-5 top-12 flex min-[850px]:flex-row md:flex-nowrap flex-wrap flex-col justify-center md:items-start items-center min-[550px]:gap-5 mx-auto"}
           >
             <Card
@@ -57,40 +55,49 @@ const viewComponent = getViewComponentByType(data);
                     navigationContext.description}
                 >
                   <div class="pb-6 w-full">
-                    {viewComponent?.type === "not_required_permission" && (
-                      <NoRequiredPermission data={data} />
-                    )}
-                    {viewComponent?.type === "document" && (
-                      <Documentation data={data} />
-                    )}
-                    {viewComponent?.type === "not_found" && (
-                      <NoFoundYourCase />
-                    )}
+                    {
+                      viewComponent?.type === "not_required_permission" && (
+                        <NoRequiredPermission data={data} />
+                      )
+                    }
+                    {
+                      viewComponent?.type === "document" && (
+                        <Documentation data={data} />
+                      )
+                    }
+                    {viewComponent?.type === "not_found" && <NoFoundYourCase />}
                     {
                       !viewComponent ? (
-                        <div
+                        <ul
+                          aria-label="Lista de casos de uso"
                           class={cn(
-                            "grid grid-cols-1 gap-4 px-[2px]",
+                            "grid grid-cols-1 gap-4 px-[2px] list-none",
                             cases.length == 2 && "lg:grid-cols-2",
                             cases.length > 3 && "lg:grid-cols-2",
                             cases.length == 3 && "lg:grid-cols-3"
                           )}
                         >
                           {cases.map((item: any) => (
-                            <HierarchyNodeCard item={item} />
+                            <li>
+                              <HierarchyNodeCard item={item} />
+                            </li>
                           ))}
-                        </div>
+                        </ul>
                       ) : null
                     }
 
-                    {!viewComponent && <div class="py-12">
-                      <Footer />
-                    </div>}
+                    {
+                      !viewComponent && (
+                        <footer class="py-12">
+                          <Footer />
+                        </footer>
+                      )
+                    }
                   </div>
                 </Wrapper>
               </CardContent>
             </Card>
-          </div>
+          </article>
         </div>
       </div>
     </section>

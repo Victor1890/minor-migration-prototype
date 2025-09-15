@@ -149,7 +149,6 @@ export const TemplateOfInterest = memo(() => {
       setShowTemplate={setShowTemplate}
       button={
         <Button
-          role="menuitem"
           aria-label="Enlaces de interés"
           variant={"outline-basic"}
           onClick={() => setShowTemplate(true)}
