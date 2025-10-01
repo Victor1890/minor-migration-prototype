@@ -6,6 +6,7 @@ import { AlertCircleIcon } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { COST_DATA } from "@/data/documentation-data";
 import { STEP_TO_REQUIRED_SERVICE } from "@/data/documentation-data/service";
+import { isValidElement } from "react";
 
 interface Props {
   data: NodeRoute;
@@ -163,13 +164,22 @@ if('requirements' in data === false || !Array.isArray(data.requirements)) {
                         ) {
                           return (
                             <div class="mb-2">
-                              <p class="text-sm text-[#1E293B]">
+                              {/* {typeof detail.label === "string" ? (
+                                <p class="text-sm text-[#1E293B] font-semibold mb-1">
+                                  <Wiki client:load value={detail.label as string} />
+                                </p>
+                              ) : (
+                                
+                              )} */}
+                              <p set:html={detail.label} class="text-sm text-[#1E293B] font-semibold mb-1">
+                                </p>
+                              {/* <p class="text-sm text-[#1E293B]">
                                 {typeof detail.label === "string" ? (
                                   <Wiki client:load value={detail.label as string} />
                                 ) : (
                                   detail.label
                                 )}
-                              </p>
+                              </p> */}
                               <ul class="list-disc list-inside space-y-1 text-sm font-normal text-[#475569] ml-4">
                                 {detail.list.map((item) => (
                                   <li>
