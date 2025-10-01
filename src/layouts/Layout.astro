@@ -1,6 +1,8 @@
 ---
 import GovernmentOfficialHeader from "@/components/GovernmentOfficialHeader.astro";
-// import AsciiArt from "@/components/AsciiArt.astro";
+import AsciiArt from "@/components/AsciiArt.astro";
+import GoogleTag from "@/components/Integration/GoogleTag.astro";
+import Clarity from "@/components/Integration/Clarity.astro";
 import Header from "@/components/Header/index.astro";
 import { SEO } from "@/data/seo";
 import "@fontsource-variable/roboto";
@@ -9,6 +11,7 @@ import "@/styles/global.css";
 
 <!doctype html>
 <html lang="es-ES">
+  <!-- <AsciiArt /> -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,7 +37,7 @@ import "@/styles/global.css";
     <meta name="twitter:title" content={SEO.title} />
     <meta name="twitter:description" content={SEO.og.description} />
     <meta name="twitter:image" content={SEO.og.image.url} />
-    
+    <Clarity />
   </head>
   <body class="antialiased">
     <GovernmentOfficialHeader />
@@ -42,22 +45,6 @@ import "@/styles/global.css";
     <main class="bg-background antialiased">
       <slot />
     </main>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6GG9G4MPZ"
-    ></script>
-    
-    <script>
-      // @ts-ignore: Declare dataLayer on window
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        // @ts-ignore: Declare dataLayer on window
-        window.dataLayer.push(arguments);
-      }
-      // @ts-ignore
-      gtag("js", new Date());
-
-      // @ts-ignore
-      gtag("config", "G-Y6GG9G4MPZ");
-    </script>
+    <GoogleTag />
   </body>
 </html>
