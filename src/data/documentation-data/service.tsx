@@ -76,7 +76,7 @@ export const STEP_TO_REQUIRED_SERVICE: StepToRequiredService[] = [
       "Preséntate en la oficina seleccionada con los documentos originales",
     details: [
       "Luego de 24 horas laborables desde que enviaste la solicitud, acude con todos los documentos originales y el comprobante de pago.",
-      "Horario: lunes a viernes de 8:00 a. m. a 4:00 p. m. (hasta las 6:00 p. m. en temporada alta).",
+      "Horario: lunes a viernes de 8:00 a. m. a 3:30 p. m. (hasta las 6:00 p. m. en temporada alta).",
     ],
   },
   {

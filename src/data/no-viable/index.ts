@@ -24,7 +24,7 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
                 },
                 time: {
                     label: "Horario de servicio",
-                    desc: ["Lunes a viernes de 8:00 a.m. a 4:00 p.m.", "Tel: 809 508 2555 Ext. 7010"]
+                    desc: ["Lunes a viernes de 8:00 a.m. a 3:30 p.m.", "Tel: 809 508 2555 Ext. 7010"]
                 },
             },
             {
@@ -45,7 +45,7 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
                 time: {
                     label: "Horario de servicio",
                     desc: [
-                        "Lunes a viernes de 8:00 a.m. – 4:00 p.m.",
+                        "Lunes a viernes de 8:00 a.m. – 3:30 p.m.",
                         "Ext. 2205 - 2203 - 2206 - 2211"
                     ]
                 }
@@ -58,7 +58,7 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
                 time: {
                     label: "Horario de servicio",
                     desc: [
-                        "Lunes a viernes de 8:00 a.m. – 4:00 p.m.",
+                        "Lunes a viernes de 8:00 a.m. – 3:30 p.m.",
                         "Ext. 3600 - 3601 - 3603 "
                     ]
                 }
@@ -70,7 +70,7 @@ export const BRANCH_OFFICE_DATA: BranchOfficeData[] = [
                 },
                 time: {
                     label: "Horario de servicio",
-                    desc: ["Lunes a viernes de 8:00 a.m. – 4:00 p.m.", "Ext. 3000 - 3001 - 3002 "]
+                    desc: ["Lunes a viernes de 8:00 a.m. – 3:30 p.m.", "Ext. 3000 - 3001 - 3002 "]
                 }
             }
         ]

@@ -255,7 +255,7 @@ export const DETAILS_OF_PROCESS_DOCUMENTATION = [
         title: "Horario de prestación",
         slug: "horario-de-prestación",
         desc: [
-            "Lunes a viernes de 8:00 AM. a 4:00 PM.",
+            "Lunes a viernes de 8:00 AM. a 3:30 PM.",
             "(En verano y navidad el horario se extiende hasta las 6:00 PM. por el aumento de la demanda)"
         ]
     },
