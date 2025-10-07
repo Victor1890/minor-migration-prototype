@@ -1,6 +1,6 @@
 ---
 import GovernmentOfficialHeader from "@/components/GovernmentOfficialHeader.astro";
-import AsciiArt from "@/components/AsciiArt.astro";
+// import AsciiArt from "@/components/AsciiArt.astro";
 import GoogleTag from "@/components/Integration/GoogleTag.astro";
 import Clarity from "@/components/Integration/Clarity.astro";
 import Header from "@/components/Header/index.astro";
@@ -8,17 +8,12 @@ import { SEO } from "@/data/seo";
 import "@fontsource-variable/roboto";
 import "@/styles/global.css";
 
-const hostname = Astro.url.hostname;
-
 const isProd = process.env?.NODE_ENV === 'production';
-
-console.log("Environment:", process.env?.NODE_ENV, "Hostname:", hostname);
 
 ---
 
 <!doctype html>
 <html lang="es-ES">
-  <!-- <AsciiArt /> -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
