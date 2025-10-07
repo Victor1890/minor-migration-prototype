@@ -7,6 +7,11 @@ import Header from "@/components/Header/index.astro";
 import { SEO } from "@/data/seo";
 import "@fontsource-variable/roboto";
 import "@/styles/global.css";
+
+const hostname = Astro.url.hostname;
+
+const isProd = hostname === "permisosalidamenor.migracion.gob.do";
+
 ---
 
 <!doctype html>
@@ -19,6 +24,7 @@ import "@/styles/global.css";
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={SEO.og.url} />
 
+    <meta name="robots" content={isProd ? "index, follow" : "noindex, nofollow"} />
     <title>{SEO.title}</title>
 
     <meta name="description" content={SEO.description} />
@@ -37,14 +43,15 @@ import "@/styles/global.css";
     <meta name="twitter:title" content={SEO.title} />
     <meta name="twitter:description" content={SEO.og.description} />
     <meta name="twitter:image" content={SEO.og.image.url} />
-    <Clarity />
+    {isProd && <Clarity />}
   </head>
   <body class="antialiased">
     <GovernmentOfficialHeader />
     <Header />
     <main class="bg-background antialiased">
+      {console.log("isProd", isProd, hostname)}
       <slot />
     </main>
-    <GoogleTag />
+    {isProd && <GoogleTag />}
   </body>
 </html>

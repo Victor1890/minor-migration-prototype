@@ -2,6 +2,19 @@
   "name": "salida-de-menor",
   "type": "module",
   "version": "0.0.1",
+  "private": true,
+  "description": "Portal para la solicitud de permisos de salida de menores del país, gestionado por el Ministerio de Interior y Policía de la República Dominicana.",
+  "author": "Victor Rosario <victorrosariodeveloper@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "astro",
+    "tailwindcss",
+    "react",
+    "radix-ui",
+    "government",
+    "dominican-republic",
+    "permisos-de-salida-de-menores"
+  ],
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
