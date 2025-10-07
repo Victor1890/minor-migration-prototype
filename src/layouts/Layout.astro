@@ -10,7 +10,7 @@ import "@/styles/global.css";
 
 const hostname = Astro.url.hostname;
 
-const isProd = hostname === "permisosalidamenor.migracion.gob.do";
+const isProd = hostname.includes("gob.do")
 
 ---
 
