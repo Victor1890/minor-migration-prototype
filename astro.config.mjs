@@ -4,11 +4,13 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap'
 
+const isProd = process.env?.NODE_ENV === 'production';
+
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
   trailingSlash: 'never',
-  site: 'https://permisosalidamenor.migracion.gob.do',
+  site: isProd ? 'https://permisosalidamenor.migracion.gob.do' : 'http://localhost:3000',
   vite: {
     plugins: [tailwindcss()]
   },

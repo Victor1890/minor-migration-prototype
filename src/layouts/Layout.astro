@@ -8,10 +8,7 @@ import { SEO } from "@/data/seo";
 import "@fontsource-variable/roboto";
 import "@/styles/global.css";
 
-const hostname = Astro.url.hostname;
-
-const isProd = hostname.includes("gob.do")
-
+const isProd = process.env?.NODE_ENV === 'production';
 ---
 
 <!doctype html>
