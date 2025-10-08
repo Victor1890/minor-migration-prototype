@@ -10,6 +10,10 @@ import "@/styles/global.css";
 
 const isProd = process.env?.NODE_ENV === 'production';
 
+const pathname = Astro.url.pathname;
+
+const canonicalUrl = pathname === "/" ? SEO.og.url: `${SEO.og.url}${pathname}`;
+
 ---
 
 <!doctype html>
@@ -19,7 +23,7 @@ const isProd = process.env?.NODE_ENV === 'production';
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="canonical" href={SEO.og.url} />
+    <link rel="canonical" href={canonicalUrl} />
 
     <meta name="robots" content={isProd ? "index, follow" : "noindex, nofollow"} />
     <title>{SEO.title}</title>
