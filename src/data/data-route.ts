@@ -16530,40 +16530,38 @@ export const DATA_ROUTE = {
         "slug": "no-veo-el-caso-del-menor-o-tengo-dudas-para-elegir",
         "children": []
     },
-    "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": [
-        {
-            "id": "4.2.1",
-            "label": "No se requiere permiso.",
-            "desc": null,
-            "type": "not_required_permission",
-            "has_icon": false,
-            "slug": "no-se-requiere-permiso.",
-            "requirements": [
-                {
-                    "requirement": "No requiere el permiso",
-                    "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
-                }
-            ],
-            "children": [],
-            "histories": [
-                {
-                    "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
-                    "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
-                    "id": "4"
-                },
-                {
-                    "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
-                    "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
-                    "id": "4.2"
-                },
-                {
-                    "label": "No se requiere permiso.",
-                    "slug": "no-se-requiere-permiso.",
-                    "id": "4.2.1"
-                }
-            ]
-        }
-    ],
+    "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais": {
+        "id": "4.2.1",
+        "label": "No se requiere permiso.",
+        "desc": null,
+        "type": "not_required_permission",
+        "has_icon": false,
+        "slug": "no-se-requiere-permiso.",
+        "requirements": [
+            {
+                "requirement": "No requiere el permiso",
+                "requirement_notes": "No lo requiere si el menor viaja acompa\u00f1ado con una de las personas con las que entro y se dirigirse a su pais de origen."
+            }
+        ],
+        "children": [],
+        "histories": [
+            {
+                "label": "El menor tiene estad\u00eda temporal como estudiante, deportista o artista",
+                "slug": "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista",
+                "id": "4"
+            },
+            {
+                "label": "El menor no ha estado m\u00e1s de 6 meses en el pa\u00eds",
+                "slug": "el-menor-no-ha-estado-mas-de-6-meses-en-el-pais",
+                "id": "4.2"
+            },
+            {
+                "label": "No se requiere permiso.",
+                "slug": "no-se-requiere-permiso.",
+                "id": "4.2.1"
+            }
+        ]
+    },
     "el-menor-tiene-estadia-temporal-como-estudiante-deportista-o-artista/el-menor-no-ha-estado-mas-de-6-meses-en-el-pais/no-se-requiere-permiso.": {
         "id": "4.2.1",
         "label": "No se requiere permiso.",
