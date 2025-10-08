@@ -24,7 +24,7 @@ export const STEP_TO_REQUIRED_SERVICE: StepToRequiredService[] = [
     details: [
       {
         label:
-          "Ve a <a href='https://servicios.migracion.gob.do' rel='noopener noreferrer'>https://servicios.migracion.gob.do</a>",
+          "Ve a <a href='https://servicios.migracion.gob.do/auth/login' rel='noopener noreferrer'>https://servicios.migracion.gob.do/auth/login</a>",
         list: [
           "Crea una cuenta si no tienes.",
           "Elige el servicio Permiso de menor y completa el formulario con los datos solicitados.",
